@@ -37,7 +37,7 @@ public class Db_main {
 						db.method2(year);
 				}
 				case 3 -> {
-						System.out.print("부서번호를 입력하세요 : ");
+						System.out.println("부서번호를 입력하세요 : [ex100]");
 						int dpId = scan.nextInt();
 						scan.nextLine();
 						db.method3(dpId);
@@ -62,13 +62,13 @@ public class Db_main {
 					System.out.print("부서장 성을 입력하세요 : ");
 					scan.nextLine();
 					String managerId = scan.nextLine();
-					db.method4(managerId);
+					db.method7(managerId);
 				}
 				case 8 -> {
 					System.out.print("나라이름을 입력하세요 : ");
 					scan.nextLine();
 					String countryName = scan.nextLine();
-					db.method4(countryName);
+					db.method8(countryName);
 				}
 				case 0 -> { 
 					db.close();
@@ -83,6 +83,7 @@ public class Db_main {
 		}
 	}
 }
+
 
 
 
