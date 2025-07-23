@@ -1,0 +1,16 @@
+body { 
+    text-align: center;
+    font-family: sans-serif;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    background: #000;
+}
+div {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 1rem;
+    width: 14rem;
+    box-shadow: 0 0 1rem rgba(0,0,0,5);
+}
+
