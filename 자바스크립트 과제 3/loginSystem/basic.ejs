@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>기본화면</title>
+
+        <style>
+
+            h1 {
+                margin-inline: 110px;
+            }
+
+            body {
+                border: 2px solid black;
+                margin: 10px auto;
+                width: 440px;
+            }
+
+            span {
+                margin-left: 10px;
+            }
+
+            input {
+                margin-left: 10px;
+            }
+
+            button {
+                margin-left: 50px;
+                margin-bottom: 20px;
+            }
+
+        </style>
+
+    </head>
+    <body>
+        <h1>-로그인하세요-</h1>
+
+        <div>
+            <span>아이디</span><input type="text" id="id" placeholder="이름을 입력하세요"><p></p>
+            <span>비밀번호</span><input type="password" id="psw" placeholder="비밀번호를 입력하세요">
+
+            <button onclick="login()">로그인</button>
+        </div>
+
+        <script>
+            // form을 사용하지 않고 사용하는 방법 
+            function login() {
+                console.log(`login 함수 실행됨`); 
+
+                const form = document.createElement('form');  // 고정
+                form.setAttribute('action', '/page/allMenu'); // allMenu 페이지로 이동
+                form.setAttribute('method', 'get');  // 고정
+                
+                const input1 = document.querySelector('#id');  // 입력한 id와 password 기억
+                const input2 = document.querySelector('#psw');
+
+                const data1 = document.createElement('input');
+                data1.setAttribute('type', 'hidden');
+                data1.setAttribute('name', 'username');
+                data1.setAttribute('value', input1.value);
+                form.appendChild(data1);
+
+                const data2 = document.createElement('input')
+                data2.setAttribute('type', 'hidden');
+                data2.setAttribute('name', 'password');
+                data2.setAttribute('value', input2.value);
+                form.appendChild(data2);
+
+                document.body.appendChild(form);
+
+                form.submit();
+            }
+
+        </script>
+        
+    </body>
+</html>
