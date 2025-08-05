@@ -1,0 +1,83 @@
+<%@page import="java.util.ArrayList"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<% 
+
+	String name = request.getParameter("name");
+	String email = request.getParameter("email");
+	String serch = request.getParameter("serch");
+	String gender = request.getParameter("gender");
+	String dinner = request.getParameter("dinner");
+	String[] hobbies = request.getParameterValues("hobby");
+	String hobbStr= "";
+	if(hobbies != null) {
+		for(int i = 0; i < hobbies.length; i++) {
+			hobbStr += hobbies[i];
+			
+			if(i != hobbies.length-1){
+				hobbStr += ", ";
+			}
+		}
+	
+			
+	}
+
+%>
+
+	<div align="center" text-align="center">
+		<h2>출력값 받기</h2>
+		<table cellspacing="2" cellpadding="2" border="1">
+			<tr>
+				<td>사용자이름</td>
+				<td><input type="text" value=<%=name%>></td>
+			</tr>
+			<tr>
+				<td>이메일</td>
+				<td><input type="text" value=<%=email%>></td>
+			</tr>
+			<tr>
+				<td>검색단어</td>
+				<td><input type="text" value=<%=serch%>></td>
+			</tr>
+			<tr>
+				<td>취미</td>
+				<td>  
+					<input type="text" value="<%= hobbStr %>">
+				</td>
+			</tr>
+			<tr>
+				<td>성별</td>
+				<td>
+					<input type="text" value=<%=gender%>>
+				</td>
+			</tr>
+			<tr>
+				<td>점심메뉴</td>
+				<td>
+					<input type="text" value=<%=dinner%>>
+				</td>
+			</tr>
+		</table>
+	</div>
+
+
+</body>
+<style>	
+	td{
+		text: center;
+		text-align: center;
+		font-weight: bolder;
+;
+	}
+	input {
+		text-align: center;
+	}
+</style>
+</html>
