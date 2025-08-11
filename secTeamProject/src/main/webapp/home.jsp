@@ -4,9 +4,15 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>LX CINEMA</title>
 </head>
 <body>
-
+<h1>홈페이지</h1>
+<a href="home.do">홈으로</a>
+<a href="login.do">로그인</a>
+<a href="register.do">회원가입</a>
+<a href="movie.do">영화</a>
+<a href="cinema.do">영화관</a>
+<a href="seat.do">좌석선택</a>
 </body>
 </html>
