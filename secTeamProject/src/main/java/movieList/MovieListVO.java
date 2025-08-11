@@ -14,7 +14,7 @@ public class MovieListVO {
 		return movieTitle;
 	}
 	public void setMovieName(String movieTitle) {
-		this.movieName = movieTitle;
+		this.movieTitle = movieTitle;
 	}
 	public int getMoviePrice() {
 		return moviePrice;
@@ -35,4 +35,5 @@ public class MovieListVO {
 		this.genre = genre;
 	}
 }
+
 
