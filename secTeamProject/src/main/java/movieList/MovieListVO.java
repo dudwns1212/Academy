@@ -1,7 +1,7 @@
 package movieList;
 
 public class MovieListVO {
-	public String movieName;
+	public String movieTitle;
 	public int moviePrice;
 	public int movieTime;
 	public String genre;
@@ -10,11 +10,11 @@ public class MovieListVO {
 		
 	}
 	
-	public String getMovieName() {
-		return movieName;
+	public String getMovieTitle() {
+		return movieTitle;
 	}
-	public void setMovieName(String movieName) {
-		this.movieName = movieName;
+	public void setMovieName(String movieTitle) {
+		this.movieName = movieTitle;
 	}
 	public int getMoviePrice() {
 		return moviePrice;
@@ -35,3 +35,4 @@ public class MovieListVO {
 		this.genre = genre;
 	}
 }
+
