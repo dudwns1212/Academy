@@ -12,7 +12,9 @@ import javax.servlet.http.HttpSession;
 public class UserServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	UserListDAO dao = new UserListDAO();
+	UserListDAO udao = new UserListDAO();
+	MovieListDAO mdao = new MovieListDAO();
+	CinemaListDAO cdao = new CinemaListDAO();
 
 	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		req.setCharacterEncoding("utf-8");
@@ -91,3 +93,4 @@ public class UserServlet extends HttpServlet {
 		return user;
 	}
 }
+
