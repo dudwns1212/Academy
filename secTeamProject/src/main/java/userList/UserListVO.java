@@ -1,6 +1,7 @@
 package userList;
 
 public class UserListVO {
+	public int userNo;
 	public String userId;
 	public String userName;
 	public int userAge;
@@ -11,6 +12,14 @@ public class UserListVO {
 		
 	}
 	
+	public int getUserNo() {
+		return userNo;
+	}
+
+	public void setUserNo(int userNo) {
+		this.userNo = userNo;
+	}
+
 	public String getUserName() {
 		return userName;
 	}
