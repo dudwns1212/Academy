@@ -7,9 +7,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/**
- * Servlet implementation class userServlet
- */
 @WebServlet("*.do")
 public class UserServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -23,7 +20,7 @@ public class UserServlet extends HttpServlet {
 		if(uri.endsWith("home.do")) {
 			
 		} else if(uri.endsWith("login.do")) {
-			forwardPage = "/login.jsp";
+			forwardPage = "/home.jsp";
 		} else if(uri.endsWith("movie.do")) {
 			forwardPage = "/movie.jsp";
 		} else if(uri.endsWith("register.do")) {
