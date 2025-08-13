@@ -8,6 +8,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import cinemaList.CinemaListDAO;
+import movieList.MovieListDAO;
+
 @WebServlet("*.do")
 public class UserServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -35,7 +38,7 @@ public class UserServlet extends HttpServlet {
 			// 아이디와 비밀번호가 모두 입력되었는지 확인
 			if (id != null && pw != null) {
 				// DAO의 login 메서드를 호출해 DB에서 사용자 정보 조회
-				UserListVO user = dao.login(id, pw);
+				UserListVO user = udao.login(id, pw);
 
 				if (user != null) {
 					// 로그인 성공: 사용자 정보가 null이 아니면 세션에 저장
@@ -57,11 +60,11 @@ public class UserServlet extends HttpServlet {
 			// 요청 파라미터를 UserListVO 객체로 생성
 			UserListVO user = makeUserFromReq(req);
 			// DAO의 register 메서드를 호출해 DB에 회원정보 저장 시도
-			boolean success = dao.register(user);
+			boolean success = udao.register(user);
 			if (success) {
 				// 회원가입 성공 시 메시지 전달 후 로그인 페이지로 이동 유도
 				req.setAttribute("msg", "회원가입 성공! 로그인 해주세요.");
-				forwardPage = "/login.jsp";
+				forwardPage = "/register.jsp";
 			} else {
 				// 회원가입 실패 시 에러 메시지 전달 후 다시 회원가입 페이지로 이동
 				req.setAttribute("errorMsg", "회원가입 실패. 다시 시도해주세요.");
@@ -93,4 +96,3 @@ public class UserServlet extends HttpServlet {
 		return user;
 	}
 }
-
