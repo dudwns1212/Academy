@@ -4,7 +4,9 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
-import junha.DBController;
+import javax.naming.Context;
+import javax.naming.InitialContext;
+import javax.sql.DataSource;
 
 public class UserListDAO {
 
@@ -14,7 +16,7 @@ public class UserListDAO {
         String sql = "SELECT * FROM users WHERE id = ? AND password = ?";
 
         //try-with-resources 문법으로 try문이 끝나면 자동으로 닫음
-        try (Connection conn = DBController.getConnection();
+        try (Connection conn = getConnection();
              PreparedStatement psmt = conn.prepareStatement(sql)) {
 
             psmt.setString(1, id);  // 첫 번째 ?에 id 세팅
@@ -44,7 +46,7 @@ public class UserListDAO {
         String sql = "INSERT INTO users (id, password, name, age, mobile) VALUES (?, ?, ?, ?, ?)";
 
         // try-with-resources로 Connection, PreparedStatement 자원 자동 해제
-        try (Connection conn = DBController.getConnection();
+        try (Connection conn = getConnection();
              PreparedStatement psmt = conn.prepareStatement(sql)) {
 
             // VO에 담긴 사용자 정보를 각각 SQL 파라미터(?)에 세팅
@@ -61,4 +63,12 @@ public class UserListDAO {
         }
         return false;  // 실패 시 false 반환
     }
+    
+    private static Connection getConnection() throws Exception {
+		Context initContext = new InitialContext();
+		Context envContext = (Context) initContext.lookup("java:comp/env");
+		DataSource dataSource = (DataSource) envContext.lookup("jdbc/mydb");
+		Connection connection = dataSource.getConnection();
+		return connection;
+	}
 }
