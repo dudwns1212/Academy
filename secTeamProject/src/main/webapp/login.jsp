@@ -16,7 +16,7 @@
         <input type="text" name="id" placeholder="아이디를 입력하세요" required>
         <input type="password" name="pw" placeholder="비밀번호를 입력하세요" required>
         <button type="submit">로그인</button>
-        <a href="register.do">회원가입</a>
+        <a href="register.jsp">회원가입</a>
     </form>
 
     <c:if test="${not empty errorMsg}">
