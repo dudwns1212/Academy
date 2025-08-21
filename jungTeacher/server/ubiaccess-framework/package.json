@@ -1,0 +1,36 @@
+{
+     "name": "ubiaccess-framework",
+     "version": "1.2.1",
+     "description": "Ubiaccess Web Service Framework, https://github.com/mike-jung/ubiaccess-framework",
+     "main": "index.js",
+     "scripts": {
+          "start": "node index.js",
+          "test": "node index.js"
+     },
+     "keywords": [],
+     "author": "Mike",
+     "license": "ISC",
+     "dependencies": {
+          "StringScanner": "0.0.3",
+          "connect-flash": "^0.1.1",
+          "cookie-parser": "^1.4.5",
+          "cors": "^2.8.5",
+          "ejs": "^2.7.4",
+          "express": "^4.17.1",
+          "express-session": "^1.17.1",
+          "express-swagger-generator": "^1.1.17",
+          "hashmap": "^2.4.0",
+          "moment": "^2.27.0",
+          "multer": "^1.4.2",
+          "mysql": "^2.18.1",
+          "mysql-utilities": "^1.1.0-alpha.6",
+          "network": "^0.5.0",
+          "node-uuid": "^1.4.8",
+          "passport": "^0.4.1",
+          "passport-local": "^1.0.0",
+          "socket.io": "^2.3.0",
+          "socket.io-redis": "^5.2.0",
+          "winston": "^2.4.4",
+          "winston-daily-rotate-file": "^1.7.2"
+     }
+}
