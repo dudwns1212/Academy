@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>연습</title>
+
+        <!-- CSS 스타일/ px-2픽셀 크기의 blue-파란색 solid-실선-->
+        <style>
+            p {
+                border: 2px solid blue;
+            }
+            
+            span {
+                border: 2px solid green;
+            }
+
+            img {
+                border: 2px solid purple;
+            }
+
+            .group1 {
+                border: 2px solid red;
+            }
+
+            #my1 {
+                color: aqua;
+                font-size: 2em;
+                font-weight: bold;
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1>연습 첫 번째</h1>
+        <!-- 주석을 이렇게하네 div -화면의 일부영역을 할당받음-->
+        <div class="group1"> 
+            <!--p는 블럭단위 요소 눈에 보이는 요소를 자동으로 줄바꿈 -->
+            <p id="my1">연습입니다.</p> 
+            <p>연습입니다.</p>
+            <p>연습입니다.</p>
+        </div>
+        <div class="group1">
+            <!--span은 인라인단위 요소 눈에 보이는 요소를 오른쪽으로 추가 -->
+         <span>테스트입니다.</span>
+            <span>테스트입니다.</span>
+            <span>테스트입니다.</span>
+        </div>
+
+        <div>
+            <img src="images/cat.png">
+            <img src="images/dog2.jpg">
+            <img src="images/house2.png">
+        </div>
+
+        <div>
+            <input type="text" value="" id="input1">
+            <input type="text" value="21">
+            <input type="text" value="010-1111-1111">
+            
+            <button onclick="show()">확인</button>
+        </div>
+
+        <div id="output1">
+
+
+        </div>
+
+        <!-- script : 자바스크립트 코드가 들어감 -->
+        <script>
+            
+            function show() {
+                window.alert('이건 오류를 생성해');
+                console.log('버튼이 눌렸어요');
+
+                const input1 = document.querySelector('#input1');
+                const output1 = document.querySelector('#output1');
+
+                output1.innerHTML = `<p>입력한 값 : ${input1.value}</p>`;
+
+            }
+
+        </script>
+
+    </body>
+</html>

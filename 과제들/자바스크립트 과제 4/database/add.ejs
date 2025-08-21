@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>고객 관리</title>
+
+        <style>
+
+            h1 {
+                margin-inline: 175px;
+            }
+
+
+            body {
+                border: 2px solid black;
+                margin: 20px auto;
+                width: 600px;
+            }
+
+            input {
+                margin: 10px auto;
+                margin-left: 10px;
+            }
+
+            button {
+                margin-inline: 260px;
+                margin-bottom: 10px;
+
+            }
+
+        </style>
+    </head>
+    <body>
+
+        <div>
+            <h1>고객 정보 추가</h1>
+        </div>
+
+        <div>
+            <form action="/person/insert" method="get"> 
+                <input type="text" name="name" value="" placeholder="name">
+                <input type="number" name="age" value="" placeholder="age">
+                <input type="text", name="mobile" value="" placeholder="mobile">
+                <p></p>
+                <button>저장</button>
+
+            </form>
+
+            <form action="/person/list" method="get">
+                <button>취소</button>
+            </form>
+        </div>
+        
+    </body>
+</html>

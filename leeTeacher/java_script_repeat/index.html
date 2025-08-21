@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <!-- 헤드부분이 살짝 웹브라우저 이름인듯 -->
+    <head>
+        <meta charset="UTF-8">
+        <title>복습 브라우저</title>
+        <!-- 꾸미는 용도 할당영역을 표시하고 싶어서 해봄-->
+        <style>
+            p {
+                border: 2px solid blue;
+            }
+
+            span {
+                border: 2px solid red;
+            }
+
+            .group1 {
+                border: 2px solid green;
+            }
+
+            .group2 {
+                border: 2px solid black;
+            }
+            
+            #my1 {
+                border: 2px solid darkorange;
+            }
+        </style>
+
+    </head>
+    <!-- body 부분은 웹 브라우저 화면의 영역. h1은 그냥 글쓰는 부분?-->
+    <body>
+        <h1>h1->h2->h3 등등 갈수록 작아짐</h1>
+        <h2>작아져라 얍</h2>
+        <h3>더 작아져라 야압</h3>
+        <h4>더더더더더더더더더ㅓ더더더더ㅓㄷ</h4>
+
+        <div class = "group1">
+            <p id = "my1">div는 화면의 일부영역을 할당 받음</p>
+            <p>p는 블럭단위로 화면에서 가로줄 전체를 할당 받음</p>
+            <p>그리고 자동으로 엔터(줄바꿈)이 됨</p>
+        </div>
+        <div class = "group2">
+            <span>이건 딱 글 쓴 부분만 할당함</span>
+            <span>그리고 오른쪽으로 붙음</span>
+            <span>div는 당연히 다른영역 새로  만들었으니</span>
+        </div>
+
+    </body>
+</html>

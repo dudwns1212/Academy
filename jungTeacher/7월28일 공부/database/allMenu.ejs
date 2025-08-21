@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>기본화면</title>
+        <h2>SQL 버튼을 클릭하세요.</h2>
+
+        <style>
+
+            h2 {
+                margin-inline: 90px;
+            }
+
+            body {
+                border: 2px solid black;
+                margin: 10px auto;
+                width: 440px;
+            }
+
+            span {
+                margin-left: 10px;
+            }
+
+            div {
+                margin-left: 140px;
+            }
+
+            button {
+                margin-left: 40px;
+                margin-bottom: 10px;
+            }
+
+        </style>
+
+    </head>
+    <body>
+        <div>
+            <form action="/page/select" method="get">
+                <input type="text" placeholder="select문을 입력하세요." name="select" value="">
+                <button>select</button>        
+            </form>
+        </div>
+        
+        <div>
+            <form action="/page/insert" method="get">
+                <input type="text" placeholder="insert문을 입력하세요." name="insert" value="">
+                <button>insert</button>        
+            </form>
+        </div>
+        
+        <div>
+            <form action="/page/update" method="get">
+                <input type="text" placeholder="update문을 입력하세요." name="update" value="">
+                <button>update</button>        
+            </form>
+        </div>
+
+        <div>
+            <form action="/page/delete" method="get">
+                <input type="text" placeholder="delete문을 입력하세요." name="delete" value="">
+                <button>delete</button>        
+            </form>
+        </div>
+    </body>
+</html>
