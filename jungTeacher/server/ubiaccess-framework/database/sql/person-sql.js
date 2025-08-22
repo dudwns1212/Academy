@@ -15,5 +15,4 @@ module.exports = {
                 from test.person
                 where name like :name`
     }
-
 }
