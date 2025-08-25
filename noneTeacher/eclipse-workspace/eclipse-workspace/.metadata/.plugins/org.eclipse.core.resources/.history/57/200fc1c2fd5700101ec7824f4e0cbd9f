@@ -1,0 +1,6 @@
+package 해시리스트;
+
+public class Animal {
+	String name
+	String Birth
+}

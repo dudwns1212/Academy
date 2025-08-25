@@ -1,0 +1,11 @@
+package 아침복습매우중요2_Fa;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+
+public class Farm {
+
+	public HashMap<String,ArrayList<IAnimal>>animalMap = new HashMap<String,ArrayList<IAnimal>>();
+	
+	
+}

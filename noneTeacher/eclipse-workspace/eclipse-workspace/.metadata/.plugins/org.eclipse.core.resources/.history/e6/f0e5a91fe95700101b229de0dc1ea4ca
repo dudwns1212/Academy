@@ -1,0 +1,13 @@
+
+
+public class Dog extends Animal {
+
+	Dog(String name) {
+		super();
+		
+		super.name = name;
+		
+		System.out.println("강아지가 만들어졌어요. 이름 : " + name);
+	}
+	
+}

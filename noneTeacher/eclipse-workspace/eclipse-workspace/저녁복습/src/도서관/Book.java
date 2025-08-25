@@ -1,0 +1,18 @@
+package 도서관;
+
+public class Book extends LibraryItem {
+
+	Book() {
+		
+	}
+	
+	Book(String name, String author) {
+		super.title = title;
+		super.author = author;
+	}
+	
+	public void read() {
+		System.out.println(this.title + "책을 읽습니다.");
+	}
+	
+}

@@ -1,0 +1,43 @@
+package 도서관;
+
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.HashMap;
+
+public class Library {
+	
+	public int Count = 0;
+	
+	String dateString;
+	
+	ArrayList<LibraryItem>books = new ArrayList<LibraryItem>();
+	ArrayList<LibraryItem>magazines = new ArrayList<LibraryItem>();
+	HashMap<String,ArrayList<LibraryItem>> dateToBorrowedItems = new HashMap<String,ArrayList<LibraryItem>>();
+	HashMap<String, Integer> dateToBorrowCount = new HashMap<String, Integer>();
+	
+	public void borrow(String type, String title, String author) {
+		
+		Date date = new Date();
+		SimpleDateFormat format = new SimpleDateFormat("yyyy-mm-dd");
+		String dateString = format.format(date);
+		
+		
+		if(!dateToBorrowedItems.containsKey(dateString)) {
+			dateToBorrowedItems.put(dateString, new ArrayList<>());
+		}
+		dateToBorrowedItems.put(dateString, magazines);
+		dateToBorrowedItems.put(dateString, books);
+		
+		if(type.equals("book")) {
+			System.out.println("책이 대출되었습니다.");
+		} else if(type.equals("magazine")) {
+			System.out.println("잡지가 대출되었습니다.");
+		}
+		
+		Count++;
+		
+		
+	}
+	
+}

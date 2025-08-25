@@ -1,0 +1,7 @@
+package 리스트;
+
+public class Computer {
+	
+	String name;
+	
+}

@@ -1,0 +1,9 @@
+package 매장관리기능;
+import java.util.ArrayList;
+public class Store {
+	
+	String name;
+	ArrayList<Product> products = new ArrayList<Product>();
+	ArrayList<Customer> customers = new ArrayList<Customer>();
+	
+}

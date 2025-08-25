@@ -1,0 +1,20 @@
+
+public class Test1 {
+	
+	public static void main(String[] args) {
+		
+		// 동물농장 만들기
+		Farm farm1 = new Farm();
+		
+		Dog dog1 = new Dog("미미");
+		farm1.animals.put("rara", dog1);  //
+		
+		Cat cat1 = new Cat("라라");
+		farm1.animals.put("rara", cat1);
+		
+		System.out.println("미미를 찾아줘 : " + farm1.animals.get("mimi").name);
+		System.out.println("라라를 찾아줘 : " + farm1.animals.get("rara").name);
+		
+	}
+	
+}

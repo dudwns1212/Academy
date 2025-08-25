@@ -1,0 +1,14 @@
+
+public class Dog implements IAnimal { // implements IAnimal -> Dog는 약속을 지켜야됨 
+	
+	String name;
+
+	public void run() {
+		System.out.println(name + "강아지가 뒤어갑니다.");
+	}
+	
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+}

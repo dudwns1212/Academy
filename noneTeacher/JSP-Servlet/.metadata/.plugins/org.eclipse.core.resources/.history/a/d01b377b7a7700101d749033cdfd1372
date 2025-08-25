@@ -1,0 +1,35 @@
+package userList;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+
+import javax.naming.Context;
+import javax.naming.InitialContext;
+import javax.sql.DataSource;
+
+//로그인에 필요한 메서드들
+public class UserListDAO {
+	public class AddrBookDAO {
+		static String sql = "select * from employees where DEPARTMENT_ID = ";
+		static String driverClassName = "oracle.jdbc.driver.OracleDriver";
+		static String connectionUrl = "jdbc:oracle:thin:@localhost:1521:xe";
+		static String userName = "hr";
+		static String password = "hr";
+		static String sqlInsertDB = "insert into addrbook(AB_NAME,ab_email,ab_comdept,ab_birth,ab_tel,ab_memo) "
+											+ "values(?,?,?,?,?,?)";
+		}
+	
+	private static Connection getConnection() throws Exception {
+		Context initContext = new InitialContext();
+		Context envContext = (Context) initContext.lookup("java:comp/env");
+		DataSource dataSource = (DataSource) envContext.lookup("jdbc/mydb");
+		Connection connection = dataSource.getConnection();
+		return connection;
+	}
+	
+	public UserListVO login(String id, String pw) {
+		return null;
+	}
+	
+	
+}

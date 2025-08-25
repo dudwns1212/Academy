@@ -1,0 +1,9 @@
+package 도서관;
+
+public class Book extends LibraryItem {
+
+	public void read() {
+		System.out.println("책을 읽습니다.");
+	}
+	
+}

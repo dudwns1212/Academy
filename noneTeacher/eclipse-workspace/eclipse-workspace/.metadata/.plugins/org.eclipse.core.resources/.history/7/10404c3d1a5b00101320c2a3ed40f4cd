@@ -1,0 +1,9 @@
+package 도서관;
+
+public class Magazine extends LibraryItem {
+	
+	public void read() {
+		System.out.println("잡지를 읽습니다.");
+	}
+	
+}

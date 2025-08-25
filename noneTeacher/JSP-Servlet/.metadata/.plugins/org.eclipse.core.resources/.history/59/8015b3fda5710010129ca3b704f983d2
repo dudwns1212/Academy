@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>생선먹기싫어</title>
+</head>
+<body>
+	이것은 html 파일이며, html 파일은 정적 resource라고 합니다.
+	br태그가 없으니 이 줄은 바뀌지 않아여
+	<br>하지만 br태그가 이렇게 있다면 줄은 바뀌겠져?ㅋ
+	<br>명태본가 그만가고싶어
+	<br>제육주면 ㅇㅈ
+	<br>대신 빨리줘야돼 밥 다먹을 때 줘 맨날
+</body>
+</html>

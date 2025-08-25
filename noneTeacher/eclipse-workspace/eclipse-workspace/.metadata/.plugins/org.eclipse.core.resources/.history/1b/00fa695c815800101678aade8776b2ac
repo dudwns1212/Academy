@@ -1,0 +1,27 @@
+package 리스트;
+public class Cpu extends {
+		// 상속받은 String name이 포함되어있음
+		String performance;
+		
+	static int count_cpu = 0;
+	
+	Cpu() {
+		System.out.println("기본 자식 생성자가 실행되었습니다.");
+		count_cpu++;
+	}
+	
+	// 다른 클래스에서 변수 사용하게 하기
+	public int age;
+	// 위는 그냥 age로 쓰고 아래는 getAge()로 써야됨 
+	public int getAge() {
+		return age;
+	}
+	
+	public static void main(String[] args) {
+		
+		print();
+		
+	}
+	
+			
+}

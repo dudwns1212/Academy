@@ -1,0 +1,51 @@
+package 리스트;
+
+public class Computer {
+	//클래스영역(main밖): 선언하는 함수(String name,함수상자)등은 사용가능하지만 실행하는 함수(println)는 사용불가 
+	public static void main(String[] args) { 
+		// 1. 변수
+		String name = "Alice";
+		int age = 25;
+		float height = 159.3f; // float/double -> 둘다 실수 자료형으로 float는 값 뒤에 항상 f
+		double weight = 44.4;
+		boolean isWoman = true; // boolean 논리자료형 값이 true 아니면 false
+		
+		System.out.println("이름: " + name);
+		System.out.println("나이: " + age);
+		System.out.println("키: " + height);
+		System.out.println("체중: " + weight);
+		System.out.println("여자인가요? " + isWoman);
+		
+		String mix = name + age;
+		System.out.println(mix); // name이랑 age을 더함 -> age가 문자열 자료형으로 변환됨
+		
+		int output1 = age + 10;
+		System.out.println(output1); // 25+10 = 35 출력
+		
+		//함수상자 실행
+		System.out.println(add(10,20));  // 10+20 add함수 실행
+		
+	    Computer com = new Computer(); // com이라는 객체 생성
+	    System.out.println(com.minus(20,10)); // 객체를 생성했으니 non-static인 minus 사용가능
+	    
+	    com.walk(); // 또한 마찬가지로 객체를 통해 실행, 당연히 static이 붙었다면 객체없이 사용가능
+	    print();
+		
+	}
+	// static 사용-> main이 static이라서 non-static은 객체없이 사용불가, 함수상자-class안 main 밖, add앞에 int=>return값이 필요함
+	static int add(int a, int b) { 
+		return a + b;
+	}
+	// non-static으로 함수선언하려면 객체를 만들어야됨 main에서 Computer com = new Computer();로 객체생성
+	int minus(int a, int b) {
+		return a - b;
+	}
+	// void는 리턴값이 없음 그냥 실행하는 단순한 상자, 함수상자의 실행은 항상 main에서 만드는건 main밖에서 
+	void walk() {
+		System.out.println("걸어요");
+	}
+	static void print() {
+		System.out.println("static이므로 그냥 객체없이 실행합니다.");
+	}
+	
+}

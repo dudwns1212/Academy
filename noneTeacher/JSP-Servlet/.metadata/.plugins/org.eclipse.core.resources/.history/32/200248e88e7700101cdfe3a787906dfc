@@ -1,0 +1,85 @@
+package userList;
+
+import java.io.IOException;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+@WebServlet("*.do")
+public class UserServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
+	UserListDAO dao = new UserListDAO();
+
+	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		req.setCharacterEncoding("utf-8");
+		String uri = req.getRequestURI();
+		System.out.println("uri=" + uri);
+
+		String forwardPage = "/home.jsp";
+
+		if (uri.endsWith("home.do")) {
+			forwardPage = "/home.jsp";
+		} else if (uri.endsWith("login.do")) { // 아이디랑 비밀번호 입력하고 login 버튼 눌렀을 때
+			String id = req.getParameter("id"); // 파라미터 받아오고
+			String pw = req.getParameter("pw");
+
+			if (id != null && pw != null) {// 둘다 입력을 했다면
+				UserListVO user = dao.login(id, pw); // dao메서드 실행
+
+				if (user != null) {// id랑 pw값이 있어서 vo가 반환되면 로그인 성공하고 session에 저장
+					HttpSession session = req.getSession();
+					session.setAttribute("loginUser", user);
+					forwardPage = "/home.jsp"; // 로그인 성공
+				} else {// 아니면
+					req.setAttribute("errorMsg", "아이디 또는 비밀번호가 일치하지 않습니다.");
+					forwardPage = "/login.jsp"; // 로그인 실패
+				}
+			} else {// id나 pw입력 안했으면 login페이지에 머무르기
+				forwardPage = "/login.jsp"; // 파라미터 없으면 로그인 페이지
+			}
+		} else if (uri.endsWith("register.do")) {
+			UserListVO user = makeUserFromReq(req);
+			try {
+				boolean success = dao.register(user);
+				if (success) {
+					req.setAttribute("msg", "회원가입 성공! 로그인 해주세요.");
+					forwardPage = "/login.jsp";
+				} else {
+					req.setAttribute("errorMsg", "회원가입 실패. 다시 시도해주세요.");
+					forwardPage = "/register.jsp";
+				}
+			} catch (Exception e) {
+				e.printStackTrace();
+				req.setAttribute("errorMsg", "서버 에러 발생");
+				forwardPage = "/error.jsp";
+			}
+
+		} else if (uri.endsWith("movie.do")) {
+			forwardPage = "/movie.jsp";
+		} else if (uri.endsWith("seat.do")) {
+			forwardPage = "/seat.jsp";
+		} else if (uri.endsWith("cinema.do")) {
+			forwardPage = "/cinema.jsp";
+		}
+
+		req.getRequestDispatcher(forwardPage).forward(req, resp);
+	}
+
+	private UserListVO makeUserFromReq(HttpServletRequest req) {
+		UserListVO user = new UserListVO();
+		user.setUserId(req.getParameter("userId"));
+		user.setUserPassword(req.getParameter("userPassword"));
+		user.setUserName(req.getParameter("userName"));
+		try {
+			user.setUserAge(Integer.parseInt(req.getParameter("userAge")));
+		} catch (NumberFormatException e) {
+			user.setUserAge(0);
+		}
+		user.setUserMobile(req.getParameter("userMobile"));
+		return user;
+	}
+}

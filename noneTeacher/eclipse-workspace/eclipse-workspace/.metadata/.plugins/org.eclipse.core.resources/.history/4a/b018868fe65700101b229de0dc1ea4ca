@@ -1,0 +1,11 @@
+
+
+public class Dog extends Animal {
+
+	Dog(String name) {
+		super();
+		
+		super.name = name;
+	}
+	
+}

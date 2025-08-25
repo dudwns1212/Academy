@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<meta charset="utf-8">
+<title>Insert title here</title>
+<style type="text/css">
+	header,section,footer,aside,nav,article,figure,figcaption,hgroup{
+  		display: block;
+  		text-align: center;
+  	}
+	table{
+		border: 1px solid;
+		width: 960px;
+	}
+	td{
+		width: 200px;
+	}
+	header{
+		height: 80px;
+		margin: 5px;
+		padding: 10px;
+		background: #cccccc;
+		text-align: center;
+	}
+
+</style>
+
+</head>
+<body>
+	<header>
+		<h1>jQuery Ajax Exercise</h1>
+	</header>
+	<section>
+		<form action="">
+			<table>
+				<tr><td>
+					<select id="type">
+						<option value="koreanfood">한식</option>
+						<option value="saladbar">셀러드바</option>
+					</select>
+					</td>
+					<td>
+					<select id="detail">
+						<option value="sodam">소담애</option>
+						<option value="babnbool">밥앤불고기</option>
+					</select>
+					</td>
+				</tr>
+				<tr><td></td><td></td></tr>
+			</table>
+		</form>
+	</section>
+	<p>타입이 달라지면 여기에 해당타입의 데이터가 출력됩니다</p>
+	<p id="myp">타입 디테일</p>
+<script type="text/javascript">
+	//type이 변경되면 실행될 이벤트 리스너
+	$('#type').on('change', function(){
+		//alert('type이 변경');
+		let type = $('#type').val();
+		$.ajax({
+			url: 'JQServlet',
+			data: {'type':type},
+			datatype: "json",
+			success: changeDetail
+		});
+	});
+	
+	function changeDetail(data){
+		//type이 바뀌는게 성공하면 -> detail이 바뀜
+		let detailOption = $('#detail')
+		detailOption.empty();
+		for(let key in data){
+			newDetailOption = `<option value="${key}">${data[key]}</option>`;
+			detailOption.append(newDetailOption);
+		}
+		
+		
+		
+		
+	}
+	
+</script>
+</body>
+</html>

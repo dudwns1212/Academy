@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jsp과제 1</title>
+</head>
+<body>
+	<div>
+		<label>나의 혈액형은? : o</label><output></output><br>
+		<label>나를 나타내는 동물 이미지는? : </label>
+		<img alt="" src="images/do.jpg" style="width: 40px;height: 40px"><br>
+		<label>내가 좋아하는 노래는? : </label>
+		<a href="https://www.youtube.com/watch?v=fBB4MaBybyg&list=RDfBB4MaBybyg&start_radio=1">소나기-이클립스</a><br>
+		<label>동료에게 들려줄 좋은 말 : 오늘도 화이팅!</label>
+	</div>
+
+
+</body>
+</html>

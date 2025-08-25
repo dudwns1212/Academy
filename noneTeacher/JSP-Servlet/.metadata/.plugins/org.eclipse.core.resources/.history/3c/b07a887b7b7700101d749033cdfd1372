@@ -1,0 +1,51 @@
+package userList;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+
+import javax.naming.Context;
+import javax.naming.InitialContext;
+import javax.sql.DataSource;
+
+public class UserListDAO {
+	static String sql = "select * from employees where DEPARTMENT_ID = ";
+	static String driverClassName = "oracle.jdbc.driver.OracleDriver";
+	static String connectionUrl = "jdbc:oracle:thin:@localhost:1521:xe";
+	static String userName = "hr";
+	static String password = "hr";
+	static String sqlInsertDB = "insert into addrbook(AB_NAME,ab_email,ab_comdept,ab_birth,ab_tel,ab_memo) "
+			+ "values(?,?,?,?,?,?)";
+
+	// 커넥션 얻기 (JNDI DataSource 사용)
+	private static Connection getConnection() throws Exception {
+		Context initContext = new InitialContext();
+		Context envContext = (Context) initContext.lookup("java:comp/env");
+		DataSource dataSource = (DataSource) envContext.lookup("jdbc/mydb");
+		return dataSource.getConnection();
+	}
+
+	// 로그인 메서드 - try-with-resources로 자원 자동 해제
+	public UserListVO login(String id, String pw) {
+		String sql = "SELECT * FROM users WHERE id = ? AND password = ?";
+
+		try (Connection conn = getConnection(); PreparedStatement pstmt = conn.prepareStatement(sql)) {
+
+			pstmt.setString(1, id);
+			pstmt.setString(2, pw);
+
+			try (ResultSet rs = pstmt.executeQuery()) {
+				if (rs.next()) {
+					UserListVO vo = new UserListVO();
+					vo.setUserId(rs.getString("id"));
+					vo.setUserPassword(rs.getString("password"));
+					vo.setUserName(rs.getString("name"));
+					vo.setUserAge(rs.getInt("age"));
+					vo.setUserMobile(rs.getString("mobile"));
+					return vo;
+				}
+			}
+		}
+		return null; // 로그인 실패 시 null 반환
+	}
+}

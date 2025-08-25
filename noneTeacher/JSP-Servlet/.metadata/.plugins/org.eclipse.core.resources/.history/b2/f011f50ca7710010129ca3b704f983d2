@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jsp과제 1</title>
+</head>
+<body>
+	<div>
+		<input>나의 혈액형은?</input>
+	</div>
+
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+package 매장관리기능;
+
+import java.util.ArrayList;
+
+public class Customer extends Store {
+	
+	String name;
+	int age;
+	String mobile;
+	ArrayList<Customer>customers = new ArrayList<Customer>();
+	
+	public Customer() {
+		
+	}
+	
+	public Customer(String name, int age, String mobile) {
+		this.name = name;
+		this.age = age;
+		this.mobile = mobile;
+		
+	}
+}

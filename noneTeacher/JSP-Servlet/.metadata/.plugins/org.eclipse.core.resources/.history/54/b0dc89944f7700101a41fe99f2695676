@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script type="text/javascript">
+	//key와 value
+	const list = {"sodam":"소담","babnbool":"밥앤불고기"};
+	for(let key in list){
+		console.log(key, list[key]);
+		const myoption = `<option value="${key}">${list[key]}</option>`;
+	}
+
+</script>
+</body>
+</html>

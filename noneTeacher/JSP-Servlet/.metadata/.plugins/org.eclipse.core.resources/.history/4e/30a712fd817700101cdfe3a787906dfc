@@ -1,0 +1,57 @@
+package userList;
+
+import java.io.IOException;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+@WebServlet("*.do")
+public class UserServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+	
+	UserListDAO dao = new UserListDAO();
+
+	
+	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+	    req.setCharacterEncoding("utf-8");
+	    String uri = req.getRequestURI();  
+	    System.out.println("uri=" + uri);
+
+	    String forwardPage = "/home.jsp"; 
+
+	    if (uri.endsWith("login.do")) { //아이디랑 비밀번호 입력하고 login 버튼 눌렀을 때
+	        String id = req.getParameter("id"); //파라미터 받아오고
+	        String pw = req.getParameter("pw");
+
+	        if (id != null && pw != null) {//둘다 입력을 했다면
+	            UserListVO user = dao.login(id, pw); //dao메서드 실행
+
+	            if (user != null) {
+	                HttpSession session = req.getSession();
+	                session.setAttribute("loginUser", user);
+	                forwardPage = "/home.jsp"; // 로그인 성공
+	            } else {
+	                req.setAttribute("errorMsg", "아이디 또는 비밀번호가 일치하지 않습니다.");
+	                forwardPage = "/login.jsp"; // 로그인 실패
+	            }
+	        } else {
+	            forwardPage = "/login.jsp"; // 파라미터 없으면 로그인 페이지
+	        }
+	    } else if (uri.endsWith("home.do")) {
+	        forwardPage = "/home.jsp";
+	    } else if (uri.endsWith("movie.do")) {
+	        forwardPage = "/movie.jsp";
+	    } else if (uri.endsWith("register.do")) {
+	        forwardPage = "/register.jsp";
+	    } else if (uri.endsWith("seat.do")) {
+	        forwardPage = "/seat.jsp";
+	    } else if (uri.endsWith("cinema.do")) {
+	        forwardPage = "/cinema.jsp";
+	    }
+
+	    req.getRequestDispatcher(forwardPage).forward(req, resp);
+	}
+}

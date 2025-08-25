@@ -1,0 +1,22 @@
+package 아침복습4;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+public class Dog extends Animal {
+	
+	String birth;
+	
+	public Dog() {
+		
+	}
+	
+	public Dog(String name) {
+		this.name = name;
+		
+		Date date = new Date();
+		SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd-HH:ss:mm");
+		birth = format.format(date);
+	}
+	
+}

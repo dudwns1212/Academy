@@ -1,0 +1,96 @@
+package 해시리스트;
+
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.HashMap;
+
+public class Test1 {
+	
+	public static void main(String[] args) {
+		
+		Farm farm1 = new Farm();
+		Dog dog1 = new Dog("미미"); // 여기서 미미는 Animal클래스의 name
+		Cat cat1 = new Cat("라라");
+		System.out.println("강아지가 태어난 시간 : " + dog1.birth);
+		
+		farm1.animals.put("mimi", dog1);
+		farm1.animals.put("rara", cat1);
+		
+		System.out.println("미미를 찾아줘 : " + farm1.animals.get("mimi").name);
+		System.out.println("라라를 찾아줘 : " + farm1.animals.get("rara").name);
+		
+		System.out.println("강아지는 몇 마리? : " + farm1.animals.size());
+		
+		farm1.setDog(dog1);
+		
+		farm1.animalsA.add(new Dog("도도"));  // 강아지를 만들어서 바로 배열에 넣음
+		farm1.animalsA.add(new Dog("츄츄"));
+		
+		System.out.println("강아지는 몇 마리? : " + farm1.animalsA.size());
+		
+		for(int i=0;i<farm1.animalsA.size();i++) {
+			System.out.println("강아지 " + i + " : " + farm1.animalsA.get(i).name);  // 해시리스트도 가능
+		} 
+		
+		System.out.println("강아지 마리 수 : " + Dog.count);
+		
+		Cat cat2 = new Cat("야미");
+		
+		farm1.animals.put("rara", cat1);
+		farm1.animals.put("yami", cat2);
+		
+		System.out.println("야미를 찾아줘 : " + farm1.animals.get("yami").name);
+		
+	}
+}
+class Farm {
+	
+	public Dog dog;
+	
+	public void setDog(Dog dog) {
+		this.dog = dog;
+	}
+	
+	HashMap <String,Animal> animals = new HashMap<String,Animal>();
+	
+	ArrayList <Dog> animalsA = new ArrayList<Dog>();
+	
+}
+
+class Animal {
+	String name;
+	String birth;
+}
+
+class Dog extends Animal {
+	
+	public static int count = 0;
+	
+	Dog(String name) {
+		super();  // 부모 생성자 실행
+		super.name = name;  // 부모 클래스의 name에 값 설정
+		// super(name), this.name = name 모두 위와 같음
+		System.out.println("강아지가 만들어졌어요. 이름: " + name);
+		
+		count ++;
+		// 코딩의 기록시간을 알려주는 코드 Date, SimpleDateFormat
+		Date date = new Date(); 
+		SimpleDateFormat format = new SimpleDateFormat("YYYY-MM-dd : HH:mm");
+		// birth = format.format(date); 아래 대신에 이렇게도 쓸 수 있음
+		String now = format.format(date);
+		super.birth = now;
+	}
+	
+}
+
+class Cat extends Animal {
+	Cat(String name) {
+		super();
+		super.name = name;
+		System.out.println("고양이가 만들어졌어요. 이름: " + name);
+	}
+}
+
+
+

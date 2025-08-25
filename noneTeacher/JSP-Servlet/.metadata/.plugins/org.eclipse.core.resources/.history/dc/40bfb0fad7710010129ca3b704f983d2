@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<div align="center" row-ailgn>
+		<form action="lunch.jsp">
+			<h2>웹 폼 사례</h2>
+			<table cellspacing="2" cellpadding="2" border="1">
+				<tr>
+					<td id="tag">사용자이름</td>
+					<td><input type="text" name="name" placeholder="이름을 입력하세요."></td>
+				</tr>
+				<tr>
+					<td id="tag">이메일</td>
+					<td><input type="text" name="email" placeholder="메일주소를 입력하세요."></td>
+				</tr>
+				<tr>
+					<td id="tag">검색단어</td>
+					<td><input type="text" name="serch" placeholder="검색어를 입력하세요."></td>
+				</tr>
+				<tr>
+					<td id="tag">취미</td>
+					<td>
+					<input type="checkbox" name="hobby" value="sports">운동 
+					<input type="checkbox" name="hobby" value="music">악기 
+					<input type="checkbox" name="hobby" value="trip">여행</td>
+				</tr>
+				<tr>
+					<td id="tag">성별</td>
+					<td><input type="radio" name="gender" value="남자">남자<input
+						type="radio" name="gender" value="여자">여자</td>
+				</tr>
+				<tr>
+					<td id="tag">점심메뉴</td>
+					<td><select name="dinner">
+							<option value="opt1">짜장면</option>
+							<option value="opt2">짬뽕</option>
+							<option value="opt3">라면</option>
+							<option value="opt4">김</option>
+							<option value="opt5">참치캔</option>
+							<option value="opt6">햄버거</option>
+					</select><br></td>
+				</tr>
+			</table>
+			<button type="submit" value="전송">Submit</button>
+		</form>
+	</div>
+</body>
+
+<style>
+	
+	td, tr {
+		text-align: center;
+	}
+	
+	#tag {
+	
+		font-weight: bolder;
+	
+	}
+	
+</style>
+
+</html>

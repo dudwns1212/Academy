@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item key="hasShownOverlayPopupBefore" value="true"/>
+	<item key="replaceBarOpen" value="true"/>
+	<list key="searchhistory">
+		<item value="cdao"/>
+		<item value="mdao"/>
+		<item value="udao"/>
+		<item value="rdao"/>
+		<item value="sdao"/>
+		<item value="rdap"/>
+		<item value="movieGenre.do"/>
+		<item value="logo"/>
+		<item value="logo\"/>
+		<item value="seatDAO"/>
+		<item value=".active"/>
+		<item value="전체"/>
+		<item value="active"/>
+		<item value=".movie.selected"/>
+		<item value="selected"/>
+	</list>
+	<list key="replacehistory">
+		<item value="MovieGenreServlet"/>
+		<item value="sdao"/>
+		<item value="public"/>
+		<item value="#movie"/>
+		<item value="selectedMovie"/>
+		<item value="res"/>
+		<item value="req"/>
+	</list>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item key="selection" value="user"/>
+		<item key="casesensitive" value="false"/>
+		<item key="wholeword" value="false"/>
+		<item key="isRegEx" value="false"/>
+		<item key="wrap" value="true"/>
+		<item key="incremental" value="false"/>
+		<list key="findhistory">
+			<item value="movieLike.do"/>
+			<item value="member"/>
+			<item value="hobby"/>
+		</list>
+		<list key="replacehistory">
+			<item value="user"/>
+			<item value="&lt;%=hobby%&gt;"/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.GotoLineAction$GotoLineDialog_dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="724"/>
+		<item key="DIALOG_Y_ORIGIN" value="396"/>
+	</section>
+	<section name="java.lang.Class">
+		<item key="selection" value="datas"/>
+		<list key="findhistory">
+			<item value="datas"/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="922"/>
+		<item key="DIALOG_Y_ORIGIN" value="327"/>
+		<item key="DIALOG_WIDTH" value="418"/>
+		<item key="DIALOG_HEIGHT" value="523"/>
+		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-18|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
+	</section>
+</section>

@@ -1,0 +1,32 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<div class="d-flex text-center">
+		<h2>웹 폼 사례</h2>
+		<table cellspacing="6" cellpadding="2" border="1">
+			<tr>
+				<td align="right">First name:</td>
+				<td><input type="text" name="firstName"></td>
+			</tr>
+			<tr>
+				<td align="right">First name:</td>
+				<td><input type="text" name="firstName"></td>
+			</tr>
+			<tr>
+				<td align="right">First name:</td>
+				<td><input type="text" name="firstName"></td>
+			</tr>
+			<tr>
+				<td align="right">First name:</td>
+				<td><input type="text" name="firstName"></td>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>

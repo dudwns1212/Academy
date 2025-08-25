@@ -1,0 +1,18 @@
+package 아침복습3_1;
+
+public class Dog extends Animal {
+	
+	public Dog() {
+		
+	}
+	
+	public Dog(String name) {
+		//this.name = name;
+		//super.name = name;
+		super(name); // 상속받으면 3개가 모두 같음
+		
+	}
+	
+	
+	
+}

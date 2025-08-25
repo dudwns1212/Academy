@@ -1,0 +1,5 @@
+package 책과만화책을판매하는서점구현;
+
+public interface IBook {
+
+}

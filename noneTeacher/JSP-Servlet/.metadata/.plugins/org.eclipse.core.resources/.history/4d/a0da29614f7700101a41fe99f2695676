@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script type="text/javascript">
+	const list = {"sodam":"소담","babnbool":"밥앤불고기"};
+	for(let key in list){
+		console.log(key, list[key]);
+	}
+
+</script>
+</body>
+</html>

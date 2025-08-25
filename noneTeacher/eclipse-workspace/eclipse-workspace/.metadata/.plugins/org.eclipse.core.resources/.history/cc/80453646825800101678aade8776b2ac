@@ -1,0 +1,6 @@
+package 아침복습4;
+
+public class Farm {
+	String name;
+	
+}

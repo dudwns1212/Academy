@@ -1,0 +1,21 @@
+package 도서관;
+
+public class LibraryItem {
+	
+	String title;
+	String author;
+	
+	LibraryItem() {
+		
+	}
+	
+	LibraryItem(String title, String author) {
+		this.title = title;
+		this.author = author;
+	}
+	
+	void read() {
+		
+	}
+	
+}

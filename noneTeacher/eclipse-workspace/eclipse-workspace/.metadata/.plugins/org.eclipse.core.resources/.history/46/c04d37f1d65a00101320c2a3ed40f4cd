@@ -1,0 +1,12 @@
+package 아침복습매우중요;
+
+public class Farm {
+	
+	Animal animal;
+	
+	// animal 변수상자에 값을 직접 넣어주는 것이 아니라 setAnimal 함수상자를 이용해서 aniaml 변수상자에 값을 넣어줌
+	void setAnimal(Animal animal) {
+		this.animal = animal;
+	}
+	
+}

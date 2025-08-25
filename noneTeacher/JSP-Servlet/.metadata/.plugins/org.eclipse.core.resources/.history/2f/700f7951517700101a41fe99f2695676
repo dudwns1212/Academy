@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script type="text/javascript">
+	
+	const list = {"sodam":"소담","babnbool":"밥앤불고기"};
+	for(let key in list){
+		console.log(key, list[key]);
+		//option을 이런식으로 만들 수 있음	
+		const myoption = `<option value="${key}">${list[key]}</option>`;
+		console.log(myoption);
+	}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>main.html</h1>
+	<a href="hello.jsp">hello.jsp</a>
+	<a href="http://localhost:8080/myjsp/hello.jsp">hello.jsp</a>
+	<br>
+		Last Name : <input type="text" name="LastName">
+	<form action="hello.jsp" method="get">
+		First Name : <input type="text" name="fristName"><br>
+		<select name="lunch">
+			<option value="opt1">1</option>
+			<option value="opt2">2</option>
+			<option value="opt3">3</option>
+			<option value="opt4">4</option>
+			<option value="opt5">5</option>
+			<option value="opt6">6</option>
+		</select>
+		<input type="submit" value="전송">
+	</form>
+	
+</body>
+</html>

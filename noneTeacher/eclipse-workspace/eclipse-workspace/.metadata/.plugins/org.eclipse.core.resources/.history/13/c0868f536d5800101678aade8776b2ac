@@ -1,0 +1,30 @@
+package 아침복습3_1;
+
+public class Animal {
+	
+	String name; 
+	
+	public Animal() {
+		
+	}
+	
+	public String getName() {
+		return name;
+	}
+	
+	public Animal(String name) {
+		this.name = name;
+	}
+	
+	
+	public void run() {
+		System.out.println(this.name + "뛰어다닙니다.");
+	}
+	
+	public static void walk() {
+		System.out.println( "걸어다닙니다.");
+	}
+	
+	
+	
+}

@@ -1,0 +1,5 @@
+package userList;
+
+public class UserListVO {
+
+}

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jsp과제 1</title>
+</head>
+<body>
+	<div>
+		<label>나의 혈액형은? : o</label><br>
+		<label>나를 나타내는 동물 이미지는? : </label>
+		<br><img alt="" src="images/do.jpg" style="width: 300px;height: 300px"><br>
+		<label>내가 좋아하는 노래는? : </label>
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/fBB4MaBybyg?si=ZuONakYlGAhLinWf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br>
+		<label>동료에게 들려줄 좋은 말 : 오늘도 화이팅!</label>
+	</div>
+
+
+</body>
+</html>

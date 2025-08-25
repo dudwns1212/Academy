@@ -1,0 +1,17 @@
+package ab;
+
+public class LJB {
+	void print() {
+		
+	}
+	
+	void pushpush(){
+		
+	}
+
+
+	void ljb() {
+		
+	}
+	
+}

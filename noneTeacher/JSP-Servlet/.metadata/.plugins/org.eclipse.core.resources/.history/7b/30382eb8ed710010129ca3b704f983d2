@@ -1,0 +1,75 @@
+<%@page import="java.util.ArrayList"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<% 
+	ArrayList hobby = new ArrayList();
+	String name = request.getParameter("name");
+	String email = request.getParameter("email");
+	String serch = request.getParameter("serch");
+	String gender = request.getParameter("gender");
+	String dinner = request.getParameter("dinner");
+	hobby = request.getParameter(hobby);
+
+%>
+
+	<div align="center">
+		<h2>출력값 받기</h2>
+		<table cellspacing="2" cellpadding="2" border="1">
+			<tr>
+				<td id="tag">사용자이름</td>
+				<td><input type="text" value=<%=name%> id="tag"></td>
+			</tr>
+			<tr>
+				<td id="tag">이메일</td>
+				<td><input type="text" value=<%=email%>></td>
+			</tr>
+			<tr>
+				<td id="tag">검색단어</td>
+				<td><input type="text" value=<%=serch%>></td>
+			</tr>
+			<tr>
+				<td id="tag">취미</td>
+				<td>  
+					<input type="text" value=<%=hobby+"," + hobby%>>
+				</td>
+			</tr>
+			<tr>
+				<td id="tag">성별</td>
+				<td>
+					<input type="text" value=<%=gender%>>
+				</td>
+			</tr>
+			<tr>
+				<td id="tag">점심메뉴</td>
+				<td>
+					<input type="text" value=<%=dinner%>>
+				</td>
+			</tr>
+		</table>
+	</div>
+
+
+</body>
+<style>	
+	td, tr {
+		
+		text-align: center;
+		
+	}
+	
+	#tag {
+	
+		font-weight: bolder;
+		align-items: center;
+	
+	}
+	
+</style>
+</html>

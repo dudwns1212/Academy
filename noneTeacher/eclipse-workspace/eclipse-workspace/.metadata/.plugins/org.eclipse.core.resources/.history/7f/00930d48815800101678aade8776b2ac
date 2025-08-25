@@ -1,0 +1,6 @@
+package 리스트;
+
+public class 스태틱이해2 extends 스태틱이해 {
+	
+
+}

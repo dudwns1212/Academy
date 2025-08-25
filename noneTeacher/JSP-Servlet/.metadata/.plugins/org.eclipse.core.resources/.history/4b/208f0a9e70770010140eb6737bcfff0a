@@ -1,0 +1,369 @@
+<%@page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>영화관 홈페이지</title>
+<style>
+  /* 기본 바디 스타일 */
+  body {
+    margin: 0;
+    background-color: #000; /* 검은 배경 */
+    color: #eee; /* 연한 글씨 색 */
+    font-family: 'Noto Sans KR', sans-serif;
+  }
+
+  /* 헤더 영역 */
+  header {
+    width: 100%;
+    padding: 20px 0 10px; /* 위 20px, 아래 10px */
+    position: relative; /* 로그인/회원가입 절대위치용 */
+    text-align: center;
+  }
+  /* 메인 타이틀 스타일 */
+  h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 0.1em; /* 글자 간격 */
+  }
+  /* 서브 타이틀 스타일 */
+  h2 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    padding-bottom: 10px;
+  }
+  /* 타이틀 아래 밑줄 */
+  .underline {
+    width: 1200px;
+    border-bottom: 2px solid #666;
+    margin: 0 auto 20px;
+  }
+
+  /* 로그인 버튼 위치 및 스타일 */
+  .login {
+    position: absolute; /* 헤더 내 절대 위치 */
+    right: 100px; /* 오른쪽에서 100px */
+    top: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+  }
+  .login button {
+    padding: 10px 25px;
+    font-size: 0.8rem;
+    background: transparent;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  .login button:hover {
+    background-color: #444; /* 마우스 오버 시 배경색 변경 */
+  }
+
+  /* 회원가입 버튼 위치 및 스타일 */
+  .signup {
+    position: absolute;
+    right: 10px; /* 로그인 버튼보다 오른쪽 끝에 위치 */
+    top: 20px;
+  }
+  .signup button {
+    padding: 10px 25px;
+    font-size: 0.8rem;
+    background: transparent;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  .signup button:hover {
+    background-color: #444;
+  }
+
+  /* 네비게이션 메뉴 영역 (예매, 영화, 영화관) */
+  .ticketing_menu {
+    display: flex; /* 가로 정렬 */
+    gap: 15px; /* 메뉴 간격 */
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto 40px; /* 상단 0, 하단 40px */
+    position: relative;
+  }
+  /* 드롭다운 메뉴 구조 */
+  .dropdown {
+    position: relative; /* 드롭다운 컨텐츠의 기준 위치 */
+    display: inline-block;
+    min-width: 100px;
+  }
+  /* 드롭다운 버튼 스타일 */
+  .dropbtn {
+    padding: 10px 30px;
+    font-size: 1rem;
+    color: #fff;
+    background: transparent;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  /* 버튼 hover & 포커스 시 배경색 변경 */
+  .dropbtn:hover,
+  .dropbtn:focus {
+    background-color: #333;
+    outline: none;
+  }
+  /* 드롭다운 메뉴가 숨겨진 상태 */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    font-size: 0.7rem;
+    top: 100%; /* 버튼 바로 아래 */
+    left: 50%;
+    transform: translateX(-50%); /* 중앙 정렬 */
+    background-color: #222;
+    border-radius: 0 0 5px 5px;
+    z-index: 100;
+    flex-direction: row;
+    gap: 15px;
+    padding: 10px 15px;
+    white-space: nowrap; /* 줄 바꿈 금지 */
+  }
+  /* 드롭다운 영역 마우스 오버 혹은 포커스 시 보임 */
+  .dropdown:hover .dropdown-content,
+  .dropdown:focus-within .dropdown-content {
+    display: flex;
+  }
+  /* 드롭다운 메뉴 링크 스타일 */
+  .dropdown-content a {
+    padding: 5px 8px;
+    color: #eee;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    flex-basis: 120px; /* 일정 너비 유지 */
+  }
+  /* 메뉴 링크 hover 및 포커스 효과 */
+  .dropdown-content a:hover,
+  .dropdown-content a:focus {
+    background-color: #333;
+    outline: none;
+  }
+
+  /* 드롭다운 외 다른 버튼 스타일 */
+  .ticketing_menu button:not(.dropbtn) {
+    background: transparent;
+    border: none;
+    padding: 10px 30px;
+    font-size: 1rem;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  .ticketing_menu button:not(.dropbtn):hover,
+  .ticketing_menu button:not(.dropbtn):focus {
+    background-color: #333;
+    outline: none;
+  }
+
+  /* --- 캐러셀 영역 스타일 --- */
+  main {
+    max-width: 1200px;
+    margin: 0 auto 60px; /* 하단 마진 */
+  }
+
+  .carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden; /* 넘치는 부분 숨김 */
+    border-radius: 10px; /* 둥근 모서리 */
+  }
+
+  .carousel-track {
+    display: flex; /* 슬라이드를 가로로 나열 */
+    transition: transform 0.5s ease; /* 부드러운 이동 효과 */
+  }
+
+  .carousel-slide {
+    min-width: 100%; /* 한 화면에 한 슬라이드 */
+    position: relative;
+  }
+
+  .carousel-slide img {
+    width: 100%; /* 슬라이드 이미지 전체 넓이 */
+    display: block;
+    border-radius: 10px;
+  }
+
+  /* 슬라이드 내 텍스트 박스 */
+  .carousel-caption {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    color: #fff;
+    background: rgba(0,0,0,0.6); /* 반투명 검정 배경 */
+    padding: 10px 20px;
+    border-radius: 5px;
+    max-width: 70%;
+  }
+
+  /* 이전/다음 버튼 공통 스타일 */
+  .carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(50, 50, 50, 0.7);
+    border: none;
+    color: #eee;
+    font-size: 2rem;
+    padding: 5px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    user-select: none; /* 텍스트 선택 방지 */
+  }
+  /* 버튼 hover & 포커스 스타일 */
+  .carousel-button:hover,
+  .carousel-button:focus {
+    background: rgba(100, 100, 100, 0.9);
+    outline: none;
+  }
+  /* 왼쪽 이전 버튼 위치 */
+  .carousel-button.prev {
+    left: 10px;
+  }
+  /* 오른쪽 다음 버튼 위치 */
+  .carousel-button.next {
+    right: 10px;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <!-- 로그인 버튼 -->
+	<form action="login.do">
+	  <div class="login">
+	    <button>로그인</button>
+	  </div>
+	</form>
+  <!-- 회원가입 버튼 -->
+	<form action="register.do">
+	  <div class="signup">
+	    <button>회원가입</button>
+	  </div>
+	</form>
+
+  <!-- 타이틀 -->
+  <h1>공간 시네마</h1>
+  <h2>LX-CINEMA</h2>
+  <div class="underline"></div>
+
+  <!-- 네비게이션 메뉴 -->
+  <div class="ticketing_menu">
+    <!-- 드롭다운 예매 메뉴 -->
+    <div class="dropdown">
+      <button class="dropbtn" aria-haspopup="true" aria-expanded="false">예매</button>
+      <div class="dropdown-content" role="menu" aria-label="예매 메뉴">
+        <a href="#" role="menuitem">현재 상영작</a>
+        <a href="#" role="menuitem">예매 내역</a>
+        <a href="#" role="menuitem">특별 이벤트</a>
+      </div>
+    </div>
+    <!-- 기타 메뉴 버튼 -->
+    <button>영화</button>
+    <button>영화관</button>
+  </div>
+</header>
+
+<main>
+  <!-- 캐러셀 메인 컨테이너 -->
+  <div class="carousel" aria-label="영화관 주요 홍보 캐러셀">
+    <!-- 이전 슬라이드 버튼 -->
+    <button class="carousel-button prev" aria-label="이전 슬라이드">&#10094;</button>
+
+    <!-- 슬라이드 트랙: 슬라이드들이 가로로 나열됨 -->
+    <div class="carousel-track">
+      <!-- 개별 슬라이드 -->
+      <div class="carousel-slide">
+        <img src="https://picsum.photos/id/1015/1200/500" alt="영화 1 이미지">
+        <div class="carousel-caption">
+          <h3>영화 타이틀 1</h3>
+          <p>최신 대작 블록버스터 소개 텍스트</p>
+        </div>
+      </div>
+      <div class="carousel-slide">
+        <img src="https://picsum.photos/id/1016/1200/500" alt="영화 2 이미지">
+        <div class="carousel-caption">
+          <h3>영화 타이틀 2</h3>
+          <p>다음 흥행작 예고편 안내</p>
+        </div>
+      </div>
+      <div class="carousel-slide">
+        <img src="https://picsum.photos/id/1018/1200/500" alt="영화 3 이미지">
+        <div class="carousel-caption">
+          <h3>영화 타이틀 3</h3>
+          <p>특별 이벤트 및 할인 안내</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 다음 슬라이드 버튼 -->
+    <button class="carousel-button next" aria-label="다음 슬라이드">&#10095;</button>
+  </div>
+</main>
+
+<script>
+  // 캐러셀 동작 관련 JS
+
+  // 슬라이드 트랙 컨테이너 선택
+  const track = document.querySelector('.carousel-track');
+  // 슬라이드들 배열로 저장
+  const slides = Array.from(track.children);
+  // 이전/다음 버튼 선택
+  const prevBtn = document.querySelector('.carousel-button.prev');
+  const nextBtn = document.querySelector('.carousel-button.next');
+
+  let currentIndex = 0; // 현재 슬라이드 인덱스
+
+  // 슬라이드 위치 업데이트 함수
+  function updateSlidePosition() {
+    // 슬라이드 한 개 너비 계산
+    const slideWidth = slides[0].getBoundingClientRect().width;
+    // 트랙을 이동시켜 현재 슬라이드가 보이도록 조정
+    track.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+  }
+
+  // 이전 버튼 클릭 시 이벤트
+  prevBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex === 0) ? slides.length -1 : currentIndex -1;
+    updateSlidePosition();
+  });
+
+  // 다음 버튼 클릭 시 이벤트
+  nextBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex === slides.length -1) ? 0 : currentIndex +1;
+    updateSlidePosition();
+  });
+
+  // 창 크기 변경 시 슬라이드 위치 재계산
+  window.addEventListener('resize', updateSlidePosition);
+
+  // 초기 위치 세팅
+  updateSlidePosition();
+
+  // 4초마다 자동 다음 슬라이드 전환
+  setInterval(() => {
+    nextBtn.click();
+  }, 4000);
+  
+</script>
+
+</body>
+</html>

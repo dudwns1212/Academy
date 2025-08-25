@@ -76,7 +76,7 @@ class DatabaseHelper {
     /// sqlObj: SQL 객체의 이름 (sql, count, where, order, page 속성이 포함된 객체)
     ///
     async queryList(sqlObj, params) {
- 
+
         const total = await this.queryCount(sqlObj, params);
         const rows = await this.queryListOnly(sqlObj, params);
 
@@ -86,4 +86,3 @@ class DatabaseHelper {
 }
 
 module.exports = DatabaseHelper;
- 

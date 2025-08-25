@@ -1,0 +1,12 @@
+
+public class Cat implements IAnimal{
+	
+	String name;
+	
+	public void run() {
+		System.out.println("고양이가 뛰어갑니다.");
+	}
+	
+	
+	
+}

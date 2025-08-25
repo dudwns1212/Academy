@@ -1,0 +1,6 @@
+package myjsp;
+
+public class UserIO {
+	// 사용자의 정보를 전달 받아서  파일에 저장한다.
+	addUser
+}

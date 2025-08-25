@@ -1,0 +1,38 @@
+package 아침복습매우중요2_Fa;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+
+public class Farm {
+
+	public HashMap<String,ArrayList<IAnimal>>animalMap = new HashMap<String,ArrayList<IAnimal>>();
+	
+	// type으로 "dog"가 전달되면 강아지 한 마리를 반환해주고, "cat"이 전달되면 고양이 한 마리를 반환해줌
+	// money : 지불 할 금액
+	public IAnimal pay(String type, int money) {
+		System.out.println("pay 함수 호출 됨 -> type : " + type + ", money : " + money);
+		
+		IAnimal ouput = null;
+		if(type.equals("dogs")) {
+			ArrayList<IAnimal> dogs = animalMap.get("dogs");
+			IAnimal output = dogs.removeFirst(); 
+			
+			return output;
+			
+		} else if(type.equals("cats")){
+			ArrayList<IAnimal> cats = animalMap.get("cats");
+			IAnimal output = cats.removeFirst();
+			
+			return output;
+			
+		} else { 
+			System.out.println("type의 값이 틀렸습니다.");
+			
+			return null;
+		}
+	}
+	
+	
+	
+	
+}

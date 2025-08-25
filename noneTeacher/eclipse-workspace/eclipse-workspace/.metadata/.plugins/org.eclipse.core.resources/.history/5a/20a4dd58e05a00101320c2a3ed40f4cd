@@ -1,0 +1,9 @@
+package 아침복습매우중요;
+
+// 인터페이스 : 약속을 정하는 것
+public interface IAnimal {
+
+	// 이 약속을 지키는 붕어빵 틀은 run이라는 함수상자를 꼭 가지고 있어야 함
+	public void run();
+	
+}

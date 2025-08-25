@@ -1,0 +1,21 @@
+package 매장관리기능;
+
+import java.util.ArrayList;
+
+public class Product extends Store {
+	
+	String name;
+	int price;
+	
+	static int wholePrice = 0;
+	
+	public Product() {
+		
+	}
+	
+	public Product(String name, int price) {
+		this.name = name;
+		this.price = price;
+		
+	}
+}

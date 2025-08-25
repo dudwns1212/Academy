@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>이름.html</title>
+</head>
+<body>
+	이것은 html 파일이며, html 파일은 정적 resource라고 합니다.
+	br태그가 없으니 이 줄은 바뀌지 않아여
+	<br>하지만 br태그가 이렇게 있다면 줄은 바뀌겠져?ㅋ
+</body>
+</html>

@@ -1,0 +1,64 @@
+package userList;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+
+import javax.naming.Context;
+import javax.naming.InitialContext;
+import javax.sql.DataSource;
+
+import junha.DBController;
+
+public class UserListDAO {
+
+	// 로그인 처리 메서드: id와 pw를 받아 DB에서 사용자 정보 조회
+	public UserListVO login(String id, String pw) {
+	    // id, pw가 일치하는 사용자 정보를 조회하는 SQL문
+	    String sql = "SELECT * FROM users WHERE id = ? AND password = ?"; 
+
+	    try (Connection conn = DBController.getConnection();
+	    		PreparedStatement psmt = conn.prepareStatement(sql)) {  // SQL 실행 준비
+	        
+	        psmt.setString(1, id);  // 첫 번째 ?에 id 세팅
+	        psmt.setString(2, pw);  // 두 번째 ?에 pw 세팅
+
+	        try (ResultSet rs = psmt.executeQuery()) {  // 쿼리 실행 후 결과 받음
+	            if (rs.next()) {  // 결과가 있으면 (일치하는 사용자 존재하면)
+	                UserListVO vo = new UserListVO();
+	                vo.setUserId(rs.getString("id"));  // DB에서 id 읽어 VO에 저장
+	                vo.setUserPassword(rs.getString("password"));  // 비밀번호 저장
+	                vo.setUserName(rs.getString("name"));  // 이름 저장
+	                vo.setUserAge(rs.getInt("age"));  // 나이 저장
+	                vo.setUserMobile(rs.getString("mobile"));  // 연락처 저장
+	                return vo;  // 완성된 VO 객체 반환 (로그인 성공)
+	            }
+	        }
+	    } catch (Exception e) {
+	        e.printStackTrace();  // 예외 발생 시 콘솔 출력
+	    }
+	    return null;  // 일치하는 사용자 없거나 에러 발생 시 null 반환 (로그인 실패)
+	}
+	
+	// 회원가입 처리 메서드: UserListVO 객체를 받아 DB에 새 사용자 추가
+	public boolean register(UserListVO user) {
+        // 회원정보를 users 테이블에 삽입하는 SQL문
+        String sql = "INSERT INTO users (id, password, name, age, mobile) VALUES (?, ?, ?, ?, ?)";
+        try (Connection conn = DBController.getConnection();  // DB 연결
+        		PreparedStatement psmt = conn.prepareStatement(sql)) {  // SQL 실행 준비
+
+            // VO에 담긴 사용자 정보를 각각 SQL 파라미터에 세팅
+            psmt.setString(1, user.getUserId());
+            psmt.setString(2, user.getUserPassword());
+            psmt.setString(3, user.getUserName());
+            psmt.setInt(4, user.getUserAge());
+            psmt.setString(5, user.getUserMobile());
+
+            int result = psmt.executeUpdate();  // INSERT 실행, 영향 받은 행 수 반환
+            return result > 0;  // 1 이상이면 성공, true 반환
+        } catch (Exception e) {
+            e.printStackTrace();  // 예외 발생 시 출력
+        }
+        return false;  // 실패 시 false 반환
+    }
+}

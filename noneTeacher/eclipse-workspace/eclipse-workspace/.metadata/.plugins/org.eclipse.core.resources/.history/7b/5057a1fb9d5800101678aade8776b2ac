@@ -1,0 +1,28 @@
+package 매장관리기능;
+
+import java.util.ArrayList;
+
+public class Customer extends Store {
+	
+	String name;
+	int age;
+	String mobile;
+	static ArrayList <Product> myProducts = new ArrayList <Product> ();  // 내가 산 제품들 변수
+	static ArrayList <Product> myPrice = new ArrayList <Product> ();    // 내가 산 총 금액 변수
+	
+	
+	public Customer() {
+		
+	}
+	
+	public Customer(String name, int age, String mobile) {
+		this.name = name;
+		this.age = age;
+		this.mobile = mobile;
+	}
+	
+	
+	
+	
+	
+}

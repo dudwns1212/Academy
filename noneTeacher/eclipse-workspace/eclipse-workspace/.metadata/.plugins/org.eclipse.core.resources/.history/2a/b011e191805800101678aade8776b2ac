@@ -1,0 +1,121 @@
+package 리스트;
+
+import java.util.ArrayList;
+
+public class Computer {
+	//클래스영역(main밖): 선언하는 함수(String name,함수상자)등은 사용가능하지만 실행하는 함수(println)는 사용불가 
+	public static void main(String[] args) { 
+		// 1. 변수
+		String name = "Alice";
+		int age = 25;
+		float height = 159.3f; // float/double -> 둘다 실수 자료형으로 float는 값 뒤에 항상 f
+		double weight = 44.4;
+		boolean isWoman = true; // boolean 논리자료형 값이 true 아니면 false
+		
+		System.out.println("이름: " + name);
+		System.out.println("나이: " + age);
+		System.out.println("키: " + height);
+		System.out.println("체중: " + weight);
+		System.out.println("여자인가요? " + isWoman);
+		
+		String mix = name + age;
+		System.out.println(mix); // name이랑 age을 더함 -> age의 자료형이 문자열로 변환
+		
+		int output1 = age + 10;
+		System.out.println(output1); // 25+10 = 35 출력
+		
+		//함수상자 실행
+		System.out.println(add(10,20));  // 10+20 add함수 실행
+		
+	    Computer com = new Computer(); // com이라는 객체 생성 , 생성자 실행
+	    System.out.println(com.minus(20,10)); // 객체를 생성했으니 non-static인 minus 사용가능
+	    
+	    com.walk(); // 또한 마찬가지로 객체를 통해 실행, 당연히 static이 붙었다면 객체없이 사용가능
+	    print();
+	    
+	    System.out.println("하루차-------------------------------------------------");
+	    // 클래스 이해하기
+	    com.name = "슈퍼컴퓨터";  // 생성한 컴퓨터 객체에 name이라는 변수로 이름 만듦
+	    Cpu cpu = new Cpu(); // 컴퓨터를 상속받은 Cpu 객체를 생성, 부모+자식 생성자 실행
+	    // 위의 Cpu객체 생성에서도 부모 생성자가 실행됨
+	    cpu.name = "레지스터"; // cpu에는 name변수상자가 없지만 상속받아 사용가능
+	    cpu.performance = "최고급 성능"; 
+	    // com.performance 자식의 변수는 부모에게 물려줄 수 없음
+	    System.out.println("컴퓨터의 이름: " + com.name);
+	    System.out.println("컴퓨터 안의 장치인 " + cpu.name + "의 성능은 " + cpu.performance + "이다.");
+	    
+	    
+	    System.out.println("Computer 생성자가 몇번 실행되었나요? : " + count);
+	    System.out.println("Cpu 생성자는 몇번 실행되었나요? : " + Cpu.count_cpu); // 다른 클래스의 static이므로 클래스명 붙여야됨
+	    
+	    cpu.walk(); // 함수상자도 상속가능
+	    
+	    // ArrayList 
+	    ArrayList<Computer> computers = new ArrayList<Computer>();  // 배열을 생성하는데 이름은 computers고 Computer 클래스의 객체만을 담을 수 있음
+	    computers.add(cpu); // cpu는 computer를 상속받았기에 담을 수 있음
+	    System.out.println(computers.size());  // 배열 칸 지금은 1개만 들어갔으니 1칸
+	    System.out.println(computers.get(0).name); // get(index) -> 인덱스번호의 값을 선택하여 이름을 출력
+	    
+	    // System.out.println(computers.get(0).performance); 오류 발생함-> performance는 Computer 클래스의 객체가 아님, 출력하는 방법은
+	    Computer out1 = computers.get(0);  
+	    Cpu out2 = (Cpu) out1;  // 다운캐스팅 원래 Cpu타입이던 걸 다시 Cpu타입으로 다운 
+	    System.out.println(out2.performance); // 이제 Cpu 타입이므로 배열을 통한 performance 사용가능 
+	    
+	    
+	    
+	    
+	}
+	// static 사용-> main이 static이라서 non-static은 객체없이 사용불가, 함수상자-class안 main 밖, add앞에 int=>return값이 필요함
+	static int add(int a, int b) { 
+		return a + b;
+	}
+	// non-static으로 함수선언하려면 객체를 만들어야됨 main에서 Computer com = new Computer();로 객체생성
+	int minus(int a, int b) {
+		return a - b;
+	}
+	// void는 리턴값이 없음 그냥 실행하는 단순한 상자, 함수상자의 실행은 항상 main에서 만드는건 main밖에서 
+	void walk() {
+		System.out.println("non-static은 객체가 없으면 출력할 수 없어요");
+	}
+	static void print() {
+		System.out.println("static이므로 그냥 객체없이 실행합니다.");
+	}
+	//Computer 클래스에서 변수상자 생성 
+	String name;
+	
+	static int count=0; // 같은 클래스 안의 static 끼리는 이름만으로 사용가능함
+	// 상속 + 생성자
+	Computer() {
+		System.out.println("기본 부모 생성자가 실행되었습니다.");
+		count++;
+	}
+	
+}
+	
+
+	// 컴퓨터 클래스를 상속받는 Cpu 클래스 생성, 당연히 Computer 클래스 영역 밖 또는 다른파일에서 생성
+	class Cpu extends Computer {
+		// 상속받은 String name이 포함되어있음
+		String performance;
+		
+	int count_cpu = 0;
+	
+	Cpu() {
+		System.out.println("기본 자식 생성자가 실행되었습니다.");
+		count_cpu++;
+	}
+	
+	// 다른 클래스에서 변수 사용하게 하기
+	public int age;
+	// 위는 그냥 age로 쓰고 아래는 getAge()로 써야됨 
+	public int getAge() {
+		return age;
+	}
+	
+			
+}
+
+
+
+
+

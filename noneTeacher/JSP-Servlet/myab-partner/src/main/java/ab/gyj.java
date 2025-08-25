@@ -1,0 +1,11 @@
+package ab;
+
+public class gyj {
+	void print() {
+		
+	}
+	
+	void LeeJaeBin() {
+		
+	}
+}

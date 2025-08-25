@@ -1,0 +1,41 @@
+package 아침복습매우중요2_Fa;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+
+public class Farm {
+
+	public int total = 0;
+	
+	public HashMap<String,ArrayList<IAnimal>>animalMap = new HashMap<String,ArrayList<IAnimal>>();
+	
+	// type으로 "dog"가 전달되면 강아지 한 마리를 반환해주고, "cat"이 전달되면 고양이 한 마리를 반환해줌
+	// money : 지불 할 금액
+	public IAnimal pay(String type, int money) { // pay 함수로 type값과 money값을 받아서 output을 출력
+		System.out.println("pay 함수 호출 됨 -> type : " + type + ", money : " + money);  
+		// 일단 객체의 크기가 IAnimal로 설정되어 있어서 name, 등등 아무것도 쓸 수 없음 
+		// 그냥 run함수상자 하나 쓸 수 있는 상태 그래서 output으로 출력이 돼도 활용이 안됨
+		IAnimal output = null;  // output을 null로 초기화
+		if(type.equals("dog")) { // 들어온 값이 dog이라면 해시맵 키가 dogs인 값(values) -> dogs라는 배열로 대입 여기서의 배열과 Test1에서의 dogs는 다른것같음
+			ArrayList<IAnimal> dogs = animalMap.get("dogs");
+			output = dogs.removeFirst();  // 배열의 첫 강아지를 제거함과 동시에 output값에 대입하여 출력
+			
+		} else if(type.equals("cat")){
+			ArrayList<IAnimal> cats = animalMap.get("cats");
+			output = cats.removeFirst();
+			
+		} else { // return null이 됨
+			System.out.println("type의 값이 틀렸습니다.");
+	
+			
+		}
+		
+		total += money;  // pay함수가 실행될 때 마다 money값 더함
+		
+		return output;
+	}
+	
+	
+	
+	
+}

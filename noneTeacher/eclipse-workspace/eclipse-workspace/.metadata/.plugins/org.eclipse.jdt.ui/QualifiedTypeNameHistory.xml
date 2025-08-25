@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="java.lang.Character"/>
+    <fullyQualifiedTypeName name="java.sql.Struct"/>
+    <fullyQualifiedTypeName name="java.lang.Integer"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="jdk.internal.org.jline.terminal.TerminalBuilder.SystemOutput"/>
+    <fullyQualifiedTypeName name="com.lx.cat.Cat"/>
+    <fullyQualifiedTypeName name="com.lx.sea.Fish"/>
+    <fullyQualifiedTypeName name="com.lx.sea.Sea"/>
+    <fullyQualifiedTypeName name="아침복습3_1.Animal"/>
+    <fullyQualifiedTypeName name="com.lx.animal.Animal"/>
+    <fullyQualifiedTypeName name="아침복습매우중요2_Fa.IAnimal"/>
+</qualifiedTypeNameHistroy>

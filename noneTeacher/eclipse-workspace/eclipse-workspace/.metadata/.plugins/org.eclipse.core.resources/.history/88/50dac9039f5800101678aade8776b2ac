@@ -1,0 +1,23 @@
+package 매장관리기능;
+import java.util.ArrayList;
+public class Store {
+	
+	public String name;
+	public ArrayList<Product> products = new ArrayList<Product>();     // 제품들 변수
+	public ArrayList<Customer> customers = new ArrayList<Customer>();  // 고객들 변수
+	
+	public Store() {
+		
+	}
+	
+	public Store(String name) {
+		this.name = name;
+	}
+	
+	static public void pay(Customer customer, Product product) {
+		
+		
+		
+	}
+	
+}

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>전체 메뉴</title>
+
+        <style>
+
+            h1 {
+                margin-inline: 90px;
+            }
+
+            h2 {
+                margin-inline: 90px;
+            }
+
+            body {
+                border: 2px solid black;
+                margin: 10px auto;
+                width: 500px;
+            }
+
+            button {
+                margin-inline: 190px;
+                padding: 20px;
+                margin-bottom: 10px;
+                font-size: large;
+                
+            }
+
+        </style>
+
+    </head>
+    <body>
+        <h1><%=username%>님 환영합니다</h1>
+
+        <div>
+            <button onclick="customerMenu()">고객관리</button><p></p>
+            <button onclick="productMenu()">상품관리</button><p></p>
+            <button onclick="saleMenu()">매출관리</button>
+            <h2>선택했던 화면 : <%=menu%></h2>
+            <button onclick="logout()">로그아웃</button>
+        </div>
+
+        <script>
+            // form을 사용하지 않고 사용하는 방법 
+            function logout() {
+                console.log(`logout 함수 실행됨`); 
+
+                const form = document.createElement('form');  // 고정
+                form.setAttribute('action', '/page/basic'); // 다시 basic 페이지로 이동
+                form.setAttribute('method', 'get');  // 고정
+
+                document.body.appendChild(form);
+
+                form.submit();
+            }
+
+        </script>
+        <script>
+            // form을 사용하지 않고 사용하는 방법 
+            function customerMenu() {
+                console.log(`customerMenu 함수 실행됨`); 
+
+                const form = document.createElement('form');  // 고정
+                form.setAttribute('action', '/page/customerMenu'); // customerMenu 페이지로 이동
+                form.setAttribute('method', 'get');  // 고정
+
+                const username = '<%=username%>';  // 전에 받은 username 값 가져오기
+                
+                const data1 = document.createElement('input'); // password는 버리고 username만 복사
+                data1.setAttribute('type', 'hidden');
+                data1.setAttribute('name', 'username');
+                data1.setAttribute('value', username);
+                form.appendChild(data1);
+
+                document.body.appendChild(form);
+
+                form.submit();
+            }
+
+        </script>
+        <script>
+            // form을 사용하지 않고 사용하는 방법 
+            function productMenu() {
+                console.log(`productMenu 함수 실행됨`); 
+
+                const form = document.createElement('form');  // 고정
+                form.setAttribute('action', '/page/productMenu'); // product 페이지로 이동
+                form.setAttribute('method', 'get');  // 고정
+
+                const username = '<%=username%>';  // 전에 받은 username 값 가져오기
+
+                const data1 = document.createElement('input'); // password는 버리고 username만 복사
+                data1.setAttribute('type', 'hidden');
+                data1.setAttribute('name', 'username');
+                data1.setAttribute('value', username);
+                form.appendChild(data1);
+
+                document.body.appendChild(form);
+
+                form.submit();
+            }
+
+        </script>
+        <script>
+            // form을 사용하지 않고 사용하는 방법 
+            function saleMenu() {
+                console.log(`saleMenu 함수 실행됨`); 
+
+                const form = document.createElement('form');  // 고정
+                form.setAttribute('action', '/page/saleMenu'); // saleMenu 페이지로 이동
+                form.setAttribute('method', 'get');  // 고정
+
+                const username = '<%=username%>';  // 전에 받은 username 값 가져오기
+
+                const data1 = document.createElement('input'); // password는 버리고 username만 복사
+                data1.setAttribute('type', 'hidden');
+                data1.setAttribute('name', 'username');
+                data1.setAttribute('value', username);
+                form.appendChild(data1);
+
+                document.body.appendChild(form);
+
+                form.submit();
+            }
+
+        </script>
+        
+        
+    </body>
+</html>

@@ -1,0 +1,15 @@
+package 아침복습5;
+
+public class Test1 {
+	
+	public static void main(String[] args) {
+	
+		// 변수상자 만들기 (variable)
+		// 변수상자를 만드는 이유 : 값(글자나 숫자)가 메모리에 혼자 있을 수 없기 때문에
+		// 변수상자가 하는 역할 : 메모리라는 창고같은 공간 안에서 어느 위치에 있는지 정보를 알고 있음
+		String naem1 = "홍길동1";
+		int age;
+		String mobile;
+		
+}
+}

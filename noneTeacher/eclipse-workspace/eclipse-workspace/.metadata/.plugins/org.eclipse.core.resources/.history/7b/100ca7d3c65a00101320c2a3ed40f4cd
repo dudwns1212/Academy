@@ -1,0 +1,13 @@
+package 아침복습5;
+
+public class Test1 {
+	
+	public static void main(String[] args) {
+	
+		// 변수상자 만들기 (variable)
+		String naem1 = "홍길동1";
+		ing age;
+		String mobile
+		
+}
+}

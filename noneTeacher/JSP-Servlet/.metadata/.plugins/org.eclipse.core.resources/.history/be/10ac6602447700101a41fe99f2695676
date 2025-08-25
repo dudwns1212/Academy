@@ -1,0 +1,78 @@
+package ab;
+
+import java.io.IOException;
+import java.util.List;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.ServletRequest;
+import javax.servlet.ServletResponse;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+
+@WebServlet("*.do")
+public class AddrBookServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+    
+	
+	@Override
+    public void service(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
+		req.setCharacterEncoding("utf-8");
+    	String uri = req.getRequestURI();
+    	System.out.println("uri="+uri);
+    	String forwardPage = "/addrbook_list.jsp";
+    	AddrBookDAO dao = new AddrBookDAO();
+    	try {
+    	
+    	if(uri.endsWith("insert.do")){
+    		AddrBookVO ab = makeAddrBookFromReq(req);
+    		dao.insertDB(ab);
+    		List<AddrBookVO> list = dao.getDBList();
+    		req.getRemoteAddr();
+    		req.setAttribute("data", list);
+    	} else if(uri.endsWith("edit.do")){
+    		String abIdStr = req.getParameter("ab_id");
+    		AddrBookVO vo = dao.getDB(Integer.parseInt(abIdStr));
+    		req.setAttribute("ab", vo);
+    		forwardPage = "/addrbook_edit_form.jsp";
+    	} else if(uri.endsWith("list.do")){
+    		List<AddrBookVO> list = dao.getDBList();
+    		req.setAttribute("data", list);
+    	} else if(uri.endsWith("delete.do")){
+    		String abIdStr = req.getParameter("ab_id");
+    		dao.deleteDB(Integer.parseInt(abIdStr));
+    		List<AddrBookVO> list = dao.getDBList();
+    		req.setAttribute("data", list);	
+    	} else if(uri.endsWith("form.do")){
+    		forwardPage = "/addrbook_form.jsp";
+    	} else if(uri.endsWith("update.do")) {
+    	    AddrBookVO ab = makeAddrBookFromReq(req);
+    	    String abIdStr = req.getParameter("ab_id");
+    	    ab.setAbId(Integer.parseInt(abIdStr));
+    	    dao.updateDB(ab);
+    	    List<AddrBookVO> list = dao.getDBList();
+    	    req.setAttribute("data", list);
+    	}
+
+    } catch (Exception e) {
+    }
+    	
+	req.getRequestDispatcher(forwardPage).forward(req, res);
+	}
+    
+	private AddrBookVO makeAddrBookFromReq(ServletRequest req) {
+		AddrBookVO vo = new AddrBookVO();
+		vo.setAbName(req.getParameter("abName"));
+		vo.setAbBirth(req.getParameter("abBirth"));
+		vo.setAbComdept(req.getParameter("abComdept"));
+		vo.setAbEmail(req.getParameter("abEmail"));
+		vo.setAbMemo(req.getParameter("abMemo"));
+		vo.setAbTel(req.getParameter("abTel"));
+		return vo;
+		
+	}
+
+}

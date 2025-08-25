@@ -1,0 +1,9 @@
+package 아침복습매우중요;
+
+public class Bird implements IAnimal {
+	
+	public void run() {
+		System.out.println("새가 달려갑니다.");
+	}
+	
+}

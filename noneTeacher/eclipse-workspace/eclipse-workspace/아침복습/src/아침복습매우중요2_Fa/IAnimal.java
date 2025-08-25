@@ -1,0 +1,7 @@
+package 아침복습매우중요2_Fa;
+
+public interface IAnimal {
+	
+	public void run();
+	
+}

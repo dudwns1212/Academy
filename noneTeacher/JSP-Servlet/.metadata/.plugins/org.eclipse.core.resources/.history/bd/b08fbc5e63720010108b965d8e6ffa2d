@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>웹 폼 사례</title>
+<style>
+</style>
+</head>
+<body>
+	<h1>웹 폼 사례</h1>
+
+	<div>
+		<form action="lunch.jsp" method="post">
+			<table cellspacing="5" border="1">
+				<tr>
+					<td>사용자이름</td>
+					<td><input type="text" name="username"
+						placeholder="이름을 입력하세요."></td>
+				</tr>
+				<tr>
+					<td>이메일</td>
+					<td><input type="email" name="email"
+						placeholder="메일주소를 입력하세요."></td>
+				</tr>
+				<tr>
+					<td>검색단어</td>
+					<td><input type="text" name="searchword"
+						placeholder="검색단어 입력하세요."></td>
+				</tr>
+				<tr>
+					<td>취미</td>
+					<td style="text-align: center;"><input type="checkbox"
+						id="exercise" name="hobby" value="운동"> <label
+						for="exercise">운동</label> <input type="checkbox" id="instrument"
+						name="hobby" value="악기"> <label for="instrument">악기</label>
+						<input type="checkbox" id="travel" name="hobby" value="여행">
+						<label for="travel">여행</label></td>
+				</tr>
+				<tr>
+					<td>성별</td>
+					<td style="text-align: center;"><input type="radio" id="male"
+						name="gender" value="남자"> <label for="male">남자</label> <input
+						type="radio" id="female" name="gender" value="여자"> <label
+						for="female">여자</label></td>
+				</tr>
+				<tr>
+					<td>점심메뉴</td>
+					<td style="text-align: center;"><select name="menu">
+							<option value="짜장면">짜장면</option>
+							<option value="짬뽕">짬뽕</option>
+							<option value="탕수육">탕수육</option>
+					</select></td>
+				</tr>
+			</table>
+
+			<div style="text-align: center;">
+				<input type="submit" value="Submit">
+			</div>
+		</form>
+	</div>
+</body>
+</html>

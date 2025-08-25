@@ -1,0 +1,53 @@
+1754912125025	Rename package 'member'
+1754912134877	Rename type 'MemberList'
+1754912256859	Rename field 'name'
+1754912275761	Rename field 'age'
+1754912293250	Rename field 'mobile'
+1754912306455	Rename field 'id'
+1754912316559	Rename field 'password'
+1754912517388	Rename field 'mName'
+1754912537848	Rename field 'mAge'
+1754912581738	Rename field 'mId'
+1754912673759	Rename package 'memberLIst'
+1754912702580	Rename type 'MemberListVO'
+1754912716931	Rename type 'MemberListDAO'
+1754913368817	Rename field 'movieName'
+1755043530632	Copy file
+1755043810417	Delete element
+1755043822730	Delete element
+1755043832060	Delete element
+1755080211667	Delete element
+1755080318003	Delete element
+1755089953548	Move 'web.xml' to 'WEB-INF'
+1755151754349	Rename type 'MovieServlet'
+1755157328590	Move 'images' to 'webapp'
+1755169078257	Delete element
+1755182321116	Move 'images' to 'asset'
+1755233229176	Rename resource 'header.jsp'
+1755233642465	Delete element
+1755233662146	Rename resource 'home_header.jsp'
+1755244610961	Copy compilation unit
+1755244616317	Delete element
+1755244629179	Delete element
+1755244643216	Delete element
+1755244654547	Delete element
+1755244659570	Delete element
+1755252529348	Delete element
+1755254189568	Delete element
+1755254193500	Delete element
+1755254197661	Delete element
+1755314638708	Rename type 'ScheduleVO'
+1755316414643	Move 'CinemaServlet.java' to 'Servlet'
+1755316479301	Rename resource 'Servlet'
+1755318999564	Delete element
+1755319090823	Delete element
+1755323793905	Move 'mypageback.jpg' to 'images'
+1755324333409	Delete element
+1755324506826	Delete element
+1755329694780	Delete element
+1755329698048	Delete element
+1755329700656	Delete element
+1755335173782	Delete element
+1755335188037	Rename type 'MovieServlet'
+1755337410799	Rename type 'ReserveServlet'
+1755337472501	Delete element

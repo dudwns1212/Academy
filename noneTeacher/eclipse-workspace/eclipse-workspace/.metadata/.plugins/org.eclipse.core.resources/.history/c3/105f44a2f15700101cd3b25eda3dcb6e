@@ -1,0 +1,24 @@
+package 리스트;
+
+public class Computer {
+	//클래스영역(main밖): 선언하는 함수(String name,함수상자)등은 사용가능하지만 실행하는 함수(println)는 사용불가 
+	public static void main(String[] args) {
+		// 1. 변수
+		String name = "Alice";
+		int age = 25;
+		float height = 159.3f; // float/double -> 둘다 실수 자료형으로 float는 값 뒤에 항상 f
+		double weight = 44.4;
+		boolean isWoman = true; // boolean 논리자료형 값이 true 아니면 false
+		
+		System.out.println("이름: " + name);
+		System.out.println("나이: " + age);
+		System.out.println("키: " + height);
+		System.out.println("체중: " + weight);
+		System.out.println("여자인가요? " + isWoman);
+		
+		String mix = name + age;
+		System.out.println(mix);
+		
+	}
+	
+}

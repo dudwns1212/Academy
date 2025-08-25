@@ -1,0 +1,19 @@
+package 매장관리기능;
+
+public class Customer extends Store {
+	
+	String name;
+	int age;
+	String mobile;
+	
+	public Customer() {
+		
+	}
+	
+	public Customer(String name, int age, String mobile) {
+		this.name = name;
+		this.age = age;
+		this.mobile = mobile;
+		
+	}
+}

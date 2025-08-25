@@ -1,0 +1,15 @@
+package 책과만화책을판매하는서점구현;
+
+public class ComicBook extends Book {
+	
+	public ComicBook(String title, String author, String publishDate) {
+		super.title = title;
+		super.author = author;
+		super.publishDate = publishDate;
+	}
+	
+	public void read() {
+		System.out.println("만화책" + title + "을(를) 읽습니다.");
+	}
+	
+}

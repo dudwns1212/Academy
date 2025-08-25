@@ -1,0 +1,25 @@
+package 도서관;
+
+import java.util.ArrayList;
+
+public class maintest {
+	
+	public static void main(String[] args) {
+		
+		Library library = new Library();
+		
+		ArrayList<LibraryItem>books = new ArrayList<LibraryItem>();
+		books.add(new Book("어린왕자", "생텍쥐페리"));
+		books.add(new Book("돈키호테", "세르반테스"));
+		books.add(new Book("해리포터", "로우링"));
+		
+		ArrayList<LibraryItem>magazines = new ArrayList<LibraryItem>();
+		magazines.add(new Magazine("잡지1","저자1"));
+		magazines.add(new Magazine("잡지2","저자2"));
+		magazines.add(new Magazine("잡지3","저자3"));
+		magazines.add(new Magazine("잡지4","저자4"));
+		magazines.add(new Magazine("잡지5","저자5"));
+		
+	}
+	
+}

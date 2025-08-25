@@ -1,0 +1,12 @@
+package 매장관리기능;
+import java.util.ArrayList;
+
+public class Product {
+	
+	String name;
+	int price;
+	ArrayList<Product>products = new ArrayList<Product>();
+	
+	
+	
+}

@@ -1,0 +1,52 @@
+package 해시리스트;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.HashMap;
+
+public class Test1 {
+	
+	public static void main(String[] args) {
+		
+		Farm farm1 = new Farm();
+		Dog dog1 = new Dog("미미"); // 여기서 미미는 Animal클래스의 name
+		System.out.println("강아지가 태어난 시간 : " + dog1.birth);
+		
+	}
+}
+class Farm {
+	
+	HashMap <String,Animal> animals = new HashMap<String,Animal>();
+	
+}
+
+class Animal {
+	String name;
+	String birth;
+}
+
+class Dog extends Animal {
+	
+	Dog(String name) {
+		super();  // 부모 생성자 실행
+		super.name = name;  // 부모 클래스의 name에 값 설정
+		System.out.println("강아지가 만들어졌어요. 이름: " + name);
+		
+		Date date = new Date(); 
+		SimpleDateFormat format = new SimpleDateFormat("YYYY-MM-dd-HH:mm:ss");
+		String now = format.format(date);
+		super.birth = now;
+	}
+	
+}
+
+class Cat extends Animal {
+	Cat(String name) {
+		super();
+		super.name = name;
+		System.out.println("고양이가 만들어졌어요. 이름:" + name);
+	}
+}
+
+
+

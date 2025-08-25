@@ -1,0 +1,18 @@
+package 아침복습매우중요;
+
+public class 혼자연습 {
+	
+	public static void main(String[] args) {
+		String name;
+		int age;
+		name = "d";
+		age = 2;
+		String name1 = "d";
+		int age1 = 1;
+		
+		String out1 = name1 + age1;
+		System.out.println(out1);
+	}
+	
+	
+}

@@ -1,0 +1,9 @@
+package 책과만화책을판매하는서점구현;
+
+public class Book implements IBook {
+	
+	public void read() {
+		
+	}
+	
+}

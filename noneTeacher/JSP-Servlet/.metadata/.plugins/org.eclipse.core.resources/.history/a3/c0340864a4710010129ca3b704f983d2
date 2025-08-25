@@ -1,0 +1,21 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+this is jsp!<br/>
+what is love we can fly gril when you see me twice so what so what <br>
+juston은 노란빛의 아이~ 배우기위해 왔어 여기 i'am gone a lie 머릴 쥐어뜯고 무언가를 미워하던 사이 <br>
+<%
+	String user = request.getParameter("name");
+	if(user==null) {
+		user = "Guest";
+	}
+%>
+Hello~! <%=user %>
+</body>
+</html>

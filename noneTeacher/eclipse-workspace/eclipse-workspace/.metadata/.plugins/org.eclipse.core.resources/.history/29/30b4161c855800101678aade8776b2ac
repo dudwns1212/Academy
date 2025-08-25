@@ -1,0 +1,12 @@
+
+public class Test1 {
+
+	public static void main(String[] args) {
+		
+		IAnimal dog1 = new Dog();  // 약속을 지킨 애들만 쓰겠다는 의미
+		dog1.name = "강아지1";
+		
+
+	}
+
+}

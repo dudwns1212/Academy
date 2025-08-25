@@ -1,0 +1,5 @@
+package movieList;
+
+public class MovieListVO {
+
+}

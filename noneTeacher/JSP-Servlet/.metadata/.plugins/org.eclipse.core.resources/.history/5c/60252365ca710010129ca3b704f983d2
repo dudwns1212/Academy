@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>main.html</h1>
+	<a href="hello.jsp">hello.jsp</a>
+	<a href="http://localhost:9000/myjsp/hello.jsp">hello.jsp</a>
+</body>
+</html>

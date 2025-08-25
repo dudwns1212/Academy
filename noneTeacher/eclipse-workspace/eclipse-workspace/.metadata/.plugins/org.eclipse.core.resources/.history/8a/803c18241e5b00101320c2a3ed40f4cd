@@ -1,0 +1,12 @@
+package 도서관;
+
+public class maintest {
+	
+	public static void main(String[] args) {
+		
+		Library library = new Library();
+		
+		
+	}
+	
+}

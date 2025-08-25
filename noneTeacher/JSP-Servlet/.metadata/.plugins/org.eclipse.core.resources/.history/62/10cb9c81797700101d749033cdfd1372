@@ -1,0 +1,46 @@
+package userList;
+
+import java.io.IOException;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+@WebServlet("*.do")
+public class UserServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
+	
+	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		req.setCharacterEncoding("utf-8");
+		UserListDAO dao = new UserListDAO();
+		String uri = req.getRequestURI();
+		System.out.println("uri=" + uri);
+		String forwardPage = "/home.jsp";
+		if(uri.endsWith("home.do")) {
+			
+		} else if(uri.endsWith("login.do")) {
+			forwardPage = "/home.jsp";
+		} else if(uri.endsWith("movie.do")) {
+			forwardPage = "/movie.jsp";
+		} else if(uri.endsWith("register.do")) {
+			forwardPage = "/register.jsp";
+		} else if(uri.endsWith("seat.do")) {
+			forwardPage = "/seat.jsp";
+		} else if(uri.endsWith("cinema.do")) {
+			forwardPage = "/cinema.jsp";
+		}
+		req.getRequestDispatcher(forwardPage).forward(req, resp);
+	}
+	
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		req.setCharacterEncoding("utf-8");
+		String id = req.getParameter("id");
+		String pw = req.getParameter("pw");
+		
+		UserListVO user dao.login(id,pw);
+	}
+
+}

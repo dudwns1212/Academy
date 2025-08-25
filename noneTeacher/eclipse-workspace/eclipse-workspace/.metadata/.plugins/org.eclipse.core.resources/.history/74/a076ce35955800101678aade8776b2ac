@@ -1,0 +1,17 @@
+package 매장관리기능;
+
+public class Product extends Store {
+	
+	String name;
+	int price;
+	
+	public Product() {
+		
+	}
+	
+	public Product(String name, int price) {
+		this.name = name;
+		this.price = price;
+		
+	}
+}

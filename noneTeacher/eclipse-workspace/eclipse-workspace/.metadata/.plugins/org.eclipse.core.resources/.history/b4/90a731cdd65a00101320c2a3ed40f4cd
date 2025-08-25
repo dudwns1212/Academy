@@ -1,0 +1,7 @@
+package 아침복습매우중요;
+
+public class Farm {
+	
+	Animal animal;
+	
+}
