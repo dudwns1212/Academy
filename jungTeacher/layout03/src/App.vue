@@ -1,7 +1,4 @@
-
-<template>
-
-  
+<template>  
   <!-- 상단 타이틀 추가하기 -->
   <div class="d-flex flex-column h-100">
 

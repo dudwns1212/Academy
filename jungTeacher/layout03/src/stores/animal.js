@@ -2,6 +2,7 @@
 import { ref } from 'vue'
 import { defineStore } from 'pinia'
 
+
 export const useAnimalStore = defineStore('animal', () => {
     
     const animals = ref([])
@@ -13,6 +14,8 @@ export const useAnimalStore = defineStore('animal', () => {
 
     //배열 안의 아이템 중에서 몇 번째 아이템이 선택되었는지에 대한 인덱스 값
     const selectedIndex = ref(-1)
+
+    
 
 
 

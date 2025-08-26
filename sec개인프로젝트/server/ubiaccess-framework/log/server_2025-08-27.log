@@ -1,0 +1,233 @@
+2025-08-27 00:01:26.704 - INFO: [logger.js:246:9] service loader called.
+2025-08-27 00:01:26.743 - INFO: [logger.js:246:9] controller loader called.
+2025-08-27 00:01:26.744 - DEBUG: [logger.js:246:9] external_loader called.
+2025-08-27 00:01:26.745 - DEBUG: [logger.js:246:9] No external configuration.
+2025-08-27 00:01:27.268 - INFO: [logger.js:246:9] Http Server started.
+2025-08-27 00:01:27.270 - INFO: [logger.js:246:9] Base URL -> http://localhost:8001
+2025-08-27 00:01:27.274 - INFO: [logger.js:246:9] Namespace -> ::_8001_16596
+2025-08-27 00:01:27.291 - DEBUG: [logger.js:246:9] database SQL file loaded.
+2025-08-27 00:01:45.211 - DEBUG: [logger.js:246:9] Member::register 호출됨.
+2025-08-27 00:01:45.213 - DEBUG: [logger.js:246:9] POST /member/v1/register requested
+2025-08-27 00:01:45.215 - DEBUG: [logger.js:246:9] PARAMS -> {"name":"123","email":"sd@d.com","password":"123","age":123,"mobile":"123"}
+2025-08-27 00:01:45.288 - DEBUG: [logger.js:246:9] SQL -> select id from test.member where email = 'sd@d.com'
+2025-08-27 00:02:01.879 - DEBUG: [logger.js:246:9] Member::register 호출됨.
+2025-08-27 00:02:01.881 - DEBUG: [logger.js:246:9] POST /member/v1/register requested
+2025-08-27 00:02:01.883 - DEBUG: [logger.js:246:9] PARAMS -> {"name":"123","email":"sdd@d.com","password":"123","age":123,"mobile":"123"}
+2025-08-27 00:02:01.887 - DEBUG: [logger.js:246:9] SQL -> select id from test.member where email = 'sdd@d.com'
+2025-08-27 00:02:01.898 - DEBUG: [logger.js:246:9] SQL -> insert into test.member (name, email, password, age, mobile)
+            values ('123', 'sdd@d.com', '123', '123', '123' )
+2025-08-27 00:04:21.776 - INFO: [logger.js:246:9] service loader called.
+2025-08-27 00:04:21.816 - INFO: [logger.js:246:9] controller loader called.
+2025-08-27 00:04:21.817 - DEBUG: [logger.js:246:9] external_loader called.
+2025-08-27 00:04:21.818 - DEBUG: [logger.js:246:9] No external configuration.
+2025-08-27 00:04:22.418 - INFO: [logger.js:246:9] Http Server started.
+2025-08-27 00:04:22.420 - INFO: [logger.js:246:9] Base URL -> http://localhost:8001
+2025-08-27 00:04:22.421 - INFO: [logger.js:246:9] Namespace -> ::_8001_27536
+2025-08-27 00:04:22.435 - DEBUG: [logger.js:246:9] database SQL file loaded.
+2025-08-27 00:04:35.373 - DEBUG: [logger.js:246:9] Member::register 호출됨.
+2025-08-27 00:04:35.376 - DEBUG: [logger.js:246:9] POST /member/v1/register requested
+2025-08-27 00:04:35.377 - DEBUG: [logger.js:246:9] PARAMS -> {"name":"123","email":"123@d.com","password":"123","age":123,"mobile":"123"}
+2025-08-27 00:04:35.436 - DEBUG: [logger.js:246:9] SQL -> select id from test.member where email = '123@d.com'
+2025-08-27 00:04:35.440 - DEBUG: [logger.js:246:9] SQL -> insert into test.member (name, email, password, age, mobile)
+            values ('123', '123@d.com', '123', '123', '123' )
+2025-08-27 00:06:56.300 - DEBUG: [logger.js:246:9] Member::register 호출됨.
+2025-08-27 00:06:56.302 - DEBUG: [logger.js:246:9] POST /member/v1/register requested
+2025-08-27 00:06:56.305 - DEBUG: [logger.js:246:9] PARAMS -> {"name":"12","email":"12@d.com","password":"12","age":12,"mobile":"12"}
+2025-08-27 00:06:56.311 - DEBUG: [logger.js:246:9] SQL -> select id from test.member where email = '12@d.com'
+2025-08-27 00:06:56.330 - DEBUG: [logger.js:246:9] SQL -> insert into test.member (name, email, password, age, mobile)
+            values ('12', '12@d.com', '12', '12', '12' )
+2025-08-27 01:50:03.682 - INFO: [logger.js:246:9] service loader called.
+2025-08-27 01:50:03.709 - INFO: [logger.js:246:9] controller loader called.
+2025-08-27 01:50:03.709 - DEBUG: [logger.js:246:9] external_loader called.
+2025-08-27 01:50:03.710 - DEBUG: [logger.js:246:9] No external configuration.
+2025-08-27 01:50:04.175 - INFO: [logger.js:246:9] Http Server started.
+2025-08-27 01:50:04.175 - INFO: [logger.js:246:9] Base URL -> http://localhost:8001
+2025-08-27 01:50:04.176 - INFO: [logger.js:246:9] Namespace -> ::_8001_14968
+2025-08-27 01:50:04.186 - DEBUG: [logger.js:246:9] database SQL file loaded.
+2025-08-27 01:56:44.761 - DEBUG: [logger.js:246:9] Text::list 호출됨.
+2025-08-27 01:56:44.764 - DEBUG: [logger.js:246:9] POST /text/v1/list requested
+2025-08-27 01:56:44.765 - DEBUG: [logger.js:246:9] PARAMS -> {"page":1,"perPage":4}
+2025-08-27 01:56:44.860 - DEBUG: [logger.js:246:9] SQL -> select count(*) as total
+                from test.text
+2025-08-27 01:56:44.865 - DEBUG: [logger.js:246:9] SQL -> select id, title, coments, likes, date, category
+                from test.text  limit 0, 4
+2025-08-27 01:56:45.663 - DEBUG: [logger.js:246:9] Text::list 호출됨.
+2025-08-27 01:56:45.664 - DEBUG: [logger.js:246:9] POST /text/v1/list requested
+2025-08-27 01:56:45.664 - DEBUG: [logger.js:246:9] PARAMS -> {"page":1,"perPage":4}
+2025-08-27 01:56:45.666 - DEBUG: [logger.js:246:9] SQL -> select count(*) as total
+                from test.text
+2025-08-27 01:56:45.668 - DEBUG: [logger.js:246:9] SQL -> select id, title, coments, likes, date, category
+                from test.text  limit 0, 4
+2025-08-27 01:57:21.444 - DEBUG: [logger.js:246:9] Text::list 호출됨.
+2025-08-27 01:57:21.445 - DEBUG: [logger.js:246:9] POST /text/v1/list requested
+2025-08-27 01:57:21.446 - DEBUG: [logger.js:246:9] PARAMS -> {"page":1,"perPage":4}
+2025-08-27 01:57:21.449 - DEBUG: [logger.js:246:9] SQL -> select count(*) as total
+                from test.text
+2025-08-27 01:57:21.452 - DEBUG: [logger.js:246:9] SQL -> select id, title, coments, likes, date, category
+                from test.text  limit 0, 4
+2025-08-27 01:59:01.666 - DEBUG: [logger.js:246:9] Text::list 호출됨.
+2025-08-27 01:59:01.667 - DEBUG: [logger.js:246:9] POST /text/v1/list requested
+2025-08-27 01:59:01.667 - DEBUG: [logger.js:246:9] PARAMS -> {"page":1,"perPage":4}
+2025-08-27 01:59:01.669 - DEBUG: [logger.js:246:9] SQL -> select count(*) as total
+                from test.text
+2025-08-27 01:59:01.670 - DEBUG: [logger.js:246:9] SQL -> select id, title, coments, likes, date, category
+                from test.text  limit 0, 4
+2025-08-27 02:01:27.325 - DEBUG: [logger.js:246:9] Text::list 호출됨.
+2025-08-27 02:01:27.325 - DEBUG: [logger.js:246:9] POST /text/v1/list requested
+2025-08-27 02:01:27.326 - DEBUG: [logger.js:246:9] PARAMS -> {"page":1,"perPage":4}
+2025-08-27 02:01:27.327 - DEBUG: [logger.js:246:9] SQL -> select count(*) as total
+                from test.text
+2025-08-27 02:01:27.332 - DEBUG: [logger.js:246:9] SQL -> select id, title, coments, likes, date, category
+                from test.text  limit 0, 4
+2025-08-27 02:01:27.333 - DEBUG: [logger.js:246:9] Error in executing SQL -> Error: ER_BAD_FIELD_ERROR: Unknown column 'date' in 'SELECT'
+2025-08-27 02:01:47.797 - INFO: [logger.js:246:9] service loader called.
+2025-08-27 02:01:47.823 - INFO: [logger.js:246:9] controller loader called.
+2025-08-27 02:01:47.824 - DEBUG: [logger.js:246:9] external_loader called.
+2025-08-27 02:01:47.824 - DEBUG: [logger.js:246:9] No external configuration.
+2025-08-27 02:01:48.207 - INFO: [logger.js:246:9] Http Server started.
+2025-08-27 02:01:48.208 - INFO: [logger.js:246:9] Base URL -> http://localhost:8001
+2025-08-27 02:01:48.208 - INFO: [logger.js:246:9] Namespace -> ::_8001_37904
+2025-08-27 02:01:48.217 - DEBUG: [logger.js:246:9] database SQL file loaded.
+2025-08-27 02:01:53.914 - DEBUG: [logger.js:246:9] Text::list 호출됨.
+2025-08-27 02:01:53.915 - DEBUG: [logger.js:246:9] POST /text/v1/list requested
+2025-08-27 02:01:53.916 - DEBUG: [logger.js:246:9] PARAMS -> {"page":1,"perPage":4}
+2025-08-27 02:01:53.950 - DEBUG: [logger.js:246:9] SQL -> select count(*) as total
+                from test.text
+2025-08-27 02:01:53.953 - DEBUG: [logger.js:246:9] SQL -> select id, title, coments, likes, createDate, category
+                from test.text  limit 0, 4
+2025-08-27 02:02:05.230 - DEBUG: [logger.js:246:9] Text::list 호출됨.
+2025-08-27 02:02:05.236 - DEBUG: [logger.js:246:9] POST /text/v1/list requested
+2025-08-27 02:02:05.237 - DEBUG: [logger.js:246:9] PARAMS -> {"page":1,"perPage":4}
+2025-08-27 02:02:05.240 - DEBUG: [logger.js:246:9] SQL -> select count(*) as total
+                from test.text
+2025-08-27 02:02:05.243 - DEBUG: [logger.js:246:9] SQL -> select id, title, coments, likes, createDate, category
+                from test.text  limit 0, 4
+2025-08-27 02:02:23.151 - DEBUG: [logger.js:246:9] Text::list 호출됨.
+2025-08-27 02:02:23.152 - DEBUG: [logger.js:246:9] POST /text/v1/list requested
+2025-08-27 02:02:23.152 - DEBUG: [logger.js:246:9] PARAMS -> {"page":1,"perPage":1}
+2025-08-27 02:02:23.155 - DEBUG: [logger.js:246:9] SQL -> select count(*) as total
+                from test.text
+2025-08-27 02:02:23.159 - DEBUG: [logger.js:246:9] SQL -> select id, title, coments, likes, createDate, category
+                from test.text  limit 0, 1
+2025-08-27 02:02:32.047 - DEBUG: [logger.js:246:9] Text::list 호출됨.
+2025-08-27 02:02:32.047 - DEBUG: [logger.js:246:9] POST /text/v1/list requested
+2025-08-27 02:02:32.048 - DEBUG: [logger.js:246:9] PARAMS -> {"page":1,"perPage":1}
+2025-08-27 02:02:32.051 - DEBUG: [logger.js:246:9] SQL -> select count(*) as total
+                from test.text
+2025-08-27 02:02:32.053 - DEBUG: [logger.js:246:9] SQL -> select id, title, coments, likes, createDate, category
+                from test.text  limit 0, 1
+2025-08-27 02:04:43.724 - DEBUG: [logger.js:246:9] Text::list 호출됨.
+2025-08-27 02:04:43.725 - DEBUG: [logger.js:246:9] POST /text/v1/list requested
+2025-08-27 02:04:43.726 - DEBUG: [logger.js:246:9] PARAMS -> {"page":1,"perPage":1}
+2025-08-27 02:04:43.729 - DEBUG: [logger.js:246:9] SQL -> select count(*) as total
+                from test.text
+2025-08-27 02:04:43.731 - DEBUG: [logger.js:246:9] SQL -> select id, title, coments, likes, createDate, category
+                from test.text  limit 0, 1
+2025-08-27 02:05:48.232 - DEBUG: [logger.js:246:9] Text::list 호출됨.
+2025-08-27 02:05:48.233 - DEBUG: [logger.js:246:9] POST /text/v1/list requested
+2025-08-27 02:05:48.233 - DEBUG: [logger.js:246:9] PARAMS -> {"page":1,"perPage":1}
+2025-08-27 02:05:48.235 - DEBUG: [logger.js:246:9] SQL -> select count(*) as total
+                from test.text
+2025-08-27 02:05:48.237 - DEBUG: [logger.js:246:9] SQL -> select id, title, coments, likes, createDate, category
+                from test.text  limit 0, 1
+2025-08-27 02:05:59.046 - DEBUG: [logger.js:246:9] Text::list 호출됨.
+2025-08-27 02:05:59.046 - DEBUG: [logger.js:246:9] POST /text/v1/list requested
+2025-08-27 02:05:59.047 - DEBUG: [logger.js:246:9] PARAMS -> {"page":1,"perPage":1}
+2025-08-27 02:05:59.048 - DEBUG: [logger.js:246:9] SQL -> select count(*) as total
+                from test.text
+2025-08-27 02:05:59.049 - DEBUG: [logger.js:246:9] SQL -> select id, title, coments, likes, createDate, category
+                from test.text  limit 0, 1
+2025-08-27 02:06:01.346 - DEBUG: [logger.js:246:9] Text::list 호출됨.
+2025-08-27 02:06:01.346 - DEBUG: [logger.js:246:9] POST /text/v1/list requested
+2025-08-27 02:06:01.347 - DEBUG: [logger.js:246:9] PARAMS -> {"page":2,"perPage":1}
+2025-08-27 02:06:01.349 - DEBUG: [logger.js:246:9] SQL -> select count(*) as total
+                from test.text
+2025-08-27 02:06:01.351 - DEBUG: [logger.js:246:9] SQL -> select id, title, coments, likes, createDate, category
+                from test.text  limit 1, 1
+2025-08-27 02:06:02.893 - DEBUG: [logger.js:246:9] Text::list 호출됨.
+2025-08-27 02:06:02.893 - DEBUG: [logger.js:246:9] POST /text/v1/list requested
+2025-08-27 02:06:02.894 - DEBUG: [logger.js:246:9] PARAMS -> {"page":1,"perPage":1}
+2025-08-27 02:06:02.897 - DEBUG: [logger.js:246:9] SQL -> select count(*) as total
+                from test.text
+2025-08-27 02:06:02.898 - DEBUG: [logger.js:246:9] SQL -> select id, title, coments, likes, createDate, category
+                from test.text  limit 0, 1
+2025-08-27 02:08:42.072 - DEBUG: [logger.js:246:9] Text::list 호출됨.
+2025-08-27 02:08:42.073 - DEBUG: [logger.js:246:9] POST /text/v1/list requested
+2025-08-27 02:08:42.073 - DEBUG: [logger.js:246:9] PARAMS -> {"page":1,"perPage":1}
+2025-08-27 02:08:42.075 - DEBUG: [logger.js:246:9] SQL -> select count(*) as total
+                from test.text
+2025-08-27 02:08:42.076 - DEBUG: [logger.js:246:9] SQL -> select id, title, coments, likes, createDate, category
+                from test.text  limit 0, 1
+2025-08-27 02:08:56.166 - DEBUG: [logger.js:246:9] Text::list 호출됨.
+2025-08-27 02:08:56.166 - DEBUG: [logger.js:246:9] POST /text/v1/list requested
+2025-08-27 02:08:56.166 - DEBUG: [logger.js:246:9] PARAMS -> {"page":1,"perPage":1}
+2025-08-27 02:08:56.168 - DEBUG: [logger.js:246:9] SQL -> select count(*) as total
+                from test.text
+2025-08-27 02:08:56.169 - DEBUG: [logger.js:246:9] SQL -> select id, title, coments, likes, createDate, category
+                from test.text  limit 0, 1
+2025-08-27 02:09:11.477 - DEBUG: [logger.js:246:9] Text::list 호출됨.
+2025-08-27 02:09:11.478 - DEBUG: [logger.js:246:9] POST /text/v1/list requested
+2025-08-27 02:09:11.478 - DEBUG: [logger.js:246:9] PARAMS -> {"page":2,"perPage":1}
+2025-08-27 02:09:11.481 - DEBUG: [logger.js:246:9] SQL -> select count(*) as total
+                from test.text
+2025-08-27 02:09:11.482 - DEBUG: [logger.js:246:9] SQL -> select id, title, coments, likes, createDate, category
+                from test.text  limit 1, 1
+2025-08-27 02:09:13.233 - DEBUG: [logger.js:246:9] Text::list 호출됨.
+2025-08-27 02:09:13.234 - DEBUG: [logger.js:246:9] POST /text/v1/list requested
+2025-08-27 02:09:13.234 - DEBUG: [logger.js:246:9] PARAMS -> {"page":1,"perPage":1}
+2025-08-27 02:09:13.235 - DEBUG: [logger.js:246:9] SQL -> select count(*) as total
+                from test.text
+2025-08-27 02:09:13.237 - DEBUG: [logger.js:246:9] SQL -> select id, title, coments, likes, createDate, category
+                from test.text  limit 0, 1
+2025-08-27 02:09:14.168 - DEBUG: [logger.js:246:9] Text::list 호출됨.
+2025-08-27 02:09:14.168 - DEBUG: [logger.js:246:9] POST /text/v1/list requested
+2025-08-27 02:09:14.168 - DEBUG: [logger.js:246:9] PARAMS -> {"page":2,"perPage":1}
+2025-08-27 02:09:14.170 - DEBUG: [logger.js:246:9] SQL -> select count(*) as total
+                from test.text
+2025-08-27 02:09:14.171 - DEBUG: [logger.js:246:9] SQL -> select id, title, coments, likes, createDate, category
+                from test.text  limit 1, 1
+2025-08-27 02:09:15.166 - DEBUG: [logger.js:246:9] Text::list 호출됨.
+2025-08-27 02:09:15.166 - DEBUG: [logger.js:246:9] POST /text/v1/list requested
+2025-08-27 02:09:15.167 - DEBUG: [logger.js:246:9] PARAMS -> {"page":1,"perPage":1}
+2025-08-27 02:09:15.169 - DEBUG: [logger.js:246:9] SQL -> select count(*) as total
+                from test.text
+2025-08-27 02:09:15.171 - DEBUG: [logger.js:246:9] SQL -> select id, title, coments, likes, createDate, category
+                from test.text  limit 0, 1
+2025-08-27 02:09:16.018 - DEBUG: [logger.js:246:9] Text::list 호출됨.
+2025-08-27 02:09:16.018 - DEBUG: [logger.js:246:9] POST /text/v1/list requested
+2025-08-27 02:09:16.019 - DEBUG: [logger.js:246:9] PARAMS -> {"page":2,"perPage":1}
+2025-08-27 02:09:16.020 - DEBUG: [logger.js:246:9] SQL -> select count(*) as total
+                from test.text
+2025-08-27 02:09:16.022 - DEBUG: [logger.js:246:9] SQL -> select id, title, coments, likes, createDate, category
+                from test.text  limit 1, 1
+2025-08-27 02:09:16.971 - DEBUG: [logger.js:246:9] Text::list 호출됨.
+2025-08-27 02:09:16.971 - DEBUG: [logger.js:246:9] POST /text/v1/list requested
+2025-08-27 02:09:16.972 - DEBUG: [logger.js:246:9] PARAMS -> {"page":1,"perPage":1}
+2025-08-27 02:09:16.973 - DEBUG: [logger.js:246:9] SQL -> select count(*) as total
+                from test.text
+2025-08-27 02:09:16.974 - DEBUG: [logger.js:246:9] SQL -> select id, title, coments, likes, createDate, category
+                from test.text  limit 0, 1
+2025-08-27 02:09:17.986 - DEBUG: [logger.js:246:9] Text::list 호출됨.
+2025-08-27 02:09:17.986 - DEBUG: [logger.js:246:9] POST /text/v1/list requested
+2025-08-27 02:09:17.987 - DEBUG: [logger.js:246:9] PARAMS -> {"page":2,"perPage":1}
+2025-08-27 02:09:17.988 - DEBUG: [logger.js:246:9] SQL -> select count(*) as total
+                from test.text
+2025-08-27 02:09:17.990 - DEBUG: [logger.js:246:9] SQL -> select id, title, coments, likes, createDate, category
+                from test.text  limit 1, 1
+2025-08-27 02:09:40.968 - DEBUG: [logger.js:246:9] Member::register 호출됨.
+2025-08-27 02:09:40.969 - DEBUG: [logger.js:246:9] POST /member/v1/register requested
+2025-08-27 02:09:40.969 - DEBUG: [logger.js:246:9] PARAMS -> {"name":"123","email":"123@c.com","password":"123","age":123,"mobile":"123"}
+2025-08-27 02:09:40.980 - DEBUG: [logger.js:246:9] SQL -> select id from test.member where email = '123@c.com'
+2025-08-27 02:09:40.992 - DEBUG: [logger.js:246:9] SQL -> insert into test.member (name, email, password, age, mobile)
+            values ('123', '123@c.com', '123', '123', '123' )
+2025-08-27 02:09:51.205 - DEBUG: [logger.js:246:9] Member::login 호출됨.
+2025-08-27 02:09:51.205 - DEBUG: [logger.js:246:9] POST /member/v1/login requested
+2025-08-27 02:09:51.205 - DEBUG: [logger.js:246:9] PARAMS -> {"email":"123@c.com","password":"123"}
+2025-08-27 02:09:51.209 - DEBUG: [logger.js:246:9] SQL -> select * from test.member where email = '123@c.com' AND password = '123'
+2025-08-27 02:10:04.218 - DEBUG: [logger.js:246:9] Text::list 호출됨.
+2025-08-27 02:10:04.219 - DEBUG: [logger.js:246:9] POST /text/v1/list requested
+2025-08-27 02:10:04.219 - DEBUG: [logger.js:246:9] PARAMS -> {"page":1,"perPage":1}
+2025-08-27 02:10:04.221 - DEBUG: [logger.js:246:9] SQL -> select count(*) as total
+                from test.text
+2025-08-27 02:10:04.222 - DEBUG: [logger.js:246:9] SQL -> select id, title, coments, likes, createDate, category
+                from test.text  limit 0, 1
