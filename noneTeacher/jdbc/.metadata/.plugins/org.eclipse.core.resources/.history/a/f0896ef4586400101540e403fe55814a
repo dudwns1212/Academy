@@ -1,0 +1,45 @@
+package project;
+
+public class 정리본 {
+	// 메인을 최소화 하자/ 표기법은 camel 표기법을 사용하자 / 내가 종료하기 전 까지 어떤 오류가 떠도 꺼지지 않게 하자 
+	//메인 실행
+	public class Db_main {
+		public static void main(String[] args) {
+			MenuController.setContext(); 
+			MenuController.run();
+		}
+	}
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}

@@ -26,7 +26,7 @@
   
 
     <!-- 하단 탭 -->
-    <div v-if="!fullScreen" class="fixed-bottom d-md-none bg-none h-10">      
+    <div v-if="!fullScreen" class=" d-md-none bg-none h-10" id="talk">      
       <div class="d-flex flex-column flex-fill mx-4 tab-btn" @click="tabButtonClicked('more')">
         <span class="menu-icon mb-1">
             <img src="/assets/talk.png" alt="" class="h-50px h-lg-50px">
@@ -89,7 +89,7 @@
           </div>
         </div>
 
-        <div class="menu-item mb-3">
+        <div v-if="!logined" class="menu-item mb-3">
           <div class="menu-link bg-light-secondary text-dark px-4 py-2 rounded" @click="goToLogin()">
             <span class="menu-icon">
               <i class="ki-duotone fs-2x">
@@ -101,7 +101,7 @@
           </div>
         </div>
 
-        <div class="menu-item mb-3">
+        <div v-if="!logined" class="menu-item mb-3">
           <div class="menu-link bg-light-secondary text-dark px-4 py-2 rounded" @click="goToRegister()">
             <span class="menu-icon">
               <i class="ki-duotone fs-2x">
@@ -110,6 +110,30 @@
               </i>
             </span>
             <span class="menu-title m-2">회원가입</span>
+          </div>
+        </div>
+
+        <div v-if="logined" class="menu-item mb-3">
+          <div class="menu-link bg-light-secondary text-dark px-4 py-2 rounded" @click="goToMyPage()">
+            <span class="menu-icon">
+              <i class="ki-duotone fs-2x">
+                <span class="path1"></span>
+                <span class="path2"></span>
+              </i>
+            </span>
+            <span class="menu-title m-2">마이페이지</span>
+          </div>
+        </div>
+
+        <div v-if="logined" class="menu-item mb-3">
+          <div class="menu-link bg-light-secondary text-dark px-4 py-2 rounded" @click="logout()">
+            <span class="menu-icon">
+              <i class="ki-duotone fs-2x">
+                <span class="path1"></span>
+                <span class="path2"></span>
+              </i>
+            </span>
+            <span class="menu-title m-2">로그아웃</span>
           </div>
         </div>
 
@@ -156,7 +180,25 @@ onMounted(() => {
     drawerElem.classList.add('drawer-hidden');
   })
 
+  // loginStore.checkLogin()  // 새로고침 방지 안해도 됨
+
 })
+
+//로그인 체크
+import { useLoginStore } from './stores/logined';
+const loginStore = useLoginStore()
+const { logined } = storeToRefs(loginStore)
+
+
+// const login = ref(false)
+
+// function checkLogin() {
+//   const user = localStorage.getItem('user');
+
+//   if(user) {
+//     login.value = true
+//   }
+// }
  
 // 드로어 안에 있는 [닫기] 버튼을 눌렀을 때
 function closeDrawer() {
@@ -172,7 +214,7 @@ function goToHome() {
 }
 
 function goToProduct() {
-  router.push('/product1');
+  router.push('/product');
   closeDrawer();
 }
 
@@ -194,6 +236,18 @@ function goToLogin() {
 function goToRegister() {
   router.push('/register');
   closeDrawer();
+}
+
+function goToMyPage() {
+  router.push('/mypage')
+  closeDrawer()
+}
+
+function logout() {
+  localStorage.removeItem('user')
+  closeDrawer()
+  window.location.href = '/'
+  
 }
 
 </script>
@@ -234,6 +288,15 @@ function goToRegister() {
 
 .tab-btn.active .menu-icon i {
   color: var(--bs-primary) !important;
+}
+
+#talk {
+  position: fixed;
+  right: 0px;
+  bottom: 0px;
+  background-color: whitesmoke;
+  border-radius: 40%;
+  margin-bottom: 30px;
 }
 
 </style>

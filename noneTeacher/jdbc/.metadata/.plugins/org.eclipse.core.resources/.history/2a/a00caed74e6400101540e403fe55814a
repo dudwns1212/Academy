@@ -1,0 +1,8 @@
+package project;
+
+public class Db_main {
+	public static void main(String[] args) throws Exception {
+		MenuController.setContext(); 
+		MenuController.run();
+	}
+}

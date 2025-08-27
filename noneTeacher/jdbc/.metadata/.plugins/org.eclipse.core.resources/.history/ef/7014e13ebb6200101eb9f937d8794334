@@ -1,0 +1,27 @@
+package Ex05;
+
+import java.util.Scanner;
+
+public class ExceptionProject {
+	public static void main(String[] args) throws Exception {
+		convert();
+		System.out.println("변환된 숫자는 " + changeInt + "입니다.");
+	}
+	static int changeInt;
+	static int convert() {
+		
+		try {
+			Scanner scan = new Scanner(System.in);
+			System.out.println("숫자로 변환할 문자열을 입력하세요 : ");
+			String str = scan.nextLine();
+			changeInt = Integer.parseInt(str);
+		} catch (Exception e) {
+			System.out.println("예외가 발생되었습니다. 문자열을 입력하지 않고 Enter키를 누르셨습니다.");
+		}
+		
+		return changeInt;
+		
+		
+		
+	}
+}

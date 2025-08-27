@@ -1,0 +1,9 @@
+package myjdbc;
+
+public class Emp {
+
+	public int id;
+	public String last_name;
+	public int salary;
+
+}

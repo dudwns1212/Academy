@@ -1,0 +1,14 @@
+package myjdbc;
+
+public class ArrayTest {
+	public static void main(String[] args) {
+		// int [10] list; 선언 -> 갯수를 지정하면 안됨
+		int [] list;
+		int list2[];
+		// list = new int[]; 생성 -> 갯수를 지정해야 함 
+		list = new int[10]; 
+		list[0] = 55;
+		list[9] = 100;
+		System.out.println(list[9]);
+	}
+}

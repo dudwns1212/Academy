@@ -20,6 +20,9 @@ module.exports = {
     },
     
     email_check: {
-        sql: `select id from test.member where email = :email`
+        sql: `select * from test.member where email = :email`
+    },
+    member_modify: {
+        sql: `update test.member set name = :name, age = :age, mobile = :mobile, password = :password where email = :email`
     }
 }

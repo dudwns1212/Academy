@@ -1,0 +1,17 @@
+package myjdbc;
+
+public class PolymorphismTest {
+	public static void main(String[] args) {
+		System.out.println(1);
+		System.out.println("1");
+		change(1);
+		change("1");
+		
+	}
+
+	private static void change(int i) {
+		// TODO Auto-generated method stub
+		
+	}
+}
+

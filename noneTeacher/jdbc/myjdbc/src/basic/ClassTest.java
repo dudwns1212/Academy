@@ -1,0 +1,27 @@
+package basic;
+
+public class ClassTest {
+	public static void main(String[] args) {
+		// class 구성요소: 메서드, 변수, 생성자
+		Emp emp;  // 스택영역에 64비트메모리 공간을 할당받아서 emp라는 이름으로 참조하게 되고
+		// 그 공간엔 객체의 주소값을 저장할 수 있다.
+		emp = new Emp(); // 생성자 호출
+		
+		emp.count = 500;
+		System.out.println(emp.count);
+		change(emp);
+		System.out.println(emp.count);
+	}
+	
+	private static void change(Emp emp2) {
+		emp2.count = 1000;
+	}
+	
+}
+
+class Emp {
+	int count;
+	Emp(){
+		System.out.println("Emp()");
+	}
+}

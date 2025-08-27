@@ -1,0 +1,28 @@
+package project;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.List;
+
+
+public class MakeList {
+	public List<db_name> makeList() throws Exception{// 반복되는 코드 넣어주기
+		List<db_name> employInfoList = new ArrayList<db_name>();
+		Connection conn =
+				DriverManager.getConnection("jdbc:mysql://localhost:3306/newhr", "root", "rootroot");
+		String sql = null;
+		PreparedStatement stmt = conn.prepareStatement(sql);
+		ResultSet rs = stmt.executeQuery();
+		while(rs.next()) {
+			db_name emp = new db_name();
+			emp.id = rs.getInt("employee_id");
+			emp.last_name = rs.getString("last_name");
+			emp.salary = rs.getInt("salary");
+			employInfoList.add(emp);
+		}
+		return employInfoList;
+	}// 안넣어진게 String sql -> 값 / setString
+}

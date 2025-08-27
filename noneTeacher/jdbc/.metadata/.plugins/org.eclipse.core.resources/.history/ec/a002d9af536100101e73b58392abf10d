@@ -1,0 +1,28 @@
+package myjdbc;
+
+public class ClassTest2 {
+	public static void main(String[] args) {
+		Util.getName();
+	}
+}
+
+class Util {
+	static String name;
+	public static String getName() {
+		return name;
+	}
+	
+}
+class Sam2 {
+	int count; 
+	static int amount;
+	void print() {
+		int localCount;
+		try {
+			int myCount = 500;
+		}catch(Exception e) {
+			
+		}
+		System.out.println(myCount);
+	}
+}

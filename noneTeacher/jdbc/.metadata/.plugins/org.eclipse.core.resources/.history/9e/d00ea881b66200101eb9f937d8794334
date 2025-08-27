@@ -1,0 +1,22 @@
+package Ex05;
+
+import java.util.Scanner;
+
+public class Exception {
+	public static void main(String[] args) {
+		convert();
+		
+	}
+	
+	static int convert() {
+		//A
+		Scanner scan = new Scanner(System.in);
+		System.out.println("문자열을 입력하세요 : ");
+		String str = scan.nextLine();
+		
+		return Integer.parseInt(str);
+		
+		
+		
+	}
+}

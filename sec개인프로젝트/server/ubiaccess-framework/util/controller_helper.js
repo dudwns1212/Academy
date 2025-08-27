@@ -46,7 +46,7 @@ class ControllerHelper {
             const rows = await this.databaseHelper.query(sqlName, params);
             
             if (!rows || rows.length === 0) {
-                // 사용자를 찾지 못했거나 비밀번호가 틀린 경우
+                // 사용자를 찾지 못하면 401
                 return util.sendError(res, 401);
             }
 
@@ -54,13 +54,7 @@ class ControllerHelper {
             const user = rows[0];
             const output = {
                 header: {},
-                data: { 
-                    user: {
-                        id: user.id,
-                        email: user.email,
-                        name: user.name,
-                    }
-                }
+                data: rows
             }
 
             util.sendRes(res, 200, 'OK', output);
@@ -69,35 +63,6 @@ class ControllerHelper {
             util.sendError(res, 500);
         }
     }
-
-    async executeRegister(req, res, sqlName) {
-        const params = param.parse(req);
-
-        try {
-        // 먼저 이메일 중복 체크
-        const checkEmail = await this.databaseHelper.query('email_check', params);
-        
-        // 이메일이 이미 존재하면
-        if (checkEmail && checkEmail.length > 0) {
-            return util.sendError(res, 409, '이미 존재하는 이메일입니다.');
-        }
-        
-        await this.databaseHelper.query(sqlName, params);
-
-        const output = {
-            header: {},
-            data: {
-                message: 'success',
-                success: true
-            }
-        }
-        
-        util.sendRes(res, 200, '회원가입 성공!', output);
-
-    } catch(err) {
-        util.sendError(res, 500, '서버 오류입니다.');
-    }
-}
 
     ///
     /// 페이지네이션을 포함한 리스트용 SQL문 실행 후 응답 전송

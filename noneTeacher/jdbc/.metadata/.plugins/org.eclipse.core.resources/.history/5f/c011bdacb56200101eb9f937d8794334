@@ -1,0 +1,18 @@
+package Ex05;
+
+import java.util.Scanner;
+
+public class Exception {
+	public static void main(String[] args) {
+		convert();
+		
+	}
+	
+	static void convert() {
+		Scanner scan = new Scanner(System.in);
+		String str = scan.nextLine();
+		
+		
+		
+	}
+}

@@ -57,7 +57,7 @@ module.exports = class Member {
         logger.debug(`Member::register 호출됨.`);
 
         const sqlName = 'member_register';
-        this.controllerHelper.executeRegister(req, res, sqlName);
+        this.controllerHelper.execute(req, res, sqlName);
 
     }
 
@@ -88,6 +88,16 @@ module.exports = class Member {
 
         const sqlName = 'member_remove';
         this.controllerHelper.execute(req, res, sqlName);
+    }
+
+    /**
+     * @RequestMapping(path="/check", method="get,post")
+     */
+    async checkEmail(req, res) {
+        logger.debug(`Member::checkEmail 호출됨.`)
+
+        const sqlName = 'email_check';
+        this.controllerHelper.executeLogin(req, res, sqlName);
     }
 
 }

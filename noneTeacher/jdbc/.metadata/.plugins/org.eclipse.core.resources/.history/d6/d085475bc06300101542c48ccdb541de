@@ -1,0 +1,16 @@
+package project;
+// 직원정보를 담은(변수정의) 클래스
+public class EmpInfo {
+	public int employee_id;
+	public String last_name;
+	public String first_name;
+	public int salary;
+	public String email;
+	public String hireDate;
+	
+	public String toString() {
+		return "EmpInfo [employee_id=" + employee_id + ", last_name=" + last_name + ", \tfirst_name=" + first_name + ", \tsalary=" + salary + ",\t email="
+				+ email + ",            hire_date=" + hireDate + "]";
+	}
+}
+

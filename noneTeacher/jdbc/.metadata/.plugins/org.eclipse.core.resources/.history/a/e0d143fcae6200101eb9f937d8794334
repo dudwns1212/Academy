@@ -1,0 +1,24 @@
+package myjdbc;
+
+public class ExceptionTest1 {
+	public static void main(String[] args)  {
+		System.out.println("start");
+		try {
+			System.out.println("inside");
+			printHello(-3);
+			System.out.println("inside end");
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		} // 메서드를 실행했는데 메서드가 예외처리 돼 있어서 얘도 예외처리해야 함
+		System.out.println("end");
+	}
+
+	private static void printHello(int count) throws Exception {
+		if(count<=0) throw new Exception("마이너스는 안되거든요!");
+		for(int i=0;i<count;i++) {
+			System.out.println("Hello");	
+		}
+		
+		
+	}
+}

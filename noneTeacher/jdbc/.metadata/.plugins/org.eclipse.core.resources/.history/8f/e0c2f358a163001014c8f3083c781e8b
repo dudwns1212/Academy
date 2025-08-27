@@ -1,0 +1,71 @@
+package project;
+
+public class Summry {
+	String id;
+	String name;
+	public int count;
+	public String avg;
+	public String max;
+	public String min;
+	
+}
+
+class SummryJodId extends Summry {
+	
+	public String toString() {
+		return "SummryJodId [job_id=" + id + ", job_title=" + name + ", count=" + count + ", avg=" + avg
+				+ ", max=" + max + ", min=" + min + "]";
+	}
+	
+}
+
+class SummrydpId extends Summry {
+	
+	public String toString() {
+		return "SummrydpId [department_id=" + id + ", department_name=" + name + ", count="
+				+ count + ", avg=" + avg + ", max=" + max + ", min=" + min + "]";
+	}
+	
+	
+	
+}
+
+class SummryDate extends Summry {
+	
+	String year_grade;
+
+	public String toString() {
+		return "SummryDate [year_grade=" + year_grade + ", count=" + count + ", avg=" + avg + ", max=" + max + ", min="
+				+ min + "]";
+	}
+	
+	
+	
+}
+
+class SummryCity extends Summry {
+		
+	public String toString() {
+		return "SummryCity [location_id=" + id + ", city=" + name + ", count=" + count + ", avg=" + avg
+				+ ", max=" + max + ", min=" + min + "]";
+	}
+	
+}
+
+class SummryCountry extends Summry {
+	
+	public String toString() {
+		return "SummryCountry [country_id=" + id + ", country_name=" + name + ", count=" + count
+				+ ", avg=" + avg + ", max=" + max + ", min=" + min + "]";
+	}
+	
+}
+
+class SummryLocation extends Summry {
+	
+	public String toString() {
+		return "SummryLocation [region_id=" + id + ", region_name=" + name + ", count=" + count + ", avg="
+				+ avg + ", max=" + max + ", min=" + min + "]";
+	}
+	
+}

@@ -1,0 +1,21 @@
+package Project;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+import Project.DBConfig;
+
+public class DbConnection {
+	public static Connection conn;
+	// 생성자에 커넥션을 넣어서 실행 -> main에 db객체 생성
+	public DbConnection() {
+		try {
+			conn = DriverManager.getConnection(dbc.set("url"),dbc.set("userName"), dbc.set("passWord"));
+	// 실행 오류 시 DB 연결 실패 메세지 전송
+		} catch (SQLException e) {
+			System.out.println("DB 연결 실패: " + e.getMessage());
+				
+		}
+	}
+}

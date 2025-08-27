@@ -1,0 +1,19 @@
+package Project;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+import exception.DBConnectException;
+
+public class DbConnection {
+	public static Connection conn;
+
+	public DbConnection() {
+		try {
+			conn = DriverManager.getConnection(DBConfig.set("url"),DBConfig.set("userName"), DBConfig.set("passWord"));
+		} catch (SQLException e) {
+			System.out.println(new DBConnectException(DBConfig.set("url"), DBConfig.set("userName"), DBConfig.set("passWord")).getMessage());	
+		}
+	}
+}

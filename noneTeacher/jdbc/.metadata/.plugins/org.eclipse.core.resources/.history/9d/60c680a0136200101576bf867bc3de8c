@@ -1,0 +1,13 @@
+package myjdbc;
+
+import java.util.Scanner;
+
+public class EmpMain {
+	public static void main(String[] args) {
+		//부서번호를 입력받아서 그 부서에 근무하는 사원들의 목록을 출력함
+		System.out.println("부서번호: " );
+		Scanner scan = new Scanner(System.in);
+		int deptNo = scan.nextInt();
+		System.out.println(deptNo);
+	}
+}

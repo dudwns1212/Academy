@@ -1,0 +1,80 @@
+package myjdbc;
+
+import java.util.ArrayList;
+
+public class Ex02 {
+
+	static int[] list = makeArray();
+	
+	public static void main(String[] args) {
+	
+		
+		
+		makeOdd();
+		System.out.println("배열 안의 수들의 합 : " + addArray());
+		System.out.println("가장 작은 수의 인덱스 : " + minIndex());
+		for(int i=0;i<threeNumber().size();i++) {
+			System.out.println("3의 배수들 : " + threeNumber().get(i));
+		}
+		oneLine();
+		
+	}
+	// 1~1000사이의 랜덤숫자 100개가 들어간 배열 생성 o
+	public static int[] makeArray() {
+		int[] result = new int[100];
+		for(int i=0;i<100;i++) {
+			result[i] = (int)(Math.random()*1000) + 1;
+		}
+		return result;
+	}
+	// 인덱스번호가 홀수인 수를 출력하는 함수 o
+	public static void makeOdd() {
+		for(int i=1;i<list.length;i+=2) {
+			System.out.println("인덱스 번호가 홀수인 수 : " + list[i]);
+		}
+	}
+	// 배열의 수들의 합을 반환하는 함수 o
+	public static int addArray() {
+		int count = 0;
+		for(int i=0;i<list.length;i++) {
+			count += list[i];
+		}
+		return count;
+	}
+	// 가장 작은 수의 위치(인덱스)를 반환하는 함수 
+	public static int minIndext() {
+		int min = list[0];
+		int index = 0;
+		
+		for(int i=1;i<list.length;i++) {
+			if(list[i]<min) {
+				min=list[i];
+				index = i;
+			}
+		}
+		return index;
+	}
+	// 3의 배수만을 배열에 넣어 리턴하는 함수
+	public static ArrayList threeNumber() {
+		ArrayList threeNumber = new ArrayList();
+		for(int i=0;i<list.length;i++) {
+			if(list[i]%3 == 0) {
+				threeNumber.add(list[i]);
+			}
+		}
+		return threeNumber;
+	}
+	// 배열의 수들을 한 줄에 10개씩 출력하는 함수
+	public static void oneLine() {
+		for(int i=0;i<list.length;i++) {
+			System.out.print(list[i] + " ");
+			if((i % 10) == 9) {
+				System.out.println();
+			}
+		}
+		
+	}
+	
+	
+	
+}

@@ -1,0 +1,12 @@
+package project;
+
+public class Summry {
+	public int count;
+	public double avg;
+	public int max;
+	public int min;
+	
+	public String toString() {
+		return "Summry [count=" + count + ", avg=" + avg + ", max=" + max + ", min=" + min + "]";
+	}
+}

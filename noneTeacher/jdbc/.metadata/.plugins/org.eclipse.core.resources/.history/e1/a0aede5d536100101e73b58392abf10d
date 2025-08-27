@@ -1,0 +1,15 @@
+package myjdbc;
+
+public class ClassTest2 {
+	public static void main(String[] args) {
+		Util.getName();
+	}
+}
+
+class Util {
+	static String name;
+	public static String getName() {
+		return name;
+	}
+	
+}

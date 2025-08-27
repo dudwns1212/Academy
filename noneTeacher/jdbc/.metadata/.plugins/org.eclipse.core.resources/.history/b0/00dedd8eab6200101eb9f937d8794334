@@ -1,0 +1,9 @@
+package myjdbc;
+
+public class JDBCTest2 {
+	public static void main(String[] args) throws Exception {
+		Class myClass = Class.forName("myjdbc.JDBCTest2");
+		JDBCTest2 test = myClass.newInstance();
+		
+	}
+}

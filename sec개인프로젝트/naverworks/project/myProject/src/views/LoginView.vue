@@ -68,11 +68,11 @@
 									<!--begin::Input group=-->
 									
                                     <div class="fv-row mb-8">
-                                    <input v-model="email" type="text" placeholder="Email" class="form-control bg-transparent" />
+                                    <input v-model="email" type="text" placeholder="Email" class="form-control bg-transparent" required/>
                                     </div>
 
                                     <div class="fv-row mb-3">
-                                    <input v-model="password" type="password" placeholder="Password" class="form-control bg-transparent" />
+                                    <input v-model="password" type="password" placeholder="Password" class="form-control bg-transparent" required/>
                                     </div>
 
                                     <div class="d-grid mb-10">

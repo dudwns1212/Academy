@@ -1,0 +1,16 @@
+package myjdbc;
+
+public class ClassTest {
+	public static void main(String[] args) {
+		// class 구성요소: 메서드, 변수, 생성자
+		int count;
+		count = 500;
+		Emp emp;    // emp: Emp 타입의 변수 선언, 힙영역에 생성된 객체의 주소값을 저장할 수 있는
+		// 메모리 공간
+		emp = new Emp();
+	}
+}
+
+class Emp {
+	
+}

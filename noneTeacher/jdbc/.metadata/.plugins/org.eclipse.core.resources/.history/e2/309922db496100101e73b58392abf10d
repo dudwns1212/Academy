@@ -1,0 +1,16 @@
+package myjdbc;
+
+public class ConstructorTest {
+	
+	User user1 = new User();
+	User user2 = user1;
+	User user3 = new User();
+	
+	
+}
+
+class User {
+	User(String name){
+		
+	}
+}

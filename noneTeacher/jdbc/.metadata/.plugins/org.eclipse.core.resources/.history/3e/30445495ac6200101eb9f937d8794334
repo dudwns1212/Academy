@@ -1,0 +1,15 @@
+package myjdbc;
+
+public class ExceptionTest1 {
+	public static void main(String[] args) {
+		printHello(-5);
+	}
+
+	private static void printHello(int count) {
+		for(int i=0;i<count;i++) {
+			System.out.println("Hello");	
+		}
+		
+		
+	}
+}

@@ -1,0 +1,17 @@
+package myjdbc;
+
+public class FunctionTest {
+	public static void main(String[] args) {
+		int result = print(6); // 메서드를 호출(call), 실행(execute)했는데 존재하지 않는다.
+		System.out.println(result);
+	}
+
+	private static int print(int count) {
+		int result=0;
+		for(int i=0;i<count;i++) {
+			System.out.println("Hello");
+			result+=i;
+		}
+		return result;
+	}
+}

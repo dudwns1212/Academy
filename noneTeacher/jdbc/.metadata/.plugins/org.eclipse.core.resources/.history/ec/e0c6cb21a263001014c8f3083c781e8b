@@ -1,0 +1,50 @@
+package project;
+
+public class Summry {
+	public int count;
+	public String avg;
+	public String max;
+	public String min;
+	
+}
+
+class SummryJodId extends Summry {
+	public String toString() {
+		return "SummryJodId [count=" + count + ", avg=" + avg + ", max=" + max + ", min=" + min + "]";
+	}
+}
+
+class SummrydpId extends Summry {
+	public String toString() {
+		return "SummrydpId [count=" + count + ", avg=" + avg + ", max=" + max + ", min=" + min + "]";
+	}
+}
+
+class SummryDate extends Summry {
+	public String toString() {
+		return "SummryDate [count=" + count + ", avg=" + avg + ", max=" + max + ", min=" + min + "]";
+	}
+	
+}
+
+class SummryCity extends Summry {
+	public String toString() {
+		return "SummryCity [count=" + count + ", avg=" + avg + ", max=" + max + ", min=" + min + "]";
+	}
+	
+}
+
+class SummryCountry extends Summry {
+	public String toString() {
+		return "SummryCountry [count=" + count + ", avg=" + avg + ", max=" + max + ", min=" + min + "]";
+	}
+	
+	
+}
+
+class SummryLocation extends Summry {
+	public String toString() {
+		return "SummryLocation [count=" + count + ", avg=" + avg + ", max=" + max + ", min=" + min + "]";
+	}
+
+}

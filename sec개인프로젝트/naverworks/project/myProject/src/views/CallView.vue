@@ -8,43 +8,27 @@
       <div v-for="(item, index) in textList" :key="item.id" class="card post-card">
         
         <div class="card-body m-0 p-0">
-          <img src="/assets/media/books/10.png">
-          <div class="p-4">
-            <h5 class="fw-bold fs-3">{{ item.title }}</h5>
-            <span class="text-muted">{{ item.mobile}}</span>
+          <div class="mb-5">
+            <h5 class="fw-bold fs-3 mx-2 my-2">{{ item.title }}</h5>
           </div>
-          
+          <div v-if="item.path">
+            <img :src="item.path" style="height: 300px; object-fit: contain;">
+          </div>
+              
           <div class="card-footer d-flex justify-content-between align-items-center py-5">
-            <span class="d-flex align-items-cneter text-gray-600 fs-5">
-              <i class="ki-duotone ki-like text-primary fs-2x me-2">
-                <span class="path1"></span>
-                <span class="path2"></span>
-              </i>
-            <span>{{item.likes}}</span>
-          </span>
-          
-          <span class="d-flex align-items-cneter text-gray-600 fs-5">
-            <i class="ki-duotone ki-message-notif">
-              <span class="path1"></span>
-              <span class="path2"></span>
-              <span class="path3"></span>
-              <span class="path4"></span>
-              <span class="path5"></span>
-            </i>
-            <span>{{item.coments}}</span>
-          </span>
-          
-          <span class="badge badge-light-primary px-4 py-2 fs-7">{{ item.category }}</span>
-          <span class="text-muted">{{ item.createDate }}</span>
-          
-        </div>
-        
-      </div>
-      <div style="margin-top: 1em;">
-          <Pagination :requestFunc="requestTextList" :pagination="pagination1" />
-        </div>
-      
-    </div>    
+            <span class="d-flex align-items-cneter text-gray-600 fs-2">
+              <button @click="showDetail(item.id)" class="btn btn-light-primary">내용</button>
+            </span>
+
+            <span class="text-muted">{{ item.createDate }}</span>    
+            <span class="badge badge-light-primary px-4 py-2 fs-7">{{ item.category }}</span>
+          </div>    
+
+      </div> 
+    </div>   
+    <div style="margin-top: 1em;">
+      <Pagination :requestFunc="requestTextList" :pagination="pagination1" />
+    </div> 
     
   </div>
   
@@ -57,46 +41,14 @@
   </div>
 
 </div>
-<!-- begin::대화상자 -->
-  <div class="modal fade" id="myDialog">
-    <div class="modal-dialog modal-dialog-centered">
-
-      <div class="modal-content rounded">
-
-        <div class="modal-header">
-          <span class="fs-1 fw-bold">파일 업로드</span>
-        </div>
-
-        <div class="modal-body p-10">
-
-          <div>
-            <label for="">이름</label>
-            <input type="text" class="form-control form-control-solid">
-          </div>
-
-          <div class="mt-4">
-            <input type="file" id="uploadImage" hidden @change="getFilename($event.target.files)">
-            <label for="uploadImage" class="d-flex justify-content-center">
-              <img src="/images/dog1.jpg" alt="" id="preview" width="50%">
-            </label>
-          </div>
-
-          <div class="mt-10">
-            <button class="btn btn-primary" @click="uploadFile()">업로드</button>
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-  </div>
-  <!-- end::대화상자 -->
 </template>
 
 <script setup>
 import { ref, onMounted } from 'vue'
 
+import { useRouter } from 'vue-router';
+
+const router = useRouter()
 //스토어 불러오기
 import { storeToRefs } from 'pinia';
 
@@ -115,9 +67,6 @@ import Pagination from '@/components/Pagination.vue'
 import { usePagination } from '@/util/pagination'
 const { makePagination } = usePagination()
 
-//부트스트랩
-import { Modal } from 'bootstrap'
-
 //업로드
 import { useUpload } from '@/util/upload.js'
 const { upload } = useUpload()
@@ -133,9 +82,9 @@ const pagination1 = ref({})
 onMounted(() => {
   console.log(`CallView : onMounted 호출됨`);
 
-  title.value = '게시판';
+  title.value = "게시판"
 
-  requestTextList(1,1);
+  requestTextList(1,2);
 
 })
 
@@ -162,7 +111,22 @@ async function requestTextList(page, perPage) {
 }
 
 function goToPostWrite() {
+
+  mode.value = 'add'
+
   router.push('/postwrite')
+}
+
+function showDetail(index) {
+  console.log(`showDetail 함수 실행됨`)
+  
+  selectedIndex.value = index
+
+  console.log('index : ' + index)
+
+  title.value = '상세정보'
+
+  router.replace('/detail', {})
 }
 
 </script>

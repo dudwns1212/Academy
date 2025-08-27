@@ -1,0 +1,42 @@
+package Ex03;
+
+public class CarTest {
+	public static void main(String[] args) {
+		// Car 객체 생성
+		Car hudson = new Car();
+		Car carrera = new Car();
+		Car mater = new Car();
+		
+		hudson.getName("Hudson");
+		carrera.getName("Carrera");
+		mater.getName("Mater");
+		
+		hudson.getSpeed(300);
+		mater.getSpeed(80);
+		carrera.getSpeed(200);
+		
+		System.out.println("차 이름 : " + hudson.getName() + "차 스피드 : " + hudson.setSpeed());
+		System.out.println("차 이름 : " + mater.getName() + "차 스피드 : " + mater.setSpeed());
+		System.out.println("차 이름 : " + carrera.getName() + "차 스피드 : " + carrera.setSpeed());
+	}
+}
+
+class Car {
+	
+	String name;
+	int speed;
+	
+	public void setName(String name) {
+		this.name=name;
+	}
+	public void setSpeed() {
+		this.speed=speed;
+	}
+	public String getName() {
+		this.name=name;
+	}
+	public int getSpeed(int speed) {
+		return speed;
+	}
+	
+}

@@ -1,0 +1,24 @@
+package Ex05;
+
+import java.util.Scanner;
+
+public class Exception {
+	public static void main(String[] args) {
+		convert();
+		
+	}
+	
+	static int convert() {
+		//A
+		Scanner scan = new Scanner(System.in); 
+		String str = scan.nextLine();
+		
+		System.out.println("문자열을 입력하세요 : ");
+		
+		
+		return Integer.parseInt(str);
+		
+		
+		
+	}
+}

@@ -77,38 +77,44 @@
 	</div>
 	
 	<!-- 책 사진 -->
-	<div class="flex-grow-1 overflow-auto text-center">
-		<div class="d-flex mb-10 mx-auto px-5 gap-10">
-			<img src="/assets/media/books/2.png" class="w-100 h-300px">
-			<img src="/assets/media/books/3.png" class="w-100 h-300px">
-			<img src="/assets/media/books/4.png" class="w-100 h-300px">
-			<img src="/assets/media/books/5.png" class="w-100 h-300px">
-			<img src="/assets/media/books/12.png" class="w-100 h-300px">
-			<img src="/assets/media/books/7.png" class="w-100 h-300px">
-			<img src="/assets/media/books/8.png" class="w-100 h-300px">
+	<div class="d-flex gap-5 px-5 mt-5" style="overflow-x: auto;">
+		<div v-for="(item, index) in productList" :key="item.id" class="d-flex text-center gap-5 px-5 mt-5" >
+			<div class="d-flex flex-column shadow">
+				<div>
+					<img :src="item.path" class="w-100 h-100" @click="showDetailProduct(item.id)">
+				</div>
+				<div class="d-flex justify-content-between" style="width: 220px;">
+					<span class="fw-bold">{{ item.name }}</span>
+					<span class="fw-bold">{{ item.genre }}</span>
+					<span>
+						<img src="/images/star.png" class="w-15px">
+						<span class="fw-bold" style="color: gold;">{{ item.lating }}</span>
+					</span>
+	
+				</div>
+			</div>
 		</div>
-	
-	
+
 	</div>
-	<div class="flex-grow-1 overflow-auto px-5">
-        <div class="d-flex h-600px mt-10 mb-3">
+	<div class="flex-grow-1 px-5">
+        <div class="d-flex h-1000px mt-10 mb-3">
 
           <div class="flex-fill d-flex flex-column">
 
-            <div class="d-flex h-300px mb-2" style="gap: 5px;">
-              <div class="flex-fill d-flex flex-column align-items-center justify-content-center w-150px shadow" style="border-radius: 10px;">
+            <div class="d-flex text-center h-500px mb-2" style="gap: 5px;">
+              <div class="flex-fill d-flex flex-column align-items-center justify-content-center shadow" style="border-radius: 10px;">
 				<img src="/assets/media/books/1.png" class="w-100 h-100">
               </div>
-              <div class="flex-fill d-flex flex-column align-items-center justify-content-center w-150px shadow" style="border-radius: 10px;">
+              <div class="flex-fill d-flex flex-column align-items-center justify-content-center shadow" style="border-radius: 10px;">
                 <img src="/assets/media/books/6.png" class="w-100 h-100">
               </div>
             </div>
             
-            <div class="d-flex h-300px" style="gap: 5px;">
-              <div class="flex-fill d-flex flex-column align-items-center justify-content-center w-150px shadow" style="border-radius: 10px;">
+            <div class="d-flex h-500px" style="gap: 5px;">
+              <div class="flex-fill d-flex flex-column align-items-center justify-content-center shadow" style="border-radius: 10px;">
                 <img src="/assets/media/books/10.png" class="w-100 h-100">
               </div>
-              <div class="flex-fill d-flex flex-column align-items-center justify-content-center w-150px shadow" style="border-radius: 10px;">
+              <div class="flex-fill d-flex flex-column align-items-center justify-content-center shadow" style="border-radius: 10px;">
                 <img src="/assets/media/books/11.png" class="w-100 h-100">
               </div>
             </div>
@@ -127,6 +133,8 @@
 import { ref, onMounted } from 'vue'
 import { useRouter } from 'vue-router';
 
+import { apiProduct } from '@/util/api_product';
+
 //스토어 불러오기
 import { storeToRefs } from 'pinia';
 
@@ -135,13 +143,46 @@ const appStore = useAppStore();
 const { title } = storeToRefs(appStore);
 const router = useRouter()
 
+import { useTextStore } from '@/stores/text'
+const textStore = useTextStore()
+const { selectedIndex } = storeToRefs(textStore)
+
+const productList = ref([])
+
 
 onMounted(() => {
   console.log(`HomeView : onMounted 호출됨`);
 
   title.value = 'NAVER WORKS';
 
+  requestProductList()
+
 })
+
+async function requestProductList() {
+	console.log(`requestProductList 함수 호출`)
+
+	try{
+
+		const response = await apiProduct.post('/list-all',{})
+
+		console.log(`응답 : ${JSON.stringify(response.data)}`)
+
+		productList.value = response.data.data.data
+
+	}catch(err) {
+		console.error(`에러 -> ${err}`)
+	}
+
+	
+}
+
+function showDetailProduct(index) {
+
+	selectedIndex.value = index
+	
+	router.push('/product',{})
+}
 
 
 

@@ -88,15 +88,11 @@ async function register() {
     console.log(`응답 -> ${JSON.stringify(response.data)}`);
     
     // 성공 시 메시지 표시
-    successMessage.value = response.data.data.data.message;
+    successMessage.value = "회원가입 성공!";
 
   } catch (err) {
-    if(err.response.status == 409){
-      errorMessage.value = '이메일이 중복되었습니다'
-    } else {
       errorMessage.value = '회원가입 중 오류가 발생했습니다'
     }
-  }
 }
 </script>
 

@@ -1,0 +1,16 @@
+package myjdbc;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Vector;
+
+public class CollectionTest{
+	public static void main(String[] args) {
+		List list = new ArrayList();
+		List list1 = makeList();
+	}
+
+	private static ArrayList makeList() {
+		return new Vector;
+	}
+}

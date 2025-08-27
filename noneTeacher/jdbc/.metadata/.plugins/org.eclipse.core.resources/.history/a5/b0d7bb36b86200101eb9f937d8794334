@@ -1,0 +1,26 @@
+package Ex05;
+
+import java.util.Scanner;
+
+public class ExceptionProject {
+	public static void main(String[] args) throws Exception {
+		convert();
+		
+	}
+	
+	static int convert() throws NumberFormatException {
+		//A
+		Scanner scan = new Scanner(System.in); 
+		System.out.println("숫자로 변환할 문자열을 입력하세요 : ");
+		String str = scan.nextLine();
+		if(str.length() == 0) throw new NumberFormatException("예외가 발생되었습니다. 문자열을 입력하지 않고 Enter키를 누르셨습니다.");
+		int changeInt = Integer.parseInt(str);
+		changeInt = 123;
+		System.out.println("변환된 숫자는 " + changeInt + "입니다.");
+		
+		return changeInt;
+		
+		
+		
+	}
+}

@@ -1,0 +1,31 @@
+package myjdbc;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
+
+public class JDBCTest {
+	public static void main(String[] args) throws Exception { // Exception이라는 오류를 던져라
+		
+		Class.forName("com.mysql.cj.jdbc.Driver"); // 패키지 이름(com.mysql.cj.jdbc).클래스이름(Driver)
+		
+		Connection conn =
+				// getConnection -> 	
+				DriverManager.getConnection("jdbc:mysql://localhost:3306/newhr", "root", "rootroot");
+		System.out.println(conn.getClass().getName());
+		String sql = "select * from employees";
+		
+		Statement stmt = conn.createStatement();
+		
+		ResultSet rs = stmt.executeQuery(sql);
+		
+		rs.next();
+		
+		System.out.println(rs.getString("last_name"));
+		
+		conn.close();
+		
+		
+	}
+}

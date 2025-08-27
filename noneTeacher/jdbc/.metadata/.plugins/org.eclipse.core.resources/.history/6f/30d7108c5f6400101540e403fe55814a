@@ -1,0 +1,8 @@
+package project;
+
+public class Db_main {
+	public static void main(String[] args) {
+		MenuController.setContext(); 
+		MenuController.run(int number);
+	}
+}

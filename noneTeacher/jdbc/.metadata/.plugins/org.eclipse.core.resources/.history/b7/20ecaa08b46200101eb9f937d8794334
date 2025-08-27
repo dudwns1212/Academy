@@ -1,0 +1,12 @@
+package myjdbc;
+
+import java.io.FileReader;
+import java.io.IOException;
+
+public class ExecptionTest2 {
+	public static void main(String[] args) throws IOException  {
+		FileReader fr = new FileReader("list.txt");
+		int read = fr.read();
+		System.out.println(read);
+	}
+}
