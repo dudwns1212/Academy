@@ -1,4 +1,4 @@
-
+const logger = require('../util/logger')
 const param = require('./param');
 const util = require('./util');
 
@@ -50,8 +50,8 @@ class ControllerHelper {
                 return util.sendError(res, 401);
             }
 
-            // 로그인 성공
-            const user = rows[0];
+            logger.debug('executeLogin -> ' + rows)
+
             const output = {
                 header: {},
                 data: rows

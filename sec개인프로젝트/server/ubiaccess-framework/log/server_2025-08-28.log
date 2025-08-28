@@ -1657,3 +1657,1425 @@
                 from test.text
 2025-08-28 02:25:01.596 - DEBUG: [logger.js:246:9] SQL -> select id, title, coments, path, createDate, category
                 from test.text  limit 2, 2
+2025-08-28 09:28:00.904 - INFO: [logger.js:246:9] service loader called.
+2025-08-28 09:28:00.953 - INFO: [logger.js:246:9] controller loader called.
+2025-08-28 09:28:00.954 - DEBUG: [logger.js:246:9] external_loader called.
+2025-08-28 09:28:00.955 - DEBUG: [logger.js:246:9] No external configuration.
+2025-08-28 09:28:01.720 - INFO: [logger.js:246:9] Http Server started.
+2025-08-28 09:28:01.722 - INFO: [logger.js:246:9] Base URL -> http://localhost:8001
+2025-08-28 09:28:01.722 - INFO: [logger.js:246:9] Namespace -> ::_8001_18948
+2025-08-28 09:28:01.737 - DEBUG: [logger.js:246:9] database SQL file loaded.
+2025-08-28 09:28:34.959 - DEBUG: [logger.js:246:9] Product::listAll 호출됨.
+2025-08-28 09:28:34.964 - DEBUG: [logger.js:246:9] POST /product/v1/list-all requested
+2025-08-28 09:28:34.965 - DEBUG: [logger.js:246:9] PARAMS -> {}
+2025-08-28 09:28:35.316 - DEBUG: [logger.js:246:9] SQL -> select id, name, lating, genre, path
+                from test.product
+2025-08-28 09:28:39.320 - DEBUG: [logger.js:246:9] Product::listAll 호출됨.
+2025-08-28 09:28:39.321 - DEBUG: [logger.js:246:9] POST /product/v1/list-all requested
+2025-08-28 09:28:39.322 - DEBUG: [logger.js:246:9] PARAMS -> {}
+2025-08-28 09:28:39.329 - DEBUG: [logger.js:246:9] SQL -> select id, name, lating, genre, path
+                from test.product
+2025-08-28 09:28:48.110 - DEBUG: [logger.js:246:9] Member::login 호출됨.
+2025-08-28 09:28:48.111 - DEBUG: [logger.js:246:9] POST /member/v1/login requested
+2025-08-28 09:28:48.111 - DEBUG: [logger.js:246:9] PARAMS -> {"email":"123","password":"12"}
+2025-08-28 09:28:48.126 - DEBUG: [logger.js:246:9] SQL -> select * from test.member where email = '123' AND password = '12'
+2025-08-28 09:29:28.106 - DEBUG: [logger.js:246:9] Member::login 호출됨.
+2025-08-28 09:29:28.107 - DEBUG: [logger.js:246:9] POST /member/v1/login requested
+2025-08-28 09:29:28.108 - DEBUG: [logger.js:246:9] PARAMS -> {"email":"123","password":"12"}
+2025-08-28 09:29:28.110 - DEBUG: [logger.js:246:9] SQL -> select * from test.member where email = '123' AND password = '12'
+2025-08-28 09:29:32.477 - DEBUG: [logger.js:246:9] Member::login 호출됨.
+2025-08-28 09:29:32.478 - DEBUG: [logger.js:246:9] POST /member/v1/login requested
+2025-08-28 09:29:32.479 - DEBUG: [logger.js:246:9] PARAMS -> {"email":"123","password":"12222"}
+2025-08-28 09:29:32.483 - DEBUG: [logger.js:246:9] SQL -> select * from test.member where email = '123' AND password = '12222'
+2025-08-28 09:29:41.169 - DEBUG: [logger.js:246:9] Member::login 호출됨.
+2025-08-28 09:29:41.170 - DEBUG: [logger.js:246:9] POST /member/v1/login requested
+2025-08-28 09:29:41.170 - DEBUG: [logger.js:246:9] PARAMS -> {"email":"1","password":"1"}
+2025-08-28 09:29:41.179 - DEBUG: [logger.js:246:9] SQL -> select * from test.member where email = '1' AND password = '1'
+2025-08-28 09:30:36.075 - DEBUG: [logger.js:246:9] Member::login 호출됨.
+2025-08-28 09:30:36.076 - DEBUG: [logger.js:246:9] POST /member/v1/login requested
+2025-08-28 09:30:36.076 - DEBUG: [logger.js:246:9] PARAMS -> {"email":"11","password":"11"}
+2025-08-28 09:30:36.080 - DEBUG: [logger.js:246:9] SQL -> select * from test.member where email = '11' AND password = '11'
+2025-08-28 09:31:56.810 - INFO: [logger.js:246:9] service loader called.
+2025-08-28 09:31:56.848 - INFO: [logger.js:246:9] controller loader called.
+2025-08-28 09:31:56.849 - DEBUG: [logger.js:246:9] external_loader called.
+2025-08-28 09:31:56.850 - DEBUG: [logger.js:246:9] No external configuration.
+2025-08-28 09:31:57.442 - INFO: [logger.js:246:9] Http Server started.
+2025-08-28 09:31:57.444 - INFO: [logger.js:246:9] Base URL -> http://localhost:8001
+2025-08-28 09:31:57.445 - INFO: [logger.js:246:9] Namespace -> ::_8001_6284
+2025-08-28 09:31:57.464 - DEBUG: [logger.js:246:9] database SQL file loaded.
+2025-08-28 09:32:11.152 - DEBUG: [logger.js:246:9] Member::login 호출됨.
+2025-08-28 09:32:11.155 - DEBUG: [logger.js:246:9] POST /member/v1/login requested
+2025-08-28 09:32:11.156 - DEBUG: [logger.js:246:9] PARAMS -> {"email":"1111","password":"111"}
+2025-08-28 09:32:11.213 - DEBUG: [logger.js:246:9] SQL -> select * from test.member where email = '1111' AND password = '111'
+2025-08-28 09:36:55.145 - INFO: [logger.js:246:9] service loader called.
+2025-08-28 09:36:55.178 - INFO: [logger.js:246:9] controller loader called.
+2025-08-28 09:36:55.179 - DEBUG: [logger.js:246:9] external_loader called.
+2025-08-28 09:36:55.179 - DEBUG: [logger.js:246:9] No external configuration.
+2025-08-28 09:36:55.689 - INFO: [logger.js:246:9] Http Server started.
+2025-08-28 09:36:55.691 - INFO: [logger.js:246:9] Base URL -> http://localhost:8001
+2025-08-28 09:36:55.692 - INFO: [logger.js:246:9] Namespace -> ::_8001_3652
+2025-08-28 09:36:55.709 - DEBUG: [logger.js:246:9] database SQL file loaded.
+2025-08-28 09:37:00.463 - DEBUG: [logger.js:246:9] Member::login 호출됨.
+2025-08-28 09:37:00.465 - DEBUG: [logger.js:246:9] POST /member/v1/login requested
+2025-08-28 09:37:00.466 - DEBUG: [logger.js:246:9] PARAMS -> {"email":"1111","password":"111"}
+2025-08-28 09:37:00.525 - DEBUG: [logger.js:246:9] SQL -> select * from test.member where email = '1111' AND password = '111'
+2025-08-28 09:37:55.150 - INFO: [logger.js:246:9] service loader called.
+2025-08-28 09:37:55.183 - INFO: [logger.js:246:9] controller loader called.
+2025-08-28 09:37:55.184 - DEBUG: [logger.js:246:9] external_loader called.
+2025-08-28 09:37:55.185 - DEBUG: [logger.js:246:9] No external configuration.
+2025-08-28 09:37:55.661 - INFO: [logger.js:246:9] Http Server started.
+2025-08-28 09:37:55.662 - INFO: [logger.js:246:9] Base URL -> http://localhost:8001
+2025-08-28 09:37:55.663 - INFO: [logger.js:246:9] Namespace -> ::_8001_13472
+2025-08-28 09:37:55.676 - DEBUG: [logger.js:246:9] database SQL file loaded.
+2025-08-28 09:38:00.787 - DEBUG: [logger.js:246:9] Member::login 호출됨.
+2025-08-28 09:38:00.788 - DEBUG: [logger.js:246:9] POST /member/v1/login requested
+2025-08-28 09:38:00.789 - DEBUG: [logger.js:246:9] PARAMS -> {"email":"1111","password":"111"}
+2025-08-28 09:38:00.842 - DEBUG: [logger.js:246:9] SQL -> select * from test.member where email = '1111' AND password = '111'
+2025-08-28 09:38:12.067 - DEBUG: [logger.js:246:9] Member::login 호출됨.
+2025-08-28 09:38:12.068 - DEBUG: [logger.js:246:9] POST /member/v1/login requested
+2025-08-28 09:38:12.069 - DEBUG: [logger.js:246:9] PARAMS -> {"email":"1111","password":"111"}
+2025-08-28 09:38:12.076 - DEBUG: [logger.js:246:9] SQL -> select * from test.member where email = '1111' AND password = '111'
+2025-08-28 09:38:12.974 - DEBUG: [logger.js:246:9] Member::login 호출됨.
+2025-08-28 09:38:12.976 - DEBUG: [logger.js:246:9] POST /member/v1/login requested
+2025-08-28 09:38:12.977 - DEBUG: [logger.js:246:9] PARAMS -> {"email":"1111","password":"111"}
+2025-08-28 09:38:12.983 - DEBUG: [logger.js:246:9] SQL -> select * from test.member where email = '1111' AND password = '111'
+2025-08-28 09:38:41.808 - INFO: [logger.js:246:9] service loader called.
+2025-08-28 09:38:41.845 - INFO: [logger.js:246:9] controller loader called.
+2025-08-28 09:38:41.846 - DEBUG: [logger.js:246:9] external_loader called.
+2025-08-28 09:38:41.847 - DEBUG: [logger.js:246:9] No external configuration.
+2025-08-28 09:38:42.335 - INFO: [logger.js:246:9] Http Server started.
+2025-08-28 09:38:42.337 - INFO: [logger.js:246:9] Base URL -> http://localhost:8001
+2025-08-28 09:38:42.338 - INFO: [logger.js:246:9] Namespace -> ::_8001_10316
+2025-08-28 09:38:42.352 - DEBUG: [logger.js:246:9] database SQL file loaded.
+2025-08-28 09:38:44.842 - DEBUG: [logger.js:246:9] Member::login 호출됨.
+2025-08-28 09:38:44.844 - DEBUG: [logger.js:246:9] POST /member/v1/login requested
+2025-08-28 09:38:44.845 - DEBUG: [logger.js:246:9] PARAMS -> {"email":"1111","password":"111"}
+2025-08-28 09:38:44.899 - DEBUG: [logger.js:246:9] SQL -> select * from test.member where email = '1111' AND password = '111'
+2025-08-28 09:38:48.533 - DEBUG: [logger.js:246:9] Member::login 호출됨.
+2025-08-28 09:38:48.537 - DEBUG: [logger.js:246:9] POST /member/v1/login requested
+2025-08-28 09:38:48.539 - DEBUG: [logger.js:246:9] PARAMS -> {"email":"1111","password":"111"}
+2025-08-28 09:38:48.543 - DEBUG: [logger.js:246:9] SQL -> select * from test.member where email = '1111' AND password = '111'
+2025-08-28 09:40:11.786 - DEBUG: [logger.js:246:9] Member::login 호출됨.
+2025-08-28 09:40:11.787 - DEBUG: [logger.js:246:9] POST /member/v1/login requested
+2025-08-28 09:40:11.788 - DEBUG: [logger.js:246:9] PARAMS -> {"email":"1111","password":"111"}
+2025-08-28 09:40:11.792 - DEBUG: [logger.js:246:9] SQL -> select * from test.member where email = '1111' AND password = '111'
+2025-08-28 09:40:32.720 - DEBUG: [logger.js:246:9] Member::login 호출됨.
+2025-08-28 09:40:32.721 - DEBUG: [logger.js:246:9] POST /member/v1/login requested
+2025-08-28 09:40:32.721 - DEBUG: [logger.js:246:9] PARAMS -> {"email":"11","password":"11"}
+2025-08-28 09:40:32.724 - DEBUG: [logger.js:246:9] SQL -> select * from test.member where email = '11' AND password = '11'
+2025-08-28 09:40:38.290 - DEBUG: [logger.js:246:9] Member::login 호출됨.
+2025-08-28 09:40:38.291 - DEBUG: [logger.js:246:9] POST /member/v1/login requested
+2025-08-28 09:40:38.292 - DEBUG: [logger.js:246:9] PARAMS -> {"email":"1","password":"1"}
+2025-08-28 09:40:38.296 - DEBUG: [logger.js:246:9] SQL -> select * from test.member where email = '1' AND password = '1'
+2025-08-28 09:41:00.789 - DEBUG: [logger.js:246:9] Product::listAll 호출됨.
+2025-08-28 09:41:00.792 - DEBUG: [logger.js:246:9] POST /product/v1/list-all requested
+2025-08-28 09:41:00.794 - DEBUG: [logger.js:246:9] PARAMS -> {}
+2025-08-28 09:41:00.804 - DEBUG: [logger.js:246:9] SQL -> select id, name, lating, genre, path
+                from test.product
+2025-08-28 09:43:17.099 - DEBUG: [logger.js:246:9] Member::login 호출됨.
+2025-08-28 09:43:17.100 - DEBUG: [logger.js:246:9] POST /member/v1/login requested
+2025-08-28 09:43:17.101 - DEBUG: [logger.js:246:9] PARAMS -> {"email":"1","password":"1234"}
+2025-08-28 09:43:17.113 - DEBUG: [logger.js:246:9] SQL -> select * from test.member where email = '1' AND password = '1234'
+2025-08-28 09:43:17.114 - DEBUG: [logger.js:246:9] 로그인 컨트롤러 수행[object Object]
+2025-08-28 09:43:18.845 - DEBUG: [logger.js:246:9] Product::listAll 호출됨.
+2025-08-28 09:43:18.846 - DEBUG: [logger.js:246:9] POST /product/v1/list-all requested
+2025-08-28 09:43:18.847 - DEBUG: [logger.js:246:9] PARAMS -> {}
+2025-08-28 09:43:18.854 - DEBUG: [logger.js:246:9] SQL -> select id, name, lating, genre, path
+                from test.product
+2025-08-28 09:44:44.740 - INFO: [logger.js:246:9] service loader called.
+2025-08-28 09:44:44.777 - INFO: [logger.js:246:9] controller loader called.
+2025-08-28 09:44:44.778 - DEBUG: [logger.js:246:9] external_loader called.
+2025-08-28 09:44:44.778 - DEBUG: [logger.js:246:9] No external configuration.
+2025-08-28 09:44:45.287 - INFO: [logger.js:246:9] Http Server started.
+2025-08-28 09:44:45.288 - INFO: [logger.js:246:9] Base URL -> http://localhost:8001
+2025-08-28 09:44:45.288 - INFO: [logger.js:246:9] Namespace -> ::_8001_13672
+2025-08-28 09:44:45.297 - DEBUG: [logger.js:246:9] database SQL file loaded.
+2025-08-28 09:44:58.976 - DEBUG: [logger.js:246:9] Product::listAll 호출됨.
+2025-08-28 09:44:58.978 - DEBUG: [logger.js:246:9] POST /product/v1/list-all requested
+2025-08-28 09:44:58.979 - DEBUG: [logger.js:246:9] PARAMS -> {}
+2025-08-28 09:44:59.071 - DEBUG: [logger.js:246:9] SQL -> select id, name, lating, genre, path
+                from test.product
+2025-08-28 09:45:04.186 - DEBUG: [logger.js:246:9] Member::login 호출됨.
+2025-08-28 09:45:04.187 - DEBUG: [logger.js:246:9] POST /member/v1/login requested
+2025-08-28 09:45:04.189 - DEBUG: [logger.js:246:9] PARAMS -> {"email":"1","password":"11"}
+2025-08-28 09:45:04.194 - DEBUG: [logger.js:246:9] SQL -> select * from test.member where email = '1' AND password = '11'
+2025-08-28 09:45:07.330 - DEBUG: [logger.js:246:9] Member::login 호출됨.
+2025-08-28 09:45:07.331 - DEBUG: [logger.js:246:9] POST /member/v1/login requested
+2025-08-28 09:45:07.333 - DEBUG: [logger.js:246:9] PARAMS -> {"email":"1","password":"1234"}
+2025-08-28 09:45:07.337 - DEBUG: [logger.js:246:9] SQL -> select * from test.member where email = '1' AND password = '1234'
+2025-08-28 09:45:07.340 - DEBUG: [logger.js:246:9] executeLogin -> [object Object]
+2025-08-28 09:45:09.058 - DEBUG: [logger.js:246:9] Product::listAll 호출됨.
+2025-08-28 09:45:09.060 - DEBUG: [logger.js:246:9] POST /product/v1/list-all requested
+2025-08-28 09:45:09.065 - DEBUG: [logger.js:246:9] PARAMS -> {}
+2025-08-28 09:45:09.072 - DEBUG: [logger.js:246:9] SQL -> select id, name, lating, genre, path
+                from test.product
+2025-08-28 09:45:35.737 - DEBUG: [logger.js:246:9] Product::listAll 호출됨.
+2025-08-28 09:45:35.739 - DEBUG: [logger.js:246:9] POST /product/v1/list-all requested
+2025-08-28 09:45:35.740 - DEBUG: [logger.js:246:9] PARAMS -> {}
+2025-08-28 09:45:35.747 - DEBUG: [logger.js:246:9] SQL -> select id, name, lating, genre, path
+                from test.product
+2025-08-28 09:46:24.591 - DEBUG: [logger.js:246:9] Product::listAll 호출됨.
+2025-08-28 09:46:24.594 - DEBUG: [logger.js:246:9] POST /product/v1/list-all requested
+2025-08-28 09:46:24.595 - DEBUG: [logger.js:246:9] PARAMS -> {}
+2025-08-28 09:46:24.602 - DEBUG: [logger.js:246:9] SQL -> select id, name, lating, genre, path
+                from test.product
+2025-08-28 09:46:31.140 - DEBUG: [logger.js:246:9] Member::login 호출됨.
+2025-08-28 09:46:31.140 - DEBUG: [logger.js:246:9] POST /member/v1/login requested
+2025-08-28 09:46:31.141 - DEBUG: [logger.js:246:9] PARAMS -> {"email":"1","password":"1234"}
+2025-08-28 09:46:31.145 - DEBUG: [logger.js:246:9] SQL -> select * from test.member where email = '1' AND password = '1234'
+2025-08-28 09:46:31.145 - DEBUG: [logger.js:246:9] executeLogin -> [object Object]
+2025-08-28 09:46:32.703 - DEBUG: [logger.js:246:9] Product::listAll 호출됨.
+2025-08-28 09:46:32.705 - DEBUG: [logger.js:246:9] POST /product/v1/list-all requested
+2025-08-28 09:46:32.706 - DEBUG: [logger.js:246:9] PARAMS -> {}
+2025-08-28 09:46:32.711 - DEBUG: [logger.js:246:9] SQL -> select id, name, lating, genre, path
+                from test.product
+2025-08-28 09:47:10.680 - DEBUG: [logger.js:246:9] Product::listAll 호출됨.
+2025-08-28 09:47:10.681 - DEBUG: [logger.js:246:9] POST /product/v1/list-all requested
+2025-08-28 09:47:10.682 - DEBUG: [logger.js:246:9] PARAMS -> {}
+2025-08-28 09:47:10.690 - DEBUG: [logger.js:246:9] SQL -> select id, name, lating, genre, path
+                from test.product
+2025-08-28 09:47:16.124 - DEBUG: [logger.js:246:9] Member::login 호출됨.
+2025-08-28 09:47:16.125 - DEBUG: [logger.js:246:9] POST /member/v1/login requested
+2025-08-28 09:47:16.126 - DEBUG: [logger.js:246:9] PARAMS -> {"email":"1","password":"1234"}
+2025-08-28 09:47:16.131 - DEBUG: [logger.js:246:9] SQL -> select * from test.member where email = '1' AND password = '1234'
+2025-08-28 09:47:16.132 - DEBUG: [logger.js:246:9] executeLogin -> [object Object]
+2025-08-28 09:47:40.611 - DEBUG: [logger.js:246:9] Member::login 호출됨.
+2025-08-28 09:47:40.611 - DEBUG: [logger.js:246:9] POST /member/v1/login requested
+2025-08-28 09:47:40.612 - DEBUG: [logger.js:246:9] PARAMS -> {"email":"1","password":"1234"}
+2025-08-28 09:47:40.616 - DEBUG: [logger.js:246:9] SQL -> select * from test.member where email = '1' AND password = '1234'
+2025-08-28 09:47:40.616 - DEBUG: [logger.js:246:9] executeLogin -> [object Object]
+2025-08-28 09:48:31.180 - DEBUG: [logger.js:246:9] Member::login 호출됨.
+2025-08-28 09:48:31.182 - DEBUG: [logger.js:246:9] POST /member/v1/login requested
+2025-08-28 09:48:31.183 - DEBUG: [logger.js:246:9] PARAMS -> {"email":"1","password":"1234"}
+2025-08-28 09:48:31.187 - DEBUG: [logger.js:246:9] SQL -> select * from test.member where email = '1' AND password = '1234'
+2025-08-28 09:48:31.188 - DEBUG: [logger.js:246:9] executeLogin -> [object Object]
+2025-08-28 09:49:09.389 - DEBUG: [logger.js:246:9] Product::listAll 호출됨.
+2025-08-28 09:49:09.395 - DEBUG: [logger.js:246:9] POST /product/v1/list-all requested
+2025-08-28 09:49:09.397 - DEBUG: [logger.js:246:9] PARAMS -> {}
+2025-08-28 09:49:09.404 - DEBUG: [logger.js:246:9] SQL -> select id, name, lating, genre, path
+                from test.product
+2025-08-28 09:49:17.456 - DEBUG: [logger.js:246:9] Product::listAll 호출됨.
+2025-08-28 09:49:17.458 - DEBUG: [logger.js:246:9] POST /product/v1/list-all requested
+2025-08-28 09:49:17.459 - DEBUG: [logger.js:246:9] PARAMS -> {}
+2025-08-28 09:49:17.464 - DEBUG: [logger.js:246:9] SQL -> select id, name, lating, genre, path
+                from test.product
+2025-08-28 09:49:19.504 - DEBUG: [logger.js:246:9] Product::listAll 호출됨.
+2025-08-28 09:49:19.506 - DEBUG: [logger.js:246:9] POST /product/v1/list-all requested
+2025-08-28 09:49:19.507 - DEBUG: [logger.js:246:9] PARAMS -> {}
+2025-08-28 09:49:19.513 - DEBUG: [logger.js:246:9] SQL -> select id, name, lating, genre, path
+                from test.product
+2025-08-28 09:49:24.448 - DEBUG: [logger.js:246:9] Member::login 호출됨.
+2025-08-28 09:49:24.450 - DEBUG: [logger.js:246:9] POST /member/v1/login requested
+2025-08-28 09:49:24.451 - DEBUG: [logger.js:246:9] PARAMS -> {"email":"1","password":"1234"}
+2025-08-28 09:49:24.454 - DEBUG: [logger.js:246:9] SQL -> select * from test.member where email = '1' AND password = '1234'
+2025-08-28 09:49:24.454 - DEBUG: [logger.js:246:9] executeLogin -> [object Object]
+2025-08-28 09:49:24.827 - DEBUG: [logger.js:246:9] Product::listAll 호출됨.
+2025-08-28 09:49:24.828 - DEBUG: [logger.js:246:9] POST /product/v1/list-all requested
+2025-08-28 09:49:24.830 - DEBUG: [logger.js:246:9] PARAMS -> {}
+2025-08-28 09:49:24.834 - DEBUG: [logger.js:246:9] SQL -> select id, name, lating, genre, path
+                from test.product
+2025-08-28 09:49:28.943 - DEBUG: [logger.js:246:9] Product::listAll 호출됨.
+2025-08-28 09:49:28.945 - DEBUG: [logger.js:246:9] POST /product/v1/list-all requested
+2025-08-28 09:49:28.946 - DEBUG: [logger.js:246:9] PARAMS -> {}
+2025-08-28 09:49:28.952 - DEBUG: [logger.js:246:9] SQL -> select id, name, lating, genre, path
+                from test.product
+2025-08-28 09:49:29.657 - DEBUG: [logger.js:246:9] Product::listAll 호출됨.
+2025-08-28 09:49:29.658 - DEBUG: [logger.js:246:9] POST /product/v1/list-all requested
+2025-08-28 09:49:29.659 - DEBUG: [logger.js:246:9] PARAMS -> {}
+2025-08-28 09:49:29.662 - DEBUG: [logger.js:246:9] SQL -> select id, name, lating, genre, path
+                from test.product
+2025-08-28 09:49:34.154 - DEBUG: [logger.js:246:9] Member::checkEmail 호출됨.
+2025-08-28 09:49:34.155 - DEBUG: [logger.js:246:9] POST /member/v1/check requested
+2025-08-28 09:49:34.156 - DEBUG: [logger.js:246:9] PARAMS -> {"email":"123"}
+2025-08-28 09:49:34.158 - DEBUG: [logger.js:246:9] SQL -> select * from test.member where email = '123'
+2025-08-28 09:49:36.509 - DEBUG: [logger.js:246:9] Member::checkEmail 호출됨.
+2025-08-28 09:49:36.509 - DEBUG: [logger.js:246:9] POST /member/v1/check requested
+2025-08-28 09:49:36.510 - DEBUG: [logger.js:246:9] PARAMS -> {"email":"1"}
+2025-08-28 09:49:36.512 - DEBUG: [logger.js:246:9] SQL -> select * from test.member where email = '1'
+2025-08-28 09:49:36.513 - DEBUG: [logger.js:246:9] executeLogin -> [object Object]
+2025-08-28 09:49:36.607 - DEBUG: [logger.js:246:9] Member::checkEmail 호출됨.
+2025-08-28 09:49:36.609 - DEBUG: [logger.js:246:9] POST /member/v1/check requested
+2025-08-28 09:49:36.610 - DEBUG: [logger.js:246:9] PARAMS -> {"email":"1"}
+2025-08-28 09:49:36.614 - DEBUG: [logger.js:246:9] SQL -> select * from test.member where email = '1'
+2025-08-28 09:49:36.615 - DEBUG: [logger.js:246:9] executeLogin -> [object Object]
+2025-08-28 09:49:42.761 - DEBUG: [logger.js:246:9] Member::modify 호출됨.
+2025-08-28 09:49:42.762 - DEBUG: [logger.js:246:9] POST /member/v1/modify requested
+2025-08-28 09:49:42.762 - DEBUG: [logger.js:246:9] PARAMS -> {"email":"1","name":"고영준","age":25,"mobile":"010-1111-1111","password":"1"}
+2025-08-28 09:49:42.781 - DEBUG: [logger.js:246:9] SQL -> update test.member set name = '고영준', age = '25', mobile = '010-1111-1111', password = '1' where email = '1'
+2025-08-28 09:49:43.152 - DEBUG: [logger.js:246:9] Member::checkEmail 호출됨.
+2025-08-28 09:49:43.153 - DEBUG: [logger.js:246:9] POST /member/v1/check requested
+2025-08-28 09:49:43.154 - DEBUG: [logger.js:246:9] PARAMS -> {"email":"1"}
+2025-08-28 09:49:43.157 - DEBUG: [logger.js:246:9] SQL -> select * from test.member where email = '1'
+2025-08-28 09:49:43.158 - DEBUG: [logger.js:246:9] executeLogin -> [object Object]
+2025-08-28 09:49:47.557 - DEBUG: [logger.js:246:9] Member::modify 호출됨.
+2025-08-28 09:49:47.558 - DEBUG: [logger.js:246:9] POST /member/v1/modify requested
+2025-08-28 09:49:47.558 - DEBUG: [logger.js:246:9] PARAMS -> {"email":"1","name":"고영준","age":25,"mobile":"010-1111-1111","password":"1"}
+2025-08-28 09:49:47.562 - DEBUG: [logger.js:246:9] SQL -> update test.member set name = '고영준', age = '25', mobile = '010-1111-1111', password = '1' where email = '1'
+2025-08-28 09:49:47.963 - DEBUG: [logger.js:246:9] Member::checkEmail 호출됨.
+2025-08-28 09:49:47.965 - DEBUG: [logger.js:246:9] POST /member/v1/check requested
+2025-08-28 09:49:47.967 - DEBUG: [logger.js:246:9] PARAMS -> {"email":"1"}
+2025-08-28 09:49:47.971 - DEBUG: [logger.js:246:9] SQL -> select * from test.member where email = '1'
+2025-08-28 09:49:47.972 - DEBUG: [logger.js:246:9] executeLogin -> [object Object]
+2025-08-28 09:49:53.944 - DEBUG: [logger.js:246:9] Product::listAll 호출됨.
+2025-08-28 09:49:53.946 - DEBUG: [logger.js:246:9] POST /product/v1/list-all requested
+2025-08-28 09:49:53.947 - DEBUG: [logger.js:246:9] PARAMS -> {}
+2025-08-28 09:49:53.951 - DEBUG: [logger.js:246:9] SQL -> select id, name, lating, genre, path
+                from test.product
+2025-08-28 09:49:56.759 - DEBUG: [logger.js:246:9] Product::listAll 호출됨.
+2025-08-28 09:49:56.760 - DEBUG: [logger.js:246:9] POST /product/v1/list-all requested
+2025-08-28 09:49:56.761 - DEBUG: [logger.js:246:9] PARAMS -> {}
+2025-08-28 09:49:56.767 - DEBUG: [logger.js:246:9] SQL -> select id, name, lating, genre, path
+                from test.product
+2025-08-28 09:50:00.560 - DEBUG: [logger.js:246:9] Member::login 호출됨.
+2025-08-28 09:50:00.561 - DEBUG: [logger.js:246:9] POST /member/v1/login requested
+2025-08-28 09:50:00.561 - DEBUG: [logger.js:246:9] PARAMS -> {"email":"1","password":"1"}
+2025-08-28 09:50:00.563 - DEBUG: [logger.js:246:9] SQL -> select * from test.member where email = '1' AND password = '1'
+2025-08-28 09:50:00.564 - DEBUG: [logger.js:246:9] executeLogin -> [object Object]
+2025-08-28 09:50:00.961 - DEBUG: [logger.js:246:9] Product::listAll 호출됨.
+2025-08-28 09:50:00.963 - DEBUG: [logger.js:246:9] POST /product/v1/list-all requested
+2025-08-28 09:50:00.964 - DEBUG: [logger.js:246:9] PARAMS -> {}
+2025-08-28 09:50:00.970 - DEBUG: [logger.js:246:9] SQL -> select id, name, lating, genre, path
+                from test.product
+2025-08-28 10:06:31.947 - DEBUG: [logger.js:246:9] Product::listAll 호출됨.
+2025-08-28 10:06:31.948 - DEBUG: [logger.js:246:9] POST /product/v1/list-all requested
+2025-08-28 10:06:31.951 - DEBUG: [logger.js:246:9] PARAMS -> {}
+2025-08-28 10:06:31.957 - DEBUG: [logger.js:246:9] SQL -> select id, name, lating, genre, path
+                from test.product
+2025-08-28 10:09:11.376 - DEBUG: [logger.js:246:9] Product::listAll 호출됨.
+2025-08-28 10:09:11.380 - DEBUG: [logger.js:246:9] POST /product/v1/list-all requested
+2025-08-28 10:09:11.382 - DEBUG: [logger.js:246:9] PARAMS -> {}
+2025-08-28 10:09:11.388 - DEBUG: [logger.js:246:9] SQL -> select id, name, lating, genre, path
+                from test.product
+2025-08-28 10:14:35.443 - DEBUG: [logger.js:246:9] Product::listAll 호출됨.
+2025-08-28 10:14:35.445 - DEBUG: [logger.js:246:9] POST /product/v1/list-all requested
+2025-08-28 10:14:35.447 - DEBUG: [logger.js:246:9] PARAMS -> {}
+2025-08-28 10:14:35.452 - DEBUG: [logger.js:246:9] SQL -> select id, name, lating, genre, path
+                from test.product
+2025-08-28 10:14:37.564 - DEBUG: [logger.js:246:9] Text::listAll 호출됨.
+2025-08-28 10:14:37.565 - DEBUG: [logger.js:246:9] POST /text/v1/list-all requested
+2025-08-28 10:14:37.566 - DEBUG: [logger.js:246:9] PARAMS -> {"page":1,"perPage":2}
+2025-08-28 10:14:37.575 - DEBUG: [logger.js:246:9] SQL -> select id, title, coments, path, createDate, category
+                from test.text
+2025-08-28 10:41:41.511 - DEBUG: [logger.js:246:9] Product::listAll 호출됨.
+2025-08-28 10:41:41.515 - DEBUG: [logger.js:246:9] POST /product/v1/list-all requested
+2025-08-28 10:41:41.516 - DEBUG: [logger.js:246:9] PARAMS -> {}
+2025-08-28 10:41:41.538 - DEBUG: [logger.js:246:9] SQL -> select id, name, lating, genre, path
+                from test.product
+2025-08-28 10:41:42.941 - DEBUG: [logger.js:246:9] Product::listAll 호출됨.
+2025-08-28 10:41:42.943 - DEBUG: [logger.js:246:9] POST /product/v1/list-all requested
+2025-08-28 10:41:42.946 - DEBUG: [logger.js:246:9] PARAMS -> {}
+2025-08-28 10:41:42.950 - DEBUG: [logger.js:246:9] SQL -> select id, name, lating, genre, path
+                from test.product
+2025-08-28 10:41:47.032 - DEBUG: [logger.js:246:9] Member::checkEmail 호출됨.
+2025-08-28 10:41:47.034 - DEBUG: [logger.js:246:9] POST /member/v1/check requested
+2025-08-28 10:41:47.036 - DEBUG: [logger.js:246:9] PARAMS -> {"email":"123"}
+2025-08-28 10:41:47.060 - DEBUG: [logger.js:246:9] SQL -> select * from test.member where email = '123'
+2025-08-28 10:41:48.555 - DEBUG: [logger.js:246:9] Member::checkEmail 호출됨.
+2025-08-28 10:41:48.557 - DEBUG: [logger.js:246:9] POST /member/v1/check requested
+2025-08-28 10:41:48.558 - DEBUG: [logger.js:246:9] PARAMS -> {"email":"12345"}
+2025-08-28 10:41:48.561 - DEBUG: [logger.js:246:9] SQL -> select * from test.member where email = '12345'
+2025-08-28 10:41:50.203 - DEBUG: [logger.js:246:9] Member::checkEmail 호출됨.
+2025-08-28 10:41:50.204 - DEBUG: [logger.js:246:9] POST /member/v1/check requested
+2025-08-28 10:41:50.205 - DEBUG: [logger.js:246:9] PARAMS -> {"email":"1"}
+2025-08-28 10:41:50.209 - DEBUG: [logger.js:246:9] SQL -> select * from test.member where email = '1'
+2025-08-28 10:41:50.211 - DEBUG: [logger.js:246:9] executeLogin -> [object Object]
+2025-08-28 10:41:50.278 - DEBUG: [logger.js:246:9] Member::checkEmail 호출됨.
+2025-08-28 10:41:50.281 - DEBUG: [logger.js:246:9] POST /member/v1/check requested
+2025-08-28 10:41:50.284 - DEBUG: [logger.js:246:9] PARAMS -> {"email":"1"}
+2025-08-28 10:41:50.288 - DEBUG: [logger.js:246:9] SQL -> select * from test.member where email = '1'
+2025-08-28 10:41:50.289 - DEBUG: [logger.js:246:9] executeLogin -> [object Object]
+2025-08-28 10:41:53.718 - DEBUG: [logger.js:246:9] Product::listAll 호출됨.
+2025-08-28 10:41:53.719 - DEBUG: [logger.js:246:9] POST /product/v1/list-all requested
+2025-08-28 10:41:53.720 - DEBUG: [logger.js:246:9] PARAMS -> {}
+2025-08-28 10:41:53.724 - DEBUG: [logger.js:246:9] SQL -> select id, name, lating, genre, path
+                from test.product
+2025-08-28 11:13:35.874 - INFO: [logger.js:246:9] service loader called.
+2025-08-28 11:13:35.917 - INFO: [logger.js:246:9] controller loader called.
+2025-08-28 11:13:35.918 - DEBUG: [logger.js:246:9] external_loader called.
+2025-08-28 11:13:35.919 - DEBUG: [logger.js:246:9] No external configuration.
+2025-08-28 11:13:36.614 - INFO: [logger.js:246:9] Http Server started.
+2025-08-28 11:13:36.616 - INFO: [logger.js:246:9] Base URL -> http://localhost:8001
+2025-08-28 11:13:36.618 - INFO: [logger.js:246:9] Namespace -> ::_8001_2108
+2025-08-28 11:13:36.638 - DEBUG: [logger.js:246:9] database SQL file loaded.
+2025-08-28 11:13:41.409 - DEBUG: [logger.js:246:9] Product::read 호출됨.
+2025-08-28 11:13:41.412 - DEBUG: [logger.js:246:9] POST /product/v1/read requested
+2025-08-28 11:13:41.413 - DEBUG: [logger.js:246:9] PARAMS -> {"id":-1}
+2025-08-28 11:13:41.560 - DEBUG: [logger.js:246:9] SQL -> select id, name, lating, genre, path
+                from test.product
+                where id = '-1'
+2025-08-28 11:13:43.005 - DEBUG: [logger.js:246:9] Product::read 호출됨.
+2025-08-28 11:13:43.007 - DEBUG: [logger.js:246:9] POST /product/v1/read requested
+2025-08-28 11:13:43.009 - DEBUG: [logger.js:246:9] PARAMS -> {"id":-1}
+2025-08-28 11:13:43.015 - DEBUG: [logger.js:246:9] SQL -> select id, name, lating, genre, path
+                from test.product
+                where id = '-1'
+2025-08-28 11:13:43.728 - DEBUG: [logger.js:246:9] Product::listAll 호출됨.
+2025-08-28 11:13:43.730 - DEBUG: [logger.js:246:9] POST /product/v1/list-all requested
+2025-08-28 11:13:43.732 - DEBUG: [logger.js:246:9] PARAMS -> {}
+2025-08-28 11:13:43.745 - DEBUG: [logger.js:246:9] SQL -> select id, name, lating, genre, path
+                from test.product
+2025-08-28 11:13:45.582 - DEBUG: [logger.js:246:9] Product::listAll 호출됨.
+2025-08-28 11:13:45.583 - DEBUG: [logger.js:246:9] POST /product/v1/list-all requested
+2025-08-28 11:13:45.584 - DEBUG: [logger.js:246:9] PARAMS -> {}
+2025-08-28 11:13:45.591 - DEBUG: [logger.js:246:9] SQL -> select id, name, lating, genre, path
+                from test.product
+2025-08-28 11:13:51.546 - DEBUG: [logger.js:246:9] Product::read 호출됨.
+2025-08-28 11:13:51.548 - DEBUG: [logger.js:246:9] POST /product/v1/read requested
+2025-08-28 11:13:51.549 - DEBUG: [logger.js:246:9] PARAMS -> {"id":4}
+2025-08-28 11:13:51.554 - DEBUG: [logger.js:246:9] SQL -> select id, name, lating, genre, path
+                from test.product
+                where id = '4'
+2025-08-28 11:13:54.596 - DEBUG: [logger.js:246:9] Product::listAll 호출됨.
+2025-08-28 11:13:54.597 - DEBUG: [logger.js:246:9] POST /product/v1/list-all requested
+2025-08-28 11:13:54.598 - DEBUG: [logger.js:246:9] PARAMS -> {}
+2025-08-28 11:13:54.602 - DEBUG: [logger.js:246:9] SQL -> select id, name, lating, genre, path
+                from test.product
+2025-08-28 11:13:56.826 - DEBUG: [logger.js:246:9] Product::read 호출됨.
+2025-08-28 11:13:56.828 - DEBUG: [logger.js:246:9] POST /product/v1/read requested
+2025-08-28 11:13:56.829 - DEBUG: [logger.js:246:9] PARAMS -> {"id":2}
+2025-08-28 11:13:56.834 - DEBUG: [logger.js:246:9] SQL -> select id, name, lating, genre, path
+                from test.product
+                where id = '2'
+2025-08-28 11:13:59.778 - DEBUG: [logger.js:246:9] Product::listAll 호출됨.
+2025-08-28 11:13:59.780 - DEBUG: [logger.js:246:9] POST /product/v1/list-all requested
+2025-08-28 11:13:59.781 - DEBUG: [logger.js:246:9] PARAMS -> {}
+2025-08-28 11:13:59.785 - DEBUG: [logger.js:246:9] SQL -> select id, name, lating, genre, path
+                from test.product
+2025-08-28 11:14:03.592 - DEBUG: [logger.js:246:9] Product::read 호출됨.
+2025-08-28 11:14:03.594 - DEBUG: [logger.js:246:9] POST /product/v1/read requested
+2025-08-28 11:14:03.596 - DEBUG: [logger.js:246:9] PARAMS -> {"id":5}
+2025-08-28 11:14:03.603 - DEBUG: [logger.js:246:9] SQL -> select id, name, lating, genre, path
+                from test.product
+                where id = '5'
+2025-08-28 11:14:05.241 - DEBUG: [logger.js:246:9] Product::listAll 호출됨.
+2025-08-28 11:14:05.242 - DEBUG: [logger.js:246:9] POST /product/v1/list-all requested
+2025-08-28 11:14:05.243 - DEBUG: [logger.js:246:9] PARAMS -> {}
+2025-08-28 11:14:05.248 - DEBUG: [logger.js:246:9] SQL -> select id, name, lating, genre, path
+                from test.product
+2025-08-28 11:17:15.458 - DEBUG: [logger.js:246:9] Product::listAll 호출됨.
+2025-08-28 11:17:15.459 - DEBUG: [logger.js:246:9] POST /product/v1/list-all requested
+2025-08-28 11:17:15.460 - DEBUG: [logger.js:246:9] PARAMS -> {}
+2025-08-28 11:17:15.466 - DEBUG: [logger.js:246:9] SQL -> select id, name, lating, genre, path
+                from test.product
+2025-08-28 11:17:55.103 - DEBUG: [logger.js:246:9] POST /profile/upload requested
+2025-08-28 11:17:55.104 - DEBUG: [logger.js:246:9] PARAMS -> {}
+2025-08-28 11:17:55.104 - DEBUG: [logger.js:246:9] FILES
+2025-08-28 11:17:55.104 - DEBUG: [logger.js:246:9] [{"fieldname":"photo","originalname":"free-icon-dialogue-1696962.png","encoding":"7bit","mimetype":"image/png","destination":"uploads","filename":"free-icon-dialogue-16969621756347475098.png","path":"uploads\\free-icon-dialogue-16969621756347475098.png","size":11854}]
+2025-08-28 11:17:55.109 - DEBUG: [logger.js:246:9] File copied to C:\academi\server\ubiaccess-framework\controllers/../public/images/free-icon-dialogue-16969621756347475098.png
+2025-08-28 11:17:57.994 - DEBUG: [logger.js:246:9] Text::add 호출됨.
+2025-08-28 11:17:57.995 - DEBUG: [logger.js:246:9] POST /text/v1/add requested
+2025-08-28 11:17:57.996 - DEBUG: [logger.js:246:9] PARAMS -> {"title":"talk 추가","coments":"talk누르면 여길 ㅗ이동","category":"문의사항","path":"http://localhost:8001/images/free-icon-dialogue-16969621756347475098.png","createDate":"2025-08-28"}
+2025-08-28 11:17:58.020 - DEBUG: [logger.js:246:9] SQL -> insert into test.text(title, coments, path, createDate, category)
+                values
+                ('talk 추가', 'talk누르면 여길 ㅗ이동', 'http://localhost:8001/images/free-icon-dialogue-16969621756347475098.png', '2025-08-28', '문의사항')
+2025-08-28 11:17:58.099 - DEBUG: [logger.js:246:9] Text::listAll 호출됨.
+2025-08-28 11:17:58.100 - DEBUG: [logger.js:246:9] POST /text/v1/list-all requested
+2025-08-28 11:17:58.102 - DEBUG: [logger.js:246:9] PARAMS -> {"page":1,"perPage":2}
+2025-08-28 11:17:58.106 - DEBUG: [logger.js:246:9] SQL -> select id, title, coments, path, createDate, category
+                from test.text
+2025-08-28 11:18:04.065 - DEBUG: [logger.js:246:9] Text::read 호출됨.
+2025-08-28 11:18:04.067 - DEBUG: [logger.js:246:9] POST /text/v1/read requested
+2025-08-28 11:18:04.068 - DEBUG: [logger.js:246:9] PARAMS -> {"id":14}
+2025-08-28 11:18:04.075 - DEBUG: [logger.js:246:9] SQL -> select id, title, coments, path, createDate, category
+                from test.text
+                where id = '14'
+2025-08-28 11:18:05.209 - DEBUG: [logger.js:246:9] Text::remove 호출됨.
+2025-08-28 11:18:05.209 - DEBUG: [logger.js:246:9] POST /text/v1/remove requested
+2025-08-28 11:18:05.210 - DEBUG: [logger.js:246:9] PARAMS -> {"id":14}
+2025-08-28 11:18:05.219 - DEBUG: [logger.js:246:9] SQL -> delete from test.text
+                where id = '14'
+2025-08-28 11:18:05.272 - DEBUG: [logger.js:246:9] Text::listAll 호출됨.
+2025-08-28 11:18:05.273 - DEBUG: [logger.js:246:9] POST /text/v1/list-all requested
+2025-08-28 11:18:05.274 - DEBUG: [logger.js:246:9] PARAMS -> {"page":1,"perPage":2}
+2025-08-28 11:18:05.276 - DEBUG: [logger.js:246:9] SQL -> select id, title, coments, path, createDate, category
+                from test.text
+2025-08-28 11:18:07.120 - DEBUG: [logger.js:246:9] Text::listAll 호출됨.
+2025-08-28 11:18:07.122 - DEBUG: [logger.js:246:9] POST /text/v1/list-all requested
+2025-08-28 11:18:07.123 - DEBUG: [logger.js:246:9] PARAMS -> {"page":null,"perPage":null}
+2025-08-28 11:18:07.126 - DEBUG: [logger.js:246:9] SQL -> select id, title, coments, path, createDate, category
+                from test.text
+2025-08-28 11:18:08.204 - DEBUG: [logger.js:246:9] Product::listAll 호출됨.
+2025-08-28 11:18:08.206 - DEBUG: [logger.js:246:9] POST /product/v1/list-all requested
+2025-08-28 11:18:08.207 - DEBUG: [logger.js:246:9] PARAMS -> {}
+2025-08-28 11:18:08.214 - DEBUG: [logger.js:246:9] SQL -> select id, name, lating, genre, path
+                from test.product
+2025-08-28 11:18:14.814 - DEBUG: [logger.js:246:9] Text::listAll 호출됨.
+2025-08-28 11:18:14.815 - DEBUG: [logger.js:246:9] POST /text/v1/list-all requested
+2025-08-28 11:18:14.815 - DEBUG: [logger.js:246:9] PARAMS -> {"page":1,"perPage":2}
+2025-08-28 11:18:14.818 - DEBUG: [logger.js:246:9] SQL -> select id, title, coments, path, createDate, category
+                from test.text
+2025-08-28 11:18:16.386 - DEBUG: [logger.js:246:9] Product::listAll 호출됨.
+2025-08-28 11:18:16.387 - DEBUG: [logger.js:246:9] POST /product/v1/list-all requested
+2025-08-28 11:18:16.389 - DEBUG: [logger.js:246:9] PARAMS -> {}
+2025-08-28 11:18:16.392 - DEBUG: [logger.js:246:9] SQL -> select id, name, lating, genre, path
+                from test.product
+2025-08-28 11:18:23.476 - DEBUG: [logger.js:246:9] Product::listAll 호출됨.
+2025-08-28 11:18:23.478 - DEBUG: [logger.js:246:9] POST /product/v1/list-all requested
+2025-08-28 11:18:23.481 - DEBUG: [logger.js:246:9] PARAMS -> {}
+2025-08-28 11:18:23.490 - DEBUG: [logger.js:246:9] SQL -> select id, name, lating, genre, path
+                from test.product
+2025-08-28 11:18:28.290 - DEBUG: [logger.js:246:9] Member::login 호출됨.
+2025-08-28 11:18:28.291 - DEBUG: [logger.js:246:9] POST /member/v1/login requested
+2025-08-28 11:18:28.292 - DEBUG: [logger.js:246:9] PARAMS -> {"email":"1","password":"1"}
+2025-08-28 11:18:28.302 - DEBUG: [logger.js:246:9] SQL -> select * from test.member where email = '1' AND password = '1'
+2025-08-28 11:18:28.303 - DEBUG: [logger.js:246:9] executeLogin -> [object Object]
+2025-08-28 11:18:28.674 - DEBUG: [logger.js:246:9] Product::listAll 호출됨.
+2025-08-28 11:18:28.676 - DEBUG: [logger.js:246:9] POST /product/v1/list-all requested
+2025-08-28 11:18:28.677 - DEBUG: [logger.js:246:9] PARAMS -> {}
+2025-08-28 11:18:28.685 - DEBUG: [logger.js:246:9] SQL -> select id, name, lating, genre, path
+                from test.product
+2025-08-28 11:19:52.503 - DEBUG: [logger.js:246:9] Product::listAll 호출됨.
+2025-08-28 11:19:52.505 - DEBUG: [logger.js:246:9] POST /product/v1/list-all requested
+2025-08-28 11:19:52.507 - DEBUG: [logger.js:246:9] PARAMS -> {}
+2025-08-28 11:19:52.512 - DEBUG: [logger.js:246:9] SQL -> select id, name, lating, genre, path
+                from test.product
+2025-08-28 11:19:54.096 - DEBUG: [logger.js:246:9] Product::read 호출됨.
+2025-08-28 11:19:54.097 - DEBUG: [logger.js:246:9] POST /product/v1/read requested
+2025-08-28 11:19:54.098 - DEBUG: [logger.js:246:9] PARAMS -> {"id":-1}
+2025-08-28 11:19:54.102 - DEBUG: [logger.js:246:9] SQL -> select id, name, lating, genre, path
+                from test.product
+                where id = '-1'
+2025-08-28 11:19:55.113 - DEBUG: [logger.js:246:9] Product::listAll 호출됨.
+2025-08-28 11:19:55.114 - DEBUG: [logger.js:246:9] POST /product/v1/list-all requested
+2025-08-28 11:19:55.116 - DEBUG: [logger.js:246:9] PARAMS -> {}
+2025-08-28 11:19:55.121 - DEBUG: [logger.js:246:9] SQL -> select id, name, lating, genre, path
+                from test.product
+2025-08-28 11:19:56.367 - DEBUG: [logger.js:246:9] Product::read 호출됨.
+2025-08-28 11:19:56.370 - DEBUG: [logger.js:246:9] POST /product/v1/read requested
+2025-08-28 11:19:56.372 - DEBUG: [logger.js:246:9] PARAMS -> {"id":1}
+2025-08-28 11:19:56.376 - DEBUG: [logger.js:246:9] SQL -> select id, name, lating, genre, path
+                from test.product
+                where id = '1'
+2025-08-28 11:19:57.999 - DEBUG: [logger.js:246:9] Product::listAll 호출됨.
+2025-08-28 11:19:58.001 - DEBUG: [logger.js:246:9] POST /product/v1/list-all requested
+2025-08-28 11:19:58.002 - DEBUG: [logger.js:246:9] PARAMS -> {}
+2025-08-28 11:19:58.006 - DEBUG: [logger.js:246:9] SQL -> select id, name, lating, genre, path
+                from test.product
+2025-08-28 11:20:03.474 - DEBUG: [logger.js:246:9] Product::read 호출됨.
+2025-08-28 11:20:03.475 - DEBUG: [logger.js:246:9] POST /product/v1/read requested
+2025-08-28 11:20:03.476 - DEBUG: [logger.js:246:9] PARAMS -> {"id":1}
+2025-08-28 11:20:03.480 - DEBUG: [logger.js:246:9] SQL -> select id, name, lating, genre, path
+                from test.product
+                where id = '1'
+2025-08-28 11:20:07.397 - DEBUG: [logger.js:246:9] Product::listAll 호출됨.
+2025-08-28 11:20:07.399 - DEBUG: [logger.js:246:9] POST /product/v1/list-all requested
+2025-08-28 11:20:07.400 - DEBUG: [logger.js:246:9] PARAMS -> {}
+2025-08-28 11:20:07.404 - DEBUG: [logger.js:246:9] SQL -> select id, name, lating, genre, path
+                from test.product
+2025-08-28 11:20:09.366 - DEBUG: [logger.js:246:9] Product::read 호출됨.
+2025-08-28 11:20:09.367 - DEBUG: [logger.js:246:9] POST /product/v1/read requested
+2025-08-28 11:20:09.369 - DEBUG: [logger.js:246:9] PARAMS -> {"id":2}
+2025-08-28 11:20:09.373 - DEBUG: [logger.js:246:9] SQL -> select id, name, lating, genre, path
+                from test.product
+                where id = '2'
+2025-08-28 11:20:12.252 - DEBUG: [logger.js:246:9] Product::listAll 호출됨.
+2025-08-28 11:20:12.254 - DEBUG: [logger.js:246:9] POST /product/v1/list-all requested
+2025-08-28 11:20:12.255 - DEBUG: [logger.js:246:9] PARAMS -> {}
+2025-08-28 11:20:12.259 - DEBUG: [logger.js:246:9] SQL -> select id, name, lating, genre, path
+                from test.product
+2025-08-28 11:20:14.079 - DEBUG: [logger.js:246:9] Product::read 호출됨.
+2025-08-28 11:20:14.081 - DEBUG: [logger.js:246:9] POST /product/v1/read requested
+2025-08-28 11:20:14.082 - DEBUG: [logger.js:246:9] PARAMS -> {"id":2}
+2025-08-28 11:20:14.088 - DEBUG: [logger.js:246:9] SQL -> select id, name, lating, genre, path
+                from test.product
+                where id = '2'
+2025-08-28 11:20:15.893 - DEBUG: [logger.js:246:9] Product::listAll 호출됨.
+2025-08-28 11:20:15.894 - DEBUG: [logger.js:246:9] POST /product/v1/list-all requested
+2025-08-28 11:20:15.894 - DEBUG: [logger.js:246:9] PARAMS -> {}
+2025-08-28 11:20:15.898 - DEBUG: [logger.js:246:9] SQL -> select id, name, lating, genre, path
+                from test.product
+2025-08-28 11:20:20.714 - DEBUG: [logger.js:246:9] Product::listAll 호출됨.
+2025-08-28 11:20:20.715 - DEBUG: [logger.js:246:9] POST /product/v1/list-all requested
+2025-08-28 11:20:20.716 - DEBUG: [logger.js:246:9] PARAMS -> {}
+2025-08-28 11:20:20.721 - DEBUG: [logger.js:246:9] SQL -> select id, name, lating, genre, path
+                from test.product
+2025-08-28 11:20:22.276 - DEBUG: [logger.js:246:9] Product::read 호출됨.
+2025-08-28 11:20:22.277 - DEBUG: [logger.js:246:9] POST /product/v1/read requested
+2025-08-28 11:20:22.278 - DEBUG: [logger.js:246:9] PARAMS -> {"id":1}
+2025-08-28 11:20:22.282 - DEBUG: [logger.js:246:9] SQL -> select id, name, lating, genre, path
+                from test.product
+                where id = '1'
+2025-08-28 11:20:35.801 - DEBUG: [logger.js:246:9] Product::listAll 호출됨.
+2025-08-28 11:20:35.802 - DEBUG: [logger.js:246:9] POST /product/v1/list-all requested
+2025-08-28 11:20:35.803 - DEBUG: [logger.js:246:9] PARAMS -> {}
+2025-08-28 11:20:35.807 - DEBUG: [logger.js:246:9] SQL -> select id, name, lating, genre, path
+                from test.product
+2025-08-28 11:20:40.455 - DEBUG: [logger.js:246:9] Member::login 호출됨.
+2025-08-28 11:20:40.456 - DEBUG: [logger.js:246:9] POST /member/v1/login requested
+2025-08-28 11:20:40.456 - DEBUG: [logger.js:246:9] PARAMS -> {"email":"","password":""}
+2025-08-28 11:20:40.460 - DEBUG: [logger.js:246:9] SQL -> select * from test.member where email = '' AND password = ''
+2025-08-28 11:20:42.221 - DEBUG: [logger.js:246:9] Product::listAll 호출됨.
+2025-08-28 11:20:42.222 - DEBUG: [logger.js:246:9] POST /product/v1/list-all requested
+2025-08-28 11:20:42.228 - DEBUG: [logger.js:246:9] PARAMS -> {}
+2025-08-28 11:20:42.239 - DEBUG: [logger.js:246:9] SQL -> select id, name, lating, genre, path
+                from test.product
+2025-08-28 11:20:45.468 - DEBUG: [logger.js:246:9] Product::listAll 호출됨.
+2025-08-28 11:20:45.470 - DEBUG: [logger.js:246:9] POST /product/v1/list-all requested
+2025-08-28 11:20:45.471 - DEBUG: [logger.js:246:9] PARAMS -> {}
+2025-08-28 11:20:45.475 - DEBUG: [logger.js:246:9] SQL -> select id, name, lating, genre, path
+                from test.product
+2025-08-28 11:20:57.153 - DEBUG: [logger.js:246:9] Member::register 호출됨.
+2025-08-28 11:20:57.154 - DEBUG: [logger.js:246:9] POST /member/v1/register requested
+2025-08-28 11:20:57.156 - DEBUG: [logger.js:246:9] PARAMS -> {"name":"123","email":"123@fassd","password":"123","age":123,"mobile":"123"}
+2025-08-28 11:20:57.167 - DEBUG: [logger.js:246:9] SQL -> insert into test.member (name, email, password, age, mobile)
+            values ('123', '123@fassd', '123', '123', '123' )
+2025-08-28 11:21:48.860 - DEBUG: [logger.js:246:9] Product::listAll 호출됨.
+2025-08-28 11:21:48.861 - DEBUG: [logger.js:246:9] POST /product/v1/list-all requested
+2025-08-28 11:21:48.863 - DEBUG: [logger.js:246:9] PARAMS -> {}
+2025-08-28 11:21:48.868 - DEBUG: [logger.js:246:9] SQL -> select id, name, lating, genre, path
+                from test.product
+2025-08-28 11:21:51.186 - DEBUG: [logger.js:246:9] Text::listAll 호출됨.
+2025-08-28 11:21:51.187 - DEBUG: [logger.js:246:9] POST /text/v1/list-all requested
+2025-08-28 11:21:51.188 - DEBUG: [logger.js:246:9] PARAMS -> {"page":1,"perPage":2}
+2025-08-28 11:21:51.191 - DEBUG: [logger.js:246:9] SQL -> select id, title, coments, path, createDate, category
+                from test.text
+2025-08-28 11:21:55.420 - DEBUG: [logger.js:246:9] Product::listAll 호출됨.
+2025-08-28 11:21:55.421 - DEBUG: [logger.js:246:9] POST /product/v1/list-all requested
+2025-08-28 11:21:55.422 - DEBUG: [logger.js:246:9] PARAMS -> {}
+2025-08-28 11:21:55.428 - DEBUG: [logger.js:246:9] SQL -> select id, name, lating, genre, path
+                from test.product
+2025-08-28 11:22:05.197 - DEBUG: [logger.js:246:9] Member::login 호출됨.
+2025-08-28 11:22:05.197 - DEBUG: [logger.js:246:9] POST /member/v1/login requested
+2025-08-28 11:22:05.198 - DEBUG: [logger.js:246:9] PARAMS -> {"email":"1","password":"1"}
+2025-08-28 11:22:05.201 - DEBUG: [logger.js:246:9] SQL -> select * from test.member where email = '1' AND password = '1'
+2025-08-28 11:22:05.202 - DEBUG: [logger.js:246:9] executeLogin -> [object Object]
+2025-08-28 11:22:05.625 - DEBUG: [logger.js:246:9] Product::listAll 호출됨.
+2025-08-28 11:22:05.627 - DEBUG: [logger.js:246:9] POST /product/v1/list-all requested
+2025-08-28 11:22:05.628 - DEBUG: [logger.js:246:9] PARAMS -> {}
+2025-08-28 11:22:05.633 - DEBUG: [logger.js:246:9] SQL -> select id, name, lating, genre, path
+                from test.product
+2025-08-28 11:22:10.184 - DEBUG: [logger.js:246:9] Text::listAll 호출됨.
+2025-08-28 11:22:10.186 - DEBUG: [logger.js:246:9] POST /text/v1/list-all requested
+2025-08-28 11:22:10.187 - DEBUG: [logger.js:246:9] PARAMS -> {"page":1,"perPage":2}
+2025-08-28 11:22:10.191 - DEBUG: [logger.js:246:9] SQL -> select id, title, coments, path, createDate, category
+                from test.text
+2025-08-28 11:22:55.500 - DEBUG: [logger.js:246:9] POST /profile/upload requested
+2025-08-28 11:22:55.501 - DEBUG: [logger.js:246:9] PARAMS -> {}
+2025-08-28 11:22:55.502 - DEBUG: [logger.js:246:9] FILES
+2025-08-28 11:22:55.502 - DEBUG: [logger.js:246:9] [{"fieldname":"photo","originalname":"cat1.jpg","encoding":"7bit","mimetype":"image/jpeg","destination":"uploads","filename":"cat11756347775496.jpg","path":"uploads\\cat11756347775496.jpg","size":129606}]
+2025-08-28 11:22:55.512 - DEBUG: [logger.js:246:9] File copied to C:\academi\server\ubiaccess-framework\controllers/../public/images/cat11756347775496.jpg
+2025-08-28 11:22:59.417 - DEBUG: [logger.js:246:9] Text::add 호출됨.
+2025-08-28 11:22:59.418 - DEBUG: [logger.js:246:9] POST /text/v1/add requested
+2025-08-28 11:22:59.419 - DEBUG: [logger.js:246:9] PARAMS -> {"title":"고양이","coments":"귀여운 고양이 보고가세요","category":"자유글","path":"http://localhost:8001/images/cat11756347775496.jpg","createDate":"2025-08-28"}
+2025-08-28 11:22:59.428 - DEBUG: [logger.js:246:9] SQL -> insert into test.text(title, coments, path, createDate, category)
+                values
+                ('고양이', '귀여운 고양이 보고가세요', 'http://localhost:8001/images/cat11756347775496.jpg', '2025-08-28', '자유글')
+2025-08-28 11:22:59.480 - DEBUG: [logger.js:246:9] Text::listAll 호출됨.
+2025-08-28 11:22:59.481 - DEBUG: [logger.js:246:9] POST /text/v1/list-all requested
+2025-08-28 11:22:59.482 - DEBUG: [logger.js:246:9] PARAMS -> {"page":1,"perPage":2}
+2025-08-28 11:22:59.486 - DEBUG: [logger.js:246:9] SQL -> select id, title, coments, path, createDate, category
+                from test.text
+2025-08-28 11:23:22.830 - DEBUG: [logger.js:246:9] Text::list 호출됨.
+2025-08-28 11:23:22.832 - DEBUG: [logger.js:246:9] POST /text/v1/list requested
+2025-08-28 11:23:22.833 - DEBUG: [logger.js:246:9] PARAMS -> {"page":1,"perPage":2}
+2025-08-28 11:23:22.841 - DEBUG: [logger.js:246:9] SQL -> select count(*) as total
+                from test.text
+2025-08-28 11:23:22.845 - DEBUG: [logger.js:246:9] SQL -> select id, title, coments, path, createDate, category
+                from test.text  limit 0, 2
+2025-08-28 11:23:24.991 - DEBUG: [logger.js:246:9] Text::list 호출됨.
+2025-08-28 11:23:24.992 - DEBUG: [logger.js:246:9] POST /text/v1/list requested
+2025-08-28 11:23:24.994 - DEBUG: [logger.js:246:9] PARAMS -> {"page":2,"perPage":2}
+2025-08-28 11:23:24.998 - DEBUG: [logger.js:246:9] SQL -> select count(*) as total
+                from test.text
+2025-08-28 11:23:25.002 - DEBUG: [logger.js:246:9] SQL -> select id, title, coments, path, createDate, category
+                from test.text  limit 2, 2
+2025-08-28 11:23:27.401 - DEBUG: [logger.js:246:9] Text::list 호출됨.
+2025-08-28 11:23:27.402 - DEBUG: [logger.js:246:9] POST /text/v1/list requested
+2025-08-28 11:23:27.403 - DEBUG: [logger.js:246:9] PARAMS -> {"page":1,"perPage":2}
+2025-08-28 11:23:27.407 - DEBUG: [logger.js:246:9] SQL -> select count(*) as total
+                from test.text
+2025-08-28 11:23:27.411 - DEBUG: [logger.js:246:9] SQL -> select id, title, coments, path, createDate, category
+                from test.text  limit 0, 2
+2025-08-28 11:23:28.547 - DEBUG: [logger.js:246:9] Text::list 호출됨.
+2025-08-28 11:23:28.548 - DEBUG: [logger.js:246:9] POST /text/v1/list requested
+2025-08-28 11:23:28.549 - DEBUG: [logger.js:246:9] PARAMS -> {"page":2,"perPage":2}
+2025-08-28 11:23:28.555 - DEBUG: [logger.js:246:9] SQL -> select count(*) as total
+                from test.text
+2025-08-28 11:23:28.558 - DEBUG: [logger.js:246:9] SQL -> select id, title, coments, path, createDate, category
+                from test.text  limit 2, 2
+2025-08-28 11:23:31.502 - DEBUG: [logger.js:246:9] Text::read 호출됨.
+2025-08-28 11:23:31.504 - DEBUG: [logger.js:246:9] POST /text/v1/read requested
+2025-08-28 11:23:31.505 - DEBUG: [logger.js:246:9] PARAMS -> {"id":15}
+2025-08-28 11:23:31.508 - DEBUG: [logger.js:246:9] SQL -> select id, title, coments, path, createDate, category
+                from test.text
+                where id = '15'
+2025-08-28 11:23:34.981 - DEBUG: [logger.js:246:9] Text::list 호출됨.
+2025-08-28 11:23:34.983 - DEBUG: [logger.js:246:9] POST /text/v1/list requested
+2025-08-28 11:23:34.992 - DEBUG: [logger.js:246:9] PARAMS -> {"page":1,"perPage":2}
+2025-08-28 11:23:34.999 - DEBUG: [logger.js:246:9] SQL -> select count(*) as total
+                from test.text
+2025-08-28 11:23:35.003 - DEBUG: [logger.js:246:9] SQL -> select id, title, coments, path, createDate, category
+                from test.text  limit 0, 2
+2025-08-28 11:23:36.796 - DEBUG: [logger.js:246:9] Text::read 호출됨.
+2025-08-28 11:23:36.798 - DEBUG: [logger.js:246:9] POST /text/v1/read requested
+2025-08-28 11:23:36.799 - DEBUG: [logger.js:246:9] PARAMS -> {"id":4}
+2025-08-28 11:23:36.803 - DEBUG: [logger.js:246:9] SQL -> select id, title, coments, path, createDate, category
+                from test.text
+                where id = '4'
+2025-08-28 11:23:39.039 - DEBUG: [logger.js:246:9] Text::list 호출됨.
+2025-08-28 11:23:39.040 - DEBUG: [logger.js:246:9] POST /text/v1/list requested
+2025-08-28 11:23:39.041 - DEBUG: [logger.js:246:9] PARAMS -> {"page":1,"perPage":2}
+2025-08-28 11:23:39.045 - DEBUG: [logger.js:246:9] SQL -> select count(*) as total
+                from test.text
+2025-08-28 11:23:39.050 - DEBUG: [logger.js:246:9] SQL -> select id, title, coments, path, createDate, category
+                from test.text  limit 0, 2
+2025-08-28 11:23:39.900 - DEBUG: [logger.js:246:9] Text::read 호출됨.
+2025-08-28 11:23:39.901 - DEBUG: [logger.js:246:9] POST /text/v1/read requested
+2025-08-28 11:23:39.902 - DEBUG: [logger.js:246:9] PARAMS -> {"id":3}
+2025-08-28 11:23:39.907 - DEBUG: [logger.js:246:9] SQL -> select id, title, coments, path, createDate, category
+                from test.text
+                where id = '3'
+2025-08-28 11:23:42.183 - DEBUG: [logger.js:246:9] Text::list 호출됨.
+2025-08-28 11:23:42.184 - DEBUG: [logger.js:246:9] POST /text/v1/list requested
+2025-08-28 11:23:42.185 - DEBUG: [logger.js:246:9] PARAMS -> {"page":1,"perPage":2}
+2025-08-28 11:23:42.189 - DEBUG: [logger.js:246:9] SQL -> select count(*) as total
+                from test.text
+2025-08-28 11:23:42.192 - DEBUG: [logger.js:246:9] SQL -> select id, title, coments, path, createDate, category
+                from test.text  limit 0, 2
+2025-08-28 11:23:45.344 - DEBUG: [logger.js:246:9] Product::listAll 호출됨.
+2025-08-28 11:23:45.345 - DEBUG: [logger.js:246:9] POST /product/v1/list-all requested
+2025-08-28 11:23:45.346 - DEBUG: [logger.js:246:9] PARAMS -> {}
+2025-08-28 11:23:45.351 - DEBUG: [logger.js:246:9] SQL -> select id, name, lating, genre, path
+                from test.product
+2025-08-28 11:23:54.134 - DEBUG: [logger.js:246:9] Text::list 호출됨.
+2025-08-28 11:23:54.137 - DEBUG: [logger.js:246:9] POST /text/v1/list requested
+2025-08-28 11:23:54.138 - DEBUG: [logger.js:246:9] PARAMS -> {"page":1,"perPage":2}
+2025-08-28 11:23:54.142 - DEBUG: [logger.js:246:9] SQL -> select count(*) as total
+                from test.text
+2025-08-28 11:23:54.145 - DEBUG: [logger.js:246:9] SQL -> select id, title, coments, path, createDate, category
+                from test.text  limit 0, 2
+2025-08-28 11:23:55.660 - DEBUG: [logger.js:246:9] Product::read 호출됨.
+2025-08-28 11:23:55.661 - DEBUG: [logger.js:246:9] POST /product/v1/read requested
+2025-08-28 11:23:55.662 - DEBUG: [logger.js:246:9] PARAMS -> {"id":3}
+2025-08-28 11:23:55.667 - DEBUG: [logger.js:246:9] SQL -> select id, name, lating, genre, path
+                from test.product
+                where id = '3'
+2025-08-28 11:24:49.538 - DEBUG: [logger.js:246:9] Product::read 호출됨.
+2025-08-28 11:24:49.539 - DEBUG: [logger.js:246:9] POST /product/v1/read requested
+2025-08-28 11:24:49.540 - DEBUG: [logger.js:246:9] PARAMS -> {"id":3}
+2025-08-28 11:24:49.543 - DEBUG: [logger.js:246:9] SQL -> select id, name, lating, genre, path
+                from test.product
+                where id = '3'
+2025-08-28 11:25:07.414 - DEBUG: [logger.js:246:9] Product::read 호출됨.
+2025-08-28 11:25:07.416 - DEBUG: [logger.js:246:9] POST /product/v1/read requested
+2025-08-28 11:25:07.417 - DEBUG: [logger.js:246:9] PARAMS -> {"id":3}
+2025-08-28 11:25:07.419 - DEBUG: [logger.js:246:9] SQL -> select id, name, lating, genre, path
+                from test.product
+                where id = '3'
+2025-08-28 11:25:08.997 - DEBUG: [logger.js:246:9] Product::read 호출됨.
+2025-08-28 11:25:08.998 - DEBUG: [logger.js:246:9] POST /product/v1/read requested
+2025-08-28 11:25:08.999 - DEBUG: [logger.js:246:9] PARAMS -> {"id":3}
+2025-08-28 11:25:09.001 - DEBUG: [logger.js:246:9] SQL -> select id, name, lating, genre, path
+                from test.product
+                where id = '3'
+2025-08-28 11:25:14.658 - DEBUG: [logger.js:246:9] Product::read 호출됨.
+2025-08-28 11:25:14.659 - DEBUG: [logger.js:246:9] POST /product/v1/read requested
+2025-08-28 11:25:14.660 - DEBUG: [logger.js:246:9] PARAMS -> {"id":3}
+2025-08-28 11:25:14.662 - DEBUG: [logger.js:246:9] SQL -> select id, name, lating, genre, path
+                from test.product
+                where id = '3'
+2025-08-28 11:33:41.057 - DEBUG: [logger.js:246:9] Product::listAll 호출됨.
+2025-08-28 11:33:41.059 - DEBUG: [logger.js:246:9] POST /product/v1/list-all requested
+2025-08-28 11:33:41.062 - DEBUG: [logger.js:246:9] PARAMS -> {}
+2025-08-28 11:33:41.071 - DEBUG: [logger.js:246:9] SQL -> select id, name, lating, genre, path
+                from test.product
+2025-08-28 11:38:52.571 - DEBUG: [logger.js:246:9] Text::list 호출됨.
+2025-08-28 11:38:52.572 - DEBUG: [logger.js:246:9] POST /text/v1/list requested
+2025-08-28 11:38:52.574 - DEBUG: [logger.js:246:9] PARAMS -> {"page":1,"perPage":2}
+2025-08-28 11:38:52.578 - DEBUG: [logger.js:246:9] SQL -> select count(*) as total
+                from test.text
+2025-08-28 11:38:52.582 - DEBUG: [logger.js:246:9] SQL -> select id, title, coments, path, createDate, category
+                from test.text  limit 0, 2
+2025-08-28 11:38:59.441 - DEBUG: [logger.js:246:9] Text::list 호출됨.
+2025-08-28 11:38:59.442 - DEBUG: [logger.js:246:9] POST /text/v1/list requested
+2025-08-28 11:38:59.443 - DEBUG: [logger.js:246:9] PARAMS -> {"page":1,"perPage":2}
+2025-08-28 11:38:59.446 - DEBUG: [logger.js:246:9] SQL -> select count(*) as total
+                from test.text
+2025-08-28 11:38:59.450 - DEBUG: [logger.js:246:9] SQL -> select id, title, coments, path, createDate, category
+                from test.text  limit 0, 2
+2025-08-28 11:39:00.809 - DEBUG: [logger.js:246:9] Text::list 호출됨.
+2025-08-28 11:39:00.811 - DEBUG: [logger.js:246:9] POST /text/v1/list requested
+2025-08-28 11:39:00.812 - DEBUG: [logger.js:246:9] PARAMS -> {"page":2,"perPage":2}
+2025-08-28 11:39:00.817 - DEBUG: [logger.js:246:9] SQL -> select count(*) as total
+                from test.text
+2025-08-28 11:39:00.825 - DEBUG: [logger.js:246:9] SQL -> select id, title, coments, path, createDate, category
+                from test.text  limit 2, 2
+2025-08-28 11:39:03.192 - DEBUG: [logger.js:246:9] Text::list 호출됨.
+2025-08-28 11:39:03.194 - DEBUG: [logger.js:246:9] POST /text/v1/list requested
+2025-08-28 11:39:03.195 - DEBUG: [logger.js:246:9] PARAMS -> {"page":1,"perPage":2}
+2025-08-28 11:39:03.199 - DEBUG: [logger.js:246:9] SQL -> select count(*) as total
+                from test.text
+2025-08-28 11:39:03.203 - DEBUG: [logger.js:246:9] SQL -> select id, title, coments, path, createDate, category
+                from test.text  limit 0, 2
+2025-08-28 13:46:15.192 - INFO: [logger.js:246:9] service loader called.
+2025-08-28 13:46:15.215 - INFO: [logger.js:246:9] controller loader called.
+2025-08-28 13:46:15.216 - DEBUG: [logger.js:246:9] external_loader called.
+2025-08-28 13:46:15.217 - DEBUG: [logger.js:246:9] No external configuration.
+2025-08-28 13:46:15.598 - INFO: [logger.js:246:9] Http Server started.
+2025-08-28 13:46:15.599 - INFO: [logger.js:246:9] Base URL -> http://localhost:8001
+2025-08-28 13:46:15.599 - INFO: [logger.js:246:9] Namespace -> ::_8001_19556
+2025-08-28 13:46:15.608 - DEBUG: [logger.js:246:9] database SQL file loaded.
+2025-08-28 13:47:08.895 - DEBUG: [logger.js:246:9] Product::listAll 호출됨.
+2025-08-28 13:47:08.897 - DEBUG: [logger.js:246:9] POST /product/v1/list-all requested
+2025-08-28 13:47:08.899 - DEBUG: [logger.js:246:9] PARAMS -> {}
+2025-08-28 13:47:09.021 - DEBUG: [logger.js:246:9] SQL -> select id, name, lating, genre, path
+                from test.product
+2025-08-28 13:47:13.673 - DEBUG: [logger.js:246:9] Text::list 호출됨.
+2025-08-28 13:47:13.673 - DEBUG: [logger.js:246:9] POST /text/v1/list requested
+2025-08-28 13:47:13.674 - DEBUG: [logger.js:246:9] PARAMS -> {"page":1,"perPage":2}
+2025-08-28 13:47:13.683 - DEBUG: [logger.js:246:9] SQL -> select count(*) as total
+                from test.text
+2025-08-28 13:47:13.689 - DEBUG: [logger.js:246:9] SQL -> select id, title, coments, path, createDate, category
+                from test.text  limit 0, 2
+2025-08-28 13:47:16.581 - DEBUG: [logger.js:246:9] Text::read 호출됨.
+2025-08-28 13:47:16.583 - DEBUG: [logger.js:246:9] POST /text/v1/read requested
+2025-08-28 13:47:16.583 - DEBUG: [logger.js:246:9] PARAMS -> {"id":4}
+2025-08-28 13:47:16.596 - DEBUG: [logger.js:246:9] SQL -> select id, title, coments, path, createDate, category
+                from test.text
+                where id = '4'
+2025-08-28 13:47:18.122 - DEBUG: [logger.js:246:9] Text::list 호출됨.
+2025-08-28 13:47:18.122 - DEBUG: [logger.js:246:9] POST /text/v1/list requested
+2025-08-28 13:47:18.123 - DEBUG: [logger.js:246:9] PARAMS -> {"page":1,"perPage":2}
+2025-08-28 13:47:18.126 - DEBUG: [logger.js:246:9] SQL -> select count(*) as total
+                from test.text
+2025-08-28 13:47:18.129 - DEBUG: [logger.js:246:9] SQL -> select id, title, coments, path, createDate, category
+                from test.text  limit 0, 2
+2025-08-28 13:47:21.955 - DEBUG: [logger.js:246:9] Text::list 호출됨.
+2025-08-28 13:47:21.955 - DEBUG: [logger.js:246:9] POST /text/v1/list requested
+2025-08-28 13:47:21.956 - DEBUG: [logger.js:246:9] PARAMS -> {"page":2,"perPage":2}
+2025-08-28 13:47:21.958 - DEBUG: [logger.js:246:9] SQL -> select count(*) as total
+                from test.text
+2025-08-28 13:47:21.960 - DEBUG: [logger.js:246:9] SQL -> select id, title, coments, path, createDate, category
+                from test.text  limit 2, 2
+2025-08-28 13:47:33.109 - DEBUG: [logger.js:246:9] POST /profile/upload requested
+2025-08-28 13:47:33.109 - DEBUG: [logger.js:246:9] PARAMS -> {}
+2025-08-28 13:47:33.110 - DEBUG: [logger.js:246:9] FILES
+2025-08-28 13:47:33.110 - DEBUG: [logger.js:246:9] [{"fieldname":"photo","originalname":"dog1.jpg","encoding":"7bit","mimetype":"image/jpeg","destination":"uploads","filename":"dog11756356453104.jpg","path":"uploads\\dog11756356453104.jpg","size":387092}]
+2025-08-28 13:47:33.112 - DEBUG: [logger.js:246:9] File copied to C:\academi\server\ubiaccess-framework\controllers/../public/images/dog11756356453104.jpg
+2025-08-28 14:14:28.134 - DEBUG: [logger.js:246:9] POST /profile/upload requested
+2025-08-28 14:14:28.135 - DEBUG: [logger.js:246:9] PARAMS -> {}
+2025-08-28 14:14:28.135 - DEBUG: [logger.js:246:9] FILES
+2025-08-28 14:14:28.136 - DEBUG: [logger.js:246:9] [{"fieldname":"photo","originalname":"dog1.jpg","encoding":"7bit","mimetype":"image/jpeg","destination":"uploads","filename":"dog11756358068130.jpg","path":"uploads\\dog11756358068130.jpg","size":387092}]
+2025-08-28 14:14:28.138 - DEBUG: [logger.js:246:9] File copied to C:\academi\server\ubiaccess-framework\controllers/../public/images/dog11756358068130.jpg
+2025-08-28 14:14:40.361 - DEBUG: [logger.js:246:9] Product::listAll 호출됨.
+2025-08-28 14:14:40.362 - DEBUG: [logger.js:246:9] POST /product/v1/list-all requested
+2025-08-28 14:14:40.363 - DEBUG: [logger.js:246:9] PARAMS -> {}
+2025-08-28 14:14:40.367 - DEBUG: [logger.js:246:9] SQL -> select id, name, lating, genre, path
+                from test.product
+2025-08-28 14:14:50.755 - DEBUG: [logger.js:246:9] Product::read 호출됨.
+2025-08-28 14:14:50.755 - DEBUG: [logger.js:246:9] POST /product/v1/read requested
+2025-08-28 14:14:50.756 - DEBUG: [logger.js:246:9] PARAMS -> {"id":1}
+2025-08-28 14:14:50.758 - DEBUG: [logger.js:246:9] SQL -> select id, name, lating, genre, path
+                from test.product
+                where id = '1'
+2025-08-28 14:14:52.736 - DEBUG: [logger.js:246:9] Product::listAll 호출됨.
+2025-08-28 14:14:52.737 - DEBUG: [logger.js:246:9] POST /product/v1/list-all requested
+2025-08-28 14:14:52.737 - DEBUG: [logger.js:246:9] PARAMS -> {}
+2025-08-28 14:14:52.740 - DEBUG: [logger.js:246:9] SQL -> select id, name, lating, genre, path
+                from test.product
+2025-08-28 14:14:54.034 - DEBUG: [logger.js:246:9] Product::read 호출됨.
+2025-08-28 14:14:54.034 - DEBUG: [logger.js:246:9] POST /product/v1/read requested
+2025-08-28 14:14:54.035 - DEBUG: [logger.js:246:9] PARAMS -> {"id":2}
+2025-08-28 14:14:54.038 - DEBUG: [logger.js:246:9] SQL -> select id, name, lating, genre, path
+                from test.product
+                where id = '2'
+2025-08-28 14:14:54.890 - DEBUG: [logger.js:246:9] Product::listAll 호출됨.
+2025-08-28 14:14:54.891 - DEBUG: [logger.js:246:9] POST /product/v1/list-all requested
+2025-08-28 14:14:54.891 - DEBUG: [logger.js:246:9] PARAMS -> {}
+2025-08-28 14:14:54.894 - DEBUG: [logger.js:246:9] SQL -> select id, name, lating, genre, path
+                from test.product
+2025-08-28 14:14:58.038 - DEBUG: [logger.js:246:9] Product::listAll 호출됨.
+2025-08-28 14:14:58.039 - DEBUG: [logger.js:246:9] POST /product/v1/list-all requested
+2025-08-28 14:14:58.040 - DEBUG: [logger.js:246:9] PARAMS -> {}
+2025-08-28 14:14:58.043 - DEBUG: [logger.js:246:9] SQL -> select id, name, lating, genre, path
+                from test.product
+2025-08-28 14:15:04.320 - DEBUG: [logger.js:246:9] Member::login 호출됨.
+2025-08-28 14:15:04.321 - DEBUG: [logger.js:246:9] POST /member/v1/login requested
+2025-08-28 14:15:04.321 - DEBUG: [logger.js:246:9] PARAMS -> {"email":"1","password":"1"}
+2025-08-28 14:15:04.328 - DEBUG: [logger.js:246:9] SQL -> select * from test.member where email = '1' AND password = '1'
+2025-08-28 14:15:04.328 - DEBUG: [logger.js:246:9] executeLogin -> [object Object]
+2025-08-28 14:15:04.540 - DEBUG: [logger.js:246:9] Product::listAll 호출됨.
+2025-08-28 14:15:04.543 - DEBUG: [logger.js:246:9] POST /product/v1/list-all requested
+2025-08-28 14:15:04.544 - DEBUG: [logger.js:246:9] PARAMS -> {}
+2025-08-28 14:15:04.546 - DEBUG: [logger.js:246:9] SQL -> select id, name, lating, genre, path
+                from test.product
+2025-08-28 14:15:09.547 - DEBUG: [logger.js:246:9] Member::checkEmail 호출됨.
+2025-08-28 14:15:09.547 - DEBUG: [logger.js:246:9] POST /member/v1/check requested
+2025-08-28 14:15:09.548 - DEBUG: [logger.js:246:9] PARAMS -> {"email":"1"}
+2025-08-28 14:15:09.550 - DEBUG: [logger.js:246:9] SQL -> select * from test.member where email = '1'
+2025-08-28 14:15:09.550 - DEBUG: [logger.js:246:9] executeLogin -> [object Object]
+2025-08-28 14:15:09.585 - DEBUG: [logger.js:246:9] Member::checkEmail 호출됨.
+2025-08-28 14:15:09.586 - DEBUG: [logger.js:246:9] POST /member/v1/check requested
+2025-08-28 14:15:09.586 - DEBUG: [logger.js:246:9] PARAMS -> {"email":"1"}
+2025-08-28 14:15:09.588 - DEBUG: [logger.js:246:9] SQL -> select * from test.member where email = '1'
+2025-08-28 14:15:09.589 - DEBUG: [logger.js:246:9] executeLogin -> [object Object]
+2025-08-28 14:15:12.211 - DEBUG: [logger.js:246:9] Member::modify 호출됨.
+2025-08-28 14:15:12.211 - DEBUG: [logger.js:246:9] POST /member/v1/modify requested
+2025-08-28 14:15:12.212 - DEBUG: [logger.js:246:9] PARAMS -> {"email":"1","name":"고영준","age":25,"mobile":"010-1111-1111","password":"1"}
+2025-08-28 14:15:12.220 - DEBUG: [logger.js:246:9] SQL -> update test.member set name = '고영준', age = '25', mobile = '010-1111-1111', password = '1' where email = '1'
+2025-08-28 14:15:12.408 - DEBUG: [logger.js:246:9] Member::checkEmail 호출됨.
+2025-08-28 14:15:12.408 - DEBUG: [logger.js:246:9] POST /member/v1/check requested
+2025-08-28 14:15:12.409 - DEBUG: [logger.js:246:9] PARAMS -> {"email":"1"}
+2025-08-28 14:15:12.410 - DEBUG: [logger.js:246:9] SQL -> select * from test.member where email = '1'
+2025-08-28 14:15:12.411 - DEBUG: [logger.js:246:9] executeLogin -> [object Object]
+2025-08-28 14:15:14.349 - DEBUG: [logger.js:246:9] Product::listAll 호출됨.
+2025-08-28 14:15:14.350 - DEBUG: [logger.js:246:9] POST /product/v1/list-all requested
+2025-08-28 14:15:14.351 - DEBUG: [logger.js:246:9] PARAMS -> {}
+2025-08-28 14:15:14.355 - DEBUG: [logger.js:246:9] SQL -> select id, name, lating, genre, path
+                from test.product
+2025-08-28 14:15:21.919 - DEBUG: [logger.js:246:9] Text::list 호출됨.
+2025-08-28 14:15:21.920 - DEBUG: [logger.js:246:9] POST /text/v1/list requested
+2025-08-28 14:15:21.920 - DEBUG: [logger.js:246:9] PARAMS -> {"page":1,"perPage":2}
+2025-08-28 14:15:21.922 - DEBUG: [logger.js:246:9] SQL -> select count(*) as total
+                from test.text
+2025-08-28 14:15:21.924 - DEBUG: [logger.js:246:9] SQL -> select id, title, coments, path, createDate, category
+                from test.text  limit 0, 2
+2025-08-28 14:15:26.074 - DEBUG: [logger.js:246:9] Text::list 호출됨.
+2025-08-28 14:15:26.075 - DEBUG: [logger.js:246:9] POST /text/v1/list requested
+2025-08-28 14:15:26.075 - DEBUG: [logger.js:246:9] PARAMS -> {"page":2,"perPage":2}
+2025-08-28 14:15:26.077 - DEBUG: [logger.js:246:9] SQL -> select count(*) as total
+                from test.text
+2025-08-28 14:15:26.081 - DEBUG: [logger.js:246:9] SQL -> select id, title, coments, path, createDate, category
+                from test.text  limit 2, 2
+2025-08-28 14:15:27.534 - DEBUG: [logger.js:246:9] Text::list 호출됨.
+2025-08-28 14:15:27.535 - DEBUG: [logger.js:246:9] POST /text/v1/list requested
+2025-08-28 14:15:27.536 - DEBUG: [logger.js:246:9] PARAMS -> {"page":1,"perPage":2}
+2025-08-28 14:15:27.537 - DEBUG: [logger.js:246:9] SQL -> select count(*) as total
+                from test.text
+2025-08-28 14:15:27.539 - DEBUG: [logger.js:246:9] SQL -> select id, title, coments, path, createDate, category
+                from test.text  limit 0, 2
+2025-08-28 14:15:28.334 - DEBUG: [logger.js:246:9] Text::read 호출됨.
+2025-08-28 14:15:28.335 - DEBUG: [logger.js:246:9] POST /text/v1/read requested
+2025-08-28 14:15:28.336 - DEBUG: [logger.js:246:9] PARAMS -> {"id":3}
+2025-08-28 14:15:28.338 - DEBUG: [logger.js:246:9] SQL -> select id, title, coments, path, createDate, category
+                from test.text
+                where id = '3'
+2025-08-28 14:15:34.625 - DEBUG: [logger.js:246:9] Text::list 호출됨.
+2025-08-28 14:15:34.626 - DEBUG: [logger.js:246:9] POST /text/v1/list requested
+2025-08-28 14:15:34.626 - DEBUG: [logger.js:246:9] PARAMS -> {"page":1,"perPage":2}
+2025-08-28 14:15:34.629 - DEBUG: [logger.js:246:9] SQL -> select count(*) as total
+                from test.text
+2025-08-28 14:15:34.630 - DEBUG: [logger.js:246:9] SQL -> select id, title, coments, path, createDate, category
+                from test.text  limit 0, 2
+2025-08-28 14:15:35.532 - DEBUG: [logger.js:246:9] Text::list 호출됨.
+2025-08-28 14:15:35.533 - DEBUG: [logger.js:246:9] POST /text/v1/list requested
+2025-08-28 14:15:35.534 - DEBUG: [logger.js:246:9] PARAMS -> {"page":2,"perPage":2}
+2025-08-28 14:15:35.535 - DEBUG: [logger.js:246:9] SQL -> select count(*) as total
+                from test.text
+2025-08-28 14:15:35.538 - DEBUG: [logger.js:246:9] SQL -> select id, title, coments, path, createDate, category
+                from test.text  limit 2, 2
+2025-08-28 14:15:36.361 - DEBUG: [logger.js:246:9] Text::read 호출됨.
+2025-08-28 14:15:36.361 - DEBUG: [logger.js:246:9] POST /text/v1/read requested
+2025-08-28 14:15:36.362 - DEBUG: [logger.js:246:9] PARAMS -> {"id":15}
+2025-08-28 14:15:36.363 - DEBUG: [logger.js:246:9] SQL -> select id, title, coments, path, createDate, category
+                from test.text
+                where id = '15'
+2025-08-28 14:15:47.541 - DEBUG: [logger.js:246:9] Text::read 호출됨.
+2025-08-28 14:15:47.542 - DEBUG: [logger.js:246:9] POST /text/v1/read requested
+2025-08-28 14:15:47.542 - DEBUG: [logger.js:246:9] PARAMS -> {"id":"15"}
+2025-08-28 14:15:47.545 - DEBUG: [logger.js:246:9] SQL -> select id, title, coments, path, createDate, category
+                from test.text
+                where id = '15'
+2025-08-28 14:15:55.117 - DEBUG: [logger.js:246:9] Text::modify 호출됨.
+2025-08-28 14:15:55.117 - DEBUG: [logger.js:246:9] POST /text/v1/modify requested
+2025-08-28 14:15:55.117 - DEBUG: [logger.js:246:9] PARAMS -> {"id":"15","title":"고양이","coments":"귀여운 고양이 보고가세요--------","category":"자유글","path":"http://localhost:8001/images/cat11756347775496.jpg","createDate":"2025-08-28"}
+2025-08-28 14:15:55.132 - DEBUG: [logger.js:246:9] SQL -> update test.text 
+                set title = '고양이',
+                    coments = '귀여운 고양이 보고가세요--------',
+                    path = 'http://localhost:8001/images/cat11756347775496.jpg',   
+                    category = '자유글',
+                    createDate = '2025-08-28'
+                where id = '15'
+2025-08-28 14:15:55.155 - DEBUG: [logger.js:246:9] Text::list 호출됨.
+2025-08-28 14:15:55.155 - DEBUG: [logger.js:246:9] POST /text/v1/list requested
+2025-08-28 14:15:55.156 - DEBUG: [logger.js:246:9] PARAMS -> {"page":1,"perPage":2}
+2025-08-28 14:15:55.158 - DEBUG: [logger.js:246:9] SQL -> select count(*) as total
+                from test.text
+2025-08-28 14:15:55.159 - DEBUG: [logger.js:246:9] SQL -> select id, title, coments, path, createDate, category
+                from test.text  limit 0, 2
+2025-08-28 14:15:56.714 - DEBUG: [logger.js:246:9] Text::list 호출됨.
+2025-08-28 14:15:56.715 - DEBUG: [logger.js:246:9] POST /text/v1/list requested
+2025-08-28 14:15:56.715 - DEBUG: [logger.js:246:9] PARAMS -> {"page":2,"perPage":2}
+2025-08-28 14:15:56.717 - DEBUG: [logger.js:246:9] SQL -> select count(*) as total
+                from test.text
+2025-08-28 14:15:56.718 - DEBUG: [logger.js:246:9] SQL -> select id, title, coments, path, createDate, category
+                from test.text  limit 2, 2
+2025-08-28 14:15:57.954 - DEBUG: [logger.js:246:9] Text::read 호출됨.
+2025-08-28 14:15:57.954 - DEBUG: [logger.js:246:9] POST /text/v1/read requested
+2025-08-28 14:15:57.954 - DEBUG: [logger.js:246:9] PARAMS -> {"id":15}
+2025-08-28 14:15:57.956 - DEBUG: [logger.js:246:9] SQL -> select id, title, coments, path, createDate, category
+                from test.text
+                where id = '15'
+2025-08-28 14:16:12.748 - DEBUG: [logger.js:246:9] Product::listAll 호출됨.
+2025-08-28 14:16:12.749 - DEBUG: [logger.js:246:9] POST /product/v1/list-all requested
+2025-08-28 14:16:12.750 - DEBUG: [logger.js:246:9] PARAMS -> {}
+2025-08-28 14:16:12.752 - DEBUG: [logger.js:246:9] SQL -> select id, name, lating, genre, path
+                from test.product
+2025-08-28 15:44:41.273 - DEBUG: [logger.js:246:9] Product::listAll 호출됨.
+2025-08-28 15:44:41.274 - DEBUG: [logger.js:246:9] POST /product/v1/list-all requested
+2025-08-28 15:44:41.274 - DEBUG: [logger.js:246:9] PARAMS -> {}
+2025-08-28 15:44:41.282 - DEBUG: [logger.js:246:9] SQL -> select id, name, lating, genre, path
+                from test.product
+2025-08-28 15:44:43.976 - DEBUG: [logger.js:246:9] Product::listAll 호출됨.
+2025-08-28 15:44:43.977 - DEBUG: [logger.js:246:9] POST /product/v1/list-all requested
+2025-08-28 15:44:43.977 - DEBUG: [logger.js:246:9] PARAMS -> {}
+2025-08-28 15:44:43.981 - DEBUG: [logger.js:246:9] SQL -> select id, name, lating, genre, path
+                from test.product
+2025-08-28 15:44:48.777 - DEBUG: [logger.js:246:9] Member::login 호출됨.
+2025-08-28 15:44:48.778 - DEBUG: [logger.js:246:9] POST /member/v1/login requested
+2025-08-28 15:44:48.778 - DEBUG: [logger.js:246:9] PARAMS -> {"email":"1","password":"1"}
+2025-08-28 15:44:48.781 - DEBUG: [logger.js:246:9] SQL -> select * from test.member where email = '1' AND password = '1'
+2025-08-28 15:44:48.782 - DEBUG: [logger.js:246:9] executeLogin -> [object Object]
+2025-08-28 15:44:48.976 - DEBUG: [logger.js:246:9] Product::listAll 호출됨.
+2025-08-28 15:44:48.977 - DEBUG: [logger.js:246:9] POST /product/v1/list-all requested
+2025-08-28 15:44:48.978 - DEBUG: [logger.js:246:9] PARAMS -> {}
+2025-08-28 15:44:48.982 - DEBUG: [logger.js:246:9] SQL -> select id, name, lating, genre, path
+                from test.product
+2025-08-28 15:44:50.976 - DEBUG: [logger.js:246:9] Product::listAll 호출됨.
+2025-08-28 15:44:50.976 - DEBUG: [logger.js:246:9] POST /product/v1/list-all requested
+2025-08-28 15:44:50.977 - DEBUG: [logger.js:246:9] PARAMS -> {}
+2025-08-28 15:44:50.979 - DEBUG: [logger.js:246:9] SQL -> select id, name, lating, genre, path
+                from test.product
+2025-08-28 15:45:19.446 - DEBUG: [logger.js:246:9] Product::listAll 호출됨.
+2025-08-28 15:45:19.447 - DEBUG: [logger.js:246:9] POST /product/v1/list-all requested
+2025-08-28 15:45:19.447 - DEBUG: [logger.js:246:9] PARAMS -> {}
+2025-08-28 15:45:19.449 - DEBUG: [logger.js:246:9] SQL -> select id, name, lating, genre, path
+                from test.product
+2025-08-28 15:47:41.028 - INFO: [logger.js:246:9] service loader called.
+2025-08-28 15:47:41.050 - INFO: [logger.js:246:9] controller loader called.
+2025-08-28 15:47:41.050 - DEBUG: [logger.js:246:9] external_loader called.
+2025-08-28 15:47:41.051 - DEBUG: [logger.js:246:9] No external configuration.
+2025-08-28 15:47:41.374 - INFO: [logger.js:246:9] Http Server started.
+2025-08-28 15:47:41.374 - INFO: [logger.js:246:9] Base URL -> http://localhost:8001
+2025-08-28 15:47:41.375 - INFO: [logger.js:246:9] Namespace -> ::_8001_14512
+2025-08-28 15:47:41.383 - DEBUG: [logger.js:246:9] database SQL file loaded.
+2025-08-28 15:48:32.531 - DEBUG: [logger.js:246:9] Product::listAll 호출됨.
+2025-08-28 15:48:32.533 - DEBUG: [logger.js:246:9] POST /product/v1/list-all requested
+2025-08-28 15:48:32.533 - DEBUG: [logger.js:246:9] PARAMS -> {}
+2025-08-28 15:48:32.575 - DEBUG: [logger.js:246:9] SQL -> select id, name, lating, genre, path
+                from test.product
+2025-08-28 15:48:48.143 - DEBUG: [logger.js:246:9] Product::listAll 호출됨.
+2025-08-28 15:48:48.144 - DEBUG: [logger.js:246:9] POST /product/v1/list-all requested
+2025-08-28 15:48:48.145 - DEBUG: [logger.js:246:9] PARAMS -> {}
+2025-08-28 15:48:48.149 - DEBUG: [logger.js:246:9] SQL -> select id, name, lating, genre, path
+                from test.product
+2025-08-28 15:49:01.827 - DEBUG: [logger.js:246:9] Member::login 호출됨.
+2025-08-28 15:49:01.827 - DEBUG: [logger.js:246:9] POST /member/v1/login requested
+2025-08-28 15:49:01.828 - DEBUG: [logger.js:246:9] PARAMS -> {"email":"1","password":"1"}
+2025-08-28 15:49:01.830 - DEBUG: [logger.js:246:9] SQL -> select * from test.member where email = '1' AND password = '1'
+2025-08-28 15:49:01.830 - DEBUG: [logger.js:246:9] executeLogin -> [object Object]
+2025-08-28 15:49:02.239 - DEBUG: [logger.js:246:9] Product::listAll 호출됨.
+2025-08-28 15:49:02.240 - DEBUG: [logger.js:246:9] POST /product/v1/list-all requested
+2025-08-28 15:49:02.240 - DEBUG: [logger.js:246:9] PARAMS -> {}
+2025-08-28 15:49:02.241 - DEBUG: [logger.js:246:9] SQL -> select id, name, lating, genre, path
+                from test.product
+2025-08-28 15:49:06.533 - DEBUG: [logger.js:246:9] Member::checkEmail 호출됨.
+2025-08-28 15:49:06.534 - DEBUG: [logger.js:246:9] POST /member/v1/check requested
+2025-08-28 15:49:06.534 - DEBUG: [logger.js:246:9] PARAMS -> {"email":"1"}
+2025-08-28 15:49:06.535 - DEBUG: [logger.js:246:9] SQL -> select * from test.member where email = '1'
+2025-08-28 15:49:06.536 - DEBUG: [logger.js:246:9] executeLogin -> [object Object]
+2025-08-28 15:49:06.611 - DEBUG: [logger.js:246:9] Member::checkEmail 호출됨.
+2025-08-28 15:49:06.611 - DEBUG: [logger.js:246:9] POST /member/v1/check requested
+2025-08-28 15:49:06.611 - DEBUG: [logger.js:246:9] PARAMS -> {"email":"1"}
+2025-08-28 15:49:06.613 - DEBUG: [logger.js:246:9] SQL -> select * from test.member where email = '1'
+2025-08-28 15:49:06.614 - DEBUG: [logger.js:246:9] executeLogin -> [object Object]
+2025-08-28 15:49:12.949 - DEBUG: [logger.js:246:9] Member::modify 호출됨.
+2025-08-28 15:49:12.950 - DEBUG: [logger.js:246:9] POST /member/v1/modify requested
+2025-08-28 15:49:12.950 - DEBUG: [logger.js:246:9] PARAMS -> {"email":"1","name":"고영준","age":25,"mobile":"010-1111-1111","password":"12"}
+2025-08-28 15:49:12.955 - DEBUG: [logger.js:246:9] SQL -> update test.member set name = '고영준', age = '25', mobile = '010-1111-1111', password = '12' where email = '1'
+2025-08-28 15:49:13.449 - DEBUG: [logger.js:246:9] Member::checkEmail 호출됨.
+2025-08-28 15:49:13.449 - DEBUG: [logger.js:246:9] POST /member/v1/check requested
+2025-08-28 15:49:13.450 - DEBUG: [logger.js:246:9] PARAMS -> {"email":"1"}
+2025-08-28 15:49:13.452 - DEBUG: [logger.js:246:9] SQL -> select * from test.member where email = '1'
+2025-08-28 15:49:13.452 - DEBUG: [logger.js:246:9] executeLogin -> [object Object]
+2025-08-28 15:49:17.318 - DEBUG: [logger.js:246:9] Product::read 호출됨.
+2025-08-28 15:49:17.319 - DEBUG: [logger.js:246:9] POST /product/v1/read requested
+2025-08-28 15:49:17.319 - DEBUG: [logger.js:246:9] PARAMS -> {"id":-1}
+2025-08-28 15:49:17.321 - DEBUG: [logger.js:246:9] SQL -> select id, name, lating, genre, path
+                from test.product
+                where id = '-1'
+2025-08-28 15:49:18.779 - DEBUG: [logger.js:246:9] Product::listAll 호출됨.
+2025-08-28 15:49:18.779 - DEBUG: [logger.js:246:9] POST /product/v1/list-all requested
+2025-08-28 15:49:18.780 - DEBUG: [logger.js:246:9] PARAMS -> {}
+2025-08-28 15:49:18.781 - DEBUG: [logger.js:246:9] SQL -> select id, name, lating, genre, path
+                from test.product
+2025-08-28 15:49:20.965 - DEBUG: [logger.js:246:9] Product::read 호출됨.
+2025-08-28 15:49:20.966 - DEBUG: [logger.js:246:9] POST /product/v1/read requested
+2025-08-28 15:49:20.966 - DEBUG: [logger.js:246:9] PARAMS -> {"id":1}
+2025-08-28 15:49:20.967 - DEBUG: [logger.js:246:9] SQL -> select id, name, lating, genre, path
+                from test.product
+                where id = '1'
+2025-08-28 15:49:24.820 - DEBUG: [logger.js:246:9] Product::listAll 호출됨.
+2025-08-28 15:49:24.821 - DEBUG: [logger.js:246:9] POST /product/v1/list-all requested
+2025-08-28 15:49:24.822 - DEBUG: [logger.js:246:9] PARAMS -> {}
+2025-08-28 15:49:24.824 - DEBUG: [logger.js:246:9] SQL -> select id, name, lating, genre, path
+                from test.product
+2025-08-28 15:49:27.201 - DEBUG: [logger.js:246:9] Product::read 호출됨.
+2025-08-28 15:49:27.201 - DEBUG: [logger.js:246:9] POST /product/v1/read requested
+2025-08-28 15:49:27.202 - DEBUG: [logger.js:246:9] PARAMS -> {"id":1}
+2025-08-28 15:49:27.203 - DEBUG: [logger.js:246:9] SQL -> select id, name, lating, genre, path
+                from test.product
+                where id = '1'
+2025-08-28 15:49:27.850 - DEBUG: [logger.js:246:9] Member::checkEmail 호출됨.
+2025-08-28 15:49:27.851 - DEBUG: [logger.js:246:9] POST /member/v1/check requested
+2025-08-28 15:49:27.851 - DEBUG: [logger.js:246:9] PARAMS -> {"email":"1"}
+2025-08-28 15:49:27.852 - DEBUG: [logger.js:246:9] SQL -> select * from test.member where email = '1'
+2025-08-28 15:49:27.853 - DEBUG: [logger.js:246:9] executeLogin -> [object Object]
+2025-08-28 15:49:43.542 - DEBUG: [logger.js:246:9] Product::listAll 호출됨.
+2025-08-28 15:49:43.543 - DEBUG: [logger.js:246:9] POST /product/v1/list-all requested
+2025-08-28 15:49:43.543 - DEBUG: [logger.js:246:9] PARAMS -> {}
+2025-08-28 15:49:43.545 - DEBUG: [logger.js:246:9] SQL -> select id, name, lating, genre, path
+                from test.product
+2025-08-28 15:51:16.574 - DEBUG: [logger.js:246:9] Product::listAll 호출됨.
+2025-08-28 15:51:16.575 - DEBUG: [logger.js:246:9] POST /product/v1/list-all requested
+2025-08-28 15:51:16.575 - DEBUG: [logger.js:246:9] PARAMS -> {}
+2025-08-28 15:51:16.577 - DEBUG: [logger.js:246:9] SQL -> select id, name, lating, genre, path
+                from test.product
+2025-08-28 15:52:09.718 - DEBUG: [logger.js:246:9] Product::listAll 호출됨.
+2025-08-28 15:52:09.719 - DEBUG: [logger.js:246:9] POST /product/v1/list-all requested
+2025-08-28 15:52:09.719 - DEBUG: [logger.js:246:9] PARAMS -> {}
+2025-08-28 15:52:09.720 - DEBUG: [logger.js:246:9] SQL -> select id, name, lating, genre, path
+                from test.product
+2025-08-28 15:55:07.391 - DEBUG: [logger.js:246:9] Product::listAll 호출됨.
+2025-08-28 15:55:07.391 - DEBUG: [logger.js:246:9] POST /product/v1/list-all requested
+2025-08-28 15:55:07.392 - DEBUG: [logger.js:246:9] PARAMS -> {}
+2025-08-28 15:55:07.394 - DEBUG: [logger.js:246:9] SQL -> select id, name, lating, genre, path
+                from test.product
+2025-08-28 15:55:56.638 - DEBUG: [logger.js:246:9] Product::listAll 호출됨.
+2025-08-28 15:55:56.639 - DEBUG: [logger.js:246:9] POST /product/v1/list-all requested
+2025-08-28 15:55:56.639 - DEBUG: [logger.js:246:9] PARAMS -> {}
+2025-08-28 15:55:56.641 - DEBUG: [logger.js:246:9] SQL -> select id, name, lating, genre, path
+                from test.product
+2025-08-28 15:56:29.433 - DEBUG: [logger.js:246:9] Product::listAll 호출됨.
+2025-08-28 15:56:29.434 - DEBUG: [logger.js:246:9] POST /product/v1/list-all requested
+2025-08-28 15:56:29.434 - DEBUG: [logger.js:246:9] PARAMS -> {}
+2025-08-28 15:56:29.436 - DEBUG: [logger.js:246:9] SQL -> select id, name, lating, genre, path
+                from test.product
+2025-08-28 15:56:33.941 - DEBUG: [logger.js:246:9] Text::list 호출됨.
+2025-08-28 15:56:33.942 - DEBUG: [logger.js:246:9] POST /text/v1/list requested
+2025-08-28 15:56:33.942 - DEBUG: [logger.js:246:9] PARAMS -> {"page":1,"perPage":2}
+2025-08-28 15:56:33.946 - DEBUG: [logger.js:246:9] SQL -> select count(*) as total
+                from test.text
+2025-08-28 15:56:33.947 - DEBUG: [logger.js:246:9] SQL -> select id, title, coments, path, createDate, category
+                from test.text  limit 0, 2
+2025-08-28 15:56:35.276 - DEBUG: [logger.js:246:9] Text::list 호출됨.
+2025-08-28 15:56:35.277 - DEBUG: [logger.js:246:9] POST /text/v1/list requested
+2025-08-28 15:56:35.277 - DEBUG: [logger.js:246:9] PARAMS -> {"page":2,"perPage":2}
+2025-08-28 15:56:35.278 - DEBUG: [logger.js:246:9] SQL -> select count(*) as total
+                from test.text
+2025-08-28 15:56:35.279 - DEBUG: [logger.js:246:9] SQL -> select id, title, coments, path, createDate, category
+                from test.text  limit 2, 2
+2025-08-28 15:56:36.712 - DEBUG: [logger.js:246:9] Text::list 호출됨.
+2025-08-28 15:56:36.714 - DEBUG: [logger.js:246:9] POST /text/v1/list requested
+2025-08-28 15:56:36.715 - DEBUG: [logger.js:246:9] PARAMS -> {"page":1,"perPage":2}
+2025-08-28 15:56:36.716 - DEBUG: [logger.js:246:9] SQL -> select count(*) as total
+                from test.text
+2025-08-28 15:56:36.718 - DEBUG: [logger.js:246:9] SQL -> select id, title, coments, path, createDate, category
+                from test.text  limit 0, 2
+2025-08-28 15:56:37.690 - DEBUG: [logger.js:246:9] Text::list 호출됨.
+2025-08-28 15:56:37.691 - DEBUG: [logger.js:246:9] POST /text/v1/list requested
+2025-08-28 15:56:37.691 - DEBUG: [logger.js:246:9] PARAMS -> {"page":2,"perPage":2}
+2025-08-28 15:56:37.693 - DEBUG: [logger.js:246:9] SQL -> select count(*) as total
+                from test.text
+2025-08-28 15:56:37.694 - DEBUG: [logger.js:246:9] SQL -> select id, title, coments, path, createDate, category
+                from test.text  limit 2, 2
+2025-08-28 15:56:39.065 - DEBUG: [logger.js:246:9] Text::read 호출됨.
+2025-08-28 15:56:39.065 - DEBUG: [logger.js:246:9] POST /text/v1/read requested
+2025-08-28 15:56:39.065 - DEBUG: [logger.js:246:9] PARAMS -> {"id":15}
+2025-08-28 15:56:39.066 - DEBUG: [logger.js:246:9] SQL -> select id, title, coments, path, createDate, category
+                from test.text
+                where id = '15'
+2025-08-28 15:56:41.219 - DEBUG: [logger.js:246:9] Text::remove 호출됨.
+2025-08-28 15:56:41.220 - DEBUG: [logger.js:246:9] POST /text/v1/remove requested
+2025-08-28 15:56:41.220 - DEBUG: [logger.js:246:9] PARAMS -> {"id":15}
+2025-08-28 15:56:41.231 - DEBUG: [logger.js:246:9] SQL -> delete from test.text
+                where id = '15'
+2025-08-28 15:56:41.276 - DEBUG: [logger.js:246:9] Text::list 호출됨.
+2025-08-28 15:56:41.277 - DEBUG: [logger.js:246:9] POST /text/v1/list requested
+2025-08-28 15:56:41.278 - DEBUG: [logger.js:246:9] PARAMS -> {"page":1,"perPage":2}
+2025-08-28 15:56:41.279 - DEBUG: [logger.js:246:9] SQL -> select count(*) as total
+                from test.text
+2025-08-28 15:56:41.280 - DEBUG: [logger.js:246:9] SQL -> select id, title, coments, path, createDate, category
+                from test.text  limit 0, 2
+2025-08-28 15:57:11.952 - DEBUG: [logger.js:246:9] Text::add 호출됨.
+2025-08-28 15:57:11.953 - DEBUG: [logger.js:246:9] POST /text/v1/add requested
+2025-08-28 15:57:11.953 - DEBUG: [logger.js:246:9] PARAMS -> {"title":"Rrrr","coments":"Rrrrr","category":"문의사항","path":"","createDate":"2025-08-28"}
+2025-08-28 15:57:11.963 - DEBUG: [logger.js:246:9] SQL -> insert into test.text(title, coments, path, createDate, category)
+                values
+                ('Rrrr', 'Rrrrr', '', '2025-08-28', '문의사항')
+2025-08-28 15:57:12.036 - DEBUG: [logger.js:246:9] Text::list 호출됨.
+2025-08-28 15:57:12.037 - DEBUG: [logger.js:246:9] POST /text/v1/list requested
+2025-08-28 15:57:12.037 - DEBUG: [logger.js:246:9] PARAMS -> {"page":1,"perPage":2}
+2025-08-28 15:57:12.038 - DEBUG: [logger.js:246:9] SQL -> select count(*) as total
+                from test.text
+2025-08-28 15:57:12.039 - DEBUG: [logger.js:246:9] SQL -> select id, title, coments, path, createDate, category
+                from test.text  limit 0, 2
+2025-08-28 15:57:13.090 - DEBUG: [logger.js:246:9] Text::list 호출됨.
+2025-08-28 15:57:13.091 - DEBUG: [logger.js:246:9] POST /text/v1/list requested
+2025-08-28 15:57:13.091 - DEBUG: [logger.js:246:9] PARAMS -> {"page":2,"perPage":2}
+2025-08-28 15:57:13.093 - DEBUG: [logger.js:246:9] SQL -> select count(*) as total
+                from test.text
+2025-08-28 15:57:13.094 - DEBUG: [logger.js:246:9] SQL -> select id, title, coments, path, createDate, category
+                from test.text  limit 2, 2
+2025-08-28 15:57:14.020 - DEBUG: [logger.js:246:9] Text::list 호출됨.
+2025-08-28 15:57:14.021 - DEBUG: [logger.js:246:9] POST /text/v1/list requested
+2025-08-28 15:57:14.021 - DEBUG: [logger.js:246:9] PARAMS -> {"page":1,"perPage":2}
+2025-08-28 15:57:14.023 - DEBUG: [logger.js:246:9] SQL -> select count(*) as total
+                from test.text
+2025-08-28 15:57:14.025 - DEBUG: [logger.js:246:9] SQL -> select id, title, coments, path, createDate, category
+                from test.text  limit 0, 2
+2025-08-28 15:57:14.670 - DEBUG: [logger.js:246:9] Text::list 호출됨.
+2025-08-28 15:57:14.670 - DEBUG: [logger.js:246:9] POST /text/v1/list requested
+2025-08-28 15:57:14.671 - DEBUG: [logger.js:246:9] PARAMS -> {"page":2,"perPage":2}
+2025-08-28 15:57:14.672 - DEBUG: [logger.js:246:9] SQL -> select count(*) as total
+                from test.text
+2025-08-28 15:57:14.674 - DEBUG: [logger.js:246:9] SQL -> select id, title, coments, path, createDate, category
+                from test.text  limit 2, 2
+2025-08-28 15:57:15.557 - DEBUG: [logger.js:246:9] Text::read 호출됨.
+2025-08-28 15:57:15.558 - DEBUG: [logger.js:246:9] POST /text/v1/read requested
+2025-08-28 15:57:15.558 - DEBUG: [logger.js:246:9] PARAMS -> {"id":16}
+2025-08-28 15:57:15.560 - DEBUG: [logger.js:246:9] SQL -> select id, title, coments, path, createDate, category
+                from test.text
+                where id = '16'
+2025-08-28 15:57:17.078 - DEBUG: [logger.js:246:9] Text::remove 호출됨.
+2025-08-28 15:57:17.078 - DEBUG: [logger.js:246:9] POST /text/v1/remove requested
+2025-08-28 15:57:17.079 - DEBUG: [logger.js:246:9] PARAMS -> {"id":16}
+2025-08-28 15:57:17.087 - DEBUG: [logger.js:246:9] SQL -> delete from test.text
+                where id = '16'
+2025-08-28 15:57:17.126 - DEBUG: [logger.js:246:9] Text::list 호출됨.
+2025-08-28 15:57:17.126 - DEBUG: [logger.js:246:9] POST /text/v1/list requested
+2025-08-28 15:57:17.127 - DEBUG: [logger.js:246:9] PARAMS -> {"page":1,"perPage":2}
+2025-08-28 15:57:17.128 - DEBUG: [logger.js:246:9] SQL -> select count(*) as total
+                from test.text
+2025-08-28 15:57:17.129 - DEBUG: [logger.js:246:9] SQL -> select id, title, coments, path, createDate, category
+                from test.text  limit 0, 2
+2025-08-28 15:57:23.653 - DEBUG: [logger.js:246:9] Text::list 호출됨.
+2025-08-28 15:57:23.653 - DEBUG: [logger.js:246:9] POST /text/v1/list requested
+2025-08-28 15:57:23.654 - DEBUG: [logger.js:246:9] PARAMS -> {"page":1,"perPage":2}
+2025-08-28 15:57:23.657 - DEBUG: [logger.js:246:9] SQL -> select count(*) as total
+                from test.text
+2025-08-28 15:57:23.658 - DEBUG: [logger.js:246:9] SQL -> select id, title, coments, path, createDate, category
+                from test.text  limit 0, 2
+2025-08-28 15:57:29.243 - DEBUG: [logger.js:246:9] Member::login 호출됨.
+2025-08-28 15:57:29.243 - DEBUG: [logger.js:246:9] POST /member/v1/login requested
+2025-08-28 15:57:29.244 - DEBUG: [logger.js:246:9] PARAMS -> {"email":"1","password":"1"}
+2025-08-28 15:57:29.245 - DEBUG: [logger.js:246:9] SQL -> select * from test.member where email = '1' AND password = '1'
+2025-08-28 15:57:48.572 - DEBUG: [logger.js:246:9] Member::login 호출됨.
+2025-08-28 15:57:48.573 - DEBUG: [logger.js:246:9] POST /member/v1/login requested
+2025-08-28 15:57:48.573 - DEBUG: [logger.js:246:9] PARAMS -> {"email":"1","password":"12"}
+2025-08-28 15:57:48.574 - DEBUG: [logger.js:246:9] SQL -> select * from test.member where email = '1' AND password = '12'
+2025-08-28 15:57:48.575 - DEBUG: [logger.js:246:9] executeLogin -> [object Object]
+2025-08-28 15:57:48.888 - DEBUG: [logger.js:246:9] Product::listAll 호출됨.
+2025-08-28 15:57:48.888 - DEBUG: [logger.js:246:9] POST /product/v1/list-all requested
+2025-08-28 15:57:48.889 - DEBUG: [logger.js:246:9] PARAMS -> {}
+2025-08-28 15:57:48.893 - DEBUG: [logger.js:246:9] SQL -> select id, name, lating, genre, path
+                from test.product
+2025-08-28 15:57:50.983 - DEBUG: [logger.js:246:9] Text::list 호출됨.
+2025-08-28 15:57:50.984 - DEBUG: [logger.js:246:9] POST /text/v1/list requested
+2025-08-28 15:57:50.985 - DEBUG: [logger.js:246:9] PARAMS -> {"page":1,"perPage":2}
+2025-08-28 15:57:50.986 - DEBUG: [logger.js:246:9] SQL -> select count(*) as total
+                from test.text
+2025-08-28 15:57:50.987 - DEBUG: [logger.js:246:9] SQL -> select id, title, coments, path, createDate, category
+                from test.text  limit 0, 2
+2025-08-28 15:57:59.433 - DEBUG: [logger.js:246:9] POST /profile/upload requested
+2025-08-28 15:57:59.433 - DEBUG: [logger.js:246:9] PARAMS -> {}
+2025-08-28 15:57:59.433 - DEBUG: [logger.js:246:9] FILES
+2025-08-28 15:57:59.434 - DEBUG: [logger.js:246:9] [{"fieldname":"photo","originalname":"cat1.jpg","encoding":"7bit","mimetype":"image/jpeg","destination":"uploads","filename":"cat11756364279430.jpg","path":"uploads\\cat11756364279430.jpg","size":129606}]
+2025-08-28 15:57:59.436 - DEBUG: [logger.js:246:9] File copied to C:\academi\server\ubiaccess-framework\controllers/../public/images/cat11756364279430.jpg
+2025-08-28 15:58:01.253 - DEBUG: [logger.js:246:9] Text::add 호출됨.
+2025-08-28 15:58:01.254 - DEBUG: [logger.js:246:9] POST /text/v1/add requested
+2025-08-28 15:58:01.254 - DEBUG: [logger.js:246:9] PARAMS -> {"title":"12","coments":"12","category":"자유글","path":"http://localhost:8001/images/cat11756364279430.jpg","createDate":"2025-08-28"}
+2025-08-28 15:58:01.256 - DEBUG: [logger.js:246:9] SQL -> insert into test.text(title, coments, path, createDate, category)
+                values
+                ('12', '12', 'http://localhost:8001/images/cat11756364279430.jpg', '2025-08-28', '자유글')
+2025-08-28 15:58:01.283 - DEBUG: [logger.js:246:9] Text::list 호출됨.
+2025-08-28 15:58:01.284 - DEBUG: [logger.js:246:9] POST /text/v1/list requested
+2025-08-28 15:58:01.284 - DEBUG: [logger.js:246:9] PARAMS -> {"page":1,"perPage":2}
+2025-08-28 15:58:01.286 - DEBUG: [logger.js:246:9] SQL -> select count(*) as total
+                from test.text
+2025-08-28 15:58:01.288 - DEBUG: [logger.js:246:9] SQL -> select id, title, coments, path, createDate, category
+                from test.text  limit 0, 2
+2025-08-28 15:58:02.239 - DEBUG: [logger.js:246:9] Text::list 호출됨.
+2025-08-28 15:58:02.240 - DEBUG: [logger.js:246:9] POST /text/v1/list requested
+2025-08-28 15:58:02.240 - DEBUG: [logger.js:246:9] PARAMS -> {"page":2,"perPage":2}
+2025-08-28 15:58:02.242 - DEBUG: [logger.js:246:9] SQL -> select count(*) as total
+                from test.text
+2025-08-28 15:58:02.244 - DEBUG: [logger.js:246:9] SQL -> select id, title, coments, path, createDate, category
+                from test.text  limit 2, 2
+2025-08-28 15:58:08.505 - DEBUG: [logger.js:246:9] Product::listAll 호출됨.
+2025-08-28 15:58:08.505 - DEBUG: [logger.js:246:9] POST /product/v1/list-all requested
+2025-08-28 15:58:08.506 - DEBUG: [logger.js:246:9] PARAMS -> {}
+2025-08-28 15:58:08.508 - DEBUG: [logger.js:246:9] SQL -> select id, name, lating, genre, path
+                from test.product
+2025-08-28 16:01:51.663 - DEBUG: [logger.js:246:9] Product::listAll 호출됨.
+2025-08-28 16:01:51.670 - DEBUG: [logger.js:246:9] POST /product/v1/list-all requested
+2025-08-28 16:01:51.671 - DEBUG: [logger.js:246:9] PARAMS -> {}
+2025-08-28 16:01:51.713 - DEBUG: [logger.js:246:9] SQL -> select id, name, lating, genre, path
+                from test.product
+2025-08-28 16:03:24.994 - DEBUG: [logger.js:246:9] Product::read 호출됨.
+2025-08-28 16:03:24.997 - DEBUG: [logger.js:246:9] POST /product/v1/read requested
+2025-08-28 16:03:25.000 - DEBUG: [logger.js:246:9] PARAMS -> {"id":5}
+2025-08-28 16:03:25.019 - DEBUG: [logger.js:246:9] SQL -> select id, name, lating, genre, path
+                from test.product
+                where id = '5'
+2025-08-28 16:03:27.115 - DEBUG: [logger.js:246:9] Product::listAll 호출됨.
+2025-08-28 16:03:27.117 - DEBUG: [logger.js:246:9] POST /product/v1/list-all requested
+2025-08-28 16:03:27.118 - DEBUG: [logger.js:246:9] PARAMS -> {}
+2025-08-28 16:03:27.121 - DEBUG: [logger.js:246:9] SQL -> select id, name, lating, genre, path
+                from test.product
+2025-08-28 16:03:37.055 - DEBUG: [logger.js:246:9] Product::read 호출됨.
+2025-08-28 16:03:37.056 - DEBUG: [logger.js:246:9] POST /product/v1/read requested
+2025-08-28 16:03:37.056 - DEBUG: [logger.js:246:9] PARAMS -> {"id":4}
+2025-08-28 16:03:37.061 - DEBUG: [logger.js:246:9] SQL -> select id, name, lating, genre, path
+                from test.product
+                where id = '4'
+2025-08-28 16:03:40.007 - DEBUG: [logger.js:246:9] Product::listAll 호출됨.
+2025-08-28 16:03:40.008 - DEBUG: [logger.js:246:9] POST /product/v1/list-all requested
+2025-08-28 16:03:40.009 - DEBUG: [logger.js:246:9] PARAMS -> {}
+2025-08-28 16:03:40.013 - DEBUG: [logger.js:246:9] SQL -> select id, name, lating, genre, path
+                from test.product
+2025-08-28 16:03:42.550 - DEBUG: [logger.js:246:9] Product::listAll 호출됨.
+2025-08-28 16:03:42.552 - DEBUG: [logger.js:246:9] POST /product/v1/list-all requested
+2025-08-28 16:03:42.553 - DEBUG: [logger.js:246:9] PARAMS -> {}
+2025-08-28 16:03:42.558 - DEBUG: [logger.js:246:9] SQL -> select id, name, lating, genre, path
+                from test.product
+2025-08-28 16:03:52.489 - DEBUG: [logger.js:246:9] Member::login 호출됨.
+2025-08-28 16:03:52.489 - DEBUG: [logger.js:246:9] POST /member/v1/login requested
+2025-08-28 16:03:52.489 - DEBUG: [logger.js:246:9] PARAMS -> {"email":"1","password":"1"}
+2025-08-28 16:03:52.494 - DEBUG: [logger.js:246:9] SQL -> select * from test.member where email = '1' AND password = '1'
+2025-08-28 16:04:03.626 - DEBUG: [logger.js:246:9] Member::login 호출됨.
+2025-08-28 16:04:03.626 - DEBUG: [logger.js:246:9] POST /member/v1/login requested
+2025-08-28 16:04:03.627 - DEBUG: [logger.js:246:9] PARAMS -> {"email":"1","password":"12"}
+2025-08-28 16:04:03.629 - DEBUG: [logger.js:246:9] SQL -> select * from test.member where email = '1' AND password = '12'
+2025-08-28 16:04:03.630 - DEBUG: [logger.js:246:9] executeLogin -> [object Object]
+2025-08-28 16:04:03.920 - DEBUG: [logger.js:246:9] Product::listAll 호출됨.
+2025-08-28 16:04:03.921 - DEBUG: [logger.js:246:9] POST /product/v1/list-all requested
+2025-08-28 16:04:03.923 - DEBUG: [logger.js:246:9] PARAMS -> {}
+2025-08-28 16:04:03.929 - DEBUG: [logger.js:246:9] SQL -> select id, name, lating, genre, path
+                from test.product
+2025-08-28 16:04:13.215 - DEBUG: [logger.js:246:9] Member::checkEmail 호출됨.
+2025-08-28 16:04:13.215 - DEBUG: [logger.js:246:9] POST /member/v1/check requested
+2025-08-28 16:04:13.216 - DEBUG: [logger.js:246:9] PARAMS -> {"email":"12"}
+2025-08-28 16:04:13.218 - DEBUG: [logger.js:246:9] SQL -> select * from test.member where email = '12'
+2025-08-28 16:04:16.442 - DEBUG: [logger.js:246:9] Member::checkEmail 호출됨.
+2025-08-28 16:04:16.442 - DEBUG: [logger.js:246:9] POST /member/v1/check requested
+2025-08-28 16:04:16.443 - DEBUG: [logger.js:246:9] PARAMS -> {"email":"1"}
+2025-08-28 16:04:16.446 - DEBUG: [logger.js:246:9] SQL -> select * from test.member where email = '1'
+2025-08-28 16:04:16.446 - DEBUG: [logger.js:246:9] executeLogin -> [object Object]
+2025-08-28 16:04:16.483 - DEBUG: [logger.js:246:9] Member::checkEmail 호출됨.
+2025-08-28 16:04:16.484 - DEBUG: [logger.js:246:9] POST /member/v1/check requested
+2025-08-28 16:04:16.485 - DEBUG: [logger.js:246:9] PARAMS -> {"email":"1"}
+2025-08-28 16:04:16.488 - DEBUG: [logger.js:246:9] SQL -> select * from test.member where email = '1'
+2025-08-28 16:04:16.488 - DEBUG: [logger.js:246:9] executeLogin -> [object Object]
+2025-08-28 16:04:21.872 - DEBUG: [logger.js:246:9] Member::modify 호출됨.
+2025-08-28 16:04:21.873 - DEBUG: [logger.js:246:9] POST /member/v1/modify requested
+2025-08-28 16:04:21.873 - DEBUG: [logger.js:246:9] PARAMS -> {"email":"1","name":"gggg","age":25,"mobile":"010-1111-1111","password":"12"}
+2025-08-28 16:04:21.891 - DEBUG: [logger.js:246:9] SQL -> update test.member set name = 'gggg', age = '25', mobile = '010-1111-1111', password = '12' where email = '1'
+2025-08-28 16:04:22.216 - DEBUG: [logger.js:246:9] Member::checkEmail 호출됨.
+2025-08-28 16:04:22.217 - DEBUG: [logger.js:246:9] POST /member/v1/check requested
+2025-08-28 16:04:22.218 - DEBUG: [logger.js:246:9] PARAMS -> {"email":"1"}
+2025-08-28 16:04:22.222 - DEBUG: [logger.js:246:9] SQL -> select * from test.member where email = '1'
+2025-08-28 16:04:22.223 - DEBUG: [logger.js:246:9] executeLogin -> [object Object]
+2025-08-28 16:04:36.868 - DEBUG: [logger.js:246:9] Text::list 호출됨.
+2025-08-28 16:04:36.869 - DEBUG: [logger.js:246:9] POST /text/v1/list requested
+2025-08-28 16:04:36.869 - DEBUG: [logger.js:246:9] PARAMS -> {"page":1,"perPage":2}
+2025-08-28 16:04:36.874 - DEBUG: [logger.js:246:9] SQL -> select count(*) as total
+                from test.text
+2025-08-28 16:04:36.876 - DEBUG: [logger.js:246:9] SQL -> select id, title, coments, path, createDate, category
+                from test.text  limit 0, 2
+2025-08-28 16:04:41.432 - DEBUG: [logger.js:246:9] Text::list 호출됨.
+2025-08-28 16:04:41.432 - DEBUG: [logger.js:246:9] POST /text/v1/list requested
+2025-08-28 16:04:41.433 - DEBUG: [logger.js:246:9] PARAMS -> {"page":2,"perPage":2}
+2025-08-28 16:04:41.434 - DEBUG: [logger.js:246:9] SQL -> select count(*) as total
+                from test.text
+2025-08-28 16:04:41.436 - DEBUG: [logger.js:246:9] SQL -> select id, title, coments, path, createDate, category
+                from test.text  limit 2, 2
+2025-08-28 16:04:43.854 - DEBUG: [logger.js:246:9] Text::read 호출됨.
+2025-08-28 16:04:43.854 - DEBUG: [logger.js:246:9] POST /text/v1/read requested
+2025-08-28 16:04:43.854 - DEBUG: [logger.js:246:9] PARAMS -> {"id":17}
+2025-08-28 16:04:43.856 - DEBUG: [logger.js:246:9] SQL -> select id, title, coments, path, createDate, category
+                from test.text
+                where id = '17'
+2025-08-28 16:04:47.299 - DEBUG: [logger.js:246:9] Text::read 호출됨.
+2025-08-28 16:04:47.299 - DEBUG: [logger.js:246:9] POST /text/v1/read requested
+2025-08-28 16:04:47.300 - DEBUG: [logger.js:246:9] PARAMS -> {"id":"17"}
+2025-08-28 16:04:47.304 - DEBUG: [logger.js:246:9] SQL -> select id, title, coments, path, createDate, category
+                from test.text
+                where id = '17'
+2025-08-28 16:05:00.781 - DEBUG: [logger.js:246:9] POST /profile/upload requested
+2025-08-28 16:05:00.782 - DEBUG: [logger.js:246:9] PARAMS -> {}
+2025-08-28 16:05:00.782 - DEBUG: [logger.js:246:9] FILES
+2025-08-28 16:05:00.782 - DEBUG: [logger.js:246:9] [{"fieldname":"photo","originalname":"dog1.jpg","encoding":"7bit","mimetype":"image/jpeg","destination":"uploads","filename":"dog11756364700775.jpg","path":"uploads\\dog11756364700775.jpg","size":387092}]
+2025-08-28 16:05:00.785 - DEBUG: [logger.js:246:9] File copied to C:\academi\server\ubiaccess-framework\controllers/../public/images/dog11756364700775.jpg
+2025-08-28 16:05:02.377 - DEBUG: [logger.js:246:9] Text::modify 호출됨.
+2025-08-28 16:05:02.377 - DEBUG: [logger.js:246:9] POST /text/v1/modify requested
+2025-08-28 16:05:02.378 - DEBUG: [logger.js:246:9] PARAMS -> {"id":"17","title":"123456","coments":"12123456","category":"제품후기","path":"http://localhost:8001/images/dog11756364700775.jpg","createDate":"2025-08-28"}
+2025-08-28 16:05:02.383 - DEBUG: [logger.js:246:9] SQL -> update test.text 
+                set title = '123456',
+                    coments = '12123456',
+                    path = 'http://localhost:8001/images/dog11756364700775.jpg',   
+                    category = '제품후기',
+                    createDate = '2025-08-28'
+                where id = '17'
+2025-08-28 16:05:02.415 - DEBUG: [logger.js:246:9] Text::list 호출됨.
+2025-08-28 16:05:02.416 - DEBUG: [logger.js:246:9] POST /text/v1/list requested
+2025-08-28 16:05:02.416 - DEBUG: [logger.js:246:9] PARAMS -> {"page":1,"perPage":2}
+2025-08-28 16:05:02.418 - DEBUG: [logger.js:246:9] SQL -> select count(*) as total
+                from test.text
+2025-08-28 16:05:02.419 - DEBUG: [logger.js:246:9] SQL -> select id, title, coments, path, createDate, category
+                from test.text  limit 0, 2
+2025-08-28 16:05:03.439 - DEBUG: [logger.js:246:9] Text::list 호출됨.
+2025-08-28 16:05:03.440 - DEBUG: [logger.js:246:9] POST /text/v1/list requested
+2025-08-28 16:05:03.441 - DEBUG: [logger.js:246:9] PARAMS -> {"page":2,"perPage":2}
+2025-08-28 16:05:03.444 - DEBUG: [logger.js:246:9] SQL -> select count(*) as total
+                from test.text
+2025-08-28 16:05:03.446 - DEBUG: [logger.js:246:9] SQL -> select id, title, coments, path, createDate, category
+                from test.text  limit 2, 2
+2025-08-28 16:05:06.041 - DEBUG: [logger.js:246:9] Text::read 호출됨.
+2025-08-28 16:05:06.041 - DEBUG: [logger.js:246:9] POST /text/v1/read requested
+2025-08-28 16:05:06.042 - DEBUG: [logger.js:246:9] PARAMS -> {"id":17}
+2025-08-28 16:05:06.043 - DEBUG: [logger.js:246:9] SQL -> select id, title, coments, path, createDate, category
+                from test.text
+                where id = '17'
+2025-08-28 16:05:07.275 - DEBUG: [logger.js:246:9] Text::remove 호출됨.
+2025-08-28 16:05:07.276 - DEBUG: [logger.js:246:9] POST /text/v1/remove requested
+2025-08-28 16:05:07.276 - DEBUG: [logger.js:246:9] PARAMS -> {"id":17}
+2025-08-28 16:05:07.280 - DEBUG: [logger.js:246:9] SQL -> delete from test.text
+                where id = '17'
+2025-08-28 16:05:07.298 - DEBUG: [logger.js:246:9] Text::list 호출됨.
+2025-08-28 16:05:07.300 - DEBUG: [logger.js:246:9] POST /text/v1/list requested
+2025-08-28 16:05:07.301 - DEBUG: [logger.js:246:9] PARAMS -> {"page":1,"perPage":2}
+2025-08-28 16:05:07.307 - DEBUG: [logger.js:246:9] SQL -> select count(*) as total
+                from test.text
+2025-08-28 16:05:07.311 - DEBUG: [logger.js:246:9] SQL -> select id, title, coments, path, createDate, category
+                from test.text  limit 0, 2
+2025-08-28 16:05:21.594 - DEBUG: [logger.js:246:9] POST /profile/upload requested
+2025-08-28 16:05:21.594 - DEBUG: [logger.js:246:9] PARAMS -> {}
+2025-08-28 16:05:21.595 - DEBUG: [logger.js:246:9] FILES
+2025-08-28 16:05:21.595 - DEBUG: [logger.js:246:9] [{"fieldname":"photo","originalname":"dog1.jpg","encoding":"7bit","mimetype":"image/jpeg","destination":"uploads","filename":"dog11756364721591.jpg","path":"uploads\\dog11756364721591.jpg","size":387092}]
+2025-08-28 16:05:21.598 - DEBUG: [logger.js:246:9] File copied to C:\academi\server\ubiaccess-framework\controllers/../public/images/dog11756364721591.jpg
+2025-08-28 16:05:23.140 - DEBUG: [logger.js:246:9] Text::add 호출됨.
+2025-08-28 16:05:23.140 - DEBUG: [logger.js:246:9] POST /text/v1/add requested
+2025-08-28 16:05:23.141 - DEBUG: [logger.js:246:9] PARAMS -> {"title":"123456","coments":"123456","category":"제품후기","path":"http://localhost:8001/images/dog11756364721591.jpg","createDate":"2025-08-28"}
+2025-08-28 16:05:23.144 - DEBUG: [logger.js:246:9] SQL -> insert into test.text(title, coments, path, createDate, category)
+                values
+                ('123456', '123456', 'http://localhost:8001/images/dog11756364721591.jpg', '2025-08-28', '제품후기')
+2025-08-28 16:05:23.175 - DEBUG: [logger.js:246:9] Text::list 호출됨.
+2025-08-28 16:05:23.176 - DEBUG: [logger.js:246:9] POST /text/v1/list requested
+2025-08-28 16:05:23.177 - DEBUG: [logger.js:246:9] PARAMS -> {"page":1,"perPage":2}
+2025-08-28 16:05:23.179 - DEBUG: [logger.js:246:9] SQL -> select count(*) as total
+                from test.text
+2025-08-28 16:05:23.183 - DEBUG: [logger.js:246:9] SQL -> select id, title, coments, path, createDate, category
+                from test.text  limit 0, 2
+2025-08-28 16:05:24.223 - DEBUG: [logger.js:246:9] Text::list 호출됨.
+2025-08-28 16:05:24.224 - DEBUG: [logger.js:246:9] POST /text/v1/list requested
+2025-08-28 16:05:24.224 - DEBUG: [logger.js:246:9] PARAMS -> {"page":2,"perPage":2}
+2025-08-28 16:05:24.227 - DEBUG: [logger.js:246:9] SQL -> select count(*) as total
+                from test.text
+2025-08-28 16:05:24.229 - DEBUG: [logger.js:246:9] SQL -> select id, title, coments, path, createDate, category
+                from test.text  limit 2, 2
+2025-08-28 16:05:26.869 - DEBUG: [logger.js:246:9] Product::listAll 호출됨.
+2025-08-28 16:05:26.870 - DEBUG: [logger.js:246:9] POST /product/v1/list-all requested
+2025-08-28 16:05:26.871 - DEBUG: [logger.js:246:9] PARAMS -> {}
+2025-08-28 16:05:26.873 - DEBUG: [logger.js:246:9] SQL -> select id, name, lating, genre, path
+                from test.product

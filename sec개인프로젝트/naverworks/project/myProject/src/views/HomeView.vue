@@ -1,8 +1,8 @@
 <template>
-<div class="flex-grow-1 overflow-auto">
+<div class="flex-grow-1 d-flex flex-column justify-content-center align-items-center text-center overflow-auto">
 		
 	<!-- 자동으로 넘어가는 슬라이드 -->
-	<div class="overlay d-flex text-center" style="overflow: hidden;">
+	<div class="overlay" style="overflow: hidden;">
 
 		<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel" style="margin-top: 100px;">
 		
@@ -10,7 +10,7 @@
 			<div class="carousel-item active">
 				<div class="d-flex flex-column px-5 py-5">
 				<!-- 텍스트 -->
-				<div class="d-flex flex-column justify-content-center text-center">
+				<div class="d-flex flex-column justify-content-center text-center" style="width: auto;">
 					<h2 class="display-4 fw-bold">일이 쉬워진다<br>네이버웍스</h2>
 					<p class="lead text-muted mt-4" style="">
 					네이버웍스는 네이버의 편리함과 기술, 일하는 방식을 담은 통합 업무<br> 
@@ -189,13 +189,6 @@ function showDetailProduct(index) {
 </script>
 
 <style scoped>
-.menu-link {
-  transition: color 0.2s;
-}
-.menu-link:hover, .menu-link:focus {
-  color: #009ef7 !important; /* 기존 메뉴의 파란색 */
-}
-
 .logo-slider {
   overflow: hidden;
   white-space: nowrap;

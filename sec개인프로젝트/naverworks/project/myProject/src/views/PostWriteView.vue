@@ -301,6 +301,7 @@ async function uploadFile() {
   } catch(err) {
     console.error(`업로드 중 에러 -> ${err}`)
   }
+    myDialog.hide();
 
   }
 

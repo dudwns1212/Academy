@@ -140,14 +140,17 @@ async function handleLogin() {
       password: password.value
     });
 
-	console.log(`응답 -> ${JSON.stringify(response.data)}`);
+	console.log(`응답 -> ${JSON.stringify(response.data.data.data[0])}`);
 
+	const result = response.data.data.data[0]
+	
     // 로그인 성공 시 사용자 정보를 localStorge에 user라는 키값으로 저장하고 홈으로 이동
     // user는 객체이므로 문자열로 변환하여 저장
     // 나중에 get으로 불러올 때는 JSON.parse로 복원
     // 로그인 시 새로고침이 되어야 정보가 기억돼서 window.location을 사용
-    localStorage.setItem('user', JSON.stringify(response.data.user));
-    window.location.href = '/'
+    localStorage.setItem('user', JSON.stringify(result));
+    
+	window.location.href = '/'
     
   } catch (error) {
     // 서버가 401 상태 코드를 보내면 여기로 옴

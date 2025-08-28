@@ -75,7 +75,7 @@ onMounted(() => {
 
 async function requestUserInfo() {
   try {
-    const response = await api.post('check', {
+    const response = await api.post('/check', {
         email: email
       })
 
@@ -96,7 +96,7 @@ const successMessage = ref('')
 
 async function updateUserInfo() {
   try {
-    const response = await api.post('modify', {
+    const response = await api.post('/modify', {
       email: email,
       name: name.value,
       age: age.value,

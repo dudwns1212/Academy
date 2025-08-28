@@ -1,14 +1,8 @@
 <template>
 <!-- 메뉴 검은부분 -->
 <div style="padding-top: 74px; text-align: center;">
-    <div class="d-flex flex-column justify-content-center align-items-center">
-            <h1 class="display-4">이용요금</h1>
-            <br>
-            <br>
-            <h3 class="fw-normal">업무 환경에 맞게 도입할 수 있도록 다양한 상품을 제공합니다.</h3>
-    </div>
     <div class="mb-5">
-        <p style="margin-top: 10px;margin-left: 40px; color: blue;">*연간 계약 시 최대 20% 할인</p>
+        <p style="margin-top: 10px; color: blue;">*연간 계약 시 최대 20% 할인</p>
         <label style="font-size: medium; margin-right: 20px;">
             <input type="radio" value="year" v-model="sales" /> 연간
         </label>
@@ -17,8 +11,8 @@
         </label>
     </div>
 </div>
-<div class="center-container d-flex justify-center align-items-center">
-    <div class="card shadow-sm p-6" style="min-height: 700px;">
+<div class="center-container d-flex flex-column justify-center align-items-center">
+    <div class="card shadow-sm p-6 text-center" style="width: 400px;">
     <!-- 가격제목 -->
         <h3 class="fs-2 fw-bold mb-1">-Free-</h3>
         <div class="fs-1 fw-bold text-primary mb-2">0원</div>
@@ -50,7 +44,7 @@
         </div>
     </div>
 
-    <div class="card shadow-sm p-6" style="min-height: 700px;">
+    <div class="card shadow-sm p-6 text-center" style="width: 400px;">
     <!-- 가격제목 -->
         <h3 class="fs-2 fw-bold mb-1">-Pro-</h3>
         <div class="fs-1 fw-bold text-primary mb-2">{{ sales == 'month' ? '7900원' : '7000원' }}</div>
@@ -81,7 +75,7 @@
         </div>
     </div>
 
-    <div class="card shadow-sm p-6" style="min-height: 700px;">
+    <div class="card shadow-sm p-6 text-center" style="width: 400px;">
     <!-- 가격제목 -->
         <h3 class="fs-2 fw-bold mb-1">Pro Max</h3>
         <div class="fs-1 fw-bold text-primary mb-2">{{ sales == 'month' ? '11900원' : '9500원' }}</div>
@@ -137,13 +131,6 @@ const sales = ref('month');
 </script>
 
 <style scoped>
-
-.menu-link {
-  transition: color 0.2s;
-}
-.menu-link:hover, .menu-link:focus {
-  color: #009ef7 !important; /* 기존 메뉴의 파란색 */
-}
 
 
 </style>

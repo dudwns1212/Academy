@@ -26,14 +26,11 @@
   
 
     <!-- 하단 탭 -->
-    <div v-if="!fullScreen" class=" d-md-none bg-none h-10" id="talk">      
-      <div class="d-flex flex-column flex-fill mx-4 tab-btn" @click="tabButtonClicked('more')">
+    <div v-if="!fullScreen" class=" d-md-none bg-none h-10" id="talk">        
         <span class="menu-icon mb-1">
-            <img src="/assets/talk.png" alt="" class="h-50px h-lg-50px">
+            <img src="/assets/talk.png" alt="" class="h-50px h-lg-50px" @click="goToPostWrite()">
         </span>
-      </div>
     </div>
-
   </div>
  
   <!-- 드로어 -->
@@ -160,6 +157,10 @@ import { useAppStore } from '@/stores/app'
 const appStore = useAppStore();
 const { fullScreen, title } = storeToRefs(appStore);
 
+import { useTextStore } from './stores/text';
+const textStore = useTextStore();
+const { mode } = storeToRefs(textStore)
+
 let drawer;
 
 // 화면이 보이기 전에 한 번 호출됨
@@ -247,7 +248,11 @@ function logout() {
   localStorage.removeItem('user')
   closeDrawer()
   window.location.href = '/'
-  
+}
+
+function goToPostWrite() {
+  mode.value = "add"
+  router.push('/postwrite', {})
 }
 
 </script>
@@ -263,32 +268,10 @@ function logout() {
   transform: translateX(-100%);
   visibility: hidden;
 }
-
 .drawer-shown {
   visibility: visible;
 }
 
-/* 탭버튼 */
-.tab-btn {
-  padding: 4px 8px;
-  border-radius: 8px;
-  transition: all 0.25s ease-in-out;
-}
-
-.tab-btn.active {
-  background-color: rgba(15, 110, 253, 0.1);
-  color: var(--bs-primary) !important;
-  border-radius: 8px;
-  transform: scale(1.1);
-}
-
-.tab-btn .menu-icon {
-  transition: color 0.25s ease-in-out;
-}
-
-.tab-btn.active .menu-icon i {
-  color: var(--bs-primary) !important;
-}
 
 #talk {
   position: fixed;
@@ -300,3 +283,4 @@ function logout() {
 }
 
 </style>
+<!-- css안쓰려했는데 저 talk이모티콘이 오른쪽에 안붙어서 그냥 css로 지정 -->

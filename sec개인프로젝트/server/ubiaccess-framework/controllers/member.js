@@ -20,17 +20,6 @@ module.exports = class Member {
         this.controllerHelper = new ControllerHelper(this.database); 
     }
 
-    /**
-     * @RequestMapping(path="/list", method="get,post")
-     */
-    async list(req, res) {
-        logger.debug(`Member::list 호출됨.`);
-
-        const sqlName = 'member_list';
-        this.controllerHelper.executeList(req, res, sqlName);
-
-    }
-
     ///
     /// 로그인
     ///

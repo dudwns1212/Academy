@@ -3,15 +3,28 @@
 </div>
 <div class="d-flex flex-column align-items-center">
 
-    <div class="d-flex justify-content-between mb-5" style="width: 330px;">
+    <h1 v-if="selectedIndex==-1">홈에서 제품을 선택해주세요</h1>
+
+    <div class="d-flex justify-content-between mb-5 shadow p-4" style="width: 330px; border-radius: 10px;">
         <span class="fs-4 fw-bold">{{ contentName }}</span>
         <span class="badge badge-light-primary">{{ contentGenre }}</span>
     </div>
     <div class="mb-10">
-        <img :src="path" style="width: 330px;">
+        <img :src="path" style="width: 330px; border-radius: 10px;">
+        <div class="d-flex justify-content-between" style="width: 330px;">
+            <div>
+                <label class="fs-3 fw-bold">평점 : </label>
+                <span class="fs-3 fw-bold" style="color: yellowgreen;">{{ contentLating }}</span>
+            </div>
+            <div>
+                <span class="fs-4 fw-light">구매처 :  </span>
+                <span class="fs-4 fw-light text-decoration-underline">LX도서관</span>
+            </div>
+    
+        </div>
     </div>
 
-    <button class="btn btn-light-primary mt-10 mb-15" @click="router.push('/')">뒤로가기</button>
+    <button class="btn btn-light-primary  mb-15" @click="router.push('/')">뒤로가기</button>
 </div>
 </template>
 
@@ -37,6 +50,7 @@ const router = useRouter()
 const contentName = ref('')
 const contentGenre = ref('')
 const path = ref('') 
+const contentLating = ref('')
 
 onMounted(() => {
   console.log(`CallView : onMounted 호출됨`);
@@ -67,6 +81,7 @@ async function requestSelectedProduct() {
         contentName.value = result.name
         path.value = result.path
         contentGenre.value = result.genre
+        contentLating.value = result.lating
 
 
 
