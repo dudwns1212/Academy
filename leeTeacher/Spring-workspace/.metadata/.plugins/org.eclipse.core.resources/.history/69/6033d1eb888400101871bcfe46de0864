@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd" >
+<configuration>
+	<!-- Mybatis 관련 설정 작성하기 * 아래 순서 중요, 바뀌면 안됨! -->
+	
+	<!-- SqlSessionTemplate 관련 설정 -->
+	<settings>
+	
+		<setting name="jdbcTypeForNull" value="NULL"/>
+ 	</settings>
+	
+	<!-- 별칭 작성 부분 -->
+	<typeAliases>
+		<typeAlias type="edu.kh.comm.member.model.vo.Member" alias="member"/>
+		
+		<typeAlias type="edu.kh.comm.board.model.vo.Board"  		alias="board"/>
+		<typeAlias type="edu.kh.comm.board.model.vo.BoardDetail"  	alias="detail"/>
+		<typeAlias type="edu.kh.comm.board.model.vo.BoardImage"  	alias="boardImage"/>
+		<typeAlias type="edu.kh.comm.board.model.vo.BoardType"  	alias="boardType"/>
+	
+		
+	</typeAliases>
+	
+	<!-- SQL이 작성되는 mapper 파일 위치 등록 -->
+	<mappers>
+	<!-- 
+		<mapper resource=""/>의 작성 기준
+		->src/main/resources 폴더
+		
+	 -->
+		<mapper resource="/mappers/member-mapper.xml"/>
+		<mapper resource="/mappers/myPage-mapper.xml"/>
+		<mapper resource="/mappers/board-mapper.xml"/>
+	</mappers>
+
+
+
+</configuration>

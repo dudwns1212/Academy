@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mapper-emp">
+	<select id="getEmpById" resultType="mybatis.Emp">
+		select last_name lastName
+			, first_name firstName
+			, employee_id id
+		from employees
+		where employee_id = #{id}
+	</select>
+	<select id="getEmpListByDeptId" resultType="mybatis.Emp">
+		select last_name lastName
+			, first_name firstName
+			, employee_id id
+		from employees
+		where department_id = #{deptId}
+	</select>
+</mapper>
