@@ -1,0 +1,13 @@
+package addrbook;
+
+import java.util.List;
+import java.util.Scanner;
+
+public class AddrBookDeletingMain2 {
+	public static void main(String[] args) throws Exception {
+		Scanner scan = new Scanner(System.in);
+		int deptNo = scan.nextInt();
+		boolean result = new AddrBookDAO().deleteDB(abId);
+		System.out.println(result);
+		}
+}

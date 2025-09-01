@@ -1,0 +1,7 @@
+package customer;
+
+public class CoporateCustomer extends PersonalCustomer{
+	String contactName;
+	int creditLimit;
+	int crditRating;
+}

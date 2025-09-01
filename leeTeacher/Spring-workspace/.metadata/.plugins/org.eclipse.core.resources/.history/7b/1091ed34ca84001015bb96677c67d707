@@ -1,0 +1,38 @@
+/*입력한 배열의 합을 구하는 프로그램을 작성하시오.
+ - 입력 : 4 9 3 50 => 문자열로 입력됨
+ - 출력 : 64*/
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class test1 {
+
+	public static void main(String[] args) {
+		// 값을 직접 입력해서 뽑아보기
+		Scanner scan = new Scanner(System.in);
+		ArrayList al = new ArrayList();
+		String input = null;
+		System.out.println("문자열 배열을 생성합니다. 그만하시려면 'stop'을 입력해주세요");
+		Boolean aa = true;
+		while (aa) {
+			System.out.print("숫자만 입력하세요 :");
+			input = scan.nextLine();
+			if (input != "stop") {
+				al.add(input);
+			} else if(input.equals("stop")){
+				System.out.println("문자열 배열이 입력되었습니다 : " + al);
+				aa = false;
+			}
+		}
+	}
+}
+//		String input = "4 9 3 50";
+//		String[] in = input.split(" ");
+//		int sum = 0;
+//		for(int i = 0;i<in.length;i++) {
+//			int a = Integer.parseInt(in[i]);
+//			sum += a;
+//		}
+//		System.out.println(sum);
+//	}

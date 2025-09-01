@@ -571,3 +571,509 @@ class Solution {
 내 풀이
 */
 
+class Solution {
+    public int[] solution(int[] num_list) {
+        int[] answer = new int[num_list.length+1];
+        
+        for(int i=0;i<num_list.length;i++){
+            answer[i]=num_list[i];
+        }
+        
+        int last = num_list[num_list.length-1];
+        int before = num_list[num_list.length-2];
+        
+        if(last > before) {
+            answer[answer.length-1] = last-before;
+            return answer;
+        } else {
+            answer[answer.length-1] = last * 2;
+            return answer;
+        }
+            
+    }
+}
+/*
+많이 어려웠음 일단 return값이 int[]이므로 int값을 가지는 배열을 리턴해야됨
+list의 경우는 불변값이므로 새로운 int[]를 생성해서 num_list.length+1 길이의 값을 가지는 배열을 생성
+나머지는 문제대로 비교하고 마지막에 if문으로 answer의 마지막값에 해당하는 값을 넣어줌
+*/
+
+
+/*
+문제 설명
+정수 n과 문자열 control이 주어집니다. control은 "w", "a", "s", "d"의 4개의 문자로 이루어져 있으며, control의 앞에서부터 순서대로 문자에 따라 n의 값을 바꿉니다.
+
+"w" : n이 1 커집니다.
+"s" : n이 1 작아집니다.
+"d" : n이 10 커집니다.
+"a" : n이 10 작아집니다.
+위 규칙에 따라 n을 바꿨을 때 가장 마지막에 나오는 n의 값을 return 하는 solution 함수를 완성해 주세요.
+
+내 풀이
+*/
+class Solution {
+    public int solution(int n, String control) {
+        int sum = 0;
+        for(char a : control.toCharArray()) {
+            if(a == 'w'){
+                n+=1;
+            } else if(a == 's'){
+                n-=1;
+            } else if(a == 'd') {
+                n+=10;
+            } else if(a == 'a') {
+                n-=10;
+            }
+            
+        }
+        return n;
+    }
+}
+//for문을 이용 controll.toCharArray() 를 사용해서 char a값에 해당 문자열의 문자를 하나씩 대입하여 for문 반복
+//n값을 누적하여 해당 조건에 맞게 더하고 뺌
+
+/*
+문제 설명
+정수 배열 numLog가 주어집니다. 처음에 numLog[0]에서 부터 시작해 "w", "a", "s", "d"로 이루어진 문자열을 입력으로 받아 순서대로 다음과 같은 조작을 했다고 합시다.
+
+"w" : 수에 1을 더한다.
+"s" : 수에 1을 뺀다.
+"d" : 수에 10을 더한다.
+"a" : 수에 10을 뺀다.
+그리고 매번 조작을 할 때마다 결괏값을 기록한 정수 배열이 numLog입니다. 즉, numLog[i]는 numLog[0]로부터 총 i번의 조작을 가한 결과가 저장되어 있습니다.
+
+주어진 정수 배열 numLog에 대해 조작을 위해 입력받은 문자열을 return 하는 solution 함수를 완성해 주세요.
+
+내 풀이
+*/
+class Solution {
+    public String solution(int[] numLog) {
+        StringBuffer sb = new StringBuffer();
+        int n = numLog[0];
+        
+        for(int i=1;i<numLog.length;i++){
+            if(numLog[i]-numLog[i-1] == 1){
+                sb.append("w");
+            } else if(numLog[i]-numLog[i-1] == -1){
+                sb.append("s");
+            } else if(numLog[i]-numLog[i-1] == 10){
+                sb.append("d");
+            } else if(numLog[i]-numLog[i-1] == -10){
+                sb.append("a");
+            }
+        }
+        String output = sb.toString();
+        return output;
+        
+    }
+}
+// 다른사람 풀이
+class Solution {
+    public String solution(int[] numLog) {
+        String answer = "";
+        for(int i=1; i<numLog.length; i++){
+            int j = numLog[i-1] - numLog[i];
+            switch(j){
+                case -1 : answer+='w'; break;
+                case 1 : answer+='s'; break;
+                case -10 : answer+='d'; break;
+                case 10 : answer+='a'; break;
+            }
+        }
+        return answer;
+    }
+}
+/*
+문제 설명
+정수 배열 arr와 2차원 정수 배열 queries이 주어집니다. queries의 원소는 각각 하나의 query를 나타내며, [i, j] 꼴입니다.
+
+각 query마다 순서대로 arr[i]의 값과 arr[j]의 값을 서로 바꿉니다.
+
+위 규칙에 따라 queries를 처리한 이후의 arr를 return 하는 solution 함수를 완성해 주세요.
+
+내 풀이
+*/
+class Solution {
+    public int[] solution(int[] arr, int[][] queries) {
+        int[] answer = Arrays.copyOf(arr, arr.length);
+
+        for (int[] query : queries) {
+            int i = query[0];
+            int j = query[1];
+
+            int temp = answer[i];
+            answer[i] = answer[j];
+            answer[j] = temp;
+        }
+
+        return answer;
+    }
+}
+/*
+## 22. 배열 원소 교체하기 (Swap Elements)
+
+### **문제 설명**
+
+정수 배열 `arr`와 2차원 정수 배열 `queries`이 주어집니다. `queries`의 원소는 각각 하나의 query를 나타내며, `[i, j]` 꼴입니다.
+
+각 query마다 순서대로 `arr[i]`의 값과 `arr[j]`의 값을 서로 바꿉니다.
+
+위 규칙에 따라 `queries`를 처리한 이후의 `arr`를 return 하는 solution 함수를 완성해 주세요.
+
+### **내 풀이**
+*/
+class Solution {
+    public int[] solution(int[] arr, int[][] queries) {
+        int[] answer = Arrays.copyOf(arr, arr.length);
+        
+        for (int[] query : queries) {
+            int i = query[0];
+            int j = query[1];
+            
+            int temp = answer[i];
+            answer[i] = answer[j];
+            answer[j] = temp;
+        }
+        
+        return answer;
+    }
+}
+/*
+### **코드 상세 분석**
+
+### 1. 배열 복사(굳이 할 필요 없는 작업, 그냥 arr 써도 됨)
+
+```java
+int[] answer = Arrays.copyOf(arr, arr.length);
+```
+
+- **목적**: 원본 배열을 보존하면서 작업용 배열을 생성
+- **`Arrays.copyOf(배열, 길이)`**: 지정된 배열을 새로운 배열로 복사
+- **why**: 원본 `arr`를 직접 수정하지 않고, 복사본에서 작업 수행
+
+### 2. Enhanced For문 (향상된 for문)
+
+```java
+for (int[] query : queries) {
+```
+
+- **동작**: `queries` 2차원 배열의 각 행을 `query` 배열로 순차 접근
+- **예시**: `queries = [[0,3], [1,2], [1,4]]`라면
+    - 1회전: `query = [0,3]`
+    - 2회전: `query = [1,2]`
+    - 3회전: `query = [1,4]`
+
+### 3. 인덱스 추출
+
+```java
+int i = query[0];  // 첫 번째 인덱스
+int j = query[1];  // 두 번째 인덱스
+```
+
+- **동작**: 각 query에서 교체할 두 위치의 인덱스를 추출
+- **예시**: `query = [0,3]`이면 `i=0, j=3`
+
+### 4. Swap 알고리즘 (교체)
+
+```java
+int temp = answer[i];    // 임시 변수에 첫 번째 값 저장
+answer[i] = answer[j];   // 첫 번째 위치에 두 번째 값 대입
+answer[j] = temp;        // 두 번째 위치에 임시 변수 값 대입
+```
+
+**Swap 과정 시각화:**
+
+```
+초기 상태: arr = [0, 1, 2, 3, 4]
+query = [1, 3] 처리
+
+1단계: temp = answer[1] = 1
+       answer = [0, 1, 2, 3, 4], temp = 1
+
+2단계: answer[1] = answer[3] = 3  
+       answer = [0, 3, 2, 3, 4], temp = 1
+
+3단계: answer[3] = temp = 1
+       answer = [0, 3, 2, 1, 4]
+```
+
+### **실행 예시**
+
+```java
+// 입력
+arr = [0, 1, 2, 3, 4]
+queries = [[0, 3], [1, 2], [1, 4]]
+
+// 처리 과정
+초기: [0, 1, 2, 3, 4]
+
+1. [0,3] 처리: [3, 1, 2, 0, 4] (0↔3 교체)
+2. [1,2] 처리: [3, 2, 1, 0, 4] (1↔2 교체)  
+3. [1,4] 처리: [3, 4, 1, 0, 2] (2↔4 교체)
+
+// 최종 결과: [3, 4, 1, 0, 2]
+```
+
+### **핵심 개념 정리**
+
+1. **배열 복사**: 원본 보존을 위한 `Arrays.copyOf()` 사용
+2. **Enhanced For문**: 2차원 배열 순회를 위한 간결한 문법
+3. **Swap 알고리즘**: 두 값을 교체하는 기본적인 알고리즘 패턴
+4. **임시 변수**: 데이터 손실 없이 값을 교체하기 위한 필수 요소
+
+### **다른 접근법**
+
+### XOR을 이용한 Swap (참고용)
+
+```java
+// 임시 변수 없이 교체 (정수만 가능)
+answer[i] ^= answer[j];
+answer[j] ^= answer[i]; 
+answer[i] ^= answer[j];
+```
+
+하지만 **가독성과 안정성** 면에서 임시 변수를 사용하는 방법이 더 좋습니다.
+*/
+/*
+## 23. 배열에서 조건에 맞는 최솟값 찾기 (Query Range Minimum)
+
+### **문제 설명**
+
+정수 배열 `arr`와 2차원 정수 배열 `queries`이 주어집니다. `queries`의 원소는 각각 하나의 `query`를 나타내며, `[s, e, k]` 꼴입니다.
+
+각 `query`마다 순서대로 `s` ≤ `i` ≤ `e`인 모든 `i`에 대해 `k`보다 크면서 가장 작은 `arr[i]`를 찾습니다.
+
+각 쿼리의 순서에 맞게 답을 저장한 배열을 반환하는 solution 함수를 완성해 주세요.
+
+단, 특정 쿼리의 답이 존재하지 않으면 -1을 저장합니다.
+
+### **내 풀이 (Stream 활용)**
+*/
+import java.util.stream.IntStream;
+
+class Solution {
+    public int[] solution(int[] arr, int[][] queries) {
+        int[] answer = {};
+        return IntStream.range(0, queries.length)
+                .map(q -> IntStream.rangeClosed(queries[q][0], queries[q][1])
+                        .map(i -> arr[i])
+                        .filter(i -> i > queries[q][2])
+                        .min().orElse(-1)
+                ).toArray();
+    }
+}
+/*
+### **🔥 Stream API 완전 분해 분석**
+
+### 1. 외부 스트림: queries 순회
+
+```java
+IntStream.range(0, queries.length)
+```
+
+- **동작**: 0부터 `queries.length-1`까지의 인덱스 스트림 생성
+- **예시**: queries.length가 3이면 → [0, 1, 2] 스트림
+- **목적**: 각 쿼리를 순서대로 처리하기 위한 인덱스 제공
+
+### 2. 메인 map 연산
+
+```java
+.map(q -> ...)
+```
+
+- **q**: 현재 처리 중인 쿼리의 인덱스 (0, 1, 2...)
+- **동작**: 각 쿼리 인덱스를 → 해당 쿼리의 결과값으로 변환
+- **반환**: 각 쿼리의 답이 담긴 새로운 스트림
+
+### 3. 내부 스트림: 범위 내 원소 순회
+
+```java
+IntStream.rangeClosed(queries[q][0], queries[q][1])
+```
+
+- **동작**: `queries[q][0]`(시작)부터 `queries[q][1]`(끝)까지의 **포함된** 범위 스트림
+- **rangeClosed vs range**:
+    - `range(1,4)`: [1, 2, 3] (끝 제외)
+    - `rangeClosed(1,4)`: [1, 2, 3, 4] (끝 포함)
+- **예시**: `queries[0] = [1, 4, 2]`라면 → [1, 2, 3, 4] 인덱스 스트림
+
+### 4. 인덱스를 배열 값으로 변환
+
+```java
+.map(i -> arr[i])
+```
+
+- **i**: 범위 내의 각 인덱스 (1, 2, 3, 4...)
+- **동작**: 인덱스 → 해당 인덱스의 배열 값으로 변환
+- **예시**: arr=[0,1,2,3,4], 인덱스 [1,2,3,4] → 값 [1,2,3,4]
+
+### 5. 조건 필터링
+
+```java
+.filter(i -> i > queries[q][2])
+```
+
+- **조건**: `i > queries[q][2]` (k보다 큰 값만 선택)
+- **동작**: 조건을 만족하는 값들만 남김
+- **예시**: k=2, 값[1,2,3,4] → 필터 후 [3,4]
+
+### 6. 최솟값 찾기
+
+```java
+.min().orElse(-1)
+```
+
+- **`.min()`**: 스트림에서 가장 작은 값을 `OptionalInt`로 반환
+- **`.orElse(-1)`**: 값이 없으면 -1 반환, 있으면 해당 값 반환
+- **왜 Optional?**: 필터 결과가 비어있을 수 있기 때문
+
+### 7. 배열로 변환
+
+```java
+.toArray()
+```
+
+- **동작**: 스트림의 모든 결과를 `int[]` 배열로 변환
+- **반환**: 각 쿼리의 답이 순서대로 담긴 배열
+
+### **🎯 전체 실행 과정 시뮬레이션**
+
+```java
+// 입력 예시
+arr = [0, 1, 2, 4, 3]
+queries = [[0, 4, 2], [1, 3, 2], [2, 4, 6]]
+```
+
+### **Query 0: [0, 4, 2] 처리**
+
+```java
+1. rangeClosed(0, 4) → [0, 1, 2, 3, 4] (인덱스)
+2. map(i -> arr[i]) → [0, 1, 2, 4, 3] (값)
+3. filter(i -> i > 2) → [4, 3] (2보다 큰 값)
+4. min() → 3 (최솟값)
+5. orElse(-1) → 3 (값이 존재)
+```
+
+**결과**: 3
+
+### **Query 1: [1, 3, 2] 처리**
+
+```java
+1. rangeClosed(1, 3) → [1, 2, 3] (인덱스)
+2. map(i -> arr[i]) → [1, 2, 4] (값)
+3. filter(i -> i > 2) → [4] (2보다 큰 값)
+4. min() → 4 (최솟값)
+5. orElse(-1) → 4 (값이 존재)
+```
+
+**결과**: 4
+
+### **Query 2: [2, 4, 6] 처리**
+
+```java
+1. rangeClosed(2, 4) → [2, 3, 4] (인덱스)
+2. map(i -> arr[i]) → [2, 4, 3] (값)
+3. filter(i -> i > 6) → [] (6보다 큰 값 없음)
+4. min() → Optional.empty() (비어있음)
+5. orElse(-1) → -1 (기본값 반환)
+```
+
+**결과**: -1
+
+**최종 답**: [3, 4, -1]
+
+### **💡 Stream API 핵심 개념**
+
+### **1. Stream의 특징**
+
+- **함수형 프로그래밍**: 데이터 변환을 연속된 함수로 표현
+- **지연 평가**: 최종 연산(.toArray())이 호출될 때까지 실행되지 않음
+- **불변성**: 원본 데이터를 변경하지 않음
+
+### **2. 중간 연산 vs 최종 연산**
+
+```java
+// 중간 연산 (Intermediate Operations)
+.map()     // 변환
+.filter()  // 필터링
+.rangeClosed() // 범위 생성
+
+// 최종 연산 (Terminal Operations)
+.min()     // 최솟값
+.toArray() // 배열 변환
+.orElse()  // Optional 처리
+```
+
+### **3. Optional 패턴**
+
+```java
+// 전통적 방법
+if (list.isEmpty()) {
+    return -1;
+} else {
+    return Collections.min(list);
+}
+
+// Optional 방법
+return [list.stream](http://list.stream)().min().orElse(-1);
+```
+
+### **🔄 전통적인 for문과 비교**
+
+### **Stream 버전 (현재 코드)**
+
+```java
+return IntStream.range(0, queries.length)
+    .map(q -> IntStream.rangeClosed(queries[q][0], queries[q][1])
+        .map(i -> arr[i])
+        .filter(i -> i > queries[q][2])
+        .min().orElse(-1)
+    ).toArray();
+```
+
+### **전통적 for문 버전**
+
+```java
+int[] answer = new int[queries.length];
+
+for (int q = 0; q < queries.length; q++) {
+    int start = queries[q][0];
+    int end = queries[q][1];
+    int k = queries[q][2];
+    
+    int minValue = Integer.MAX_VALUE;
+    boolean found = false;
+    
+    for (int i = start; i <= end; i++) {
+        if (arr[i] > k) {
+            minValue = Math.min(minValue, arr[i]);
+            found = true;
+        }
+    }
+    
+    answer[q] = found ? minValue : -1;
+}
+
+return answer;
+```
+
+### **📊 두 방법의 장단점**
+
+| 구분 | Stream API | 전통적 for문 |
+| --- | --- | --- |
+| **가독성** | 높음 (선언적) | 보통 (명령적) |
+| **간결성** | 매우 높음 | 보통 |
+| **성능** | 약간 느림 | 빠름 |
+| **디버깅** | 어려움 | 쉬움 |
+| **학습 곡선** | 높음 | 낮음 |
+
+### **🎓 Stream 학습 팁**
+
+1. **단계별 분해**: 복잡한 Stream을 작은 단위로 나누어 이해
+2. **중간 출력**: `.peek(System.out::println)`으로 중간 결과 확인
+3. **Optional 이해**: null 대신 Optional 사용하는 이유 파악
+4. **함수형 사고**: 데이터 변환의 파이프라인으로 생각
+
+이 문제는 **Stream API의 고급 활용법**을 보여주는 좋은 예시입니다!
+
+*/

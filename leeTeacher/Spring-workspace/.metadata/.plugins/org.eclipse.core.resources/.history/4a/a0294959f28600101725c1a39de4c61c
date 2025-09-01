@@ -1,0 +1,15 @@
+package myjdbc;
+
+import java.util.List;
+import java.util.Scanner;
+
+public class EmpMain {
+	public static void main(String[] args) throws Exception {
+		int deptNo = 100;
+		List<Emp> empList = EmpDAO.getEmpListByDeptNo(deptNo);
+		for(Emp emp : empList) {
+			System.out.println(emp);
+		}
+	}
+}
+

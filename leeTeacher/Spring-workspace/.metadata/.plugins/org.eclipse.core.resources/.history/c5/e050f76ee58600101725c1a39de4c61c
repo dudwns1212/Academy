@@ -1,0 +1,6 @@
+package customer;
+
+public class Customer extends CoporateCustomer{
+	String address;
+	String name;
+}

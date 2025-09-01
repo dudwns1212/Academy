@@ -1,0 +1,10 @@
+package customer;
+
+public abstract class Customer {
+	abstract String getCreditRation(); 
+	
+	Order order;
+	
+	String address;
+	String name;
+}

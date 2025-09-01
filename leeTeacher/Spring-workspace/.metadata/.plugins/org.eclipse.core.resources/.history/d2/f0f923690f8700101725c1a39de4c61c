@@ -1,0 +1,7 @@
+//전달받은 문자열이 회문(앞으로나 뒤로나 동일한 문자열) 문자열인지를 체크하는 메서드를 완성하시오.
+//제출: heee@lx.co.kr
+public class hihi {
+	public static void main(String[] args) {
+		String input = "4 9 3 50";
+	}
+}

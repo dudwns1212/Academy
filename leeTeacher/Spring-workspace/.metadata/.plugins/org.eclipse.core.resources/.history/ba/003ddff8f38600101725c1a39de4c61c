@@ -1,0 +1,20 @@
+package myjdbc;
+
+import java.util.List;
+
+public class EmpServiceImpl implements EmpService {
+	
+	EmpDAO dao;
+	
+	@Override
+	public void setDAO(EmpDAO dao) {
+		this.dao = dao;
+	}
+
+	@Override
+	public List<Emp> getEmpListByDeptNo(int deptNo) {
+
+		return null;
+	}
+
+}

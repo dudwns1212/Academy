@@ -1,0 +1,15 @@
+package customer;
+
+public class CoporateCustomer extends Customer{
+	String contactName;
+	int creditLimit;
+	int crditRating;
+	
+	public String getCreditRaging() {
+		return null;
+	}
+
+	String getCreditRation() {
+		return null;
+	}
+}

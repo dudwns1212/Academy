@@ -6,7 +6,8 @@
 			<transactionManager type="JDBC" />
 			<dataSource type="POOLED">
 				<property name="driver" value="com.mysql.cj.jdbc.Driver" />
-				<property name="url" value="jdbc:mysql://localhost:3306/newhr" />
+				<property name="url"
+					value="jdbc:mysql://localhost:3306/newhr" />
 				<property name="username" value="root" />
 				<property name="password" value="rootroot" />
 			</dataSource>
@@ -15,5 +16,7 @@
 	<!-- SQL이 작성되는 mapper 파일 위치 등록 -->
 	<mappers>
 		<mapper resource="mapper-emp.xml" />
+		<mapper resource="mapper-addrbook.xml" />
+
 	</mappers>
 </configuration>

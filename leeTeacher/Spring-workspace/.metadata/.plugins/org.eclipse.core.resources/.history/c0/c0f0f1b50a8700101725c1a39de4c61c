@@ -1,0 +1,14 @@
+package myjdbc;
+//변수와 객체를 구분하자!
+public class VariableObject {
+	public static void main(String[] args) {
+		Product product;
+		product = new Product();
+	}
+}
+
+class Product {
+	int price;
+	String name;
+	String maker;
+}
