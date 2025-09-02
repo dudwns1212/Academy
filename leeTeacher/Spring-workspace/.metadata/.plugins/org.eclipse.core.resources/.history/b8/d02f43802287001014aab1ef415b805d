@@ -1,0 +1,10 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class aaa {
+	public int[] solution(int[] num_list) {
+		
+		List<Integer> num_list = new ArrayList<Integer>();
+	
+	}
+}

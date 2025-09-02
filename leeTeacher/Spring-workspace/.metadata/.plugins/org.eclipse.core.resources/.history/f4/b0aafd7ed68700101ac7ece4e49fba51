@@ -1,0 +1,16 @@
+package myspring;
+
+public class Emp {
+
+	public int employeeId;
+	public String lastName;
+	public int salary;
+	public String firstName;
+	
+	@Override
+	public String toString() {
+		return "Emp [employeeId=" + employeeId + ", lastName=" + lastName + ", salary=" + salary + ", firstName="
+				+ firstName + "]";
+	}
+
+}

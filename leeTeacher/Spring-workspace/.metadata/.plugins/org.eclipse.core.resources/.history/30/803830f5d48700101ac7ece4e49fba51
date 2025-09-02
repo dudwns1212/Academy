@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mapper-emp">
+	<select id="getEmpByFirstNLastName" parameterType="myspring.Emp" resultType="myspring.Emp">
+		select last_name
+			, first_name
+			, employee_id
+			, salary
+		from employees
+		where 1=1
+		<choose>
+			<when test="firstName != null">
+				And first_name = #{firstNmae}
+			</when>
+			<when test="lastName != null">
+				And last_name = #{lastName}
+			</when>
+		</choose>
+	</select>
+	<select id="getEmpById" resultType="myspring.Emp">
+		select last_name
+			, first_name
+			, employee_id
+			, salary
+		from employees
+		where employee_id = #{id}
+	</select>
+	<select id="getEmpListByDeptNo" parameterType="int" resultType="myspring.Emp">
+		select last_name 
+			, first_name 
+			, employee_id
+			, salary
+		from employees
+		where department_id = #{deptNo}
+	</select>
+	<select id="getEmpListByJobId" parameterType="String" resultType="myspring.Emp">
+		select last_name lastName
+			, first_name firstName
+			, employee_id id
+		from employees
+		where job_id = #{jobId}
+	</select>
+</mapper>

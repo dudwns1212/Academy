@@ -6,7 +6,6 @@
     <fullyQualifiedTypeName name="org.apache.ibatis.session.SqlSessionFactory"/>
     <fullyQualifiedTypeName name="org.apache.ibatis.session.SqlSessionFactoryBuilder"/>
     <fullyQualifiedTypeName name="mybatis.EmpDAOMybatis"/>
-    <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="java.lang.StringBuffer"/>
     <fullyQualifiedTypeName name="addrbook.AddrBookDAO"/>
     <fullyQualifiedTypeName name="addrbook.AddrBookVO"/>
@@ -17,5 +16,6 @@
     <fullyQualifiedTypeName name="java.lang.annotation.Retention"/>
     <fullyQualifiedTypeName name="java.lang.annotation.RetentionPolicy"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
 </qualifiedTypeNameHistroy>

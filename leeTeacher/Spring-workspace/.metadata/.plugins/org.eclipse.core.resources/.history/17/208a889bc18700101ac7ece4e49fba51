@@ -1,0 +1,22 @@
+package project;
+
+import java.util.ArrayList;
+import java.util.List;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
+
+@Component("empService")
+public class EmpServiceImpl implements EmpService {
+	
+	@Autowired
+	EmpDAO dao;
+
+	@Override
+	public ArrayList<Emp> findEmpByYear(int year) throws Exception {
+		return dao.findEmpByYear(year);
+	}
+	
+	
+
+}

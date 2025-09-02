@@ -1,0 +1,144 @@
+package project;
+
+import java.util.ArrayList;
+import java.util.InputMismatchException;
+import java.util.List;
+import java.util.Scanner;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class ProjectMain {
+	public static void main(String[] args) throws Exception {
+		Scanner scan = new Scanner(System.in);
+		int way = 10;
+		while (way != 0) {
+			System.out.println("<원하는 검색방법 번호를 입력하세요>(0 입력시 종료됩니다)");
+			System.out.println("1.이름 2.입사년도 3. 부서번호 4. 도시이름 5.통계자료 6. 부서장이름을 통한 부서원검색");
+			try {
+				way = scan.nextInt();
+			} catch (InputMismatchException e) {
+				System.out.println("숫자로 다시 입력해주세요.");
+				scan.nextLine();
+				continue;
+			}
+			switch (way) {
+			case 1:
+				searchByName();
+				break;
+			case 2:
+				searchByYear();
+				break;
+			case 3:
+				searchByDeptId();
+				break;
+			case 4:
+				searchByCity();
+				break;
+			case 5:
+				EmpService service1 = getEmpService();
+				List<EmpStat> list = service1.printStat();
+				for (EmpStat empStat : list) {
+					System.out.println(empStat);
+				}
+				break;
+			case 6:
+				EmpService service2 = getEmpService();
+				List<Emp> list2 = service2.findEmpByManagerName();
+				for (Emp emp : list2) {
+					System.out.println(emp);
+				}
+				break;
+			default:
+				System.out.println("선택지에 없는 번호입니다.");
+				break;
+			}
+		}
+		System.out.println("-프로그램 종료-");
+	}
+
+	private static EmpService getEmpService() {
+		ApplicationContext context = new ClassPathXmlApplicationContext("spring-project.xml");
+		return context.getBean(EmpService.class);
+	}
+
+	private static void searchByDeptId() throws Exception {
+		Scanner scan = new Scanner(System.in);
+		System.out.println("부서번호 입력 : ");
+		int dept = scan.nextInt();
+
+		EmpService service = getEmpService();
+
+		while (dept != 0) {
+			List<Emp> list = service.findEmpByDeptId(dept);
+			for (Emp emp : list) {
+				System.out.println(emp);
+			}
+
+			System.out.println("부서번호 입력(0은 종료) : ");
+			dept = scan.nextInt();
+		}
+	}
+
+	private static void searchByYear() throws Exception {
+		Scanner scan = new Scanner(System.in);
+		System.out.println("입사연도 입력(YYYY) : ");
+		int year = scan.nextInt();
+
+		EmpService service = getEmpService();
+		while (year != 0) {
+			List<Emp> list = service.findEmpByYear(year);
+
+			for (Emp emp : list) {
+				System.out.println(emp);
+			}
+
+			System.out.println("연도 입력(0은 종료) : ");
+			year = scan.nextInt();
+		}
+	}
+
+	private static void searchByName() throws Exception {
+		System.out.println("이름: ");
+		Scanner scan = new Scanner(System.in);
+		String firstName = scan.nextLine();
+
+		EmpService service = getEmpService();
+
+		while (firstName != null || firstName != "") {
+			List<Emp> list = service.findEmpByName(firstName);
+
+			for (Emp emp : list) {
+				System.out.println(emp);
+			}
+			System.out.print("입력값 없을 시 종료 : ");
+			firstName = scan.nextLine();
+			scan.nextLine();
+		}
+	}
+
+	private static void searchByCity() throws Exception {
+		Scanner scan = new Scanner(System.in);
+		System.out.println("도시 목록");
+		System.out.println("Roma, Venice, Tokyo, Hiroshima, Southlake, South San Francisco, South Brunswick, Seattle");
+		System.out.println("Toronto, Whitehorse, Beijing, Bombay, Sydney, Singapore, London, Oxford, Stretford");
+		System.out.println("Munich, Sao Paulo, Geneva, Bern, Utrecht, Mexico City");
+		System.out.print("도시 이름은? : ");
+		String city = scan.nextLine();
+
+		EmpService service = getEmpService();
+		while (city != null || city != " ") {
+			List<Emp> list = service.findByCity(city);
+			for (Emp emp : list) {
+				System.out.println(emp);
+			}
+			System.out.print("입력값 없을 시 종료 : ");
+			System.out.println("도시 목록");
+			System.out.println(
+					"Roma, Venice, Tokyo, Hiroshima, Southlake, South San Francisco, South Brunswick, Seattle");
+			System.out.println("Toronto, Whitehorse, Beijing, Bombay, Sydney, Singapore, London, Oxford, Stretford");
+			System.out.println("Munich, Sao Paulo, Geneva, Bern, Utrecht, Mexico City");
+			city = scan.nextLine();
+		}
+	}
+}

@@ -17,6 +17,5 @@
 	<mappers>
 		<mapper resource="mapper-emp.xml" />
 		<mapper resource="mapper-addrbook.xml" />
-
 	</mappers>
 </configuration>

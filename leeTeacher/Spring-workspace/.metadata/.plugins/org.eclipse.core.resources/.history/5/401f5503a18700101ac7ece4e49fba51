@@ -1,0 +1,13 @@
+package basic;
+
+public class SingletonTest {
+	public static void main(String[] args) {
+		
+	}
+}
+
+class MySingleton {
+	MySingleton(){
+		System.out.println("MySingleton");
+	}
+}

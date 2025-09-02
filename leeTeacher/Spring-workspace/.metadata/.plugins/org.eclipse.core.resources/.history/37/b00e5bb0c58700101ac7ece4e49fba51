@@ -1,0 +1,10 @@
+package project;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public interface EmpService {
+
+	public List<Emp> findEmpByYear(int year) throws Exception;
+	
+}
