@@ -4,13 +4,15 @@ import java.util.List;
 import java.util.Scanner;
 
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class EmpMainSpring {
 	public static void main(String[] args) throws Exception {
 		int deptNo = 100;
 		//Container - context
-		ApplicationContext context = new ClassPathXmlApplicationContext("spring-context.xml");
+//		ApplicationContext context = new ClassPathXmlApplicationContext("spring-context.xml");
+		ApplicationContext context = new AnnotationConfigApplicationContext(SpringConfig.class);
 //		String[] nameList = context.getBeanDefinitionNames();
 //		for(String name : nameList) System.out.println(name);
 		
@@ -20,7 +22,7 @@ public class EmpMainSpring {
 //			System.out.println(emp);
 //		}
 		String firstName = "Steven";
-		String lastName = null;
+		String lastName = "King";
 		String fullName = firstName + lastName;
 		List<Emp> list = service.getEmpByFirstNLastName(firstName,lastName, fullName);
 		for(Emp emp : list) {

@@ -8,16 +8,16 @@
 			, salary
 			, concat(first_name, last_name) fullName
 		from employees
-		where 1=1
+		where
 		<choose>
 			<when test="firstName != null and lastName == null">
-				And first_name = #{firstName}
+				 first_name = #{firstName}
 			</when>
 			<when test="lastName != null and firstName == null">
-				And last_name = #{lastName}
+				 last_name = #{lastName}
 			</when>
 			<otherwise>
-				And concat(first_name, last_name) = #{fullName}			
+				 concat(first_name, last_name) = #{fullName}			
 			</otherwise>
 		</choose>
 	</select>

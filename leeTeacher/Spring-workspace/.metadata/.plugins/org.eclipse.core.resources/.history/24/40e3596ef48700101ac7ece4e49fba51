@@ -1,0 +1,42 @@
+import java.util.stream.IntStream;
+
+public class sss {
+	public static void main(String[] args) {
+		//그냥 전통적 for문을 이용해서 출력
+		int arri =0;
+		int[] arr = {3, 1, 2, 4, 5};
+		int[][] queries = {{0,4,2},{1,3,2},{2,4,6}};
+		int[] answer = new int[queries.length];
+		for(int[] query : queries) {
+			int s = query[0];
+			int e = query[1];
+			int k = query[2];
+			
+			int minValue = Integer.MAX_VALUE;
+			boolean found = false;
+			
+			for(int i = s;i <= e;i++) {
+				if(arr[i] > k) {
+					minValue = Math.min(minValue, arr[i]);
+					found = true;
+				}
+			}
+			answer[arri] = found ? minValue : -1;
+			arri++;
+			
+			
+		}
+		
+		for(int a : answer) {
+			System.out.println(a);
+		}
+		
+		
+		System.out.println(IntStream.range(0, queries.length).map(q -> IntStream.rangeClosed(queries[q][0], queries[q][1]))
+					.map(i -> arr[i]).filter(i -> i > queries[q][2])
+					.min().orElse(-1).toArray());
+		
+		
+		
+	}
+}

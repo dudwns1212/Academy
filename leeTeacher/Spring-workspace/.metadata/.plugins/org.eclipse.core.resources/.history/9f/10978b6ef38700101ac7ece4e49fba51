@@ -1,0 +1,34 @@
+
+public class sss {
+	public static void main(String[] args) {
+		
+		int arri =0;
+		int[] arr = {3, 1, 2, 4, 5};
+		int[][] queries = {{0,4,2},{1,3,2},{2,4,6}};
+		int[] answer = new int[queries.length];
+		for(int[] query : queries) {
+			int s = query[0];
+			int e = query[1];
+			int k = query[2];
+			
+			int minValue = Integer.MAX_VALUE;
+			boolean found = false;
+			
+			for(int i = s;i <= e;i++) {
+				if(arr[i] > k) {
+					minValue = Math.min(minValue, arr[i]);
+					found = true;
+				}
+			}
+			answer[arri] = found ? minValue : -1;
+			arri++;
+			
+			
+		}
+		
+		for(int a : answer) {
+			System.out.print(a);
+		}
+		
+	}
+}

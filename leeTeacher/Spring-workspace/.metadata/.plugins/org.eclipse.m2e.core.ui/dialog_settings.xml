@@ -70,12 +70,14 @@
 	</section>
 	<section name="wizardPage">
 		<list key="groupId">
-			<item value="lx.edi"/>
 			<item value="lx.edu"/>
+			<item value="lx.edi"/>
 		</list>
 		<list key="name">
 		</list>
 		<list key="artifactId">
+			<item value="myspringmvc"/>
+			<item value="springmybatisproject"/>
 			<item value="myspringpjt"/>
 			<item value="mybatis"/>
 		</list>

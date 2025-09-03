@@ -1,0 +1,46 @@
+import java.util.stream.IntStream;
+
+public class sss {
+	public static void main(String[] args) {
+		int[] arr = {7, 3, 9, 1, 8, 2, 6};
+	    int[][] queries = {{1, 5, 5}, {0, 3, 8}, {2, 6, 1}};
+	    
+	    // 각 쿼리: [시작인덱스, 끝인덱스, 기준값k]
+	    // arr[시작~끝] 범위에서 k보다 큰 값 중 최댓값을 구하기
+	    // 없으면 -1 반환
+	    
+//	    //For문을 이용해서 문제 풀기
+//	    int[] answer = new int[queries.length];
+//	    int mins = 0;
+//	    for(int[] query : queries) {
+//	    	int s = query[0];
+//	    	int e = query[1];
+//	    	int k = query[2];
+//	    	
+//	    	int minValue = -999999999;
+//	    	boolean found = false;
+//	    	
+//	    	for(int i = s; i <= e; i++) {
+//	    		if(arr[i] > k) {
+//	    			minValue = Math.max(minValue, arr[i]);
+//	    			found = true;
+//	    		}
+//	    	}
+//	    	
+//	    	answer[mins] = found ? minValue : -1;
+//	    	mins++;
+//	    }
+//	    
+//	    for(int a : answer) {
+//	    	System.out.println(a);
+//			출력 : 999 통과
+//	    }
+	    
+	    //IntStream으로 문제 풀기
+	    IntStream.range(0, queries.length).map(q -> 
+	    				IntStream.rangeClosed(queries[q][0], queries[q][1])
+	    					.map(i -> arr[i]).filter(i -> i > queries[q][2])
+	    					.max().orElse(-1)).forEach(i -> System.out.println((int) i));;
+	    
+	}
+}
