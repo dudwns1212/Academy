@@ -4,12 +4,11 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<link rel="stylesheet" href="addrbook.css" type="text/css" media="screen" />
 <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 <script type="text/javascript">
 	function check(ab_id) {
 		//pwd = prompt('수정/삭제 하려면 비밀번호를 넣으세요');
-		document.location.href="edit.do?ab_id="+ab_id;
+		document.location.href="edit.do?abId="+ab_id;
 		//document.location.href="editview.do?ab_id="+ab_id+"&upasswd="+pwd;
 	}
 </script>
@@ -48,7 +47,7 @@
 <script type="text/javascript">
 	$('tr').on('click', function(){
 		let ab_id = ($(this).find('a').text());
-		document.location.href="edit.do?ab_id="+ab_id;
+		document.location.href="edit.do?abId="+ab_id;
 	})
 </script>
 </body>

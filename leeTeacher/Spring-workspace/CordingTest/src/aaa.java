@@ -1,22 +1,7 @@
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Arrays;
 
 public class aaa {
-	public int solution(int n, String control) {
-        int sum = 0;
-        for(char a : control.toCharArray()) {
-            if(a == 'w'){
-                sum = n+1;
-            } else if(a == 's'){
-                sum = n-1;
-            } else if(a == 'd') {
-                sum = n+10;
-            } else if(a == 'a') {
-                sum = n-10;
-            }
-            
-        }
-        System.out.println(sum);
-        return sum;
-    }
+	public static void main(String[] args) {
+	
+	}
 }

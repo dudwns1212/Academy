@@ -1,0 +1,10 @@
+package lx.edu.springmvc.vo;
+
+public class RequestLogVO {
+	public int id;
+	public String reqClass;
+	public String reqMethod;
+	public String reqTime;
+	
+	
+}

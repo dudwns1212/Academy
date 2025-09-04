@@ -1,0 +1,26 @@
+package lx.edu.springmvc.aop;
+
+import org.aspectj.lang.JoinPoint;
+import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.Before;
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
+import org.springframework.stereotype.Component;
+
+import lx.edu.springmvc.vo.RequestLogVO;
+
+@Aspect
+@Component
+@EnableAspectJAutoProxy
+public class RequestLogAdvice {
+	
+	@Before("execution(* lx.edu.springmvc.controller.Addr*.*(..))")
+	public void beforeLog(JoinPoint joinPoint, RequestLogVO vo) {
+		System.out.println("RequestLogAdvice.beforeLog()");
+		String reqClass = joinPoint.getTarget().getClass().getName();
+		String reqMethod = joinPoint.getSignature().getName();
+		//String reqTime = joinPoint.get
+		System.out.printf("class=%s, method=%s\n", reqClass, reqMethod);
+		
+		
+	}
+}

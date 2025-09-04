@@ -1,0 +1,11 @@
+package lx.edu.springmvc.aop;
+
+import org.aopalliance.intercept.Joinpoint;
+
+public class LogAdvice {
+	
+	@Before("execution")
+	public void beforeLog(Joinpoint joinPoint) {
+		System.out.println("LogAdvice.beforeLog()");
+	}
+}

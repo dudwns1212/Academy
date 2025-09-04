@@ -3,7 +3,6 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<link rel="stylesheet" href="addrbook.css" type="text/css" media="screen" />
 
 <script type="text/javascript">
 	function delcheck() {
@@ -21,7 +20,7 @@
 <title>주소록:수정화면</title>
 </head>
 
-<jsp:useBean id="ab" scope="request" class="lx.edu.springmvc.AddrBookVO" />
+<jsp:useBean id="ab" scope="request" class="lx.edu.springmvc.vo.AddrBookVO" />
 
 <body>
 <div align="center">
@@ -31,9 +30,9 @@
 [<a href="addrbook_list.do">주소록 목록으로</a>] <p>
 ab_id: ${requestScope.ab.abId}<br/>
 ab_id: ${ab.abId}<br/>
-<form name=form1 method=post action="update.do">
+<form name=form1 method=post action="modify.do">
 <input type=hidden name="abId" value="${ab.abId}">
-<input type="hidden" value="update.do">
+<input type="hidden" value="modify.do">
 
 <table border="1">
   <tr>
@@ -62,7 +61,7 @@ ab_id: ${ab.abId}<br/>
   </tr>
   <tr>
     <td colspan=2 align=center><input type=submit value="저장"><input type=reset value="취소" onclick="location.href='addrbook_list.do'">
-    <input type="hidden" id="ab_id" value="<%=ab.getAbId()%>"><input type="button" value="삭제" onClick="delcheck()"></td>
+    <input type="hidden" id="abId" value="<%=ab.getAbId()%>"><input type="button" value="삭제" onClick="delcheck()"></td>
 </tr>
 </table>
 </form>
