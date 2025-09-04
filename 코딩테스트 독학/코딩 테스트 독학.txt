@@ -1,0 +1,454 @@
+# 9/2
+
+## 24.
+
+### **문제 설명**
+
+정수 배열 `arr`와 2차원 정수 배열 `queries`이 주어집니다. `queries`의 원소는 각각 하나의 `query`를 나타내며, `[s, e, k]` 꼴입니다.
+
+각 `query`마다 순서대로 `s` ≤ `i` ≤ `e`인 모든 `i`에 대해 `i`가 `k`의 배수이면 `arr[i]`에 1을 더합니다.
+
+위 규칙에 따라 `queries`를 처리한 이후의 `arr`를 return 하는 solution 함수를 완성해 주세요.
+
+## 내 풀이
+
+```java
+class Solution {
+    public int[] solution(int[] arr, int[][] queries) {
+        int[] answer = {};
+        for(int[] query : queries){
+            int s = query[0];
+            int e = query[1];
+            int k = query[2];
+            
+            for(int i = s;i <= e; i++){
+                if(i%k == 0){
+                    arr[i] += 1;
+                }
+            }   
+        }
+        return arr;
+    }
+}
+```
+
+for문을 사용해서 2차 배열 형태를 순차적으로 1차 배열로 만듦
+
+각 s, e, k 의 정수를 정의하고 2차 for문과 그 안에 if문을 통해 i값이 k의 배수인지 확인 후 arr[i]의 값에 1을 추가함
+
+### 25. 배열 만들기
+
+### **문제 설명**
+
+정수 `l`과 `r`이 주어졌을 때, `l` 이상 `r`이하의 정수 중에서 숫자 "0"과 "5"로만 이루어진 모든 정수를 오름차순으로 저장한 배열을 return 하는 solution 함수를 완성해 주세요.
+
+만약 그러한 정수가 없다면, -1이 담긴 배열을 return 합니다.
+
+### 내 풀이
+
+```java
+import java.util.ArrayList;
+class Solution {
+    public int[] solution(int l, int r) {
+        String s = "";
+        int cnt = 0;
+        ArrayList<Integer> list= new ArrayList<Integer>();
+        for (int i=l; i<= r; i++) {
+            s = Integer.toString(i);
+            cnt += s.length();
+            for(int j=0;j<s.length();j++) {
+                if(s.charAt(j) == '5' || s.charAt(j) == '0') {
+                    cnt--;
+                }
+            }
+            if(cnt == 0) {
+                list.add(i);
+            }
+            cnt=0;
+        }
+        if(list.size() == 0) {
+            list.add(-1);
+        }
+        int[] answer = new int[list.size()];
+        for(int h=0;h<list.size();h++) {
+            answer[h] = list.get(h);
+        }
+        return answer;
+    }
+}
+```
+
+# 9/3
+
+### 26. 콜라츠 수열 만들기
+
+### **문제 설명**
+
+모든 자연수 `x`에 대해서 현재 값이 `x`이면 `x`가 짝수일 때는 2로 나누고, `x`가 홀수일 때는 `3 * x + 1`로 바꾸는 계산을 계속해서 반복하면 언젠가는 반드시 `x`가 1이 되는지 묻는 문제를 콜라츠 문제라고 부릅니다.
+
+그리고 위 과정에서 거쳐간 모든 수를 기록한 수열을 콜라츠 수열이라고 부릅니다.
+
+계산 결과 1,000 보다 작거나 같은 수에 대해서는 전부 언젠가 1에 도달한다는 것이 알려져 있습니다.
+
+임의의 1,000 보다 작거나 같은 양의 정수 `n`이 주어질 때 초기값이 `n`인 콜라츠 수열을 return 하는 solution 함수를 완성해 주세요.
+
+### 내 풀이
+
+```java
+import java.util.ArrayList;
+class Solution {
+    public int[] solution(int n) {
+        ArrayList<Integer> al = new ArrayList<Integer>();
+        al.add(n);
+        while(true){
+            if(n%2==0){
+                n/=2;
+            }else if(n%2==1){
+                n = 3 * n + 1;
+            }
+        al.add(n);
+        if(n==1){
+            break;
+        }
+        }
+        int[] answer = new int[al.size()];
+        for(int i=0;i<al.size();i++){
+            answer[i] = al.get(i);    
+        }          
+        return answer;
+    }
+}
+```
+
+**해설:**
+
+- ArrayList를 사용해 동적으로 수열의 값들을 저장
+- while(true) 무한 루프로 콜라츠 조건에 따라 n 값 변경
+- n이 짝수면 2로 나누고, 홀수면 3*n+1 계산
+- 매번 계산된 n을 리스트에 추가하고, n이 1이 되면 루프 종료
+- 마지막에 ArrayList를 int 배열로 변환하여 반환
+
+### 27. 수열과 구간 쿼리 3
+
+### **문제 설명**
+
+정수 `start_num`와 `end_num`가 주어질 때, `start_num`부터 `end_num`까지의 숫자를 차례로 담은 리스트를 return하도록 solution 함수를 완성해주세요.
+
+### 내 풀이
+
+```java
+import [java.util.stream](http://java.util.stream).IntStream;
+class Solution {
+    public int[] solution(int start_num, int end_num) {
+        return IntStream.rangeClosed(start_num,end_num).toArray();
+    }
+}
+```
+
+**해설:**
+
+- `IntStream.rangeClosed(start_num, end_num)`: start_num부터 end_num까지의 정수를 포함하는 스트림을 생성
+- `.toArray()`: 스트림을 int 배열로 변환
+- 한 줄로 간단하게 해결할 수 있는 스트림 API 활용 문제
+
+### 28. 배열 만들기 4
+
+### **문제 설명**
+
+정수 배열 `arr`가 주어집니다. `arr`를 이용해 새로운 배열 `stk`를 만드려고 합니다.
+
+변수 `i`를 만들어 초기값을 0으로 설정한 후 `i`가 `arr`의 길이보다 작으면 다음 작업을 반복합니다.
+
+- 만약 `stk`가 빈 배열이라면 `arr[i]`를 `stk`에 추가하고 `i`에 1을 더합니다.
+- `stk`에 원소가 있고, `stk`의 마지막 원소가 `arr[i]`보다 작으면 `arr[i]`를 `stk`의 뒤에 추가하고 `i`에 1을 더합니다.
+- `stk`에 원소가 있는데 `stk`의 마지막 원소가 `arr[i]`보다 크거나 같으면 `stk`의 마지막 원소를 `stk`에서 제거합니다.
+
+위 작업을 마친 후 만들어진 `stk`를 return 하는 solution 함수를 완성해 주세요.
+
+### 내 풀이
+
+```java
+import java.util.ArrayList;
+class Solution {
+    public int[] solution(int[] arr) {
+        int i = 0;
+        ArrayList<Integer> al = new ArrayList<Integer>();
+        
+        while(i < arr.length){  // 수정: i가 배열 범위를 벗어나지 않도록
+            if(al.size() == 0){  // stk가 빈 배열
+                al.add(arr[i]);
+                i++;
+            }else if(al.get(al.size()-1) < arr[i]){  // 마지막 원소가 arr[i]보다 작음
+                al.add(arr[i]);
+                i++;
+            }else{  // 마지막 원소가 arr[i]보다 크거나 같음
+                al.remove(al.size()-1);  // 마지막 원소 제거, i는 증가 X
+            }
+        }
+        
+        int[] result = new int[al.size()];
+        for(int aa = 0; aa < al.size(); aa++){  // 수정: -1 제거
+            result[aa] = al.get(aa);
+        }
+        return result;
+    }
+}
+```
+
+**해설:**
+
+- **단조증가 스택(Monotonic Stack)** 개념을 활용한 문제
+- `while(i < arr.length)` 조건으로 배열 범위 초과 방지
+- `stk`가 비어있거나 마지막 원소가 현재 값보다 작을 때만 추가
+- 그렇지 않으면 마지막 원소 제거 (이때 `i`는 증가하지 않음)
+- 결과적으로 오름차순으로 정렬된 스택 구조 생성
+
+### 29. 논리 연산
+
+### **문제 설명**
+
+boolean 변수 `x1`, `x2`, `x3`, `x4`가 매개변수로 주어질 때, 다음의 식의 true/false를 return 하는 solution 함수를 작성해 주세요.
+
+- (`x1` ∨ `x2`) ∧ (`x3` ∨ `x4`)
+
+### 내 풀이
+
+```java
+class Solution {
+    public boolean solution(boolean x1, boolean x2, boolean x3, boolean x4) {
+        boolean answer = false;
+
+        int t = 0;
+        int f = 0;
+
+        boolean[] isit = {x1, x2, x3, x4};
+
+        for(int i = 0; i < isit.length; i += 2){
+            boolean current = isit[i];
+            boolean next = isit[i + 1];
+
+            if(current || next){
+                t ++;
+            }
+            else if(!current && !next){
+                f ++;
+            }
+        }
+
+        if(t > f) return true;
+
+        return answer;
+    }
+} 
+```
+
+**해설:**
+
+- 4개의 boolean 값을 배열로 저장하여 2개씩 짝지어 처리
+- i += 2`로 (x1, x2), (x3, x4) 순서대로 쌍을 만듦
+- 각 쌍에서 OR 연산(||) 결과가 true면 t 카운터 증가
+- 둘 다 false인 경우 f 카운터 증가
+- 최종적으로 true인 쌍이 false인 쌍보다 많으면 AND 연산 결과가 true
+- 논리: (x1 ∨ x2) = true, (x3 ∨ x4) = true → 전체 결과 true
+
+### 다른 풀이
+
+```java
+class Solution {
+    public boolean solution(boolean x1, boolean x2, boolean x3, boolean x4) {
+        boolean answer = (x1||x2)&&(x3||x4);
+        return answer;
+    }
+}
+```
+
+**해설:**
+
+- 논리 연산을 직접적으로 구현한 가장 간단한 방법
+- `(x1||x2)`: x1과 x2 중 하나라도 true면 true
+- `(x3||x4)`: x3과 x4 중 하나라도 true면 true
+- `&&`: 두 조건이 모두 true일 때만 최종 결과가 true
+- **가독성과 성능 면에서 가장 우수한 해법**
+
+**논리 연산 정리**
+- `∨` (OR): 하나라도 true면 true
+- `∧` (AND): 모두 true여야 true
+- 따라서 `(x1 ∨ x2) ∧ (x3 ∨ x4)`는 앞쪽 쌍과 뒤쪽 쌍 모두에서 최소 하나씩은 true가 있어야 전체가 true
+
+## 기초 다지기
+
+### 타입변환
+
+- Int ↔ String
+    - String str = String.valueOf(num);  String str2 = Integer.toString(num);
+- char ↔ Int
+    - int num2 = Character.getNumericValue(ch);
+- 배열 변환
+    - int[] -> String
+        - int[] arr = {1, 2, 3};
+        String str = Arrays.toString(arr); → 사실 애는 int[]가 아니라도 다 string으로 바꿈
+    - ArrayList -> int[]
+        - ArrayList<Integer> list = new ArrayList<>();
+        int[] arr = list.stream().mapToInt(i->i).toArray();
+    - String -> char[]
+        - String str = "hello";
+        char[] charArr = str.toCharArray();
+        
+
+## 30. 주사위 점수 계산
+
+### **문제 설명**
+
+1부터 6까지 숫자가 적힌 주사위가 네 개 있습니다. 네 주사위를 굴렸을 때 나온 숫자에 따라 다음과 같은 점수를 얻습니다.
+
+**점수 계산 규칙**
+
+1. **네 주사위에서 나온 숫자가 모두 p로 같다면**
+    - **1111 × p점**을 얻습니다.
+2. **세 주사위에서 나온 숫자가 p로 같고 나머지 다른 주사위에서 나온 숫자가 q(p ≠ q)라면**
+    - **(10 × p + q)² 점**을 얻습니다.
+3. **주사위가 두 개씩 같은 값이 나오고, 나온 숫자를 각각 p, q(p ≠ q)라고 한다면**
+    - **(p + q) × |p - q|점**을 얻습니다.
+4. **어느 두 주사위에서 나온 숫자가 p로 같고 나머지 두 주사위에서 나온 숫자가 각각 p와 다른 q, r(q ≠ r)이라면**
+    - **q × r점**을 얻습니다.
+5. **네 주사위에 적힌 숫자가 모두 다르다면**
+    - **나온 숫자 중 가장 작은 숫자 만큼의 점수**를 얻습니다.
+
+네 주사위를 굴렸을 때 나온 숫자가 정수 매개변수 `a`, `b`, `c`, `d`로 주어질 때, 얻는 점수를 return 하는 solution 함수를 작성해 주세요.
+
+### 내 풀이
+
+```java
+import java.util.Arrays;
+class Solution {
+    public int solution(int a, int b, int c, int d) {
+        int[] arr = {a, b, c, d};
+        Arrays.sort(arr);
+        int answer = 0;
+        
+        if(arr[0] == arr[3]){
+            answer = 1111 * arr[0];
+        } else if(arr[0]==arr[2] || arr[1]==arr[3]){
+            answer = (int)Math.pow(arr[1]*10+(arr[0]+arr[3]-arr[1]) ,2);
+        } else if(arr[0]==arr[1] && arr[2]==arr[3]){
+            answer = (arr[0]+arr[3])*(arr[3]-arr[0]);
+        } else if(arr[0]==arr[1]){
+            answer = arr[2]*arr[3];
+        } else if(arr[1]==arr[2]){
+            answer = arr[0] * arr[3];
+        } else if(arr[2]==arr[3]){
+            answer = arr[0]*arr[1];
+        } else {
+            answer = arr[0];
+        }
+        return answer;
+    }
+}
+```
+
+Arrays.sort() 를 활용해서 오름차순 정렬
+
+오름차순 정렬을 하면 함수를 몰라도 조금만 생각하면 문제를 풀 수 있음
+
+## 31. 글자 이어 붙여 문자열 만들기
+
+### **문제 설명**
+
+문자열 `my_string`과 정수 배열 `index_list`가 매개변수로 주어집니다. `my_string`의 `index_list`의 원소들에 해당하는 인덱스의 글자들을 순서대로 이어 붙인 문자열을 return 하는 solution 함수를 작성해 주세요.
+
+### 내 풀이
+
+```java
+class Solution {
+    public String solution(String my_string, int[] index_list) {
+        String answer = "";
+        
+        for(int a : index_list){
+            answer += String.valueOf(my_string.charAt(a));
+        }
+        
+        return answer;
+    }
+}
+```
+
+list에 들어있는 숫자를 하나 씩 꺼내 a에 대입하는 반복문 실행
+
+my_string.charAt(a); → a번째 index 값을 꺼냄 (char)
+
+answer에 추가해야되므로 String.valueOf 로 String 변환
+
+## 32.  9로 나눈 나머지
+
+### **문제 설명**
+
+음이 아닌 정수를 9로 나눈 나머지는 그 정수의 각 자리 숫자의 합을 9로 나눈 나머지와 같은 것이 알려져 있습니다.
+
+이 사실을 이용하여 음이 아닌 정수가 **문자열** `number`로 주어질 때, 이 정수를 9로 나눈 나머지를 return 하는 solution 함수를 작성해주세요.
+
+### 내 풀이
+
+```java
+class Solution {
+    public int solution(String number) {
+        int answer = 0;   
+        for(char a : number.toCharArray()){
+            answer += Character.getNumericValue(a);
+        }   
+        answer %= 9;
+        
+        return answer;
+    }
+}
+```
+
+number 문자열 → char 배열
+
+for문을 통해서 각 자릿수를 꺼내 반복
+
+꺼낸 각 문자(char)를 숫자로 변환 → Character.getNumericValue(); → answer에 누적하여 더해줌
+
+반복문이 끝나고 answer 을 9로 나눈 값을 리턴
+
+## 33. 문자열 여러 번 뒤집기
+
+### **문제 설명**
+
+문자열 `my_string`과 이차원 정수 배열 `queries`가 매개변수로 주어집니다. `queries`의 원소는 [s, e] 형태로, `my_string`의 인덱스 s부터 인덱스 e까지를 뒤집으라는 의미입니다. `my_string`에 `queries`의 명령을 순서대로 처리한 후의 문자열을 return 하는 solution 함수를 작성해 주세요.
+
+### 내 풀이
+
+```java
+class Solution {
+    public String solution(String my_string, int[][] queries) {
+        String answer = "";
+        char[] cArr = my_string.toCharArray();
+        for(int[] query : queries){
+            int s = query[0];
+            int e = query[1];
+            char temp;
+            for(int i=s;i<e;i++){
+                temp = cArr[i];
+                cArr[i] = cArr[e];
+                cArr[e] = temp;
+                e--;
+            }   
+        }
+        answer += String.valueOf(cArr);
+        
+        return answer;
+    }
+}
+```
+
+2차원 배열인 queries를 for문을 통해 1차원 배열 형태로 반복하게 함
+
+int s, e를 선언하고 query의 0, 1 인덱스 값을 넣어줌
+
+빈 문자를 하나 선언하고 다음 이중 반복문을 실행함
+
+s → e 까지 s는 1씩 증가 e는 1씩 감소하는 구조를 만듦
+
+자리 바꾸기 구조를 만들어서 s가 e보다 작을 때 까지 대칭되는 자리를 바꿔줌
+
+cArr을 String으로 바꿔주고 리턴
