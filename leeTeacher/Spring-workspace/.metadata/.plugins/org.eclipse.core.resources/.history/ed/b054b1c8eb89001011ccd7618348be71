@@ -1,0 +1,8 @@
+public class aaa {
+	public static void main(String[] args) {
+		String myName = "13579";
+		int num = Integer.parseInt(myName.substring(0));
+		System.out.println(num);
+		
+	}
+}

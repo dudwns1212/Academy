@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<html>
+<head>
+
+<script type="text/javascript">
+	function delcheck() {
+		result = confirm("정말로 삭제하시겠습니까 ?");
+		
+		if(result == true){
+			document.form1.action="delete.do";
+			document.form1.submit();
+		}
+		else 
+			return;
+	}
+</script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>주소록:수정화면</title>
+</head>
+
+<body>
+<div align="center">
+<H2>주소록:수정화면 </H2>
+<link rel="stylesheet" href="/css/addrbook.css" type="text/css" media="screen" />
+<HR>
+[<a href="addrbook_list.do">주소록 목록으로</a>] <p></p>
+<tr th:each="vo : ${ab}">
+
+ab_id: <label th:text="${vo.abId}"></label></br>
+
+<form name=form1 method=post action="modify.do">
+<input type=hidden name="abId" th:value="${vo.abId}">
+<input type="hidden" value="modify.do">
+
+<table border="1">
+  <tr>
+    <th>이 름</th>
+    <td><input type="text" name="abName" th:value="${vo.abName}"></td>
+  </tr>
+  <tr>
+    <th>email</th>
+    <td><input type="text" name="abEmail" th:value="${vo.abEmail}"></td>
+  </tr>
+    <tr>
+    <th>전화번호</th>
+    <td><input type="text" name="abTel" th:value="${vo.abTel}"></td>
+  </tr>
+      <tr>
+    <th>생 일</th>
+    <td><input type="date" name="abBirth" th:value="${ab.abBirth}"></td>
+  </tr>
+  <tr>
+    <th>회 사</th>
+    <td><input type="text" name="abComdept" th:value="${ab.abComdept}"></td>
+  </tr>
+  <tr>
+    <th>메 모</th>
+    <td><input type="text" name="abMemo" th:value="${ab.abMemo}"></td>
+  </tr>
+  <tr>
+    <td colspan=2 align=center><input type=submit value="저장"><input type=reset value="취소" onclick="location.href='addrbook_list.do'">
+    <input type="hidden" id="abId" th:value="${vo.abId}"><input type="button" value="삭제" onClick="delcheck()"></td>
+</tr>
+</table>
+</form>
+
+</div>
+</body>
+
+</html>

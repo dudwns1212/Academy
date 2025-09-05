@@ -1,0 +1,5 @@
+package lx.edu.springboot.controller;
+
+public class HelloController {
+
+}

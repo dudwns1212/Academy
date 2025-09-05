@@ -1,0 +1,17 @@
+package lx.edu.springmvc.controller;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import lx.edu.springmvc.vo.AddrBookVO;
+
+@RestController
+public class AddrBookRestController {
+	
+	//id를 전달받아서 해당 방명록을 JSON으로 리턴
+	@RequestMapping("/addrbook/{id}")
+	public AddrBookVO getAddrBook() {
+		return null;
+	}
+	
+}

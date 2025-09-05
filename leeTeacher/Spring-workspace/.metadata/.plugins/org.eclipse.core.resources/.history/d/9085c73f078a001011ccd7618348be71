@@ -1,0 +1,23 @@
+package lx.edu.springmvc.config;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+
+@Configuration
+@EnableWebMvc
+public class WebMvcConfig implements WebMvcConfigurer {
+	
+	/*
+	 * <beans:bean
+	 * class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+	 * <beans:property name="prefix" value="/WEB-INF/views/" /> <beans:property
+	 * name="suffix" value=".jsp" /> </beans:bean>
+	 */
+	@Bean
+	public InternalResourceViewResover jspResolver
+	
+	
+	
+}

@@ -1,0 +1,19 @@
+
+import java.util.Scanner;
+
+public class aaa {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		String UpperLower = sc.nextLine();
+		
+		for(char c : UpperLower.toCharArray()) {
+			if(Character.isUpperCase(c)) {
+				Character.toLowerCase(c);
+			} else {
+				Character.toUpperCase(c);
+			}
+			System.out.print(c);
+		}
+		
+	}
+}

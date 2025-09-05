@@ -1,0 +1,20 @@
+package lx.edu.springmvc.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+
+@Controller
+public class MainController {
+	
+	@GetMapping("login_form.do")
+	public String loginForm() {
+		return "login";
+	}
+	
+	@PostMapping("login_action.do")
+	public String loginAction() {
+		return "";
+	}
+	
+}

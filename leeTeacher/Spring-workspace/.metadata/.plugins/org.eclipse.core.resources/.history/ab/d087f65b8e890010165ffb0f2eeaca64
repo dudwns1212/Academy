@@ -1,0 +1,13 @@
+
+import java.util.Scanner;
+
+public class aaa {
+	public static void main(String[] args) {
+		String number = "132456789";
+		String answer = "";
+		for(char a : number.toCharArray()) {
+			answer = Integer.parseInt(a) 
+		}
+		
+	}
+}

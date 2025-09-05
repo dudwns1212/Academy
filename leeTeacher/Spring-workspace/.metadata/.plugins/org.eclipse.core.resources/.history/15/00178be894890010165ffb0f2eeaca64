@@ -1,0 +1,9 @@
+public class aaa {
+	public static void main(String[] args) {
+		String number = "132456789";
+		
+		int a = Integer.valueOf(number, 2);
+		
+		
+	}
+}

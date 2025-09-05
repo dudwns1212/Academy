@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html>
+<head>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script type="text/javascript">
+	function check(ab_id) {
+		//pwd = prompt('수정/삭제 하려면 비밀번호를 넣으세요');
+		document.location.href="edit.do?abId="+ab_id;
+		//document.location.href="editview.do?ab_id="+ab_id+"&upasswd="+pwd;
+	}
+</script>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>주소록:목록화면</title>
+<link rel="stylesheet" href="/css/addrbook.css" type="text/css" media="screen" />
+
+</head>
+
+<body>
+<div align="center"> 
+<H2>주소록:목록화면</H2>
+<HR>
+<form>
+<a href="addrbook_form.do">주소록 등록</a><P>
+
+		<table border="1">
+			<tr><th>번호</th><th>이 름</th><th>전화번호</th><th>생 일</th><th>회 사</th><th>메 모</th></tr>
+		
+			 <tr th:each="vo : ${data}">
+					<td><a th:href="|javascript:check(${vo.abId})|" th:text="${vo.abId}"></a></td>
+					<td th:text="${vo.abName}"></td>
+					<td th:text="${vo.abTel}"></td>
+					<td th:text="${vo.abBirth}"></td>
+					<td th:text="${vo.abComdept}"></td>
+					<td th:text="${vo.abMemo}"></td>
+				</tr>
+		</table>
+</form>
+
+</div>
+<script type="text/javascript">
+	$('tr').on('click', function(){
+		let ab_id = ($(this).find('a').text());
+		document.location.href="edit.do?abId="+ab_id;
+	})
+</script>
+</body>
+</html>

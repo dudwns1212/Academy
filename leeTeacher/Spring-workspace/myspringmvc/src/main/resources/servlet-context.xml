@@ -22,6 +22,15 @@
     <beans:property name="prefix" value="/WEB-INF/views/" />
     <beans:property name="suffix" value=".jsp" />
   </beans:bean>
+  
+  <interceptors>
+  	<interceptor>
+  		<mapping path="/addrbook_list.do"/>
+  		<mapping path="/insert.do"/>
+  		<mapping path="/edit.do"/>
+  		<beans:bean class="lx.edu.springmvc.interceptor.LoginInterceptor"></beans:bean>
+  	</interceptor>
+  </interceptors>
 
   <context:component-scan base-package="lx.edu.springmvc" />
 

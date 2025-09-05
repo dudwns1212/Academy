@@ -1,0 +1,32 @@
+package lx.edu.springmvc.controller;
+
+import java.net.http.HttpRequest;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpSession;
+
+@Controller
+public class MainController {
+	
+	@GetMapping("login_form.do")
+	public String loginForm() {
+		return "login";
+	}
+	
+	@PostMapping("loginaction.do")
+	public String loginAction(HttpSession session, HttpServletRequest req, @RequestParam("id") String id, 
+					@RequestParam("pw") String pw) {
+		
+		if(session.getAttribute("userId") == null || session.getAttribute("userId") == "0") {
+			session.setAttribute("userId", id);
+			session.setAttribute("userPw", pw);
+		}
+		return "addrbook_form";
+	}
+	
+}
