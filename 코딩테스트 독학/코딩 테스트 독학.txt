@@ -452,3 +452,137 @@ s → e 까지 s는 1씩 증가 e는 1씩 감소하는 구조를 만듦
 자리 바꾸기 구조를 만들어서 s가 e보다 작을 때 까지 대칭되는 자리를 바꿔줌
 
 cArr을 String으로 바꿔주고 리턴
+
+## 34. 배열 만들기
+
+### **문제 설명**
+
+문자열 배열 `intStrs`와 정수 `k`, `s`, `l`가 주어집니다. `intStrs`의 원소는 숫자로 이루어져 있습니다.
+
+배열 `intStrs`의 각 원소마다 `s`번 인덱스에서 시작하는 길이 `l`짜리 부분 문자열을 잘라내 정수로 변환합니다. 이때 변환한 정수값이 `k`보다 큰 값들을 담은 배열을 return 하는 solution 함수를 완성해 주세요.
+
+### 내 풀이
+
+```java
+import java.util.ArrayList;
+class Solution {
+    public int[] solution(String[] intStrs, int k, int s, int l) {
+        int num = 0;
+        ArrayList<Integer> arr = new ArrayList<>();
+        for(String str : intStrs){
+            try{
+	            num = Integer.parseInt(str.substring(s,l+s));
+	            if(num > k){
+	            arr.add(num);
+            }
+            }catch(Exception e){
+	            continue;
+            }
+        }
+        int[] arrlist = arr.stream().mapToInt(i->i).toArray();
+        return arrlist;
+    }
+}
+```
+
+## 35. 부분 문자열 이어 붙여 문자열 만들기
+
+### **문제 설명**
+
+길이가 같은 문자열 배열 `my_strings`와 이차원 정수 배열 `parts`가 매개변수로 주어집니다. `parts[i]`는 [s, e] 형태로, `my_string[i]`의 인덱스 s부터 인덱스 e까지의 부분 문자열을 의미합니다. 각 `my_strings`의 원소의 `parts`에 해당하는 부분 문자열을 순서대로 이어 붙인 문자열을 return 하는 solution 함수를 작성해 주세요.
+
+### 내 풀이
+
+```java
+class Solution {
+    public String solution(String[] my_strings, int[][] parts) {
+        String answer = "";
+        for(int i=0;i<my_strings.length;i++){
+            int s = parts[i][0];
+            int e = parts[i][1];
+            String str = my_strings[i].substring(s,e+1);
+            answer += str;
+        }
+        return answer;
+    }
+}
+```
+
+## 36. 문자열의 뒤의 n글자
+
+### **문제 설명**
+
+문자열 `my_string`과 정수 `n`이 매개변수로 주어질 때, `my_string`의 뒤의 `n`글자로 이루어진 문자열을 return 하는 solution 함수를 작성해 주세요.
+
+### 내 풀이
+
+```java
+class Solution {
+    public String solution(String my_string, int n) {
+        String answer = "";
+        int i = my_string.length()-n;
+        
+        answer = my_string.substring(i);
+        
+        
+        return answer;
+    }
+}
+```
+
+## 37. 접미사 배열
+
+### **문제 설명**
+
+어떤 문자열에 대해서 접미사는 특정 인덱스부터 시작하는 문자열을 의미합니다. 예를 들어, "banana"의 모든 접미사는 "banana", "anana", "nana", "ana", "na", "a"입니다.
+
+문자열 `my_string`이 매개변수로 주어질 때, `my_string`의 모든 접미사를 사전순으로 정렬한 문자열 배열을 return 하는 solution 함수를 작성해 주세요.
+
+### 내 풀이
+
+```java
+import java.util.ArrayList;
+class Solution {
+    public String[] solution(String my_string) {
+        ArrayList<String> arr = new ArrayList<>();
+        for(int i=0;i<my_string.length();i++){
+            arr.add(my_string.substring(i));
+        }
+        
+        arr.sort(null);
+        
+        String[] answer = new String[arr.size()];
+        for(int j=0;j<arr.size();j++){
+            answer[j] = arr.get(j);
+        }
+        
+        return answer;
+    }
+}
+```
+
+sort(null) → 정렬
+
+sort(Comparator.reverseOrder()) → 내림차순 정렬
+
+## 38. 접미사인지 확인
+
+### **문제 설명**
+
+어떤 문자열에 대해서 접미사는 특정 인덱스부터 시작하는 문자열을 의미합니다. 예를 들어, "banana"의 모든 접미사는 "banana", "anana", "nana", "ana", "na", "a"입니다.
+
+문자열 `my_string`과 `is_suffix`가 주어질 때, `is_suffix`가 `my_string`의 접미사라면 1을, 아니면 0을 return 하는 solution 함수를 작성해 주세요.
+
+### 내 풀이
+class Solution {
+    public int solution(String my_string, String is_suffix) {
+        int answer = 0;
+        
+        for(int i=0;i<my_string.length();i++){
+            if(my_string.substring(i).equals(is_suffix)){
+                answer = 1;   
+            }
+        }
+        return answer;
+    }
+}
