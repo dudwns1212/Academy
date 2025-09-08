@@ -1,0 +1,8 @@
+package lx.edu.vo;
+
+public class StudentInfo {
+	int studentId;
+	String studentName;
+	String gender;
+	String 
+}

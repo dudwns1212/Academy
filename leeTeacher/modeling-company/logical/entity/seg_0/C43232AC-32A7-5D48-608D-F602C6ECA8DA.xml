@@ -1,0 +1,69 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="C43232AC-32A7-5D48-608D-F602C6ECA8DA" name="투입 프로젝트">
+<createdBy>ernmq</createdBy>
+<createdTime>2025-09-08 07:20:25 UTC</createdTime>
+<ownerDesignName>modeling-company</ownerDesignName>
+<engineerTo>
+<item key="4B354F31-AF9F-C342-A8F1-5C88C3A3DECF" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="프로젝트번호" id="4B409E2D-7CCA-EEAD-4065-FF68EFD90D09">
+<createdBy>ernmq</createdBy>
+<createdTime>2025-09-08 07:21:03 UTC</createdTime>
+<generatorID>32BE2F9C-8B52-6ED2-704C-FA0D90C65335</generatorID>
+<ownerDesignName>modeling-company</ownerDesignName>
+<engineerTo>
+<item key="4B354F31-AF9F-C342-A8F1-5C88C3A3DECF" value="true"/>
+</engineerTo>
+<referedAttribute>854DF2FD-8FF1-3B46-C3E8-1F30B1EC0B64</referedAttribute>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="사번" id="1EA25335-1544-1142-9B29-DF7A8BE49093">
+<createdBy>ernmq</createdBy>
+<createdTime>2025-09-08 07:21:09 UTC</createdTime>
+<generatorID>EB06A41C-2027-8708-18FC-74F87E12FF22</generatorID>
+<ownerDesignName>modeling-company</ownerDesignName>
+<engineerTo>
+<item key="4B354F31-AF9F-C342-A8F1-5C88C3A3DECF" value="true"/>
+</engineerTo>
+<referedAttribute>2B9F95D6-EEAA-37C3-8B03-94D270CBE6A4</referedAttribute>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="투입근무일수" id="FFFC29B1-01C9-6D6C-3262-341A6D4FC147">
+<createdBy>ernmq</createdBy>
+<createdTime>2025-09-08 07:21:37 UTC</createdTime>
+<ownerDesignName>modeling-company</ownerDesignName>
+<engineerTo>
+<item key="4B354F31-AF9F-C342-A8F1-5C88C3A3DECF" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="F54AB20E-787A-026A-D41E-3F83709B96B5" name="투입 프로젝트 PK">
+<createdBy>ernmq</createdBy>
+<createdTime>2025-09-08 07:21:24 UTC</createdTime>
+<ownerDesignName>modeling-company</ownerDesignName>
+<engineerTo>
+<item key="4B354F31-AF9F-C342-A8F1-5C88C3A3DECF" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>1EA25335-1544-1142-9B29-DF7A8BE49093</attributeRef>
+<attributeRef>4B409E2D-7CCA-EEAD-4065-FF68EFD90D09</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

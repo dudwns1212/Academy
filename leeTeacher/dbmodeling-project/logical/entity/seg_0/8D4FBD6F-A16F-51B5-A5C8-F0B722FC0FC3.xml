@@ -1,0 +1,100 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="8D4FBD6F-A16F-51B5-A5C8-F0B722FC0FC3" name="지점">
+<createdBy>ernmq</createdBy>
+<createdTime>2025-09-08 07:45:00 UTC</createdTime>
+<ownerDesignName>dbmodeling-project</ownerDesignName>
+<engineerTo>
+<item key="41E90ACB-92D3-94FD-E649-CA7E2EB168CD" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="지점번호" id="D7265940-B4F0-9F5E-6204-E15BD9376545">
+<createdBy>ernmq</createdBy>
+<createdTime>2025-09-08 07:45:57 UTC</createdTime>
+<ownerDesignName>dbmodeling-project</ownerDesignName>
+<engineerTo>
+<item key="41E90ACB-92D3-94FD-E649-CA7E2EB168CD" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="지점명칭" id="350D12A5-AAEC-14F6-47BB-AB6FA5D0CCA5">
+<createdBy>ernmq</createdBy>
+<createdTime>2025-09-08 07:46:06 UTC</createdTime>
+<ownerDesignName>dbmodeling-project</ownerDesignName>
+<engineerTo>
+<item key="41E90ACB-92D3-94FD-E649-CA7E2EB168CD" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="지점주소" id="04330B92-A5B9-5CA1-9044-C952CD6A9294">
+<createdBy>ernmq</createdBy>
+<createdTime>2025-09-08 07:46:13 UTC</createdTime>
+<ownerDesignName>dbmodeling-project</ownerDesignName>
+<engineerTo>
+<item key="41E90ACB-92D3-94FD-E649-CA7E2EB168CD" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="지점 전화번호" id="170B6A1D-87EE-930B-526E-D639346C3695">
+<createdBy>ernmq</createdBy>
+<createdTime>2025-09-08 07:46:21 UTC</createdTime>
+<ownerDesignName>dbmodeling-project</ownerDesignName>
+<engineerTo>
+<item key="41E90ACB-92D3-94FD-E649-CA7E2EB168CD" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="고객번호" id="BCA339A0-895F-B0E9-FBB1-17A00E3CE119">
+<createdBy>ernmq</createdBy>
+<createdTime>2025-09-08 10:02:26 UTC</createdTime>
+<generatorID>9C73457A-886E-F128-F960-62C4B3506B86</generatorID>
+<ownerDesignName>dbmodeling-project</ownerDesignName>
+<engineerTo>
+<item key="41E90ACB-92D3-94FD-E649-CA7E2EB168CD" value="true"/>
+</engineerTo>
+<referedAttribute>33111264-9BA2-948E-D62C-6CB2950DE414</referedAttribute>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="직원번호" id="7C0DFFEA-C5BD-8889-9BE2-26DCB0746D20">
+<createdBy>ernmq</createdBy>
+<createdTime>2025-09-08 10:13:43 UTC</createdTime>
+<generatorID>AE6A9EA2-941F-680A-2D5C-71B520C171A0</generatorID>
+<ownerDesignName>dbmodeling-project</ownerDesignName>
+<engineerTo>
+<item key="41E90ACB-92D3-94FD-E649-CA7E2EB168CD" value="true"/>
+</engineerTo>
+<referedAttribute>0CA5C3C3-0739-3D4D-957F-74386417AE7D</referedAttribute>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="7733E923-6ACB-FA96-4897-073AAE2B2B02" name="지점 PK">
+<createdBy>ernmq</createdBy>
+<createdTime>2025-09-08 07:46:04 UTC</createdTime>
+<ownerDesignName>dbmodeling-project</ownerDesignName>
+<engineerTo>
+<item key="41E90ACB-92D3-94FD-E649-CA7E2EB168CD" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>D7265940-B4F0-9F5E-6204-E15BD9376545</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

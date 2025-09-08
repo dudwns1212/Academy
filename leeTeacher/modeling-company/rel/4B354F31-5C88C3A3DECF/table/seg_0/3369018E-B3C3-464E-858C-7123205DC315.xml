@@ -1,0 +1,69 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="3369018E-B3C3-464E-858C-7123205DC315" name="부서_지역">
+<createdBy>ernmq</createdBy>
+<createdTime>2025-09-08 07:18:52 UTC</createdTime>
+<generatorID>6BD1D4D0-A8A0-8F41-904A-1E7A8CC08975</generatorID>
+<ownerDesignName>modeling-company</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="지역번호" id="26BA179A-37F4-A5E5-8E4D-457E302740DF">
+<createdBy>ernmq</createdBy>
+<createdTime>2025-09-08 07:18:52 UTC</createdTime>
+<generatorID>96E6B1DA-2B27-BC86-C4AF-92D85D57C44E</generatorID>
+<ownerDesignName>modeling-company</ownerDesignName>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="지역명" id="799C7477-69BE-BAE2-5D14-83810F04040F">
+<createdBy>ernmq</createdBy>
+<createdTime>2025-09-08 07:18:52 UTC</createdTime>
+<generatorID>7ECC7B82-514B-36D9-8100-1D85B8BA9FEC</generatorID>
+<ownerDesignName>modeling-company</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="부서_부서번호" id="BEAE515D-604D-4EBA-3347-628282E04A82">
+<createdBy>ernmq</createdBy>
+<createdTime>2025-09-08 07:18:52 UTC</createdTime>
+<generatorID>C39BA2D9-0753-77EC-AE4F-BBCA4C2EB965</generatorID>
+<ownerDesignName>modeling-company</ownerDesignName>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="1FBEE599-2E97-4DD2-311A-55B3A0E2DE53" referredColumn="95411252-12D5-EE37-B6C6-412054A82F5F"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="92A61B53-B4F3-F771-7D2A-6BA3F72CD402" name="부서_지역_PK">
+<createdBy>ernmq</createdBy>
+<createdTime>2025-09-08 07:18:52 UTC</createdTime>
+<generatorID>5E1912D0-BAAA-2681-A84E-5B1F3D2DEF20</generatorID>
+<ownerDesignName>modeling-company</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="26BA179A-37F4-A5E5-8E4D-457E302740DF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D5627F8B-DA29-70AE-68AE-827F239DB107" name="부서_지역_부서_FK">
+<createdBy>ernmq</createdBy>
+<createdTime>2025-09-08 07:18:52 UTC</createdTime>
+<generatorID>30DC3E1A-A1A1-0D80-E922-D99474D7BBDE</generatorID>
+<ownerDesignName>modeling-company</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="BEAE515D-604D-4EBA-3347-628282E04A82"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,10 @@
+package lx.edu.vo;
+
+public class AssistantInfo {
+	String taId;
+	String taName;
+	String deptId;
+	String supervisorId;
+	String taType;
+	String createdAt;
+}

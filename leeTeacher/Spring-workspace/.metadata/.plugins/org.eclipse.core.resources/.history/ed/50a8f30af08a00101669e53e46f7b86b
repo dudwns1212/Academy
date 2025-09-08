@@ -1,0 +1,119 @@
+package lx.edu.vo;
+
+public class StudentInfo {
+	int studentId;
+	String studentName;
+	String gender;
+	String birthDate;
+	int admissionYear;
+	int currentGrade;
+	String deptId;
+	String studentStatus;
+	String address;
+	String emergencyConcat;
+	String emergencyPhone;
+	double gpa;
+	int totalCredits;
+	String createdAt;
+	String updatedAt;
+	public int getStudentId() {
+		return studentId;
+	}
+	public void setStudentId(int studentId) {
+		this.studentId = studentId;
+	}
+	public String getStudentName() {
+		return studentName;
+	}
+	public void setStudentName(String studentName) {
+		this.studentName = studentName;
+	}
+	public String getGender() {
+		return gender;
+	}
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
+	public String getBirthDate() {
+		return birthDate;
+	}
+	public void setBirthDate(String birthDate) {
+		this.birthDate = birthDate;
+	}
+	public int getAdmissionYear() {
+		return admissionYear;
+	}
+	public void setAdmissionYear(int admissionYear) {
+		this.admissionYear = admissionYear;
+	}
+	public int getCurrentGrade() {
+		return currentGrade;
+	}
+	public void setCurrentGrade(int currentGrade) {
+		this.currentGrade = currentGrade;
+	}
+	public String getDeptId() {
+		return deptId;
+	}
+	public void setDeptId(String deptId) {
+		this.deptId = deptId;
+	}
+	public String getStudentStatus() {
+		return studentStatus;
+	}
+	public void setStudentStatus(String studentStatus) {
+		this.studentStatus = studentStatus;
+	}
+	public String getAddress() {
+		return address;
+	}
+	public void setAddress(String address) {
+		this.address = address;
+	}
+	public String getEmergencyConcat() {
+		return emergencyConcat;
+	}
+	public void setEmergencyConcat(String emergencyConcat) {
+		this.emergencyConcat = emergencyConcat;
+	}
+	public String getEmergencyPhone() {
+		return emergencyPhone;
+	}
+	public void setEmergencyPhone(String emergencyPhone) {
+		this.emergencyPhone = emergencyPhone;
+	}
+	public double getGpa() {
+		return gpa;
+	}
+	public void setGpa(double gpa) {
+		this.gpa = gpa;
+	}
+	public int getTotalCredits() {
+		return totalCredits;
+	}
+	public void setTotalCredits(int totalCredits) {
+		this.totalCredits = totalCredits;
+	}
+	public String getCreatedAt() {
+		return createdAt;
+	}
+	public void setCreatedAt(String createdAt) {
+		this.createdAt = createdAt;
+	}
+	public String getUpdatedAt() {
+		return updatedAt;
+	}
+	public void setUpdatedAt(String updatedAt) {
+		this.updatedAt = updatedAt;
+	}
+	@Override
+	public String toString() {
+		return "StudentInfo [studentId=" + studentId + ", studentName=" + studentName + ", gender=" + gender
+				+ ", birthDate=" + birthDate + ", admissionYear=" + admissionYear + ", currentGrade=" + currentGrade
+				+ ", deptId=" + deptId + ", studentStatus=" + studentStatus + ", address=" + address
+				+ ", emergencyConcat=" + emergencyConcat + ", emergencyPhone=" + emergencyPhone + ", gpa=" + gpa
+				+ ", totalCredits=" + totalCredits + ", createdAt=" + createdAt + ", updatedAt=" + updatedAt + "]";
+	}
+	
+	
+}

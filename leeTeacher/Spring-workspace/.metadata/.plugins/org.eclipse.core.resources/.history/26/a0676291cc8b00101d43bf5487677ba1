@@ -1,0 +1,27 @@
+package lx.edu.dao;
+
+import javax.sql.DataSource;
+
+import org.apache.ibatis.session.SqlSession;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+import lx.edu.vo.StudentInfo;
+
+@Component
+public class LmsDAO {
+	
+	@Autowired
+	SqlSession session;
+	
+	@Autowired
+	StudentInfo stInfo;
+	
+	public StudentInfo getStudentInfoById() {
+		
+		
+		
+		return null;
+	}
+	
+}

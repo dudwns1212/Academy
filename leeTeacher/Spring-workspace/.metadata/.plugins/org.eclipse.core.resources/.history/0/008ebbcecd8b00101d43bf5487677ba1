@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<title>학사관리</title>
+</head>
+<body>
+ <div align-center>
+ 	<h2>학사관리</h2>
+ 	<a href="">교직원 전용으로</a><br>
+ 	<table border="1">
+		<tr><th>학번</th><th>이 름</th><th>전화번호</th><th>생 일</th><th>회 사</th><th>메 모</th></tr>
+	
+		 <tr th:each="vo : ${data}">
+				<td th:text="${vo.studentId}"></td>
+				<td th:text="${vo.studentName}"></td>
+				<td th:text="${vo.gender}"></td>
+				<td th:text="${vo.studentTel}"></td>
+				<td th:text="${vo.birthDate}"></td>
+				<td th:text="${vo.address}"></td>
+				<td th:text="${vo.currentGrade}"></td>
+			</tr>
+	</table>
+ 	
+ </div>
+
+
+</body>
+</html>

@@ -1,0 +1,77 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="803673DB-30AB-16A0-0F2E-C76DAD856A36" name="부서">
+<createdBy>ernmq</createdBy>
+<createdTime>2025-09-08 06:35:42 UTC</createdTime>
+<ownerDesignName>modeling-company</ownerDesignName>
+<engineerTo>
+<item key="4B354F31-AF9F-C342-A8F1-5C88C3A3DECF" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="부서번호" id="5DCC729D-706D-18D2-53BF-2A2A80493D28">
+<createdBy>ernmq</createdBy>
+<createdTime>2025-09-08 06:36:30 UTC</createdTime>
+<ownerDesignName>modeling-company</ownerDesignName>
+<engineerTo>
+<item key="4B354F31-AF9F-C342-A8F1-5C88C3A3DECF" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="부서명" id="FA8C059C-FD81-A9EC-D4D4-1A412F89BF34">
+<createdBy>ernmq</createdBy>
+<createdTime>2025-09-08 06:36:35 UTC</createdTime>
+<ownerDesignName>modeling-company</ownerDesignName>
+<engineerTo>
+<item key="4B354F31-AF9F-C342-A8F1-5C88C3A3DECF" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="부서장취임일자" id="082B7509-BA2B-CDE8-14D4-A242F9F41543">
+<createdBy>ernmq</createdBy>
+<createdTime>2025-09-08 06:36:38 UTC</createdTime>
+<ownerDesignName>modeling-company</ownerDesignName>
+<engineerTo>
+<item key="4B354F31-AF9F-C342-A8F1-5C88C3A3DECF" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="사번" id="060B629E-F5C8-99E3-A884-3CC5B1C1B1FE">
+<createdBy>ernmq</createdBy>
+<createdTime>2025-09-08 07:16:06 UTC</createdTime>
+<generatorID>B9FC1E1B-C203-7548-3F76-5580DCAF949E</generatorID>
+<ownerDesignName>modeling-company</ownerDesignName>
+<engineerTo>
+<item key="4B354F31-AF9F-C342-A8F1-5C88C3A3DECF" value="true"/>
+</engineerTo>
+<referedAttribute>2B9F95D6-EEAA-37C3-8B03-94D270CBE6A4</referedAttribute>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="F24F9CE9-D74D-4660-7E26-D7B2D3B3B4D9" name="부서 PK">
+<createdBy>ernmq</createdBy>
+<createdTime>2025-09-08 06:38:54 UTC</createdTime>
+<ownerDesignName>modeling-company</ownerDesignName>
+<engineerTo>
+<item key="4B354F31-AF9F-C342-A8F1-5C88C3A3DECF" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>5DCC729D-706D-18D2-53BF-2A2A80493D28</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

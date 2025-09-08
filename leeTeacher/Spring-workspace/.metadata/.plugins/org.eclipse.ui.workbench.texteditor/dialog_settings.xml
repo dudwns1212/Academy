@@ -3,6 +3,7 @@
 	<item key="hasShownOverlayPopupBefore" value="true"/>
 	<item key="replaceBarOpen" value="true"/>
 	<list key="searchhistory">
+		<item value="ab"/>
 		<item value="update.do"/>
 		<item value="WebApplicationContext"/>
 		<item value="emp"/>
@@ -11,6 +12,7 @@
 		<item value="setDriverClassNa"/>
 	</list>
 	<list key="replacehistory">
+		<item value="sutdent"/>
 		<item value="modify.do"/>
 	</list>
 </section>

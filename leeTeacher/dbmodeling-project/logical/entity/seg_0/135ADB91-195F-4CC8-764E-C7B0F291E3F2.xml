@@ -1,0 +1,76 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="135ADB91-195F-4CC8-764E-C7B0F291E3F2" name="직원">
+<createdBy>ernmq</createdBy>
+<createdTime>2025-09-08 09:58:04 UTC</createdTime>
+<ownerDesignName>dbmodeling-project</ownerDesignName>
+<engineerTo>
+<item key="41E90ACB-92D3-94FD-E649-CA7E2EB168CD" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="직원번호" id="0CA5C3C3-0739-3D4D-957F-74386417AE7D">
+<createdBy>ernmq</createdBy>
+<createdTime>2025-09-08 10:04:44 UTC</createdTime>
+<ownerDesignName>dbmodeling-project</ownerDesignName>
+<engineerTo>
+<item key="41E90ACB-92D3-94FD-E649-CA7E2EB168CD" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="직원성명" id="EAA6A446-E0DC-5F45-CB93-C8DCF45D1A96">
+<createdBy>ernmq</createdBy>
+<createdTime>2025-09-08 10:04:48 UTC</createdTime>
+<ownerDesignName>dbmodeling-project</ownerDesignName>
+<engineerTo>
+<item key="41E90ACB-92D3-94FD-E649-CA7E2EB168CD" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="직원성별" id="17B47398-0150-A4A3-1ED5-49120F331EA2">
+<createdBy>ernmq</createdBy>
+<createdTime>2025-09-08 10:04:53 UTC</createdTime>
+<ownerDesignName>dbmodeling-project</ownerDesignName>
+<engineerTo>
+<item key="41E90ACB-92D3-94FD-E649-CA7E2EB168CD" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="직원전화번호" id="1C3F0467-7DCD-C95C-50EF-E4F080A043D2">
+<createdBy>ernmq</createdBy>
+<createdTime>2025-09-08 10:04:57 UTC</createdTime>
+<ownerDesignName>dbmodeling-project</ownerDesignName>
+<engineerTo>
+<item key="41E90ACB-92D3-94FD-E649-CA7E2EB168CD" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="5E3BB391-6E78-9F36-F6DC-D21310CEE017" name="직원 PK">
+<createdBy>ernmq</createdBy>
+<createdTime>2025-09-08 10:05:23 UTC</createdTime>
+<ownerDesignName>dbmodeling-project</ownerDesignName>
+<engineerTo>
+<item key="41E90ACB-92D3-94FD-E649-CA7E2EB168CD" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>0CA5C3C3-0739-3D4D-957F-74386417AE7D</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

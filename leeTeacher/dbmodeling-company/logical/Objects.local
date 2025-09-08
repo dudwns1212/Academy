@@ -1,0 +1,9 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.logical.LogicalDesign>
+   <object objectType="Entity" objectID="803673DB-30AB-16A0-0F2E-C76DAD856A36" name="부서" seqName="seg_0" propertyClassName="oracle.dbtools.crest.model.design.logical.Entity" propertyParentId="F6A7182A-78B1-E7F6-65F0-F365D267A604" propertySourceId="" propertyTargetId=""/>
+   <object objectType="Entity" objectID="6BD1D4D0-A8A0-8F41-904A-1E7A8CC08975" name="부서 지역" seqName="seg_0" propertyClassName="oracle.dbtools.crest.model.design.logical.Entity" propertyParentId="F6A7182A-78B1-E7F6-65F0-F365D267A604" propertySourceId="" propertyTargetId=""/>
+   <object objectType="Entity" objectID="BF5C635F-4F7A-5230-CB91-291B9C4424EF" name="프로젝트" seqName="seg_0" propertyClassName="oracle.dbtools.crest.model.design.logical.Entity" propertyParentId="F6A7182A-78B1-E7F6-65F0-F365D267A604" propertySourceId="" propertyTargetId=""/>
+   <object objectType="Entity" objectID="2370DA52-4EA3-EBB4-36FB-DAE5BD0A15A6" name="회사원" seqName="seg_0" propertyClassName="oracle.dbtools.crest.model.design.logical.Entity" propertyParentId="F6A7182A-78B1-E7F6-65F0-F365D267A604" propertySourceId="" propertyTargetId=""/>
+   <object objectType="Relation" objectID="5A4077FA-0F2A-0391-BB6A-A8DC4C33D83E" name="Relation_1" seqName="seg_0" propertyClassName="oracle.dbtools.crest.model.design.logical.Relation" propertyParentId="F6A7182A-78B1-E7F6-65F0-F365D267A604" propertySourceId="803673DB-30AB-16A0-0F2E-C76DAD856A36" propertyTargetId="2370DA52-4EA3-EBB4-36FB-DAE5BD0A15A6"/>
+   <object objectType="Relation" objectID="30DC3E1A-A1A1-0D80-E922-D99474D7BBDE" name="Relation_2" seqName="seg_0" propertyClassName="oracle.dbtools.crest.model.design.logical.Relation" propertyParentId="F6A7182A-78B1-E7F6-65F0-F365D267A604" propertySourceId="803673DB-30AB-16A0-0F2E-C76DAD856A36" propertyTargetId="6BD1D4D0-A8A0-8F41-904A-1E7A8CC08975"/>
+</oracle.dbtools.crest.model.design.logical.LogicalDesign>

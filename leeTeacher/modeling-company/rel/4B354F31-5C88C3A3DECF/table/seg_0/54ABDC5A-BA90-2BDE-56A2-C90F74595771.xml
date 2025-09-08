@@ -1,0 +1,79 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="54ABDC5A-BA90-2BDE-56A2-C90F74595771" name="프로젝트">
+<createdBy>ernmq</createdBy>
+<createdTime>2025-09-08 07:18:52 UTC</createdTime>
+<generatorID>BF5C635F-4F7A-5230-CB91-291B9C4424EF</generatorID>
+<ownerDesignName>modeling-company</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="프로젝트번호" id="477944DF-9712-A6EE-0A63-B66997C4F121">
+<createdBy>ernmq</createdBy>
+<createdTime>2025-09-08 07:18:52 UTC</createdTime>
+<generatorID>854DF2FD-8FF1-3B46-C3E8-1F30B1EC0B64</generatorID>
+<ownerDesignName>modeling-company</ownerDesignName>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="프로젝트명" id="05568EA4-CEE6-B2AD-C379-11820A375DAA">
+<createdBy>ernmq</createdBy>
+<createdTime>2025-09-08 07:18:52 UTC</createdTime>
+<generatorID>8FFB1C9D-B193-1663-2872-E56E1F6C052F</generatorID>
+<ownerDesignName>modeling-company</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="수행장소" id="0B3A026E-E9DC-D75A-96CD-31A78B9922FE">
+<createdBy>ernmq</createdBy>
+<createdTime>2025-09-08 07:18:52 UTC</createdTime>
+<generatorID>62A0DC7A-9270-CFC1-3AFB-6404F04E7189</generatorID>
+<ownerDesignName>modeling-company</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="부서_부서번호" id="47F00DB9-8F91-ACAC-7D3B-1634C887D0AC">
+<createdBy>ernmq</createdBy>
+<createdTime>2025-09-08 07:18:52 UTC</createdTime>
+<generatorID>94297A93-F12E-0AFE-309E-BFE54097B8FA</generatorID>
+<ownerDesignName>modeling-company</ownerDesignName>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="0812D35A-6ED5-FF63-38BA-D993988C4D59" referredColumn="95411252-12D5-EE37-B6C6-412054A82F5F"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="D0DBDC45-2C67-9063-7F0D-8E6C860C3FF0" name="프로젝트_PK">
+<createdBy>ernmq</createdBy>
+<createdTime>2025-09-08 07:18:52 UTC</createdTime>
+<generatorID>39CF0F5E-D42E-23DA-1D43-33E05E52700F</generatorID>
+<ownerDesignName>modeling-company</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="477944DF-9712-A6EE-0A63-B66997C4F121"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="7E02CB55-DD5F-9133-72EA-334DE1BDEFB4" name="프로젝트_부서_FK">
+<createdBy>ernmq</createdBy>
+<createdTime>2025-09-08 07:18:52 UTC</createdTime>
+<generatorID>A39E8292-37B6-8BD7-3985-AF9D92E060D8</generatorID>
+<ownerDesignName>modeling-company</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="47F00DB9-8F91-ACAC-7D3B-1634C887D0AC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

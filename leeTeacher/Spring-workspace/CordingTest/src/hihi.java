@@ -5,21 +5,12 @@ import java.util.Scanner;
 
 public class hihi {
 	public static void main(String[] args) {
-		System.out.println("문자열을 입력하세요");
-		Scanner scan = new Scanner(System.in);
-		String input = scan.nextLine();
+		String str = "00:55";
+		String str2 = "11:66";
+		String str3 = str + ":" +str2;
 		
-		StringBuffer sb = new StringBuffer(input);
-		
-		String newInput = sb.reverse().toString();
-		
-		System.out.println(newInput);				
-		 
-		if(input.equals(newInput)) {
-			System.out.println("문자열이 회문 입니다.");
-		} else {
-			System.out.println("문자열이 회문이 아닙니다.");
-		}
+		String[] arr = str3.split(":");
+		System.out.println(arr[3]);
 		
 	}
 }

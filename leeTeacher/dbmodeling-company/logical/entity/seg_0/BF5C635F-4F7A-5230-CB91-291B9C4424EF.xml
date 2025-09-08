@@ -1,0 +1,65 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="BF5C635F-4F7A-5230-CB91-291B9C4424EF" name="프로젝트">
+<createdBy>ernmq</createdBy>
+<createdTime>2025-09-08 06:35:53 UTC</createdTime>
+<ownerDesignName>부서-지역-사원-프로젝트 data modeler</ownerDesignName>
+<engineerTo>
+<item key="4B354F31-AF9F-C342-A8F1-5C88C3A3DECF" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="프로젝트번호" id="854DF2FD-8FF1-3B46-C3E8-1F30B1EC0B64">
+<createdBy>ernmq</createdBy>
+<createdTime>2025-09-08 06:38:37 UTC</createdTime>
+<ownerDesignName>부서-지역-사원-프로젝트 data modeler</ownerDesignName>
+<engineerTo>
+<item key="4B354F31-AF9F-C342-A8F1-5C88C3A3DECF" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="프로젝트명" id="8FFB1C9D-B193-1663-2872-E56E1F6C052F">
+<createdBy>ernmq</createdBy>
+<createdTime>2025-09-08 06:38:41 UTC</createdTime>
+<ownerDesignName>부서-지역-사원-프로젝트 data modeler</ownerDesignName>
+<engineerTo>
+<item key="4B354F31-AF9F-C342-A8F1-5C88C3A3DECF" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="수행장소" id="62A0DC7A-9270-CFC1-3AFB-6404F04E7189">
+<createdBy>ernmq</createdBy>
+<createdTime>2025-09-08 06:38:45 UTC</createdTime>
+<ownerDesignName>부서-지역-사원-프로젝트 data modeler</ownerDesignName>
+<engineerTo>
+<item key="4B354F31-AF9F-C342-A8F1-5C88C3A3DECF" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="39CF0F5E-D42E-23DA-1D43-33E05E52700F" name="프로젝트 PK">
+<createdBy>ernmq</createdBy>
+<createdTime>2025-09-08 06:39:14 UTC</createdTime>
+<ownerDesignName>부서-지역-사원-프로젝트 data modeler</ownerDesignName>
+<engineerTo>
+<item key="4B354F31-AF9F-C342-A8F1-5C88C3A3DECF" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>854DF2FD-8FF1-3B46-C3E8-1F30B1EC0B64</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

@@ -1,0 +1,71 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="1834F713-D2C3-686B-4836-3474613FDE28" name="Relation_5">
+<createdBy>ernmq</createdBy>
+<createdTime>2025-09-08 07:18:52 UTC</createdTime>
+<ownerDesignName>modeling-company</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="회사원_사번" id="ECEE7C75-DD46-9635-6EA1-144BC1D5DA4E">
+<createdBy>ernmq</createdBy>
+<createdTime>2025-09-08 07:18:52 UTC</createdTime>
+<ownerDesignName>modeling-company</ownerDesignName>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="8AE6C67A-1610-103A-90C7-B9A8D054C855" referredColumn="75E632E4-22D1-74F6-3D9C-1EDEA2D33F47"/>
+</associations>
+</Column>
+<Column name="프로젝트_프로젝트번호" id="4A241E2C-1ADE-74E6-34E4-9745085CA09B">
+<createdBy>ernmq</createdBy>
+<createdTime>2025-09-08 07:18:52 UTC</createdTime>
+<ownerDesignName>modeling-company</ownerDesignName>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="857C7B68-0563-5B10-D57F-0178DEC65B99" referredColumn="477944DF-9712-A6EE-0A63-B66997C4F121"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="CCC1F2C7-19FC-97AE-85D5-830E284E5398" name="Relation_5_PK">
+<createdBy>ernmq</createdBy>
+<createdTime>2025-09-08 07:18:52 UTC</createdTime>
+<ownerDesignName>modeling-company</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="ECEE7C75-DD46-9635-6EA1-144BC1D5DA4E"/>
+<colUsage columnID="4A241E2C-1ADE-74E6-34E4-9745085CA09B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="2A1D230C-4951-A1AD-E4F1-195850669489" name="Relation_5_회사원_FK">
+<createdBy>ernmq</createdBy>
+<createdTime>2025-09-08 07:18:52 UTC</createdTime>
+<generatorID>E7B025D6-F1A8-E781-C648-41BDF1DD8B90</generatorID>
+<ownerDesignName>modeling-company</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="ECEE7C75-DD46-9635-6EA1-144BC1D5DA4E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="CC709205-A32E-6851-2AE7-6DF8B5C0DE69" name="Relation_5_프로젝트_FK">
+<createdBy>ernmq</createdBy>
+<createdTime>2025-09-08 07:18:52 UTC</createdTime>
+<generatorID>E7B025D6-F1A8-E781-C648-41BDF1DD8B90</generatorID>
+<ownerDesignName>modeling-company</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4A241E2C-1ADE-74E6-34E4-9745085CA09B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

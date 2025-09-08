@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<BusinessInfoDesign class="oracle.dbtools.crest.model.businessinfo.BusinessInfoDesign" name="Business Information" id="DBB4D7A2-A4A7-0212-1150-B86ADB643271">
+<createdBy>ernmq</createdBy>
+<createdTime>2025-09-08 06:34:02 UTC</createdTime>
+<ownerDesignName>modeling-company</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</BusinessInfoDesign>

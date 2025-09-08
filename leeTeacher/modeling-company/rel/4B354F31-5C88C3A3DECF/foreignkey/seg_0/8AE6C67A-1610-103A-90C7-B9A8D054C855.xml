@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="8AE6C67A-1610-103A-90C7-B9A8D054C855" containerWithKeyObject="1834F713-D2C3-686B-4836-3474613FDE28" localFKIndex="2A1D230C-4951-A1AD-E4F1-195850669489" name="Relation_5_회사원_FK">
+<createdBy>ernmq</createdBy>
+<createdTime>2025-09-08 07:18:52 UTC</createdTime>
+<generatorID>E7B025D6-F1A8-E781-C648-41BDF1DD8B90</generatorID>
+<ownerDesignName>modeling-company</ownerDesignName>
+<referredTableLongName>회사원</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>D1190545-3EF7-A5DE-599A-0D3C102A6FEA</referredTableID>
+<keyObject>7EFBEBB1-8C90-8E90-7BC7-197BA3399D24</keyObject>
+<referredKeyID>7EFBEBB1-8C90-8E90-7BC7-197BA3399D24</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>사번</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

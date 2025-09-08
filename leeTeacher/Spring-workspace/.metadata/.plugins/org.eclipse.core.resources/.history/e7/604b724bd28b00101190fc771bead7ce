@@ -1,0 +1,25 @@
+package lx.edu;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ConfigurableApplicationContext;
+
+import lx.edu.controller.LmsController;
+
+@SpringBootApplication
+public class LmsProjectApplication {
+	
+	public static void main(String[] args) {
+		SpringApplication.run(LmsProjectApplication.class, args);
+        ConfigurableApplicationContext context = SpringApplication.run(LmsProjectApplication.class, args);
+
+		try {
+            LmsController controller = context.getBean(LmsController.class);
+            System.out.println("✅ Controller 빈 등록 성공: " + controller);
+        } catch (Exception e) {
+            System.out.println("❌ Controller 빈 등록 실패: " + e.getMessage());
+        }
+		
+	}
+
+}

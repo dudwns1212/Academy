@@ -1,11 +1,12 @@
-import java.util.Scanner;
+import java.util.Arrays;
 
 public class aaa {
 	public static void main(String[] args) {
-		Scanner scan = new Scanner(System.in);
-		String myName = "13579";
-		int num = Integer.parseInt(myName.substring(1,4));
-		System.out.println(num);
+		int[] arr = {12, 45, 2, 55, 88};
+		
+		Arrays.sort(arr);
+		
+		System.out.println("답 : " + arr[arr.length-1]);
 		
 	}
 }

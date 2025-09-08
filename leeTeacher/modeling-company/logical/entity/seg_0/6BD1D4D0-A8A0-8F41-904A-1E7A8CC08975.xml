@@ -1,0 +1,66 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="6BD1D4D0-A8A0-8F41-904A-1E7A8CC08975" name="부서 지역">
+<createdBy>ernmq</createdBy>
+<createdTime>2025-09-08 06:36:08 UTC</createdTime>
+<ownerDesignName>modeling-company</ownerDesignName>
+<engineerTo>
+<item key="4B354F31-AF9F-C342-A8F1-5C88C3A3DECF" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="지역번호" id="96E6B1DA-2B27-BC86-C4AF-92D85D57C44E">
+<createdBy>ernmq</createdBy>
+<createdTime>2025-09-08 06:38:28 UTC</createdTime>
+<ownerDesignName>modeling-company</ownerDesignName>
+<engineerTo>
+<item key="4B354F31-AF9F-C342-A8F1-5C88C3A3DECF" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="지역명" id="7ECC7B82-514B-36D9-8100-1D85B8BA9FEC">
+<createdBy>ernmq</createdBy>
+<createdTime>2025-09-08 06:38:32 UTC</createdTime>
+<ownerDesignName>modeling-company</ownerDesignName>
+<engineerTo>
+<item key="4B354F31-AF9F-C342-A8F1-5C88C3A3DECF" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="부서번호" id="C39BA2D9-0753-77EC-AE4F-BBCA4C2EB965">
+<createdBy>ernmq</createdBy>
+<createdTime>2025-09-08 06:41:04 UTC</createdTime>
+<generatorID>30DC3E1A-A1A1-0D80-E922-D99474D7BBDE</generatorID>
+<ownerDesignName>modeling-company</ownerDesignName>
+<engineerTo>
+<item key="4B354F31-AF9F-C342-A8F1-5C88C3A3DECF" value="true"/>
+</engineerTo>
+<referedAttribute>5DCC729D-706D-18D2-53BF-2A2A80493D28</referedAttribute>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="5E1912D0-BAAA-2681-A84E-5B1F3D2DEF20" name="부서 지역 PK">
+<createdBy>ernmq</createdBy>
+<createdTime>2025-09-08 06:39:25 UTC</createdTime>
+<ownerDesignName>modeling-company</ownerDesignName>
+<engineerTo>
+<item key="4B354F31-AF9F-C342-A8F1-5C88C3A3DECF" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>96E6B1DA-2B27-BC86-C4AF-92D85D57C44E</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

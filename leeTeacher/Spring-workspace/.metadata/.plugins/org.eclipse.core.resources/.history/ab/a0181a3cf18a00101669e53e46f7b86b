@@ -1,0 +1,15 @@
+package lx.edu.vo;
+
+public class UserInfo {
+
+	String userId;
+	String userPassword;
+	String userType;
+	String userName;
+	String userPhone;
+	int isActive;
+	String createdAt;
+	String updatedAt;
+	
+	
+}

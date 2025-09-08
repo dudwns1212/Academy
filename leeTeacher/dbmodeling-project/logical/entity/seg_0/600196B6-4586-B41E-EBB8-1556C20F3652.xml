@@ -1,0 +1,89 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="600196B6-4586-B41E-EBB8-1556C20F3652" name="계좌">
+<createdBy>ernmq</createdBy>
+<createdTime>2025-09-08 07:45:05 UTC</createdTime>
+<ownerDesignName>dbmodeling-project</ownerDesignName>
+<engineerTo>
+<item key="41E90ACB-92D3-94FD-E649-CA7E2EB168CD" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="계좌번호" id="720AD2B5-CCA5-E64D-837B-85BF3E7E2260">
+<createdBy>ernmq</createdBy>
+<createdTime>2025-09-08 07:48:20 UTC</createdTime>
+<ownerDesignName>dbmodeling-project</ownerDesignName>
+<engineerTo>
+<item key="41E90ACB-92D3-94FD-E649-CA7E2EB168CD" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="잔고" id="943C4E7F-C3EE-0116-695C-DF6D91A6EB1A">
+<createdBy>ernmq</createdBy>
+<createdTime>2025-09-08 07:48:24 UTC</createdTime>
+<ownerDesignName>dbmodeling-project</ownerDesignName>
+<engineerTo>
+<item key="41E90ACB-92D3-94FD-E649-CA7E2EB168CD" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="구분" id="FCC12E74-CB95-FFB9-78EE-3D70457A4E8B">
+<createdBy>ernmq</createdBy>
+<createdTime>2025-09-08 08:04:34 UTC</createdTime>
+<ownerDesignName>dbmodeling-project</ownerDesignName>
+<engineerTo>
+<item key="41E90ACB-92D3-94FD-E649-CA7E2EB168CD" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="고객번호" id="A885D697-C532-748B-BE5F-A18A530F59F7">
+<createdBy>ernmq</createdBy>
+<createdTime>2025-09-08 08:03:56 UTC</createdTime>
+<generatorID>BF9EC40C-A2B8-083C-9504-1EAD181EB5A2</generatorID>
+<ownerDesignName>dbmodeling-project</ownerDesignName>
+<engineerTo>
+<item key="41E90ACB-92D3-94FD-E649-CA7E2EB168CD" value="true"/>
+</engineerTo>
+<referedAttribute>33111264-9BA2-948E-D62C-6CB2950DE414</referedAttribute>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="담당관리자번호" id="1BCA206B-D705-C7C6-2AC9-E2FD2BE2107E">
+<createdBy>ernmq</createdBy>
+<createdTime>2025-09-08 10:11:06 UTC</createdTime>
+<generatorID>375860BB-F7DD-09C1-D68E-1EBC0579FC66</generatorID>
+<ownerDesignName>dbmodeling-project</ownerDesignName>
+<engineerTo>
+<item key="41E90ACB-92D3-94FD-E649-CA7E2EB168CD" value="true"/>
+</engineerTo>
+<referedAttribute>0CA5C3C3-0739-3D4D-957F-74386417AE7D</referedAttribute>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="F6F61FCC-E56E-53D4-8DA5-556151A5B4F4" name="계좌 PK">
+<createdBy>ernmq</createdBy>
+<createdTime>2025-09-08 08:05:00 UTC</createdTime>
+<ownerDesignName>dbmodeling-project</ownerDesignName>
+<engineerTo>
+<item key="41E90ACB-92D3-94FD-E649-CA7E2EB168CD" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>720AD2B5-CCA5-E64D-837B-85BF3E7E2260</attributeRef>
+<attributeRef>FCC12E74-CB95-FFB9-78EE-3D70457A4E8B</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

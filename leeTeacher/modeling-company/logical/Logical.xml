@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<LogicalDesign class="oracle.dbtools.crest.model.design.logical.LogicalDesign" name="Logical" id="F6A7182A-78B1-E7F6-65F0-F365D267A604" mainViewID="912FBA1B-DDF8-65E8-4A8C-CF8D587EB8FA">
+<createdBy>ernmq</createdBy>
+<createdTime>2025-09-08 06:34:02 UTC</createdTime>
+<ownerDesignName>modeling-company</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</LogicalDesign>
