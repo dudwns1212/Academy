@@ -1,9 +1,0 @@
-package lx.edu.springmvc.aop;
-
-import org.aopalliance.intercept.Joinpoint;
-
-public class LogAdvice {
-	public void beforeLog(Joinpoint joinPoint) {
-		
-	}
-}

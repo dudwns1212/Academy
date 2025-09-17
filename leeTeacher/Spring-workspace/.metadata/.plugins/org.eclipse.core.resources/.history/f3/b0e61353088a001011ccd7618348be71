@@ -1,7 +1,0 @@
-package lx.edu.springmvc.config;
-
-import org.springframework.web.WebApplicationInitializer;
-
-public class AddrBookWebInitializer implements WebApplicationInitializer{
-
-}

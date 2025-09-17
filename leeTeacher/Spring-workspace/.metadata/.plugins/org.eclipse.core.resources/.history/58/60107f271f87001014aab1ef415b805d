@@ -1,8 +1,0 @@
-
-public class aaa {
-	public int[] solution(int[] num_list) {
-		
-		List num_list = new ArrayList();
-	
-	}
-}

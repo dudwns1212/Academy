@@ -1,6 +1,0 @@
-package customer;
-
-public class Customer{
-	String address;
-	String name;
-}

@@ -1,7 +1,0 @@
-package customer;
-
-public class CoporateCustomer {
-	String contactName;
-	int creditLimit;
-	int crditRating;
-}

@@ -1,9 +1,0 @@
-import java.util.*;
-import java.util.Comparator;
-import java.util.Scanner;
-
-public class aaa {
-	public static void main(String[] args) {
-		
-	}
-}

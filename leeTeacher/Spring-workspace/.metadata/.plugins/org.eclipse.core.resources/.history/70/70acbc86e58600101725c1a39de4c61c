@@ -1,8 +1,0 @@
-package customer;
-
-public abstract class Customer extends CoporateCustomer{
-	abstract String getCreditRation(); 
-	
-	String address;
-	String name;
-}

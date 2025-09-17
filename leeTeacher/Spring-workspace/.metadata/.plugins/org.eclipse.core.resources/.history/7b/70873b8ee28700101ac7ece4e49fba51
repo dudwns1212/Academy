@@ -1,7 +1,0 @@
-package project;
-
-public class EmpStat {
-	String departmentName;
-	double maxs, mins;
-	int avs;
-}

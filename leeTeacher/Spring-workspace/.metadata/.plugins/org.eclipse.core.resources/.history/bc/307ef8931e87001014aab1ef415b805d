@@ -1,9 +1,0 @@
-
-public class aaa {
-	public int[] solution(int[] num_list) {
-        int lastIndex = num_list.size()-1; 
-        int lastNum = num_list[lastIndex];
-        int Num = num_list[lastIndex-1];
-        return lastNum > Num ? (lastNum-Num) : (lastNum * 2);  
-    }
-}

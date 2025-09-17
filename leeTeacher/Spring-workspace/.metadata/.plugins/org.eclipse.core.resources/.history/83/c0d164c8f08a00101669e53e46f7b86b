@@ -1,7 +1,0 @@
-package lx.edu.vo;
-
-public class ProfessorInfo {
-	String ProfessorId;
-	String ProfessorName;
-	String ProfessorRank;
-}
